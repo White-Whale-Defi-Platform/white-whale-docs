@@ -3,6 +3,10 @@
 * [Migaloo Documentation](README.md)
 
 ## Smart Contracts
+* [Overview](smart-contracts/overview.md)
+
+### Vault Network
+* [Overview](smart-contracts/vault-network/overview.md)
 
 * [Page 3](smart-contracts/page-3.md)
 * [Page 1](smart-contracts/page-1.md)
