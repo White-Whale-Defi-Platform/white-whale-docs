@@ -161,15 +161,29 @@ The following are the messages that can be executed on the router:
 
 ### Config
 
-```json 
+{% tabs %}
+{% tab title="Query" %}
+```json
 {
   "config": {}
 }
 ```
+{% endtab %}
+
+{% tab title="Response" %}
+```json
+{
+  "terraswap_factory": "juno1..."
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Reverse simulate swap operations
 
-```json 
+{% tabs %}
+{% tab title="Query" %}
+```json
 {
   "reverse_simulate_swap_operations": {
     "operations": [
@@ -206,10 +220,22 @@ The following are the messages that can be executed on the router:
   }
 }
 ```
+{% endtab %}
+
+{% tab title="Response" %}
+```json
+{
+  "amount": "0"
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Simulate swap operations
 
-```json 
+{% tabs %}
+{% tab title="Query" %}
+```json
 {
   "simulate_swap_operations":{
     "operations":[
@@ -246,29 +272,13 @@ The following are the messages that can be executed on the router:
   }
 }
 ```
+{% endtab %}
 
-## Query responses
-
-### Config
-
-```json 
-{
-  "terraswap_factory": "juno1..."
-}
-```
-
-### Reverse simulate swap operations
-
-```json 
+{% tab title="Response" %}
+```json
 {
   "amount": "0"
 }
 ```
-
-### Simulate swap operations
-
-```json 
-{
-  "amount": "0"
-}
-```
+{% endtab %}
+{% endtabs %}
