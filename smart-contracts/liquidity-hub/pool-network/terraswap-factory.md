@@ -1,11 +1,12 @@
-# Terraswap Factory
+# Factory
 
-The factory contract is used to create pools. Pools are comprised of two tokens, which can be either native, ibc or cw20
-tokens. Once a pool is created it's stored in state, meaning the factory acts as a pool registry.
+The factory contract is used to create pools. Pools are comprised of two tokens, which can be either native, ibc or cw20 tokens. Once a pool is created it's stored in state, meaning the factory acts as a pool registry.
 
 Note that the factory is permissioned, meaning the messages can only be executed by the owner of the contract.
 
 The following are the messages that can be executed on the factory:
+
+
 
 ## Instantiate
 
@@ -103,14 +104,31 @@ The following are the messages that can be executed on the factory:
 
 ### Config
 
+{% tabs %}
+{% tab title="Query" %}
 ```json
 {
   "config": {}
 }
 ```
+{% endtab %}
+
+{% tab title="Response" %}
+```json
+{
+  "owner": "juno1...",
+  "fee_collector_addr": "juno1...",
+  "pair_code_id": 123,
+  "token_code_id": 456
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Native token decimals
 
+{% tabs %}
+{% tab title="Query" %}
 ```json
 {
   "native_token_decimals": {
@@ -118,9 +136,21 @@ The following are the messages that can be executed on the factory:
   }
 }
 ```
+{% endtab %}
+
+{% tab title="Response" %}
+```json
+{
+  "decimals": 6
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Pair
 
+{% tabs %}
+{% tab title="Query" %}
 ```json
 {
   "pair": {
@@ -139,52 +169,9 @@ The following are the messages that can be executed on the factory:
   }
 }
 ```
+{% endtab %}
 
-### Pairs
-
-```json
-{
-  "pairs": {
-    "start_after": [
-      {
-        "token": {
-          "contract_addr": "juno1..."
-        }
-      },
-      {
-        "native_token": {
-          "denom": "ujuno"
-        }
-      }
-    ],
-    "limit": 30
-  }
-}
-```
-
-## Query responses
-
-### Config response
-
-```json
-{
-  "owner": "juno1...",
-  "fee_collector_addr": "juno1...",
-  "pair_code_id": 123,
-  "token_code_id": 456
-}
-```
-
-### Native token decimals response
-
-```json
-{
-  "decimals": 6
-}
-```
-
-### Pair response
-
+{% tab title="Response" %}
 ```json
 {
   "asset_infos": [
@@ -207,9 +194,35 @@ The following are the messages that can be executed on the factory:
   ]
 }
 ```
+{% endtab %}
+{% endtabs %}
 
-### Pairs response
+### Pairs
 
+{% tabs %}
+{% tab title="Query" %}
+```json
+{
+  "pairs": {
+    "start_after": [
+      {
+        "token": {
+          "contract_addr": "juno1..."
+        }
+      },
+      {
+        "native_token": {
+          "denom": "ujuno"
+        }
+      }
+    ],
+    "limit": 30
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Response" %}
 ```json
 {
   "pairs": [
@@ -256,3 +269,5 @@ The following are the messages that can be executed on the factory:
   ]
 }
 ```
+{% endtab %}
+{% endtabs %}
