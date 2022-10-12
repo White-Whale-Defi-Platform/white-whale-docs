@@ -311,6 +311,10 @@ where `ewogICJ3...kiOiB7fQp9` is the following message, encoded in base64:
 
 ### Protocol fees
 
+Retrieves the protocol fees on the pool. If `all_time` is `true`, it will return the fees collected since
+the inception of the pool. On the other hand, if `all_time` is set to `false`, only the fees that has been accrued by
+the pool but not collected by the fee collector will be returned.
+
 {% tabs %}
 {% tab title="Query" %}
 ```json

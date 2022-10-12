@@ -128,49 +128,21 @@ the `msg` is a message in base64 of the operations to be executed with the flash
 
 ## Queries
 
+
 ### Config
 
+Retrieves the configuration of the contract in a `Config` response.
+
+{% tabs %}
+{% tab title="Query" %}
 ```json
 {
   "config": {}
 }
 ```
+{% endtab %}
 
-### Get payback amount
-
-```json
-{
-  "get_payback_amount": {
-    "amount": "10000"
-  }
-}
-```
-
-### Protocol fees
-
-```json
-{
-  "protocol_fees": {
-    "all_time": false
-  }
-}
-```
-
-### Share
-
-```json
-{
-  "share": {
-    "amount": "1000"
-  }
-}
-```
-
-## Query responses
-
-
-### Config
-
+{% tab title="Response" %}
 ```json
 {
   "owner": "juno1...",
@@ -194,9 +166,25 @@ the `msg` is a message in base64 of the operations to be executed with the flash
   }
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Get payback amount
 
+Retrieves the `Uint128` amount that must be sent back to the contract to pay off a loan taken out, in a `PaybackAmountResponse` response.
+
+{% tabs %}
+{% tab title="Query" %}
+```json
+{
+  "get_payback_amount": {
+    "amount": "10000"
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Response" %}
 ```json
 {
   "payback_amount": "10030",
@@ -204,9 +192,27 @@ the `msg` is a message in base64 of the operations to be executed with the flash
   "flash_loan_fee": "20"
 }
 ```
+{% endtab %}
+{% endtabs %}
 
-### Protocol fees (native)
+### Protocol fees
 
+Retrieves the protocol fees on the vault. If `all_time` is `true`, it will return the fees collected since 
+the inception of the vault. On the other hand, if `all_time` is set to `false`, only the fees that has been accrued by 
+the vault but not collected by the fee collector will be returned.
+
+{% tabs %}
+{% tab title="Query" %}
+```json
+{
+  "protocol_fees": {
+    "all_time": false
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Response" %}
 ```json
 {
   "fees": {
@@ -219,26 +225,29 @@ the `msg` is a message in base64 of the operations to be executed with the flash
   }
 }
 ```
-
-### Protocol fees (cw20)
-
-```json
-{
-  "fees": {
-    "info": {
-      "token": {
-        "contract_addr": "juno1..."
-      }
-    },
-    "amount": "10000"
-  }
-}
-```
+{% endtab %}
+{% endtabs %}
 
 ### Share
 
+Retrieves the share of the assets stored in the vault that a given `amount` of lp tokens is entitled to in a `Uint128` response.
+
+{% tabs %}
+{% tab title="Query" %}
+```json
+{
+  "share": {
+    "amount": "1000"
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Response" %}
 ```json
 {
   "data": "10002558"
 }
 ```
+{% endtab %}
+{% endtabs %}
