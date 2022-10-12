@@ -1,11 +1,10 @@
 # Terraswap Pair
 
-The factory contract is used to create pools. Pools are comprised of two tokens, which can be either native, ibc or cw20
-tokens. Once a pool is created it's stored in state, meaning the factory acts as a pool registry.
+The pair contract is the pool itself. This contract is used by the factory to spawn new pools as needed, so no
+need to create pools manually. Also, the pool factory is an integral part of the Liquidity Hub, so you must use it
+for creating pools for a correct functioning of the protocol.
 
-Note that the factory is permissioned, meaning the messages can only be executed by the owner of the contract.
-
-The following are the messages that can be executed on the factory:
+The following are the messages that can be executed on the pair contract:
 
 ## Instantiate
 
