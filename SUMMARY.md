@@ -4,11 +4,11 @@
 
 ## Smart Contracts
 
-* [Overview](smart-contracts/overview.md)
+* [Overview](smart-contracts/liquidity-hub/overview.md)
 
 ## Liquidity Hub
 
-* [Overview](liquidity-hub/overview/README.md)
+* [Overview](smart-contracts/liquidity-hub/overview.md)
   * [Pool Network](smart-contracts/liquidity-hub/pool-network/overview.md)
     * [Factory](smart-contracts/liquidity-hub/pool-network/terraswap-factory.md)
     * [Pair](smart-contracts/liquidity-hub/pool-network/terraswap-pair.md)
