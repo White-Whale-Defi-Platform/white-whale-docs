@@ -202,113 +202,17 @@ where `ewogICJ3...kiOiB7fQp9` is the following message, encoded in base64:
 
 ### Config
 
-```json 
+{% tabs %}
+{% tab title="Query" %}
+```json
 {
   "config": {}
 }
 ```
+{% endtab %}
 
-### Pair
-
-```json 
-{
-  "pair": {}
-}
-```
-
-### Pool
-
-```json 
-{
-  "pool": {}
-}
-```
-
-### Protocol fees
-
-```json 
-{
-  "protocol_fees": {
-    "asset_id": "ujuno",
-    "all_time": false
-  }
-}
-```
-
-### Reserve simulation (native)
-
-```json 
-{
-  "reverse_simulation": {
-    "ask_asset": {
-      "info": {
-        "native_token": {
-          "denom": "ujuno"
-        }
-      },
-      "amount": "1000"
-    }
-  }
-}
-```
-
-### Reserve simulation (cw20)
-
-```json 
-{
-  "reverse_simulation": {
-    "ask_asset": {
-      "info": {
-        "token": {
-          "contract_addr": "juno1..."
-        }
-      },
-      "amount": "1000"
-    }
-  }
-}
-```
-
-### Simulation (native)
-
-```json 
-{
-  "simulation": {
-    "offer_asset": {
-      "info": {
-        "native_token": {
-          "denom": "ujuno"
-        }
-      },
-      "amount": "1000"
-    }
-  }
-}
-```
-
-### Simulation (cw20)
-
-```json 
-{
-  "simulation": {
-    "offer_asset": {
-      "info": {
-        "token": {
-          "contract_addr": "juno1..."
-        }
-      },
-      "amount": 1000
-    }
-  }
-}
-```
-
-## Query responses
-
-
-### Config
-
-```json 
+{% tab title="Response" %}
+```json
 {
   "owner": "juno1...",
   "fee_collector_addr": "juno1...",
@@ -327,10 +231,22 @@ where `ewogICJ3...kiOiB7fQp9` is the following message, encoded in base64:
   }
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Pair
 
-```json 
+{% tabs %}
+{% tab title="Query" %}
+```json
+{
+  "pair": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response" %}
+```json
 {
   "asset_infos": [
     {
@@ -352,10 +268,22 @@ where `ewogICJ3...kiOiB7fQp9` is the following message, encoded in base64:
   ]
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Pool
 
-```json 
+{% tabs %}
+{% tab title="Query" %}
+```json
+{
+  "pool": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response" %}
+```json
 {
   "assets": [
     {
@@ -378,10 +306,25 @@ where `ewogICJ3...kiOiB7fQp9` is the following message, encoded in base64:
   "total_share": "1720147158"
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Protocol fees
 
-```json 
+{% tabs %}
+{% tab title="Query" %}
+```json
+{
+  "protocol_fees": {
+    "asset_id": "ujuno",
+    "all_time": false
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Response" %}
+```json
 {
   "fees": [
     {
@@ -395,10 +338,31 @@ where `ewogICJ3...kiOiB7fQp9` is the following message, encoded in base64:
   ]
 }
 ```
+{% endtab %}
+{% endtabs %}
 
-### Reverse simulation
+### Reserve simulation (native)
 
-```json 
+{% tabs %}
+{% tab title="Query" %}
+```json
+{
+  "reverse_simulation": {
+    "ask_asset": {
+      "info": {
+        "native_token": {
+          "denom": "ujuno"
+        }
+      },
+      "amount": "1000"
+    }
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Response" %}
+```json
 {
   "offer_amount": "207639",
   "spread_amount": "0",
@@ -406,10 +370,63 @@ where `ewogICJ3...kiOiB7fQp9` is the following message, encoded in base64:
   "protocol_fee_amount": "1"
 }
 ```
+{% endtab %}
+{% endtabs %}
 
-### Simulation
+### Reserve simulation (cw20)
 
-```json 
+{% tabs %}
+{% tab title="Query" %}
+```json
+{
+  "reverse_simulation": {
+    "ask_asset": {
+      "info": {
+        "token": {
+          "contract_addr": "juno1..."
+        }
+      },
+      "amount": "1000"
+    }
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Response" %}
+```json
+{
+  "offer_amount": "207639",
+  "spread_amount": "0",
+  "swap_fee_amount": "2",
+  "protocol_fee_amount": "1"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Simulation (native)
+
+{% tabs %}
+{% tab title="Query" %}
+```json
+{
+  "simulation": {
+    "offer_asset": {
+      "info": {
+        "native_token": {
+          "denom": "ujuno"
+        }
+      },
+      "amount": "1000"
+    }
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Response" %}
+```json
 {
   "return_amount": "206395",
   "spread_amount": "1",
@@ -417,3 +434,37 @@ where `ewogICJ3...kiOiB7fQp9` is the following message, encoded in base64:
   "protocol_fee_amount": "207"
 }
 ```
+{% endtab %}
+{% endtabs %}
+
+### Simulation (cw20)
+
+{% tabs %}
+{% tab title="Query" %}
+```json
+{
+  "simulation": {
+    "offer_asset": {
+      "info": {
+        "token": {
+          "contract_addr": "juno1..."
+        }
+      },
+      "amount": 1000
+    }
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Response" %}
+```json
+{
+  "return_amount": "206395",
+  "spread_amount": "1",
+  "swap_fee_amount": "414",
+  "protocol_fee_amount": "207"
+}
+```
+{% endtab %}
+{% endtabs %}
