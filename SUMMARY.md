@@ -13,5 +13,5 @@
       * [Router](smart-contracts/liquidity-hub/pool-network/terraswap-router.md)
     * [Vault Network](smart-contracts/liquidity-hub/vault-network/overview.md)
       * [Vault Factory]()
-      * [Vault]()
+      * [Vault](smart-contracts/liquidity-hub/vault-network/vault.md)
       * [Vault Router]()
