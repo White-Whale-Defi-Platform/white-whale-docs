@@ -18,21 +18,6 @@ The following are the messages that can be executed on the vault router:
 }
 ```
 
-## Instantiate
-
-```json
-{
-  "owner": "inj1...",
-  "vault_factory_addr": "inj1..."
-}
-```
-
-## Migrate
-
-```json
-{}
-```
-
 ## Migrate
 
 ```json
