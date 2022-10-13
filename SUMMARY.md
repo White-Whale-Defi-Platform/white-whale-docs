@@ -9,6 +9,7 @@
 ## Liquidity Hub
 
 * [Overview](smart-contracts/liquidity-hub/overview.md)
+* [Fee Collector](smart-contracts/liquidity-hub/fee-collector.md)
 * [Pool Network](smart-contracts/liquidity-hub/pool-network/overview.md)
   * [Factory](smart-contracts/liquidity-hub/pool-network/terraswap-factory.md)
   * [Pair](smart-contracts/liquidity-hub/pool-network/terraswap-pair.md)
