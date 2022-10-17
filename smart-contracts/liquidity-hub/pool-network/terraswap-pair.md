@@ -15,7 +15,7 @@ is done via `withdraw_liquidity`.
 
 ## Fees
 
-There are two types of fees associated to the pools, namely `swap_fee` and `protocol_fee`. The `swap_fee `remains in the 
+There are two types of fees associated to the pools, namely `swap_fee` and `protocol_fee`. The `swap_fee` remains in the 
 pool, causing a permanent increase in the constant product K. The value of this permanently increased pool goes to all LPs.
 
 The `protocol_fee` goes to the protocol, and it is to be collected by the Fee Collector contract of the Liquidity Hub. 
@@ -24,7 +24,7 @@ The protocol revenue is then distributed to WHALE stakers in the form of token b
 ## Feature toggle
 
 Pools contain a feature toggle, containing the following properties: `withdrawals_enabled`, `deposits_enabled` and `swaps_enabled`. 
-Those features are `ON by default, but could be changed via governance. They could changed in different scenarios, the once 
+Those features are `ON by default, but could be changed via governance. They could be changed in different scenarios, the ones
 we could envision include for example if a critical bug is found in a given feature, it could be shut down while is being 
 fixed to avoid exploits. Additionally, if for example liquidity is desired to be migrated to another pool, deposits could 
 be disabled to prevent bots or users to deposit liquidity in the pool.
