@@ -1,15 +1,21 @@
 # Vault Router
 
 The vault router contract is a convenient way to take flash loans from White Whale vaults. Instead of interacting with 
-individual vaults, bots can request the vault router the asset they need to do the flash loan operation and the router 
+individual vaults, bots can request the vault router the desired asset to do the flash loan operation with and the router 
 will take care of communicating and requesting the funds to the appropriate vault.
 
 An interesting feature that the White Whale Vault Router is pioneering is the possibility to take multiple flash loans at 
 once.
 
+The code for the vault router can be found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/vault-network/vault_router).
+
+---
+
 The following are the messages that can be executed on the vault router:
 
 ## Instantiate
+
+Instantiates the vault router.
 
 ```json
 {
@@ -19,6 +25,8 @@ The following are the messages that can be executed on the vault router:
 ```
 
 ## Migrate
+
+Migrates the vault router.
 
 ```json
 {}
@@ -59,9 +67,8 @@ and returning the profit to the sender.
 
 ## Next loan
 
-Performs the next loan in case multiple flash loans are taken.
-
-This message is called internally by the vault where the flash loan is being taken from. Cannot be called manually.
+Performs the next loan in case multiple flash loans are taken. This message is called internally by the vault where the 
+flash loan is being taken from. Cannot be called manually.
 
 ```json
 {
@@ -114,9 +121,8 @@ This message is called internally by the vault where the flash loan is being tak
 
 ## Complete loan
 
-Completes the flash-loan by paying back all outstanding loans, and returning profits to the sender.
-
-This message is called internally by the vault router, cannot be called manually.
+Completes the flash-loan by paying back all outstanding loans, and returning profits to the sender. This message is called 
+internally by the vault router, cannot be called manually.
 
 ```json
 {
@@ -142,6 +148,8 @@ This message is called internally by the vault router, cannot be called manually
 ```
 
 ## Update config
+
+Updates the configuration of the vault router.
 
 ```json
 {
