@@ -1,20 +1,28 @@
 # Fee Collector
 
-The local fee collector collects the fees for usage of the pool and vault network on a specific blockchain. Part of the 
-collected fees goes back to the depositors of the White Whale pools and/or the single asset flash loan vaults. The 
-remainder is sent to the interchain collector as protocol revenue. The protocol revenue is then distributed to WHALE stakers 
-in the form of token buybacks.
+The local fee collector collects the fees for usage of the pool and vault network on a specific blockchain. Part of the
+collected fees goes back to the depositors of the White Whale pools and/or the single asset flash loan vaults. The
+remainder is sent to the interchain collector as protocol revenue. The protocol revenue is then distributed to WHALE
+stakers in the form of token buybacks.
+
+The code for the fee collector contract can be
+found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/fee_collector).
+
+---
 
 The following are the messages that can be executed on the fee collector:
 
+## Instantiate
 
-## Instantiate 
+Instantiates the fee collector.
 
 ```json
 {}
 ```
 
-## Migrate 
+## Migrate
+
+Migrates the fee collector.
 
 ```json
 {}
@@ -23,6 +31,8 @@ The following are the messages that can be executed on the fee collector:
 ## ExecuteMsg
 
 ### Add factory
+
+Adds a vault or pool factory to the fee collector registry.
 
 ```json
 {
@@ -34,62 +44,84 @@ The following are the messages that can be executed on the fee collector:
 
 ### Collect fees
 
+Collects the fees accrued by the pools or vaults. It can be triggered in different ways:
+
+- Fees can be collected for specific contracts, specifying the address and contract type (pool or vault)
+- Fees can be collected for pools, specifying the pool factory address and factory type (pool)
+- Fees can be collected for vaults, specifying the vault factory address and factory type (vault)
 
 {% tabs %}
 {% tab title="Contract fees" %}
+
 ```json
 {
   "collect_fees": {
     "collect_fees_for": {
       "contracts": {
         "contracts": [
-          "terra1...",
-          "terra1..."
+          {
+            "address": "terra1...",
+            "contract_type": {
+              "vault": {}
+            }
+          },
+          {
+            "address": "terra1...",
+            "contract_type": {
+              "pool": {}
+            }
+          }
         ]
       }
     }
   }
 }
 ```
+
 {% endtab %}
 
 {% tab title="Pool fees" %}
+
 ```json
 {
-  "collect_fees":{
-    "collect_fees_for":{
-      "factory":{
-        "factory_addr":"terra1...",
-        "factory_type":{
-          "pool":{}
+  "collect_fees": {
+    "collect_fees_for": {
+      "factory": {
+        "factory_addr": "terra1...",
+        "factory_type": {
+          "pool": {}
         }
       }
     }
   }
 }
 ```
+
 {% endtab %}
 
 {% tab title="Vault fees" %}
+
 ```json
 {
-  "collect_fees":{
-    "collect_fees_for":{
-      "factory":{
-        "factory_addr":"terra1...",
-        "factory_type":{
-          "vault":{}
+  "collect_fees": {
+    "collect_fees_for": {
+      "factory": {
+        "factory_addr": "terra1...",
+        "factory_type": {
+          "vault": {}
         }
       }
     }
   }
 }
 ```
+
 {% endtab %}
 {% endtabs %}
 
-
 ### Remove factory
+
+Removes a pool or vault factory from the fee collector registry.
 
 ```json
 {
@@ -100,6 +132,8 @@ The following are the messages that can be executed on the fee collector:
 ```
 
 ### Update config
+
+Updates the configuration of the fee collector.
 
 ```json
 {
@@ -117,19 +151,23 @@ Retrieves the configuration of the contract in a `Config` response.
 
 {% tabs %}
 {% tab title="Query" %}
+
 ```json
 {
   "config": {}
 }
 ```
+
 {% endtab %}
 
 {% tab title="Response" %}
+
 ```json
 {
   "owner": "terra1..."
 }
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -139,6 +177,7 @@ Queries factories added to the fee collector.
 
 {% tabs %}
 {% tab title="Query" %}
+
 ```json
 {
   "factories": {
@@ -146,9 +185,11 @@ Queries factories added to the fee collector.
   }
 }
 ```
+
 {% endtab %}
 
 {% tab title="Response" %}
+
 ```json
 {
   "factories": [
@@ -157,15 +198,19 @@ Queries factories added to the fee collector.
   ]
 }
 ```
+
 {% endtab %}
 {% endtabs %}
 
-### Fees (contracts)
+### Fees
 
-Queries the fees collected by individual contracts, whether they are pools or vaults.
+Queries the fees collected by individual contracts, whether they are pools or vaults. Additionally, it can query the
+fees
+collected by a given pool or vault factory's children.
 
 {% tabs %}
-{% tab title="Query" %}
+{% tab title="Query Contracts Fees" %}
+
 ```json
 {
   "fees": {
@@ -191,46 +236,11 @@ Queries the fees collected by individual contracts, whether they are pools or va
   }
 }
 ```
+
 {% endtab %}
 
-{% tab title="Response" %}
-```json
-[
-  {
-    "info": {
-      "native_token": {
-        "denom": "uluna"
-      }
-    },
-    "amount": "0"
-  },
-  {
-    "info": {
-      "token": {
-        "contract_addr": "terra1..."
-      }
-    },
-    "amount": "196116"
-  },
-  {
-    "info": {
-      "native_token": {
-        "denom": "ujuno"
-      }
-    },
-    "amount": "0"
-  }
-]
-```
-{% endtab %}
-{% endtabs %}
+{% tab title="Query Pools Fees" %}
 
-### Fees (pool)
-
-Queries the fees collected by a given pool factory's children.
-
-{% tabs %}
-{% tab title="Query" %}
 ```json
 {
   "fees": {
@@ -246,38 +256,11 @@ Queries the fees collected by a given pool factory's children.
   }
 }
 ```
+
 {% endtab %}
 
-{% tab title="Response" %}
-```json
-[
-  {
-    "info": {
-      "native_token": {
-        "denom": "uluna"
-      }
-    },
-    "amount": "0"
-  },
-  {
-    "info": {
-      "token": {
-        "contract_addr": "terra1..."
-      }
-    },
-    "amount": "10936515"
-  }
-]
-```
-{% endtab %}
-{% endtabs %}
+{% tab title="Query Vaults Fees" %}
 
-### Fees (vault)
-
-Queries the fees collected by a given vault factory's children.
-
-{% tabs %}
-{% tab title="Query" %}
 ```json
 {
   "fees": {
@@ -293,36 +276,39 @@ Queries the fees collected by a given vault factory's children.
   }
 }
 ```
+
 {% endtab %}
 
 {% tab title="Response" %}
+
 ```json
 [
-  {
-    "info": {
-      "token": {
-        "contract_addr": "terra1..."
-      }
-    },
-    "amount": "1000000"
-  },
   {
     "info": {
       "native_token": {
         "denom": "ujuno"
       }
     },
-    "amount": "1000000"
+    "amount": "250050890"
+  },
+  {
+    "info": {
+      "token": {
+        "contract_addr": "terra1..."
+      }
+    },
+    "amount": "19610016"
   },
   {
     "info": {
       "native_token": {
-        "denom": "uluna"
+        "denom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9"
       }
     },
-    "amount": "1000000"
+    "amount": "15905454"
   }
 ]
 ```
+
 {% endtab %}
 {% endtabs %}
