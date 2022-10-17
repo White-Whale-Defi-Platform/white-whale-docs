@@ -121,7 +121,7 @@ Provides liquidity for a pool with native or ibc tokens.
 
 ### Provide liquidity cw20
 
-Provides liquidity for a pool with cw20 tokens. Note that the message [increase_allowance](../terraswap-token#increase-allowance) 
+Provides liquidity for a pool with cw20 tokens. Note that the message [increase_allowance](https://app.gitbook.com/o/fVZwd36itixTM6EMRcZt/s/PtAatYv3uVRxf7beAOPp/liquidity-hub/overview-1/terraswap-token#increase-allowance) 
 should be called on the cw20 token before you can transfer cw20 tokens to the pool.
 
 ```json

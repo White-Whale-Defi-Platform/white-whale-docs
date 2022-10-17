@@ -14,12 +14,12 @@ The code for the pool network can be found [here](https://github.com/White-Whale
 
 ## Contracts
 
-| Name                                     | Description                                                                |
-| ---------------------------------------- |----------------------------------------------------------------------------|
-| [`terraswap_factory`](terraswap_factory) | Factory used to create pools (pairs)                                       |
-| [`terraswap_pair`](terraswap_pair)       | Pair (pool) contract                                                       |
-| [`terraswap_router`](terraswap_router)   | Allows multi-hob swaps                                                     |
-| [`terraswap_token`](terraswap_token)     | CW20 (ERC20 equivalent) token implementation. Used for creating LP tokens. |
+| Name                                                                                                                                    | Description                                                                |
+| --------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [`terraswap_factory`](https://app.gitbook.com/o/fVZwd36itixTM6EMRcZt/s/PtAatYv3uVRxf7beAOPp/liquidity-hub/overview-1/terraswap-factory) | Factory used to create pools (pairs)                                       |
+| [`terraswap_pair`](https://app.gitbook.com/o/fVZwd36itixTM6EMRcZt/s/PtAatYv3uVRxf7beAOPp/liquidity-hub/overview-1/terraswap-pair)       | Pair (pool) contract                                                       |
+| [`terraswap_router`](https://app.gitbook.com/o/fVZwd36itixTM6EMRcZt/s/PtAatYv3uVRxf7beAOPp/liquidity-hub/overview-1/terraswap-router)   | Allows multi-hob swaps                                                     |
+| [`terraswap_token`](https://app.gitbook.com/o/fVZwd36itixTM6EMRcZt/s/PtAatYv3uVRxf7beAOPp/liquidity-hub/overview-1/terraswap-token)     | CW20 (ERC20 equivalent) token implementation. Used for creating LP tokens. |
 
 ## Running the Pool Network
 
