@@ -1,11 +1,19 @@
 # Vault Factory
 
 The vault factory contract is used to create vaults. Similarly to the pool factory, the vault factory acts as a 
-directory for the vaults that have been created through the factory.
+directory for the vaults that have been created through the factory. Note that **the vault factory is permissioned**, meaning 
+the messages can only be executed by the owner of the contract.
+
+The code for the vault factory contract can be found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/vault-network/vault_factory).
+
+---
 
 The following are the messages that can be executed on the vault factory:
 
 ## Instantiate
+
+Instantiates the vault factory. Requires storing the vault and token contracts in advance so that the contract code ids 
+can be provided.
 
 ```json
 {
@@ -18,6 +26,8 @@ The following are the messages that can be executed on the vault factory:
 
 ## Migrate
 
+Migrates the vault factory.
+
 ```json
 {}
 ```
@@ -26,6 +36,10 @@ The following are the messages that can be executed on the vault factory:
 
 ### Create vault (native/ibc)
 
+Creates a vault. Includes token info and vault fees.
+
+{% tabs %}
+{% tab title="Native/IBC token" %}
 ```json
 {
   "create_vault" : {
@@ -45,9 +59,9 @@ The following are the messages that can be executed on the vault factory:
   }
 }
 ```
+{% endtab %}
 
-### Create vault (cw20)
-
+{% tab title="CW20 token" %}
 ```json
 {
   "create_vault" : {
@@ -67,8 +81,13 @@ The following are the messages that can be executed on the vault factory:
   }
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Migrate vaults
+
+Migrates vault contracts to the given vault code id. If `vault_addr` is provided, the message migrates only that given vault. 
+Otherwise, it migrates all the vaults created by the factory.
 
 ```json
 {
@@ -80,6 +99,8 @@ The following are the messages that can be executed on the vault factory:
 ```
 
 ### Update config
+
+Updates the configuration of the vault factory.
 
 ```json
 {
@@ -93,6 +114,8 @@ The following are the messages that can be executed on the vault factory:
 ```
 
 ### Update vault config
+
+Updates the configuration of the given vault with the provided `UpdateConfigParams`.
 
 ```json
 {
