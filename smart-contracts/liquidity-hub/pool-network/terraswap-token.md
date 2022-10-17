@@ -4,9 +4,17 @@ This is a standard CW20 token. CW20 is a specification for fungible tokens based
 loosely based on Ethereum's ERC20 standard, but many changes have been made. The types in here can be imported by 
 contracts that wish to implement this spec, or by contracts that call to any standard cw20 contract.
 
+The token contract is used by the pool contract to create LP tokens.
+
+The code for the token contract can be found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/pool-network/terraswap_token).
+
+---
+
 The following are the messages that can be executed on the cw20 token contract:
 
 ## Instantiate
+
+Instantiates a cw20 token.
 
 ```json
 {
@@ -28,44 +36,10 @@ The following are the messages that can be executed on the cw20 token contract:
 
 ## ExecuteMsg
 
-### Burn
-
-```json
-{
-  "burn": {
-    "amount": "1000"
-  }
-}
-```
-
-### Burn from
-
-```json
-{
-  "burn_from": {
-    "owner": "juno1...",
-    "amount": "1000"
-  }
-}
-```
-
-### Decrease allowance
-
-```json
-{
-  "decrease_allowance": {
-    "spender": "juno1...",
-    "amount": "1000",
-    "expires": {
-      "at_height": 9999,
-      "at_time": 9999,
-      "never": {}
-    }
-  }
-}
-```
-
 ### Increase allowance
+
+Only with "approval" extension. Allows spender to access an additional amount tokens from the owner's (env.sender) account. 
+If expires is Some(), overwrites current allowance expiration with this one.
 
 ```json
 {
@@ -81,7 +55,53 @@ The following are the messages that can be executed on the cw20 token contract:
 }
 ```
 
+### Decrease allowance
+
+Only with "approval" extension. Lowers the spender's access of tokens from the owner's (env.sender) account by amount.
+If expires is Some(), overwrites current allowance expiration with this one.
+
+```json
+{
+  "decrease_allowance": {
+    "spender": "juno1...",
+    "amount": "1000",
+    "expires": {
+      "at_height": 9999,
+      "at_time": 9999,
+      "never": {}
+    }
+  }
+}
+```
+
+### Burn
+
+Burn is a base message to destroy tokens forever. 
+
+```json
+{
+  "burn": {
+    "amount": "1000"
+  }
+}
+```
+
+### Burn from
+
+Only with "approval" extension. Destroys tokens forever
+
+```json
+{
+  "burn_from": {
+    "owner": "juno1...",
+    "amount": "1000"
+  }
+}
+```
+
 ### Mint
+
+Only with the "mintable" extension. If authorized, creates amount new tokens and adds to the recipient balance.
 
 ```json
 {
@@ -94,6 +114,8 @@ The following are the messages that can be executed on the cw20 token contract:
 
 ### Send
 
+Send is a base message to transfer tokens to a contract and trigger an action on the receiving contract.
+
 ```json
 {
   "send": {
@@ -105,6 +127,8 @@ The following are the messages that can be executed on the cw20 token contract:
 ```
 
 ### Send from
+
+Only with "approval" extension. Sends amount tokens from owner -> contract if env.sender has sufficient pre-approval.
 
 ```json
 {
@@ -119,6 +143,8 @@ The following are the messages that can be executed on the cw20 token contract:
 
 ### Transfer
 
+Transfer is a base message to move tokens to another account without triggering actions.
+
 ```json
 {
   "transfer": {
@@ -129,6 +155,8 @@ The following are the messages that can be executed on the cw20 token contract:
 ```
 
 ### Transfer from
+
+Only with "approval" extension. Transfers amount tokens from owner -> recipient if env.sender has sufficient pre-approval.
 
 ```json
 {
@@ -142,6 +170,9 @@ The following are the messages that can be executed on the cw20 token contract:
 
 ### Update marketing
 
+Only with the "marketing" extension. If authorized, updates marketing metadata. Setting None/null for any of these will 
+leave it unchanged. Setting Some("") will clear this field on the contract storage
+
 ```json
 {
   "update_marketing": {
@@ -154,6 +185,9 @@ The following are the messages that can be executed on the cw20 token contract:
 
 ### Update minter
 
+Only with the "mintable" extension. The current minter may set a new minter. Setting the minter to None will remove the 
+token's minter forever.
+
 ```json
 {
   "update_minter": {
@@ -163,6 +197,8 @@ The following are the messages that can be executed on the cw20 token contract:
 ```
 
 ### Upload logo
+
+If set as the "marketing" role on the contract, upload a new URL, SVG, or PNG for the token.
 
 ```json
 {
@@ -179,6 +215,8 @@ The following are the messages that can be executed on the cw20 token contract:
 ## Queries
 
 ### All accounts
+
+Only with "enumerable" extension. Returns all accounts that have balances. Supports pagination.
 
 {% tabs %}
 {% tab title="Query" %}
@@ -207,6 +245,8 @@ The following are the messages that can be executed on the cw20 token contract:
 
 ### All allowances
 
+Only with "enumerable" extension (and "allowances"). Returns all allowances this owner has approved. Supports pagination.
+
 {% tabs %}
 {% tab title="Query" %}
 ```json
@@ -230,6 +270,8 @@ The following are the messages that can be executed on the cw20 token contract:
 {% endtabs %}
 
 ### All spender allowances
+
+Only with "enumerable" extension (and "allowances"). Returns all allowances this spender has been granted. Supports pagination.
 
 {% tabs %}
 {% tab title="Query" %}
@@ -258,6 +300,8 @@ The following are the messages that can be executed on the cw20 token contract:
 
 ### Allowance
 
+Only with "allowance" extension. Returns how much spender can use from owner account, 0 if unset.
+
 {% tabs %}
 {% tab title="Query" %}
 ```json
@@ -284,6 +328,8 @@ The following are the messages that can be executed on the cw20 token contract:
 
 ### Balance
 
+Returns the current balance of the given address, 0 if unset.
+
 {% tabs %}
 {% tab title="Query" %}
 ```json
@@ -306,6 +352,9 @@ The following are the messages that can be executed on the cw20 token contract:
 
 ### Download logo
 
+Only with "marketing" extension. Downloads the embedded logo data (if stored on chain). Errors if no logo data is stored 
+for this contract.
+
 {% tabs %}
 {% tab title="Query" %}
 ```json
@@ -322,6 +371,9 @@ The following are the messages that can be executed on the cw20 token contract:
 {% endtabs %}
 
 ### Marketing info
+
+Only with "marketing" extension. Returns more metadata on the contract to display in the client:
+description, logo, project url, etc.
 
 {% tabs %}
 {% tab title="Query" %}
@@ -346,6 +398,8 @@ The following are the messages that can be executed on the cw20 token contract:
 
 ### Minter
 
+Only with "mintable" extension. Returns who can mint and the hard cap on maximum tokens after minting.
+
 {% tabs %}
 {% tab title="Query" %}
 ```json
@@ -366,6 +420,8 @@ The following are the messages that can be executed on the cw20 token contract:
 {% endtabs %}
 
 ### Token info
+
+Returns metadata on the contract - name, decimals, supply, etc.
 
 {% tabs %}
 {% tab title="Query" %}
