@@ -1,6 +1,9 @@
 # Table of contents
 
-* [Migaloo Documentation](README.md)
+* [Welcome](README.md)
+* [Abstract](abstract.md)
+* [Migaloo's Vision](vision.md)
+* [Architecture](architecture.md)
 
 ## Smart Contracts
 
