@@ -1,6 +1,9 @@
 # Table of contents
 
-* [Migaloo Documentation](README.md)
+* [Welcome](README.md)
+* [Abstract](abstract.md)
+* [Migaloo's Vision](vision.md)
+* [Architecture](architecture.md)
 
 ## Smart Contracts
 
@@ -9,6 +12,7 @@
 ## Liquidity Hub
 
 * [Overview](smart-contracts/liquidity-hub/overview.md)
+* [Fee Collector](smart-contracts/liquidity-hub/fee-collector.md)
 * [Pool Network](smart-contracts/liquidity-hub/pool-network/overview.md)
   * [Factory](smart-contracts/liquidity-hub/pool-network/terraswap-factory.md)
   * [Pair](smart-contracts/liquidity-hub/pool-network/terraswap-pair.md)
@@ -18,3 +22,7 @@
   * [Vault Factory](smart-contracts/liquidity-hub/vault-network/vault-factory.md)
   * [Vault](smart-contracts/liquidity-hub/vault-network/vault.md)
   * [Vault Router](smart-contracts/liquidity-hub/vault-network/vault-router.md)
+
+## Bot Client Documentation
+
+* [Overview](bot-client-docs/overview.md)
