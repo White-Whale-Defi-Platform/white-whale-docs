@@ -30,18 +30,6 @@ Migrates the fee collector.
 
 ## ExecuteMsg
 
-### Add factory
-
-Adds a vault or pool factory to the fee collector registry.
-
-```json
-{
-  "add_factory": {
-    "factory_addr": "inj1..."
-  }
-}
-```
-
 ### Collect fees
 
 Collects the fees accrued by the pools or vaults. It can be triggered in different ways:
@@ -119,18 +107,6 @@ Collects the fees accrued by the pools or vaults. It can be triggered in differe
 {% endtab %}
 {% endtabs %}
 
-### Remove factory
-
-Removes a pool or vault factory from the fee collector registry.
-
-```json
-{
-  "remove_factory": {
-    "factory_addr": "terra1..."
-  }
-}
-```
-
 ### Update config
 
 Updates the configuration of the fee collector.
@@ -171,42 +147,10 @@ Retrieves the configuration of the contract in a `Config` response.
 {% endtab %}
 {% endtabs %}
 
-### Factories
-
-Queries factories added to the fee collector.
-
-{% tabs %}
-{% tab title="Query" %}
-
-```json
-{
-  "factories": {
-    "limit": 10
-  }
-}
-```
-
-{% endtab %}
-
-{% tab title="Response" %}
-
-```json
-{
-  "factories": [
-    "terra1...",
-    "terra1..."
-  ]
-}
-```
-
-{% endtab %}
-{% endtabs %}
-
 ### Fees
 
 Queries the fees collected by individual contracts, whether they are pools or vaults. Additionally, it can query the
-fees
-collected by a given pool or vault factory's children.
+fees collected by a given pool or vault factory's children.
 
 {% tabs %}
 {% tab title="Query Contracts Fees" %}
