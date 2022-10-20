@@ -8,6 +8,7 @@
 ## Smart Contracts
 
 * [Overview](smart-contracts/overview.md)
+* [Common Types](smart-contracts/common-types/overview.md)
 
 ## Liquidity Hub
 

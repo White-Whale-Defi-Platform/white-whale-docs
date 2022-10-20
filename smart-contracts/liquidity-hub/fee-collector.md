@@ -66,6 +66,11 @@ Collects the fees accrued by the pools or vaults. It can be triggered in differe
 }
 ```
 
+| Key                | Type           | Description                                                      |
+| ------------------ | -------------- |------------------------------------------------------------------|
+| `collect_fees_for` | CollectFeesFor | Enum specifiying to collect fees for either Contracts or Factory |
+| `contracts`        | Vec<Contract>  | Contracts to collect fees from                                   |
+
 {% endtab %}
 
 {% tab title="Pool fees" %}
@@ -84,6 +89,11 @@ Collects the fees accrued by the pools or vaults. It can be triggered in differe
   }
 }
 ```
+
+| Key                | Type           | Description                                                      |
+| ------------------ | -------------- | ---------------------------------------------------------------- |
+| `collect_fees_for` | CollectFeesFor | Enum specifiying to collect fees for either Contracts or Factory |
+| `factory`          | Factory        | Factory data to collect fees from                                |
 
 {% endtab %}
 
@@ -104,6 +114,11 @@ Collects the fees accrued by the pools or vaults. It can be triggered in differe
 }
 ```
 
+| Key                | Type           | Description                                                      |
+| ------------------ | -------------- | ---------------------------------------------------------------- |
+| `collect_fees_for` | CollectFeesFor | Enum specifiying to collect fees for either Contracts or Factory |
+| `factory`          | Factory        | Factory data to collect fees from                                |
+
 {% endtab %}
 {% endtabs %}
 
@@ -118,6 +133,10 @@ Updates the configuration of the fee collector.
   }
 }
 ```
+
+| Key     | Type           | Description               |
+| ------- | -------------- | ------------------------- |
+| `owner` | Option<String> | New owner of the contract |
 
 ## Queries
 
@@ -181,6 +200,12 @@ fees collected by a given pool or vault factory's children.
 }
 ```
 
+| Key              | Type          | Description                                                   |
+| ---------------- | ------------- | ------------------------------------------------------------- |
+| `query_fees_for` | QueryFeesFor  | Enum specifying to query fees for either Contracts or Factory |
+| `contracts`      | Vec<Contract> | Contracts to query fees from                                  |
+| `all_time`       | Option<bool>  | New owner of the contract                                     |
+
 {% endtab %}
 
 {% tab title="Query Pools Fees" %}
@@ -201,6 +226,12 @@ fees collected by a given pool or vault factory's children.
 }
 ```
 
+| Key              | Type         | Description                                                   |
+|------------------|--------------|---------------------------------------------------------------|
+| `query_fees_for` | QueryFeesFor | Enum specifying to query fees for either Contracts or Factory |
+| `factory`        | Factory      | Factory data to query fees from                               |
+| `all_time`       | Option<bool> | New owner of the contract                                     |
+
 {% endtab %}
 
 {% tab title="Query Vaults Fees" %}
@@ -220,6 +251,12 @@ fees collected by a given pool or vault factory's children.
   }
 }
 ```
+
+| Key              | Type         | Description                                                   |
+|------------------|--------------|---------------------------------------------------------------|
+| `query_fees_for` | QueryFeesFor | Enum specifying to query fees for either Contracts or Factory |
+| `factory`        | Factory      | Factory data to query fees from                               |
+| `all_time`       | Option<bool> | New owner of the contract                                     |
 
 {% endtab %}
 
