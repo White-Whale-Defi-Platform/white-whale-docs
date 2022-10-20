@@ -29,6 +29,13 @@ Instantiates the pool factory.
 }
 ```
 
+| Key                  | Type   | Description                           |
+| -------------------- | ------ | ------------------------------------- |
+| `pair_code_id`       | u64    | Code id for the pair/pool contract    |
+| `token_code_id`      | u64    | Code id for the token contract        |
+| `fee_collector_addr` | String | Address of the fee collector contract |
+
+
 ## Migrate
 
 Migratest the pool factory.
@@ -52,6 +59,11 @@ message, a small amount of the token should be transferred.
   }
 }
 ```
+
+| Key        | Type   | Description                   |
+| ---------- | ------ | ----------------------------- |
+| `denom`    | String | denom of the native/ibc asset |
+| `decimals` | u8     | Decimal places for that asset |
 
 ### Create pair
 
@@ -84,6 +96,11 @@ Creates a pool with the given assets and pool fees. If the pool already exists, 
 }
 ```
 
+| Key           | Type           | Description                                              |
+| ------------- | -------------- | -------------------------------------------------------- |
+| `asset_infos` | [AssetInfo; 2] | Information about the two assets to create the pair with |
+| `pool_fees`   | PoolFee        | Pool fees for the given pair                             |
+
 ### Migrate pair
 
 Migrates a pool with the given address to the desired code id.
@@ -96,6 +113,11 @@ Migrates a pool with the given address to the desired code id.
   }
 }
 ```
+
+| Key        | Type         | Description                                     |
+| ---------- |--------------| ----------------------------------------------- |
+| `contract` | String       | Pair contract address to be migrated            |
+| `code_id`  | Option\<u64> | Code id for the pair contract to be migrated to |
 
 ### Remove pair
 
@@ -112,6 +134,10 @@ after the pool's liquidity has been withdrawn or migrated.
 }
 ```
 
+| Key            | Type   | Description                                                   |
+| -------------- | ------ | ------------------------------------------------------------- |
+| `pair_address` | String | Pair contract address to be removed from the factory registry |
+
 ### Update config
 
 Updates the configuration of the factory.
@@ -126,6 +152,13 @@ Updates the configuration of the factory.
   }
 }
 ```
+
+| Key                  | Type            | Description                                                                            |
+| -------------------- |-----------------| -------------------------------------------------------------------------------------- |
+| `owner`              | Option\<String> | New owner of the contract                                                              |
+| `fee_collector_addr` | Option\<String> | New fee collector address                                                              |
+| `token_code_id`      | Option\<u64>    | New code id for the token contract, used by the pair contract to create LP tokens from |
+| `pair_code_id`       | Option\<u64>    | New code id for the pair contract, used by the factory to create pools from            |
 
 ## Queries
 
@@ -142,7 +175,7 @@ Retrieves the configuration of the factory.
 ```
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (ConfigResponse)" %}
 ```json
 {
   "owner": "juno1...",
@@ -151,6 +184,15 @@ Retrieves the configuration of the factory.
   "token_code_id": 456
 }
 ```
+
+| Key                  | Type   | Description                    |
+| -------------------- | ------ | ------------------------------ |
+| `owner`              | String | Contract's owner address       |
+| `fee_collector_addr` | String | Fee collector contract address |
+| `pair_code_id`       | u64    | Code id for the pair contract  |
+| `token_code_id`      | u64    | Code id for the token contract |
+
+
 {% endtab %}
 {% endtabs %}
 
@@ -167,14 +209,25 @@ Retrieves the native token decimals for the given `denom`.
   }
 }
 ```
+
+| Key                  | Type   | Description                               |
+|----------------------| ------ |-------------------------------------------|
+| `denom`              | String | Native or IBC denom to query decimals for |
+
+
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (NativeTokenDecimalsResponse)" %}
 ```json
 {
   "decimals": 6
 }
 ```
+
+| Key        | Type | Description                                      |
+| ---------- | ---- | ------------------------------------------------ |
+| `decimals` | u8   | Native or IBC denom decimals for the given denom |
+
 {% endtab %}
 {% endtabs %}
 
@@ -202,9 +255,14 @@ Retrieves pool information for a given pair.
   }
 }
 ```
+
+| Key           | Type           | Description                                    |
+| ------------- | -------------- | ---------------------------------------------- |
+| `asset_infos` | [AssetInfo; 2] | Asset info for the pair to retrieve info about |
+
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (PairInfo)" %}
 ```json
 {
   "asset_infos": [
@@ -227,6 +285,14 @@ Retrieves pool information for a given pair.
   ]
 }
 ```
+
+| Key               | Type           | Description                             |
+| ----------------- | -------------- | --------------------------------------- |
+| `asset_infos`     | [AssetInfo; 2] | Asset infos for the pair                |
+| `contract_addr`   | String         | Pair contract address                   |
+| `liquidity_token` | String         | LP token contract address for the pair  |
+| `asset_decimals`  | [u8; 2]        | Decimals for the assets within the pool |
+
 {% endtab %}
 {% endtabs %}
 
@@ -256,9 +322,15 @@ limit for the query is `10`, while the maximum is `30`.
   }
 }
 ```
+
+| Key           | Type                    | Description                                                    |
+| ------------- |-------------------------| -------------------------------------------------------------- |
+| `start_after` | Option\<[AssetInfo; 2]> | Asset infos to start fetching from (when pagination is needed) |
+| `limit`       | Option\<u32>            | How many items to fetch at once. Default is `10`, max `30`     |
+
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (PairsResponse)" %}
 ```json
 {
   "pairs": [
@@ -305,5 +377,10 @@ limit for the query is `10`, while the maximum is `30`.
   ]
 }
 ```
+
+| Key     | Type           | Description                                       |
+|---------|----------------|---------------------------------------------------|
+| `pairs` | Vec\<PairInfo> | Vector with information about the requested pairs |
+
 {% endtab %}
 {% endtabs %}
