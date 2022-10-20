@@ -155,13 +155,18 @@ Retrieves the configuration of the contract in a `Config` response.
 
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (ConfigResponse)" %}
 
 ```json
 {
   "owner": "terra1..."
 }
 ```
+
+| Key     | Type | Description          |
+| ------- |------|----------------------|
+| `owner` | Addr | Address of the owner |
+
 
 {% endtab %}
 {% endtabs %}
@@ -260,7 +265,7 @@ fees collected by a given pool or vault factory's children.
 
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (Vec<Asset>)" %}
 
 ```json
 [
@@ -273,7 +278,7 @@ fees collected by a given pool or vault factory's children.
     "amount": "250050890"
   },
   {
-    "info": {
+    "Asset": {
       "token": {
         "contract_addr": "terra1..."
       }
@@ -290,6 +295,11 @@ fees collected by a given pool or vault factory's children.
   }
 ]
 ```
+
+| Key      | Type      | Description                                                   |
+| -------- | --------- | ------------------------------------------------------------- |
+| `info`   | AssetInfo | Enum specifying whether the asset is native/ibc or cw20 token |
+| `amount` | Uint128   | Asset amount                                                  |
 
 {% endtab %}
 {% endtabs %}
