@@ -67,9 +67,9 @@ Collects the fees accrued by the pools or vaults. It can be triggered in differe
 ```
 
 | Key                | Type           | Description                                                      |
-| ------------------ | -------------- |------------------------------------------------------------------|
+| ------------------ |----------------|------------------------------------------------------------------|
 | `collect_fees_for` | CollectFeesFor | Enum specifiying to collect fees for either Contracts or Factory |
-| `contracts`        | Vec<Contract>  | Contracts to collect fees from                                   |
+| `contracts`        | Vec\<Contract> | Contracts to collect fees from                                   |
 
 {% endtab %}
 
@@ -134,9 +134,9 @@ Updates the configuration of the fee collector.
 }
 ```
 
-| Key     | Type           | Description               |
-| ------- | -------------- | ------------------------- |
-| `owner` | Option<String> | New owner of the contract |
+| Key     | Type            | Description               |
+| ------- |-----------------| ------------------------- |
+| `owner` | Option\<String> | New owner of the contract |
 
 ## Queries
 
@@ -200,11 +200,11 @@ fees collected by a given pool or vault factory's children.
 }
 ```
 
-| Key              | Type          | Description                                                   |
-| ---------------- | ------------- | ------------------------------------------------------------- |
-| `query_fees_for` | QueryFeesFor  | Enum specifying to query fees for either Contracts or Factory |
-| `contracts`      | Vec<Contract> | Contracts to query fees from                                  |
-| `all_time`       | Option<bool>  | New owner of the contract                                     |
+| Key              | Type           | Description                                                                                                                                                                                                                      |
+| ---------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `query_fees_for` | QueryFeesFor   | Enum specifying to query fees for either Contracts or Factory                                                                                                                                                                    |
+| `contracts`      | Vec\<Contract> | Contracts to query fees from                                                                                                                                                                                                     |
+| `all_time`       | Option\<bool>  | If `true`, it will return the fees collected since the inception of the pool/vault. On the other hand, if `false`, only the fees that has been accrued by the pool/vault but not collected by the fee collector will be returned |
 
 {% endtab %}
 
@@ -226,11 +226,11 @@ fees collected by a given pool or vault factory's children.
 }
 ```
 
-| Key              | Type         | Description                                                   |
-|------------------|--------------|---------------------------------------------------------------|
-| `query_fees_for` | QueryFeesFor | Enum specifying to query fees for either Contracts or Factory |
-| `factory`        | Factory      | Factory data to query fees from                               |
-| `all_time`       | Option<bool> | New owner of the contract                                     |
+| Key              | Type          | Description                                                                                                                                                                                                                      |
+| ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `query_fees_for` | QueryFeesFor  | Enum specifying to query fees for either Contracts or Factory                                                                                                                                                                    |
+| `factory`        | Factory       | Factory data to query fees from                                                                                                                                                                                                  |
+| `all_time`       | Option\<bool> | If `true`, it will return the fees collected since the inception of the pool/vault. On the other hand, if `false`, only the fees that has been accrued by the pool/vault but not collected by the fee collector will be returned |
 
 {% endtab %}
 
@@ -252,11 +252,11 @@ fees collected by a given pool or vault factory's children.
 }
 ```
 
-| Key              | Type         | Description                                                   |
-|------------------|--------------|---------------------------------------------------------------|
-| `query_fees_for` | QueryFeesFor | Enum specifying to query fees for either Contracts or Factory |
-| `factory`        | Factory      | Factory data to query fees from                               |
-| `all_time`       | Option<bool> | New owner of the contract                                     |
+| Key              | Type          | Description                                                                                                                                                                                                                      |
+| ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `query_fees_for` | QueryFeesFor  | Enum specifying to query fees for either Contracts or Factory                                                                                                                                                                    |
+| `factory`        | Factory       | Factory data to query fees from                                                                                                                                                                                                  |
+| `all_time`       | Option\<bool> | If `true`, it will return the fees collected since the inception of the pool/vault. On the other hand, if `false`, only the fees that has been accrued by the pool/vault but not collected by the fee collector will be returned |
 
 {% endtab %}
 
