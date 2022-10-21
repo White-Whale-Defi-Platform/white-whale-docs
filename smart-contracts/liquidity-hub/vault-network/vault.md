@@ -78,6 +78,14 @@ Instantiates a vault. Includes providing information about the asset infos, toke
 {% endtab %}
 {% endtabs %}
 
+| Key                  | Type      | Description                                       |
+| -------------------- | --------- | ------------------------------------------------- |
+| `owner`              | String    | Contract owner address                            |
+| `asset_info`         | AssetInfo | The asset info the vault shoudl manage            |
+| `token_id`           | u64       | The code ID of the liquidity token to instantiate |
+| `vault_fees`         | VaultFee  | The fees used for the vault                       |
+| `fee_collector_addr` | String    | The address of the fee collector contract         |
+
 ## Migrate
 
 Migrates the vault contract.
@@ -101,6 +109,10 @@ of the deposited amount into the vault.
 }
 ```
 
+| Key      | Type    | Description                         |
+| -------- | ------- | ----------------------------------- |
+| `amount` | Uint128 | Amount to be deposited in the vault |
+
 ### Flashloan
 
 Performs a flash loan operation, executing the provided message. The `msg` is a message in base64 of the operation to be 
@@ -115,6 +127,13 @@ executed with the flash loan.
 }
 ```
 
+
+| Key                  | Type    | Description                                                   |
+|----------------------|---------|---------------------------------------------------------------|
+| `amount`             | Uint128 | Amount for the flash loan                                     |
+| `msg`                | Binary  | Message to be executed with the flash loan, encoded in base64 |
+
+
 ### Collect protocol fees
 
 Sends the accrued vault fees to the Fee Collector. This action can be triggered by anyone.
@@ -127,8 +146,8 @@ Sends the accrued vault fees to the Fee Collector. This action can be triggered 
 
 ### Callback
 
-This message triggers the `after_trade` function, which makes sure the borrowed funds plus vault fees are returned after 
-executing a flash loan. This message can only be called internally by the vault contract.
+This message triggers a `CallbackMsg` message, e.g. `AfterTrade` which makes sure the borrowed funds plus vault fees are 
+returned after executing a flash loan. This message can only be called internally by the vault contract.
 
 ```json
 {
@@ -140,6 +159,10 @@ executing a flash loan. This message can only be called internally by the vault 
   }
 }
 ```
+
+| Key           | Type                    | Description                                                                  |
+| ------------- | ----------------------- | ---------------------------------------------------------------------------- |
+| `after_trade` | CallbackMsg::AfterTrade | Callback parameters verified balances by the end of the flash loan execution |
 
 ### Update config
 
@@ -165,6 +188,16 @@ Updates the configuration of the vault.
 }
 ```
 
+| Key                      | Type              | Description                             |
+| ------------------------ | ----------------- | --------------------------------------- |
+| `flash_loan_enabled`     | Option\<bool>     | Toggle for the flash loan functionality |
+| `deposit_enabled`        | Option\<bool>     | Toggle for the deposit functionality    |
+| `withdraw_enabled`       | Option\<bool>     | Toggle for the withdraw functionality   |
+| `new_owner`              | Option\<String>   | New owner address                       |
+| `new_vault_fees`         | Option\<VaultFee> | New vault fees                          |
+| `new_fee_collector_addr` | Option\<String>   | New fee collector address               |
+
+
 ## Queries
 
 ### Config
@@ -180,7 +213,7 @@ Retrieves the configuration of the contract in a `Config` response.
 ```
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (Config)" %}
 ```json
 {
   "owner": "juno1...",
@@ -204,6 +237,19 @@ Retrieves the configuration of the contract in a `Config` response.
   }
 }
 ```
+
+| Key                  | Type      | Description                         |
+| -------------------- | --------- | ----------------------------------- |
+| `owner`              | Addr      | The owner of the vault              |
+| `asset_info`         | AssetInfo | The asset info the vault manages    |
+| `flash_loan_enabled` | bool      | If flash-loans are enabled          |
+| `deposit_enabled`    | bool      | If deposits are enabled             |
+| `withdraw_enabled`   | bool      | If withdrawals are enabled          |
+| `liquidity_token`    | Addr      | The address of the liquidity token  |
+| `fee_collector_addr` | Addr      | The address of the fee collector    |
+| `fees`               | VaultFee  | The fees associated with this vault |
+
+
 {% endtab %}
 {% endtabs %}
 
@@ -220,9 +266,14 @@ Retrieves the `Uint128` amount that must be sent back to the contract to pay off
   }
 }
 ```
+
+| Key      | Type    | Description                                                               |
+| -------- | ------- | ------------------------------------------------------------------------- |
+| `amount` | Uint128 | Amount that must be sent back to the contract to pay off a loan taken out |
+
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (PaybackAmountResponse)" %}
 ```json
 {
   "payback_amount": "10030",
@@ -230,6 +281,13 @@ Retrieves the `Uint128` amount that must be sent back to the contract to pay off
   "flash_loan_fee": "20"
 }
 ```
+
+| Key              | Type    | Description                                                                                        |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------- |
+| `payback_amount` | Uint128 | The total amount that must be returned. Equivalent to `amount` + `protocol_fee` + `flash_loan_fee` |
+| `protocol_fee`   | Uint128 | The amount of fee paid to the protocol                                                             |
+| `flash_loan_fee` | Uint128 | The amount of fee paid to vault holders                                                            |
+
 {% endtab %}
 {% endtabs %}
 
@@ -248,9 +306,15 @@ the vault but not collected by the fee collector will be returned.
   }
 }
 ```
+
+| Key        | Type | Description                                        |
+| ---------- | ---- | -------------------------------------------------- |
+| `all_time` | bool | If `true`, will return the all time collected fees |
+
+
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (ProtocolFeesResponse)" %}
 ```json
 {
   "fees": {
@@ -263,6 +327,12 @@ the vault but not collected by the fee collector will be returned.
   }
 }
 ```
+
+| Key    | Type  | Description                      |
+| ------ | ----- | -------------------------------- |
+| `fees` | Asset | Fees collected accrued the vault |
+
+
 {% endtab %}
 {% endtabs %}
 
@@ -279,13 +349,24 @@ Retrieves the share of the assets stored in the vault that a given `amount` of l
   }
 }
 ```
+
+| Key      | Type    | Description                                                                  |
+|----------|---------|------------------------------------------------------------------------------|
+| `amount` | Uint128 | Amount of LP tokens to calculate the share of the assets stored in the vault |
+
+
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (Uint128)" %}
 ```json
 {
   "data": "10002558"
 }
 ```
+
+| Key    | Type    | Description                                                                                 |
+|--------|---------|---------------------------------------------------------------------------------------------|
+| `data` | Uint128 | The share of assets sotred in the vault that the given `amount` of LP tokens is entitled to |
+
 {% endtab %}
 {% endtabs %}
