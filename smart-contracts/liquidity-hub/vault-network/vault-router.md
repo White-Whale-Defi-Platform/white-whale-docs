@@ -24,6 +24,11 @@ Instantiates the vault router.
 }
 ```
 
+| Key                  | Type   | Description                       |
+| -------------------- | ------ | --------------------------------- |
+| `owner`              | String | The owner of the router           |
+| `vault_factory_addr` | String | The address for the vault factory |
+
 ## Migrate
 
 Migrates the vault router.
@@ -64,6 +69,12 @@ and returning the profit to the sender.
   ]
 }
 ```
+
+| Key      | Type            | Description                                    |
+|----------|-----------------|------------------------------------------------|
+| `assets` | Vec\<Asset>     | Desired assets for the flash loan(s)           |
+| `msg`    | Vec\<CosmosMsg> | Messages to be executed with the flash loan(s) |
+
 
 ## Next loan
 
@@ -119,6 +130,14 @@ flash loan is being taken from. Cannot be called manually.
 }
 ```
 
+| Key             | Type                  | Description                                               |
+| --------------- | --------------------- | --------------------------------------------------------- |
+| `initiator`     | Addr                  | The address to pay back all profits to                    |
+| `source_vault`  | String                | The vault contract that calls the `NextLoan message       |
+| `payload`       | Vec\<CosmosMsg>       | The final message to run once all assets have been loaned |
+| `to_loan`       | Vec\<(String, Asset)> | The next loans to run                                     |
+| `loaned_assets` | Vec\<(String, Asset)> | The assets that have been loaned                          |
+
 ## Complete loan
 
 Completes the flash-loan by paying back all outstanding loans, and returning profits to the sender. This message is called 
@@ -147,6 +166,11 @@ internally by the vault router, cannot be called manually.
 }
 ```
 
+| Key             | Type                  | Description                                                                                                       |
+| --------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `initiator`     | Addr                  | The address to pay back all profits to                                                                            |
+| `loaned_assets` | Vec\<(String, Asset)> | A vec of tuples where the first value represents the vault address, and the second value represents the loan size |
+
 ## Update config
 
 Updates the configuration of the vault router.
@@ -157,6 +181,11 @@ Updates the configuration of the vault router.
   "vault_factory_addr": "juno1..."
 }
 ```
+
+| Key                  | Type            | Description               |
+|----------------------|-----------------|---------------------------|
+| `owner`              | Option\<String> | New owner of the router   |
+| `vault_factory_addr` | Option\<String> | New vault factory address |
 
 ## Queries
 
@@ -173,12 +202,18 @@ Retrieves the configuration of the vault router. Returns a `Config` struct.
 ```
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (Config)" %}
 ```json
 {
   "owner": "juno1...",
   "vault_factory": "juno1..."
 }
 ```
+
+| Key                  | Type | Description               |
+|----------------------|------|---------------------------|
+| `owner`              | Addr | New owner of the router   |
+| `vault_factory_addr` | Addr | New vault factory address |
+
 {% endtab %}
 {% endtabs %}
