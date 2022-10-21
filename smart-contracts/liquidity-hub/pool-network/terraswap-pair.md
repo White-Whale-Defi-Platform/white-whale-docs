@@ -70,6 +70,14 @@ Instantiates the pair.
 }
 ```
 
+| Key                  | Type           | Description                                                                         |
+| -------------------- | -------------- | ----------------------------------------------------------------------------------- |
+| `asset_infos`        | [AssetInfo; 2] | Information about the two assets                                                    |
+| `token_code_id`      | u64            | Code if for the token contract. Used by the factory to create the LP token contract |
+| `asset_decimals`     | [u8; 2]        | Decimal places for the given assets                                                 |
+| `pool_fees`          | PoolFee        | Pool fees for the given pair                                                        |
+| `fee_collector_addr` | String         | Fee collector contract address                                                      |
+
 ## Migrate
 
 Migrates a pair. This is to be triggered by the owner of the contract, i.e. the pool factory, via the `migrate_pair` message.
@@ -90,10 +98,13 @@ Sends the accrued protocol fees to the Fee Collector. This action can be trigger
 }
 ```
 
-### Provide liquidity native/ibc
+### Provide liquidity 
 
-Provides liquidity for a pool with native or ibc tokens.
+Provides liquidity to the pool. Note that in case of providing liquidity with a cw20 token, the message [increase_allowance](https://app.gitbook.com/o/fVZwd36itixTM6EMRcZt/s/PtAatYv3uVRxf7beAOPp/liquidity-hub/overview-1/terraswap-token#increase-allowance)
+should be called on the cw20 token contract before you can transfer cw20 tokens to the pool.
 
+{% tabs %}
+{% tab title="Native/IBC token" %}
 ```json
 {
   "provide_liquidity": {
@@ -114,16 +125,15 @@ Provides liquidity for a pool with native or ibc tokens.
         },
         "amount": "1000"
       }
-    ]
+    ],
+    "slippage_tolerance": "0.01",
+    "receiver": "receiver_addr"
   }
 }
 ```
+{% endtab %}
 
-### Provide liquidity cw20
-
-Provides liquidity for a pool with cw20 tokens. Note that the message [increase_allowance](https://app.gitbook.com/o/fVZwd36itixTM6EMRcZt/s/PtAatYv3uVRxf7beAOPp/liquidity-hub/overview-1/terraswap-token#increase-allowance) 
-should be called on the cw20 token before you can transfer cw20 tokens to the pool.
-
+{% tab title="cw20 token" %}
 ```json
 {
   "provide_liquidity": {
@@ -144,10 +154,21 @@ should be called on the cw20 token before you can transfer cw20 tokens to the po
         },
         "amount": "1000"
       }
-    ]
+    ],
+    "slippage_tolerance": "0.01",
+    "receiver": "receiver_addr"
   }
 }
 ```
+{% endtab %}
+{% endtabs %}
+
+| Key                  | Type             | Description                                                                                               |
+| -------------------- | ---------------- | --------------------------------------------------------------------------------------------------------- |
+| `assets`             | [Asset; 2]       | Assets to provide liquidity with                                                                          |
+| `slippage_tolerance` | Option\<Decimal> | If set, the transaction will suceed if the price in the pool moves less than the given slippage tolerance |
+| `receiver`           | Option\<String>  | Receiver address for the LP tokens in case it is different from the sender                                |
+
 
 ### Swap native
 
@@ -157,16 +178,26 @@ Swaps a native token.
 {
   "swap": {
     "offer_asset": {
-      "info" : {
+      "amount": "100000",
+      "info": {
         "native_token": {
           "denom": "ujuno"
         }
-      },
-      "amount": "1000"
-    }
+      }
+    },
+    "belief_price": "0.3524",
+    "max_spread": "0.05",
+    "to": "to_address"
   }
 }
 ```
+
+| Key            | Type             | Description                                                            |
+| -------------- | ---------------- | ---------------------------------------------------------------------- |
+| `offer_asset`  | Asset            | Asset to swap                                                          |
+| `belief_price` | Option\<Decimal> | Belief price of the asset                                              |
+| `max_spread`   | Option\<Decimal> | Max desired spread to perform the swap with                            |
+| `to`           | Option\<String>  | Receiver address for ask asset in case it is different from the sender |
 
 ### Swap cw20
 
@@ -193,12 +224,23 @@ where `ewog....fQp9` is the following message, encoded in base64:
         }
       },
       "amount": "1000"
-    }
+    },
+    "belief_price": "0.3524",
+    "max_spread": "0.05",
+    "to": "to_address"
   }
 }
 ```
 
 Note that `contract_addr` in the swap message is the cw20 token address to be swapped.
+
+| Key            | Type             | Description                                                            |
+| -------------- | ---------------- | ---------------------------------------------------------------------- |
+| `offer_asset`  | Asset            | Asset to swap                                                          |
+| `belief_price` | Option\<Decimal> | Belief price of the asset                                              |
+| `max_spread`   | Option\<Decimal> | Max desired spread to perform the swap with                            |
+| `to`           | Option\<String>  | Receiver address for ask asset in case it is different from the sender |
+
 
 ### Update config
 
@@ -226,6 +268,13 @@ Updates the configuration of the pool.
 }
 ```
 
+| Key                  | Type                   | Description                                                                          |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------ |
+| `owner`              | Option\<String>        | New owner of the contract                                                            |
+| `fee_collector_addr` | Option\<String>        | New fee collector address                                                            |
+| `pool_fees`          | Option\<PoolFee>       | New pool fees                                                                        |
+| `feature_toggle`     | Option\<FeatureToggle> | If set, toggles features on/off based on the parameters specified in `FeatureToggle` |
+
 ### Withdraw
 
 Withdraws liquidity from the pool. This message is to be sent to the cw20 token contract address.
@@ -239,6 +288,12 @@ Withdraws liquidity from the pool. This message is to be sent to the cw20 token 
   },
 }
 ```
+
+| Key        | Type    | Description                   |
+| ---------- | ------- | ----------------------------- |
+| `contract` | String  | Contract to send the `msg` to |
+| `amount`   | Uint128 | Amount of tokens to be sent   |
+| `msg`      | Binary  | Encoded message in base64     |
 
 where `ewogICJ3...kiOiB7fQp9` is the `withdraw_liquidity` message, encoded in base64:
 
@@ -263,7 +318,7 @@ Retrieves the configuration of the pool.
 ```
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (ConfigResponse)" %}
 ```json
 {
   "owner": "juno1...",
@@ -283,6 +338,15 @@ Retrieves the configuration of the pool.
   }
 }
 ```
+
+| Key                  | Type          | Description                        |
+| -------------------- | ------------- | ---------------------------------- |
+| `owner`              | Addr          | The contract's owner               |
+| `fee_collector_addr` | Addr          | The fee collector contract address |
+| `pool_fees`          | PoolFee       | Pool fees                          |
+| `feature_toggle`     | FeatureToggle | Settings for the feature toggle    |
+
+
 {% endtab %}
 {% endtabs %}
 
@@ -299,7 +363,7 @@ Retrieves information of the pool pair.
 ```
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (PairInfo)" %}
 ```json
 {
   "asset_infos": [
@@ -322,6 +386,15 @@ Retrieves information of the pool pair.
   ]
 }
 ```
+
+| Key               | Type           | Description                             |
+| ----------------- | -------------- | --------------------------------------- |
+| `asset_infos`     | [AssetInfo; 2] | Asset infos for the pair                |
+| `contract_addr`   | String         | Pair contract address                   |
+| `liquidity_token` | String         | LP token contract address for the pair  |
+| `asset_decimals`  | [u8; 2]        | Decimals for the assets within the pool |
+
+
 {% endtab %}
 {% endtabs %}
 
@@ -338,7 +411,7 @@ Retrieves information about the pool, i.e. liquidity provided, asset infos and t
 ```
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (PoolResponse)" %}
 ```json
 {
   "assets": [
@@ -362,6 +435,13 @@ Retrieves information about the pool, i.e. liquidity provided, asset infos and t
   "total_share": "1720147158"
 }
 ```
+
+| Key           | Type       | Description                         |
+| ------------- | ---------- | ----------------------------------- |
+| `assets`      | [Asset; 2] | Assets within the pool              |
+| `total_share` | Uint128    | Total supply of the pool's LP token |
+
+
 {% endtab %}
 {% endtabs %}
 
@@ -370,6 +450,8 @@ Retrieves information about the pool, i.e. liquidity provided, asset infos and t
 Retrieves the protocol fees on the pool. If `all_time` is `true`, it will return the fees collected since
 the inception of the pool. On the other hand, if `all_time` is set to `false`, only the fees that has been accrued by
 the pool but not collected by the fee collector will be returned.
+
+Alternatively, if `asset_id` is set the accrued fees (non collected) for that specific asset will be returned.
 
 {% tabs %}
 {% tab title="Query" %}
@@ -381,9 +463,16 @@ the pool but not collected by the fee collector will be returned.
   }
 }
 ```
+
+| Key        | Type            | Description                                    |
+| ---------- | --------------- | ---------------------------------------------- |
+| `asset_id` | Option\<String> | Asset id to return the protocol fees for       |
+| `all_time` | Option\<bool>   | Defines whether to return all time fees or not |
+
+
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (ProtocolFeesResponse)" %}
 ```json
 {
   "fees": [
@@ -398,6 +487,11 @@ the pool but not collected by the fee collector will be returned.
   ]
 }
 ```
+
+| Key    | Type        | Description                |
+| ------ | ----------- | -------------------------- |
+| `fees` | Vec\<Asset> | Fees collected by the pair |
+
 {% endtab %}
 {% endtabs %}
 
@@ -421,6 +515,12 @@ Performs a swap simulation for the given token.
   }
 }
 ```
+
+| Key           | Type  | Description                |
+| ------------- | ----- | -------------------------- |
+| `offer_asset` | Asset | Asset to simulate swap for |
+
+
 {% endtab %}
 
 {% tab title="Query (cw20 token)" %}
@@ -438,9 +538,15 @@ Performs a swap simulation for the given token.
   }
 }
 ```
+
+| Key           | Type  | Description                |
+| ------------- | ----- | -------------------------- |
+| `offer_asset` | Asset | Asset to simulate swap for |
+
+
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (SimulationResponse)" %}
 ```json
 {
   "return_amount": "206395",
@@ -449,6 +555,14 @@ Performs a swap simulation for the given token.
   "protocol_fee_amount": "207"
 }
 ```
+
+| Key                   | Type    | Description                                                          |
+| --------------------- | ------- | -------------------------------------------------------------------- |
+| `return_amount`       | Uint128 | Amount that would be delivered to the user after the swap            |
+| `spread_amount`       | Uint128 | Spread the swap would have                                           |
+| `swap_fee_amount`     | Uint128 | Swap fees amount that would be distributed among liquidity providers |
+| `protocol_fee_amount` | Uint128 | Protocol fees amount                                                 |
+
 {% endtab %}
 {% endtabs %}
 
@@ -472,6 +586,11 @@ Performs a reverse swap simulation, i.e. given the ask asset, how much of the of
   }
 }
 ```
+
+| Key         | Type  | Description                         |
+| ----------- | ----- | ----------------------------------- |
+| `ask_asset` | Asset | Desired asset to get after the swap |
+
 {% endtab %}
 
 {% tab title="Query (cw20 token)" %}
@@ -489,9 +608,15 @@ Performs a reverse swap simulation, i.e. given the ask asset, how much of the of
   }
 }
 ```
+
+| Key         | Type  | Description                         |
+| ----------- | ----- | ----------------------------------- |
+| `ask_asset` | Asset | Desired asset to get after the swap |
+
+
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (ReverseSimulationResponse)" %}
 ```json
 {
   "offer_amount": "207639",
@@ -500,5 +625,13 @@ Performs a reverse swap simulation, i.e. given the ask asset, how much of the of
   "protocol_fee_amount": "1"
 }
 ```
+
+| Key                   | Type    | Description                                                          |
+| --------------------- | ------- | -------------------------------------------------------------------- |
+| `offer_amount`        | Uint128 | Offer asset amount that is needed to get the given ask asset         |
+| `spread_amount`       | Uint128 | Spread the swap would have                                           |
+| `swap_fee_amount`     | Uint128 | Swap fees amount that would be distributed among liquidity providers |
+| `protocol_fee_amount` | Uint128 | Protocol fees amount                                                 |
+
 {% endtab %}
 {% endtabs %}
