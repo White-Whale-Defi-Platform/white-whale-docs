@@ -1,7 +1,7 @@
 # Table of contents
 
 * [👋 Welcome](README.md)
-* [Abstract](abstract.md)
+* [📜 Abstract](abstract.md)
 * [Migaloo's Vision](vision.md)
 * [Architecture](architecture.md)
 
