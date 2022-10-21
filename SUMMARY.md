@@ -2,8 +2,8 @@
 
 * [👋 Welcome](README.md)
 * [📜 Abstract](abstract.md)
-* [Migaloo's Vision](vision.md)
-* [Architecture](architecture.md)
+* [🚀 Migaloo's Vision](vision.md)
+* [🏗 Architecture](architecture.md)
 
 ## Smart Contracts
 
