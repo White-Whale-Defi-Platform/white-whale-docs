@@ -22,6 +22,11 @@ Instantiates the router. Requires to have instantiated the factory first.
 }
 ```
 
+| Key                 | Type   | Description                           |
+| ------------------- | ------ | ------------------------------------- |
+| `terraswap_factory` | String | Contract address for the pool factory |
+
+
 ## Migrate
 
 Migrates the router.
@@ -34,7 +39,7 @@ Migrates the router.
 
 ### Asset minimum receive
 
-Checks whether the ask amount is equal to or above a minimum amount.
+Checks whether the amount returned after the swap exceeds the `minimum_receive` amount. Internally called by the router.
 
 ```json
 {
@@ -50,6 +55,13 @@ Checks whether the ask amount is equal to or above a minimum amount.
   }
 }
 ```
+
+| Key               | Type      | Description                                  |
+| ----------------- | --------- | -------------------------------------------- |
+| `asset_info`      | AssetInfo | Asset info to perform the validation with    |
+| `prev_balance`    | Uint128   | Receivers balance before the swap            |
+| `minimum_receive` | Uint128   | Minimum amount to be received after the swap |
+| `receiver`        | String    | Receiver address for the swap                |
 
 ### Swap Operations
 
@@ -94,6 +106,12 @@ Executes swap operations. It can be a multi-hop swap as the example described ab
 }
 ```
 
+| Key               | Type                | Description                                              |
+|-------------------|---------------------|----------------------------------------------------------|
+| `operations`      | Vec\<SwapOperation> | Swap operations to be executed                           |
+| `minimum_receive` | Option\<Uint128>    | Minimum desired amount to be received after the swap     |
+| `to`              | Option\<String>     | Receiver address in case it is different from the sender |
+
 ### Swap Operation
 
 Executes a swap operation. This is called internally by the contract itself.
@@ -120,6 +138,11 @@ Executes a swap operation. This is called internally by the contract itself.
 }
 ```
 
+| Key          | Type            | Description                                              |
+| ------------ | --------------- | -------------------------------------------------------- |
+| `operations` | SwapOperation   | Swap operation to be executed                            |
+| `to`         | Option\<String> | Receiver address in case it is different from the sender |
+
 ### Receive (Cw20ReceiveMsg)
 
 Receives a `Cw20ReceiveMsg` message, being the only valid message `ExecuteSwapOperations`, used to execute swap operations 
@@ -134,6 +157,12 @@ when the token to be swapped is a cw20 token.
   }
 }
 ```
+
+| Key        | Type    | Description                   |
+| ---------- | ------- | ----------------------------- |
+| `contract` | String  | Contract to send the `msg` to |
+| `amount`   | Uint128 | Amount of tokens to be sent   |
+| `msg`      | Binary  | Encoded message in base64     |
 
 where `ewogI...7fQp9` is the `ExecuteSwapOperations` message, encoded in base64.
 
@@ -152,12 +181,17 @@ Retrieves the configuration of the router contract.
 ```
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (ConfigResponse)" %}
 ```json
 {
   "terraswap_factory": "juno1..."
 }
 ```
+
+| Key                 | Type   | Description                   |
+| ------------------- | ------ | ----------------------------- |
+| `terraswap_factory` | String | Pool factory contract address |
+
 {% endtab %}
 {% endtabs %}
 
@@ -204,14 +238,26 @@ Performs a simulation for swap operations.
   }
 }
 ```
+
+| Key            | Type                | Description                                  |
+| -------------- | ------------------- | -------------------------------------------- |
+| `offer_amount` | Uint128             | Offer asset amount to simulate the swap with |
+| `operations`   | Vec\<SwapOperation> | Swap operations to be simulated              |
+
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (SimulateSwapOperationsResponse)" %}
 ```json
 {
   "amount": "5000"
 }
 ```
+
+| Key      | Type    | Description                                            |
+| -------- | ------- | ------------------------------------------------------ |
+| `amount` | Uint128 | Ask asset amount that would be returned after the swap |
+
+
 {% endtab %}
 {% endtabs %}
 
@@ -260,13 +306,25 @@ the swap.
   }
 }
 ```
+
+| Key          | Type                | Description                                |
+| ------------ | ------------------- | ------------------------------------------ |
+| `ask_amount` | Uint128             | Ask asset amount to simulate the swap with |
+| `operations` | Vec\<SwapOperation> | Swap operations to be simulated            |
+
 {% endtab %}
 
-{% tab title="Response" %}
+{% tab title="Response (SimulateSwapOperationsResponse)" %}
 ```json
 {
   "amount": "5000"
 }
 ```
+
+| Key      | Type    | Description                                            |
+| -------- | ------- | ------------------------------------------------------ |
+| `amount` | Uint128 | Ask asset amount that would be returned after the swap |
+
+
 {% endtab %}
 {% endtabs %}
