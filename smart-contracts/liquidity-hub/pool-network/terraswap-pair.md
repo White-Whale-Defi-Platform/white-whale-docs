@@ -304,7 +304,7 @@ Withdraws liquidity from the pool. This message is to be sent to the cw20 token 
     "contract": "pool_contract_address",
     "amount": "1000",
     "msg": "ewogICJ3aXRoZHJhd19saXF1aWRpdHkiOiB7fQp9"
-  },
+  }
 }
 ```
 
