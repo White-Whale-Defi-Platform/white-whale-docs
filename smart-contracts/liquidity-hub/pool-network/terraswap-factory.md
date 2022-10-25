@@ -160,6 +160,40 @@ Updates the configuration of the factory.
 | `token_code_id`      | Option\<u64>    | New code id for the token contract, used by the pair contract to create LP tokens from |
 | `pair_code_id`       | Option\<u64>    | New code id for the pair contract, used by the factory to create pools from            |
 
+### Update pair config
+
+Updates the configuration of the pair created by the factory.
+
+```json
+{
+  "update_pair_config": {
+    "pair_addr": "pair_contract_addr",
+    "fee_collector_addr": "fee_collector_addr",
+    "pool_fees": {
+      "protocol_fee": {
+        "share": "0.001"
+      },
+      "swap_fee": {
+        "share": "0.002"
+      }
+    },
+    "feature_toggle": {
+      "withdrawals_enabled": true,
+      "deposits_enabled": true,
+      "swaps_enabled": true
+    }
+  }
+}
+```
+
+| Key                  | Type                   | Description                                |
+| -------------------- | ---------------------- | ------------------------------------------ |
+| `pair_addr`          | String                 | Pair contract address to update the config |
+| `owner`              | Option\<String>        | New owner address                          |
+| `fee_collector_addr` | Option\<String>        | New fee collector address                  |
+| `pool_fees`          | Option\<PoolFee>       | New pool fees                              |
+| `feature_toggle`     | Option\<FeatureToggle> | New feature toggle options for the pool    |
+
 ## Queries
 
 ### Config
