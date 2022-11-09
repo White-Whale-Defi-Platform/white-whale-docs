@@ -9,6 +9,10 @@
 
 * [🖼 Overview](smart-contracts/overview.md)
 * [📚 Common Types](smart-contracts/common-types/overview.md)
+* 🌐 Deployments
+  * [🐶 Chihuahua](smart-contracts/deployments/chihuahua.md)
+  * [🗽 Juno](smart-contracts/deployments/juno.md)
+  * [🌕 Terra](smart-contracts/deployments/terra.md)
 
 ## Liquidity Hub
 
