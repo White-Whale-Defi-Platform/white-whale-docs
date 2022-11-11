@@ -4,6 +4,7 @@
 * [📜 Abstract](abstract.md)
 * [🚀 Migaloo's Vision](vision.md)
 * [🌉 Architecture](architecture.md)
+* [🐞 Bug Bounty Program](bug-bounty-program.md)
 
 ## Smart Contracts
 
