@@ -198,6 +198,37 @@ Updates the configuration of the vault.
 | `new_fee_collector_addr` | Option\<String>   | New fee collector address               |
 
 
+### Withdraw
+
+To withdraw from the vault, the user must burn the LP tokens they hold. To do that, the `Send` message from the cw20 
+token contract should be used together with the `Cw20HookMsg::Withdraw` message. 
+
+The following should be sent to the LP (CW20 token) contract.
+
+```json
+{
+  "send": {
+    "contract": "vault_contract",
+    "amount": "1000",
+    "msg": "ewogICJ3aXRoZHJhdyI6IHt9Cn0="
+  }
+}
+```
+
+where `ewogICJ3aXRoZHJhdyI6IHt9Cn0=` is the base64 encoded message:
+
+```json
+{
+  "withdraw": {}
+}
+```
+
+| Key        | Type   | Description                         |
+| ---------- | ------ | ----------------------------------- |
+| `contract` | String | Vault contract address              |
+| `amount`   | String | Amount of LP tokens to be withdrawn |
+| `msg`      | Binary | The `Cw20HookMsg::Withdraw` message |
+
 ## Queries
 
 ### Config

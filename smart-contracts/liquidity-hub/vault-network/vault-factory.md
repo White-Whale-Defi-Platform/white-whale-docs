@@ -1,10 +1,13 @@
 # Vault Factory
 
-The vault factory contract is used to create vaults. Similarly to the pool factory, the vault factory acts as a 
-directory for the vaults that have been created through the factory. Note that **the vault factory is permissioned**, meaning 
+The vault factory contract is used to create vaults. Similarly to the pool factory, the vault factory acts as a
+directory for the vaults that have been created through the factory. Note that **the vault factory is permissioned**,
+meaning
 the messages can only be executed by the owner of the contract.
 
-The code for the vault factory contract can be found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/vault-network/vault_factory).
+The code for the vault factory contract can be
+found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/vault-network/vault_factory)
+.
 
 ---
 
@@ -12,7 +15,7 @@ The following are the messages that can be executed on the vault factory:
 
 ## Instantiate
 
-Instantiates the vault factory. Requires storing the vault and token contracts in advance so that the contract code ids 
+Instantiates the vault factory. Requires storing the vault and token contracts in advance so that the contract code ids
 can be provided.
 
 ```json
@@ -47,9 +50,10 @@ Creates a vault. Includes token info and vault fees.
 
 {% tabs %}
 {% tab title="Native/IBC token" %}
+
 ```json
 {
-  "create_vault" : {
+  "create_vault": {
     "asset_info": {
       "native_token": {
         "denom": "uluna"
@@ -67,12 +71,14 @@ Creates a vault. Includes token info and vault fees.
 }
 
 ```
+
 {% endtab %}
 
 {% tab title="CW20 token" %}
+
 ```json
 {
-  "create_vault" : {
+  "create_vault": {
     "asset_info": {
       "token": {
         "contract_addr": "inj1..."
@@ -89,19 +95,19 @@ Creates a vault. Includes token info and vault fees.
   }
 }
 ```
+
 {% endtab %}
 {% endtabs %}
-
 
 | Key          | Type      | Description                       |
 | ------------ | --------- | --------------------------------- |
 | `asset_info` | AssetInfo | Asset info to create a vault with |
 | `fees`       | VaultFee  | Fees for the vault                |
 
-
 ### Migrate vaults
 
-Migrates vault contracts to the given vault code id. If `vault_addr` is provided, the message migrates only that given vault. 
+Migrates vault contracts to the given vault code id. If `vault_addr` is provided, the message migrates only that given
+vault.
 Otherwise, it migrates all the vaults created by the factory.
 
 ```json
@@ -140,6 +146,48 @@ Updates the configuration of the vault factory.
 | `vault_id`           | Option\<u64>    | New code id for creating vault contracts with |
 | `token_id`           | Option\<u64>    | New code id for the token contract            |
 
+### Remove vault
+
+Removes a vault from the factory's registry.
+
+{% tabs %}
+{% tab title="Native token Vault" %}
+
+```json
+{
+  "remove_vault": {
+    "asset_info": {
+      "native_token": {
+        "denom": "uluna"
+      }
+    }
+  }
+}
+```
+
+{% endtab %}
+
+{% tab title="CW20 token Vault" %}
+
+```json
+{
+  "remove_vault": {
+    "asset_info": {
+      "token": {
+        "contract_addr": "terra1..."
+      }
+    }
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+| Key          | Type      | Description                               |
+| ------------ | --------- | ----------------------------------------- |
+| `asset_info` | AssetInfo | The asset_info of the vault to be removed |
+
 ### Update vault config
 
 Updates the configuration of the given vault with the provided `UpdateConfigParams`.
@@ -149,11 +197,11 @@ Updates the configuration of the given vault with the provided `UpdateConfigPara
   "update_vault_config": {
     "vault_addr": "inj1...",
     "params": {
-      "flash_loan_enabled" : true,
-      "deposit_enabled" : true,
-      "withdraw_enabled" : true,
-      "new_owner" : "inj1...",
-      "new_vault_fees" : {
+      "flash_loan_enabled": true,
+      "deposit_enabled": true,
+      "withdraw_enabled": true,
+      "new_owner": "inj1...",
+      "new_vault_fees": {
         "protocol_fee": {
           "share": "0.02"
         },
@@ -161,7 +209,7 @@ Updates the configuration of the given vault with the provided `UpdateConfigPara
           "share": "0.03"
         }
       },
-      "new_fee_collector_addr" : "inj1..."
+      "new_fee_collector_addr": "inj1..."
     }
   }
 }
@@ -172,7 +220,6 @@ Updates the configuration of the given vault with the provided `UpdateConfigPara
 | `vault_addr` | String             | Vault address                        |
 | `params`     | UpdateConfigParams | Parameters to update the config with |
 
-
 ## Queries
 
 ### Config
@@ -181,14 +228,17 @@ Retrieves the configuration of the contract in a `Config` response.
 
 {% tabs %}
 {% tab title="Query" %}
+
 ```json
 {
   "config": {}
 }
 ```
+
 {% endtab %}
 
 {% tab title="Response (Config)" %}
+
 ```json
 {
   "owner": "inj1...",
@@ -205,7 +255,6 @@ Retrieves the configuration of the contract in a `Config` response.
 | `token_id`           | u64  | Code id for the token contract |
 | `fee_collector_addr` | Addr | Fee collector address          |
 
-
 {% endtab %}
 {% endtabs %}
 
@@ -215,6 +264,7 @@ Retrieves the vault address given the `AssetInfo`.
 
 {% tabs %}
 {% tab title="Query (native/IBC token)" %}
+
 ```json
 {
   "vault": {
@@ -231,10 +281,10 @@ Retrieves the vault address given the `AssetInfo`.
 | ------------ | --------- | -------------------------------------------------- |
 | `asset_info` | AssetInfo | Asset info of the vault to retrieve the address of |
 
-
 {% endtab %}
 
 {% tab title="Query (cw20 token)" %}
+
 ```json
 {
   "vault": {
@@ -251,10 +301,10 @@ Retrieves the vault address given the `AssetInfo`.
 | ------------ | --------- | -------------------------------------------------- |
 | `asset_info` | AssetInfo | Asset info of the vault to retrieve the address of |
 
-
 {% endtab %}
 
 {% tab title="Response (Option<String>)" %}
+
 ```json
 {
   "data": "juno1..."
@@ -265,7 +315,6 @@ Retrieves the vault address given the `AssetInfo`.
 |--------|-----------------|------------------------------------|
 | `data` | Option\<String> | Address of the vault, if it exists |
 
-
 {% endtab %}
 {% endtabs %}
 
@@ -275,6 +324,7 @@ Retrieves the addresses for all the vaults. Returns an `Option<Vec<String>>`.
 
 {% tabs %}
 {% tab title="Query" %}
+
 ```json
 {
   "vaults": {
@@ -298,6 +348,7 @@ Retrieves the addresses for all the vaults. Returns an `Option<Vec<String>>`.
 {% endtab %}
 
 {% tab title="Response (VaultsResponse)" %}
+
 ```json
 {
   "vaults": [
