@@ -19,6 +19,7 @@ Vulnerabilities that could dilute user or protocol rewards or fees:
 Based on the bug severity and complexity, White Whale will, at its sole discretion, grant the following rewards:
 - B-0: up to $5000
 - B-1: up to $2000
+
 A comprehensive and meaningful submission may positively impact the reward size and reduce the processing time. Code examples that describe the exploit or even the appropriate fix are especially welcome.
 
 
