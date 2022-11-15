@@ -21,7 +21,7 @@ Based on the bug severity and complexity, White Whale will, at its sole discreti
 - B-1: up to $2000
 
 ## Disclosure and Reporting 
-Bugs should be reported directly via email at info@whitewhale.com. All bounty hunters must abide by the following rules when reporting bugs to be eligible for rewards:
+Bugs should be reported directly via email at info@whitewhale.money. All bounty hunters must abide by the following rules when reporting bugs to be eligible for rewards:
 - Document the attack and create reproducible instructions in your submission.
 - Do not exploit the reported bug.
 - Do not publicize the vulnerability before the core contributors have rolled out a fix.
