@@ -97,34 +97,30 @@ flash loan is being taken from. Cannot be called manually.
       }
     ],
     "to_loan": [
-      (
-      {
-        "juno1..."
-      },
-      {
-        "info": {
-          "native_token": {
-            "denom": "ujuno"
-          }
-        },
-        "amount": "10000"
-      }
-      )
+      [
+        "juno1...",
+        {
+          "info":{
+            "native_token":{
+              "denom":"ujunox"
+            }
+          },
+          "amount":"10000"
+        }
+      ]
     ],
     "loaned_assets": [
-      (
-      {
-        "juno1..."
-      },
-      {
-        "info": {
-          "native_token": {
-            "denom": "ujuno"
-          }
-        },
-        "amount": "10000"
-      }
-      )
+      [
+        "juno1...",
+        {
+          "info":{
+            "native_token":{
+              "denom":"ujunox"
+            }
+          },
+          "amount":"10000"
+        }
+      ]
     ]
   }
 }
@@ -148,19 +144,17 @@ internally by the vault router, cannot be called manually.
   "complete_loan": {
     "initiator": "juno1...",
     "loaned_assets": [
-      (
-      {
-        "juno1..."
-      },
-      {
-        "info": {
-          "native_token": {
-            "denom": "ujuno"
-          }
-        },
-        "amount": "10000"
-      }
-      )
+      [
+        "juno1...",
+        {
+          "info":{
+            "native_token":{
+              "denom":"ujunox"
+            }
+          },
+          "amount":"10000"
+        }
+      ]
     ]
   }
 }
