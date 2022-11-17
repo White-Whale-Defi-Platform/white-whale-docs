@@ -1,5 +1,10 @@
 # Bug Bounty Program
-The White Whale Bug Bounty Program encourages developers and researchers to find and report bugs in the [Migaloo Core](https://github.com/White-Whale-Defi-Platform/migaloo-core), [Migaloo Front-End](https://github.com/White-Whale-Defi-Platform/migaloo-frontend), and [Migaloo Bots](https://github.com/White-Whale-Defi-Platform/migaloo-bots) repositories. Before reporting a bug, please read this document carefully!
+The White Whale Bug Bounty Program encourages developers and researchers to find and report bugs in the following repositories:
+- [Migaloo Core](https://github.com/White-Whale-Defi-Platform/migaloo-core)
+- [Migaloo Front-End](https://github.com/White-Whale-Defi-Platform/migaloo-frontend)
+- [Migaloo Bots](https://github.com/White-Whale-Defi-Platform/migaloo-bots)
+
+Before reporting a bug, please read this document carefully!
 
 ## Bounty Types
 The bug bounty program contains two types of bugs that vary in severity and bounty size.
@@ -24,7 +29,7 @@ A comprehensive and meaningful submission may positively impact the reward size 
 
 
 ## Disclosure and Reporting 
-Bugs should be reported directly via email at info@whitewhale.money. All bounty hunters must abide by the following rules when reporting bugs to be eligible for rewards:
+Bugs should be reported directly via email at security@whitewhale.money. All bounty hunters must abide by the following rules when reporting bugs to be eligible for rewards:
 - Document the attack and create reproducible instructions in your submission.
 - Do not exploit the reported bug.
 - Do not publicize the vulnerability before the core contributors have rolled out a fix.
