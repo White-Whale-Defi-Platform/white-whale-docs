@@ -232,19 +232,11 @@ Swaps a cw20 token. This message is to be sent to the cw20 token contract addres
 }
 ```
 
-where `ewog....fQp9` is the following message, encoded in base64:
+where `ewog....fQp9` is the `pair::Cw20HookMsg::Swap` message, encoded in base64:
 
 ```json
 {
   "swap": {
-    "offer_asset": {
-      "info" : {
-        "token": {
-          "contract_addr": "juno1..."
-        }
-      },
-      "amount": "1000"
-    },
     "belief_price": "0.3524",
     "max_spread": "0.05",
     "to": "to_address"
@@ -256,7 +248,6 @@ Note that `contract_addr` in the swap message is the cw20 token address to be sw
 
 | Key            | Type             | Description                                                            |
 | -------------- | ---------------- | ---------------------------------------------------------------------- |
-| `offer_asset`  | Asset            | Asset to swap                                                          |
 | `belief_price` | Option\<Decimal> | Belief price of the asset                                              |
 | `max_spread`   | Option\<Decimal> | Max desired spread to perform the swap with                            |
 | `to`           | Option\<String>  | Receiver address for ask asset in case it is different from the sender |
