@@ -11,8 +11,8 @@
     },
     {
       "wasm": "terraswap_factory.wasm",
-      "code_id": "113",
-      "version": "1.1.0",
+      "code_id": "120",
+      "version": "1.1.1",
       "contract_address": "chihuahua1s8ehad3r9wxyk08ls2nmz8mqh4vlfmaxd2nw0crxwh04t4l5je4s8ljv0j"
     },
     {
