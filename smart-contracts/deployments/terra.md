@@ -11,8 +11,8 @@
     },
     {
       "wasm": "terraswap_factory.wasm",
-      "code_id": "751",
-      "version": "1.1.0",
+      "code_id": "770",
+      "version": "1.1.1",
       "contract_address": "terra1f4cr4sr5eulp3f2us8unu6qv8a5rhjltqsg7ujjx6f2mrlqh923sljwhn3"
     },
     {
