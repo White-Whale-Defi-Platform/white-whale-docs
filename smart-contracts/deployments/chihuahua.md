@@ -67,14 +67,14 @@
     {
       "pair": "Huahua-Shiba",
       "label": "uhuahua-SHIB pair",
-      "contract": "chihuahua193zmm83x0h99resrcdlrsr72gz6xl538r8qp4460te2wdrlhzh0sfle595",
-      "lp_token": "chihuahua1xjj8j8r24fejlp8f65n40vgutl3d3ehq70g9tvyarss09z728w9svu4n3v"
+      "contract": "chihuahua1ncq4gg9c9du8u2jrp55dszxf00rr28m98q2n5sllwkmnsuxq4u6s2y2uu6",
+      "lp_token": "chihuahua1w650rr57pasw4mxhlmawmp49ljje26k4xsa2qrfzjs8qeq9tvuys0pv7yc"
     },
     {
       "pair": "Huahua-Wrapped Doge",
       "label": "uhuahua-WDOGE pair",
-      "contract": "chihuahua19jvhrkfkhd6qm7gkv94te24svjfavtnhxr6mf0hh9np3dxke4mcse7vsdw",
-      "lp_token": "chihuahua1h8ch6gu7nrq4nk8gatn7wj0gnn0f4nhuqd3xj5elpjr4g5mvmpmq7zn2dw"
+      "contract": "chihuahua1mqcyratr5xcmzr2t008skvh5zzfx8xuqgxnv6vvz5fqkas4vsgys3hzga0",
+      "lp_token": "chihuahua177qc0dufzlsytmlq7tx8s8mvjag062llr8ay53p3jnsm6y347qwqzzml96"
     }
   ],
   "date": "2022-09-29T20:50:49+0000",
