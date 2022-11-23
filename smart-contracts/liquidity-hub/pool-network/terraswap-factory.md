@@ -75,12 +75,12 @@ Creates a pool with the given assets and pool fees. If the pool already exists, 
     "asset_infos": [
       {
         "native_token": {
-          "denom": "ujuno"
+          "denom": "uluna"
         }
       },
       {
         "token": {
-          "contract_addr": "juno1..."
+          "contract_addr": "terra1..."
         }
       }
     ],
@@ -129,14 +129,25 @@ after the pool's liquidity has been withdrawn or migrated.
 ```json
 {
   "remove_pair": {
-    "pair_address": "pair_address"
+    "asset_infos": [
+      {
+        "native_token": {
+          "denom": "uluna"
+        }
+      },
+      {
+        "token": {
+          "contract_addr": "terra1..."
+        }
+      }
+    ]
   }
 }
 ```
 
-| Key            | Type   | Description                                                   |
-| -------------- | ------ | ------------------------------------------------------------- |
-| `pair_address` | String | Pair contract address to be removed from the factory registry |
+| Key           | Type           | Description                                                              |
+| ------------- | -------------- |--------------------------------------------------------------------------|
+| `asset_infos` | [AssetInfo; 2] | Asset infos of the Pair contract to be removed from the factory registry |
 
 ### Update config
 

@@ -227,24 +227,16 @@ Swaps a cw20 token. This message is to be sent to the cw20 token contract addres
   "send": {
     "contract": "pool_contract_address",
     "amount": "1000",
-    "msg": "ewogICJzd2FwIjogewogICAgIm9mZmVyX2Fzc2V0IjogewogICAgICAiaW5mbyIgOiB7CiAgICAgICAgInRva2VuIjogewogICAgICAgICAgImNvbnRyYWN0X2FkZHIiOiAianVubzEuLi4iCiAgICAgICAgfQogICAgICB9LAogICAgICAiYW1vdW50IjogIjEwMDAiCiAgICB9CiAgfQp9"
+    "msg": "ewogICJzd2FwIjogewogICAgImJlbGllZl9wcmljZSI6ICIwLjM1MjQiLAogICAgIm1heF9zcHJlYWQiOiAiMC4wNSIsCiAgICAidG8iOiAidG9fYWRkcmVzcyIKICB9Cn0="
   }
 }
 ```
 
-where `ewog....fQp9` is the following message, encoded in base64:
+where `ewogICJ...IKICB9Cn0=` is the following message, encoded in base64:
 
 ```json
 {
   "swap": {
-    "offer_asset": {
-      "info" : {
-        "token": {
-          "contract_addr": "juno1..."
-        }
-      },
-      "amount": "1000"
-    },
     "belief_price": "0.3524",
     "max_spread": "0.05",
     "to": "to_address"
@@ -256,7 +248,6 @@ Note that `contract_addr` in the swap message is the cw20 token address to be sw
 
 | Key            | Type             | Description                                                            |
 | -------------- | ---------------- | ---------------------------------------------------------------------- |
-| `offer_asset`  | Asset            | Asset to swap                                                          |
 | `belief_price` | Option\<Decimal> | Belief price of the asset                                              |
 | `max_spread`   | Option\<Decimal> | Max desired spread to perform the swap with                            |
 | `to`           | Option\<String>  | Receiver address for ask asset in case it is different from the sender |
