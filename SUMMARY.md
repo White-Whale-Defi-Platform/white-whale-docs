@@ -29,6 +29,7 @@
   * [🛡 Vault](smart-contracts/liquidity-hub/vault-network/vault.md)
   * [🔀 Vault Router](smart-contracts/liquidity-hub/vault-network/vault-router.md)
 
-## Bot Client Documentation
+## Client Documentation
 
+* [⚡ Calling Flashloans](client-docs/flashloan.md)
 * [🤖 Overview](bot-client-docs/overview.md)

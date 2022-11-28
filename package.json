@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "gitbook-plugin-mermaid-gb3": "^2.1.0"
+    "gitbook-plugin-mermaid-gb3": "^2.1.0",
+    "graceful-fs": "^4.2.4"
+  },
+  "devDependencies": {
+    "graceful-fs": "^4.2.4"
   }
 }
