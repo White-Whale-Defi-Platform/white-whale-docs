@@ -9,5 +9,63 @@ We will first briefly describe the message that a user needs to send to this fla
 ## Flashloan Router
 The flashloan router [contract](../smart-contracts/liquidity-hub/vault-network/vault-router.md) requires a specific ExecuteMsg to be executed properly, this Msg is called "Flashloan". The message is described briefly in [this](../smart-contracts/liquidity-hub/vault-network/vault-router.md#flashloan) section, however we will explain it with more details in this section. 
 
+As described in the Vault Router page, the Flashloan message has the following JSON format: 
+```json
+{
+  "assets": [
+    {
+      "info": {
+        "native_token": {
+          "denom": "ujuno"
+        }
+      },
+      "amount": "10000"
+    }
+  ],
+  "msgs": [
+    {
+      "wasm": {
+        "execute": {
+          "contract_addr": "juno1...",
+          "msg": "binary",
+          "funds": []
+        }
+      }
+    }
+  ]
+}
+```
+However, from a client side, the message we need to send requires one extra layer nested layer with the `flash_loan` label, which leads to:
+```json
+"flash_loan": {
+  "assets": [
+    {
+      "info": {
+        "native_token": {
+          "denom": "ujuno"
+        }
+      },
+      "amount": "10000"
+    }
+  ],
+  "msgs": [
+    {
+      "wasm": {
+        "execute": {
+          "contract_addr": "juno1...",
+          "msg": "binary",
+          "funds": []
+        }
+      }
+    }
+  ]
+}
+```
+The above message requires only two fields to be provided by the user: 
+| Key      | Type            | Description                                    |
+|----------|-----------------|------------------------------------------------|
+| `assets` | Vec\<Asset>     | A list/array of assets the user wants to borrow      |
+| `msg`    | Vec\<CosmosMsg> | A list/array of subsequent messages the contracts should perform given the borrowed funds |
 
-
+The `assets` field can hold assets of two types: a `native_token`, which are the chain's nativily known tokens/assets, or the `token` type, which are tokens/assets described by a CW20 smart contract deployment. Since these are not native to a chain, they need to be specified differently. 
+Each asset in the list of `assets` has to follow either one of the following formats, depending on whethere it is a native token or a CW20 token:
