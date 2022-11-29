@@ -75,6 +75,12 @@
       "label": "uhuahua-WDOGE pair",
       "contract": "chihuahua1mqcyratr5xcmzr2t008skvh5zzfx8xuqgxnv6vvz5fqkas4vsgys3hzga0",
       "lp_token": "chihuahua177qc0dufzlsytmlq7tx8s8mvjag062llr8ay53p3jnsm6y347qwqzzml96"
+    },
+    {
+      "pair": "Huahua-rHUAHUA",
+      "label": "uhuahua-rHUAHUA pair",
+      "contract": "chihuahua19du4llehge50k23pwwckj93lnvp9cyyer8ve9as663mz64nrhq9qn2gauk",
+      "lp_token": "chihuahua1v5yqf0jcw3hl8uc8ucug8fr98n45krwfl0k5ktxrevqpu3c60f7qsjys7v"
     }
   ],
   "date": "2022-09-29T20:50:49+0000",
