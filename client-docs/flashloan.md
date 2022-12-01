@@ -65,7 +65,38 @@ The above message requires only two fields to be provided by the user:
 | Key      | Type            | Description                                    |
 |----------|-----------------|------------------------------------------------|
 | `assets` | Vec\<Asset>     | A list/array of assets the user wants to borrow      |
-| `msg`    | Vec\<CosmosMsg> | A list/array of subsequent messages the contracts should perform given the borrowed funds |
+| `msgs`    | Vec\<CosmosMsg> | A list/array of subsequent messages the contracts should perform given the borrowed funds |
+### Assets field
+The `assets` field holds a list of `asset` types, which has the following structure, depending on whether the user wants to borrow a `native_token` (or IBC) of the chain or a `token`, which is a CW20 token:
 
-The `assets` field can hold assets of two types: a `native_token`, which are the chain's nativily known tokens/assets, or the `token` type, which are tokens/assets described by a CW20 smart contract deployment. Since these are not native to a chain, they need to be specified differently. 
+{% tabs %}
+{% tab title="Native/IBC token" %}
+```json
+"asset": {
+  "amount": "1000000", 
+  "info": {
+    "native_token":{
+      "denom": "ujuno"
+    }
+  }
+}
+```
+{% endtab %}
+{% tab title="CW20 token"%}
+```json
+"asset": {
+  "amount": "1000000", 
+  "info": {
+    "token":{
+      
+      "contract_addr": "juno12x12...." #the contract address of the CW20 token
+    }
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Msgs field
+can hold assets of two types: a `native_token`, which are the chain's nativily known tokens/assets, or the `token` type, which are tokens/assets described by a CW20 smart contract deployment. Since these are not native to a chain, they need to be specified differently. 
 Each asset in the list of `assets` has to follow either one of the following formats, depending on whethere it is a native token or a CW20 token:
