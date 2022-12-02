@@ -99,7 +99,9 @@ Migrates the vault contract.
 ### Deposit
 
 Deposits an amount of the vault's asset. The vault issues to the sender an amount of LP tokens proportional to the shares 
-of the deposited amount into the vault.
+of the deposited amount into the vault. Note that in case of depositing a cw20 token, the message 
+[increase\_allowance](terraswap-token.md#increase-allowance) should be called on the cw20 token contract before you can 
+transfer cw20 tokens to the vault.
 
 ```json
 {
