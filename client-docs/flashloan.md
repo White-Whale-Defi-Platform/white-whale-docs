@@ -66,7 +66,7 @@ The above message requires only two fields to be provided by the user:
 |----------|-----------------|------------------------------------------------|
 | `assets` | Vec\<Asset>     | A list/array of assets the user wants to borrow      |
 | `msgs`    | Vec\<CosmosMsg> | A list/array of subsequent messages the contracts should perform given the borrowed funds |
-### Assets field
+### `Assets` field
 The `assets` field holds a list of `asset` types, which has the following structure, depending on whether the user wants to borrow a `native_token` (or IBC) of the chain or a `token`, which is a CW20 token:
 
 {% tabs %}
@@ -97,6 +97,59 @@ The `assets` field holds a list of `asset` types, which has the following struct
 {% endtab %}
 {% endtabs %}
 
-### Msgs field
-can hold assets of two types: a `native_token`, which are the chain's nativily known tokens/assets, or the `token` type, which are tokens/assets described by a CW20 smart contract deployment. Since these are not native to a chain, they need to be specified differently. 
-Each asset in the list of `assets` has to follow either one of the following formats, depending on whethere it is a native token or a CW20 token:
+### `Msgs` field
+The Msgs holds all messages that the contract should execute sequentially. Meaning it will first execute the first message, then the second and so on. This gives the opportunity to use the results from the first message in the second message, which is really helpful in arbitrage for example. 
+Every entry in `Msgs` should have the following format: 
+```json
+      "wasm": {
+        "execute": {
+          "contract_addr": "juno1...",
+          "msg": "binary",
+          "funds": []
+        }
+      }
+```
+In which the user only has to change the lowest level fields: 
+| Key      | Type            | Description                                    |
+|----------|-----------------|------------------------------------------------|
+`contract_addr`|string|The address of the wasm contract on which the contacts has to perform `msg`
+`msg`|string|The base64 encoded message the contract needs to execute, see below for more details
+`funds`|array|The funds the contract needs to use to execute this message, see below for more details. 
+
+### `msg` field
+in the above table is required to be of type string and should represent the base64 encoded message the contract needs to execute. Below an example of a native swap on a AMM-pool: 
+```json
+{
+   "swap":{
+      "max_spread":"0.05",
+      "offer_asset":{
+         "amount":"29830392",
+         "info":{
+            "native_token":{
+               "denom":"uluna"
+            }
+         }
+      },
+      "belief_price":"0.649957"
+   }
+}
+```
+There's many tools available that are able to encode the above JSON format to base64 (like https://onlineasciitools.com/convert-ascii-to-base64) and it will lead to this base64 string: 
+```
+ewogICAic3dhcCI6ewogICAgICAibWF4X3NwcmVhZCI6IjAuMDUiLAogICAgICAib2ZmZXJfYXNz
+ZXQiOnsKICAgICAgICAgImFtb3VudCI6IjI5ODMwMzkyIiwKICAgICAgICAgImluZm8iOnsKICAg
+ICAgICAgICAgIm5hdGl2ZV90b2tlbiI6ewogICAgICAgICAgICAgICAiZGVub20iOiJ1bHVuYSIK
+ICAgICAgICAgICAgfQogICAgICAgICB9CiAgICAgIH0sCiAgICAgICJiZWxpZWZfcHJpY2UiOiIw
+LjY0OTk1NyIKICAgfQp9
+```
+This string should be used as the `msg` field. 
+### `funds` field
+The `funds` field should hold a list of assets that have to be used to perform `msg`, however, these assets are only linked to the `assets` field of the overall `flashloan` message. Meaning if we are going to use the flashloan assets on the first message, only the first message should have this `funds` field filled with the borrowed asset: 
+```json
+{
+  "amount":"29830392",
+  "denom":"uluna"
+}
+```
+As said it is possible to use the result of the first message in the second message and so on. This allowed for chained swaps to be executed sequentially with the previous message's result as input. 
+see [example](/client-docs/flashloan_example.md) for a full example.
