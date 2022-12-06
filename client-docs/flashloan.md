@@ -110,11 +110,11 @@ Every entry in `Msgs` should have the following format:
       }
 ```
 In which the user only has to change the lowest level fields: 
-| Key      | Type            | Description                                    |
-|----------|-----------------|------------------------------------------------|
-`contract_addr`|string|The address of the wasm contract on which the contacts has to perform `msg`
-`msg`|string|The base64 encoded message the contract needs to execute, see below for more details
-`funds`|array|The funds the contract needs to use to execute this message, see below for more details. 
+| Key             | Type   | Description                                                                              |
+| --------------- | ------ | ---------------------------------------------------------------------------------------- |
+| `contract_addr` | string | The address of the wasm contract on which the contacts has to perform `msg`              |
+| `msg`           | string | The base64 encoded message the contract needs to execute, see below for more details     |
+| `funds`         | array  | The funds the contract needs to use to execute this message, see below for more details. |
 
 ### `msg` field
 in the above table is required to be of type string and should represent the base64 encoded message the contract needs to execute. Below an example of a native swap on a AMM-pool: 
