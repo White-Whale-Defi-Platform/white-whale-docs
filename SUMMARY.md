@@ -1,33 +1,33 @@
 # Table of contents
 
-* [👋 Welcome](README.md)
-* [📜 Abstract](abstract.md)
-* [🚀 Migaloo's Vision](vision.md)
-* [🌉 Architecture](architecture.md)
-* [🐞 Bug Bounty Program](bug-bounty-program.md)
+* [👋 Welcome](./docs/general/README.md)
+* [📜 Abstract](./docs/general/abstract.md)
+* [🚀 Migaloo's Vision](./docs/general/vision.md)
+* [🌉 Architecture](./docs/general/architecture.md)
+* [🐞 Bug Bounty Program](./docs/general/bug-bounty-program.md)
 
 ## Smart Contracts
 
-* [🖼 Overview](smart-contracts/overview.md)
-* [📚 Common Types](smart-contracts/common-types/overview.md)
+* [🖼 Overview](./docs/smart-contracts/overview.md)
+* [📚 Common Types](./docs/smart-contracts/common-types/overview.md)
 * 🌐 Deployments
-  * [🐶 Chihuahua](smart-contracts/deployments/chihuahua.md)
-  * [🗽 Juno](smart-contracts/deployments/juno.md)
-  * [🌕 Terra](smart-contracts/deployments/terra.md)
+  * [🐶 Chihuahua](./docs/smart-contracts/deployments/chihuahua.md)
+  * [🗽 Juno](./docs/smart-contracts/deployments/juno.md)
+  * [🌕 Terra](./docs/smart-contracts/deployments/terra.md)
 
-## Liquidity Hub
+### Liquidity Hub
 
-* [🖼 Overview](smart-contracts/liquidity-hub/overview.md)
-* [🪄 Fee Collector](smart-contracts/liquidity-hub/fee-collector.md)
-* [💱 Pool Network](smart-contracts/liquidity-hub/pool-network/overview.md)
-  * [🏭 Factory](smart-contracts/liquidity-hub/pool-network/terraswap-factory.md)
-  * [💱 Pair](smart-contracts/liquidity-hub/pool-network/terraswap-pair.md)
-  * [🔀 Router](smart-contracts/liquidity-hub/pool-network/terraswap-router.md)
-  * [🪙 Token](smart-contracts/liquidity-hub/pool-network/terraswap-token.md)
-* [🏦 Vault Network](smart-contracts/liquidity-hub/vault-network/overview.md)
-  * [🏭 Vault Factory](smart-contracts/liquidity-hub/vault-network/vault-factory.md)
-  * [🛡 Vault](smart-contracts/liquidity-hub/vault-network/vault.md)
-  * [🔀 Vault Router](smart-contracts/liquidity-hub/vault-network/vault-router.md)
+* [🖼 Overview](./docs/smart-contracts/liquidity-hub/overview.md)
+* [🪄 Fee Collector](./docs/smart-contracts/liquidity-hub/fee-collector.md)
+* [💱 Pool Network](./docs/smart-contracts/liquidity-hub/pool-network/overview.md)
+  * [🏭 Factory](./docs/smart-contracts/liquidity-hub/pool-network/terraswap-factory.md)
+  * [💱 Pair](./docs/smart-contracts/liquidity-hub/pool-network/terraswap-pair.md)
+  * [🔀 Router](./docs/smart-contracts/liquidity-hub/pool-network/terraswap-router.md)
+  * [🪙 Token](./docs/smart-contracts/liquidity-hub/pool-network/terraswap-token.md)
+* [🏦 Vault Network](./docs/smart-contracts/liquidity-hub/vault-network/overview.md)
+  * [🏭 Vault Factory](./docs/smart-contracts/liquidity-hub/vault-network/vault-factory.md)
+  * [🛡 Vault](./docs/smart-contracts/liquidity-hub/vault-network/vault.md)
+  * [🔀 Vault Router](./docs/smart-contracts/liquidity-hub/vault-network/vault-router.md)
 
 ## Bot Client Documentation
 
