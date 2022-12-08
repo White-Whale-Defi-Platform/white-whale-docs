@@ -102,7 +102,7 @@ The `assets` field holds a list of `asset` types, which has the following struct
 
 ### `Msgs` field
 The Msgs holds all messages that the contract should execute sequentially. Meaning it will first execute the first message, then the second and so on. This gives the opportunity to use the results from the first message in the second message, which is really helpful in arbitrage for example. 
-Every entry in `Msgs` should have the following format: 
+Every entry in `Msgs` should have the format of the type of message the user wants to send. For example when using a WasmExecuteMessage:
 ```json
       "wasm": {
         "execute": {
@@ -112,11 +112,23 @@ Every entry in `Msgs` should have the following format:
         }
       }
 ```
-In which the user only has to change the lowest level fields: 
+However this might as well be an BankSendMessage:
+```json
+{
+    "bank": {
+        "send": {
+            "to_address": "terra123",
+            "amount": [{ "denom": "uluna", "amount": "1000000"}]
+        }
+    }
+}
+```
+
+When we try to perform arbitrage however, we usually use the WasmExecuteMessage as we are trying to trade on a DEX, which is done via executing certain wasm messages like the WasmExecuteMessage. The lower level fields that a user needs to provide for this WasmExecuteMessage are:
 | Key             | Type   | Description                                                                              |
 | --------------- | ------ | ---------------------------------------------------------------------------------------- |
 | `contract_addr` | string | The address of the wasm contract on which the contacts has to perform `msg`              |
-| `msg`           | string | The base64 encoded message the contract needs to execute, see below for more details     |
+| `msg`           | string | The base64 encoded message the wasm contract on `contract_addr` needs to execute, see below for more details     |
 | `funds`         | array  | The funds the contract needs to use to execute this message, see below for more details. |
 
 ### `msg` field
