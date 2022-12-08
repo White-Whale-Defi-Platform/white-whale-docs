@@ -32,4 +32,4 @@
 ## Client Documentation
 
 * [⚡ Calling Flashloans](client-docs/flashloan.md)
-* [🤖 Overview](bot-client-docs/overview.md)
+* [🤖 Overview](client-docs/overview.md)
