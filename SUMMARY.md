@@ -30,6 +30,7 @@
   * [🔀 Vault Router](./gitbook/smart-contracts/liquidity-hub/vault-network/vault-router.md)
 
 ## Client Documentation
-* [⚡ Calling Flashloans](./gitbookclient-docs/flashloan.md)
+* [⚡ Calling Flashloans](./gitbook/client-docs/flashloan.md)
+  * [Example](./gitbook/client-docs/flashloan_example.md)
 * [🤖 Overview](./gitbook/client-docs/overview.md)
 
