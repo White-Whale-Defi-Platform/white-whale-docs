@@ -47,6 +47,9 @@ Instantiates a vault. Includes providing information about the asset infos, toke
     },
     "flash_loan_fee": {
       "share": "0.02"
+    },
+    "burn_fee": {
+      "share": "0.01"
     }
   },
   "fee_collector_addr": "inj1..."
@@ -70,6 +73,9 @@ Instantiates a vault. Includes providing information about the asset infos, toke
     },
     "flash_loan_fee": {
       "share": "0.02"
+    },
+    "burn_fee": {
+      "share": "0.01"
     }
   },
   "fee_collector_addr": "juno1..."
@@ -181,6 +187,9 @@ Updates the configuration of the vault.
       },
       "flash_loan_fee": {
         "share": "0.02"
+      },
+      "burn_fee": {
+        "share": "0.01"
       }
     },
     "new_fee_collector_addr": "inj1..."
@@ -264,6 +273,9 @@ Retrieves the configuration of the contract in a `Config` response.
     },
     "flash_loan_fee": {
       "share": "0.002"
+    },
+    "burn_fee": {
+      "share": "0.001"
     }
   }
 }
@@ -309,7 +321,8 @@ Retrieves the `Uint128` amount that must be sent back to the contract to pay off
 {
   "payback_amount": "10030",
   "protocol_fee": "10",
-  "flash_loan_fee": "20"
+  "flash_loan_fee": "20",
+  "burn_fee": "20"
 }
 ```
 
@@ -318,6 +331,7 @@ Retrieves the `Uint128` amount that must be sent back to the contract to pay off
 | `payback_amount` | Uint128 | The total amount that must be returned. Equivalent to `amount` + `protocol_fee` + `flash_loan_fee` |
 | `protocol_fee`   | Uint128 | The amount of fee paid to the protocol                                                             |
 | `flash_loan_fee` | Uint128 | The amount of fee paid to vault holders                                                            |
+| `burn_fee`       | Uint128 | Fees that would be burned, if any, by executing a flashloan                                        |
 
 {% endtab %}
 {% endtabs %}
@@ -362,6 +376,42 @@ the vault but not collected by the fee collector will be returned.
 | Key    | Type  | Description                      |
 | ------ | ----- | -------------------------------- |
 | `fees` | Asset | Fees collected accrued the vault |
+
+
+{% endtab %}
+{% endtabs %}
+
+### Burned fees
+
+Retrieves the fees that have been burned by vault.
+
+{% tabs %}
+{% tab title="Query" %}
+```json
+{
+  "burned_fees": {}
+}
+```
+
+{% endtab %}
+
+{% tab title="Response (ProtocolFeesResponse)" %}
+```json
+{
+  "fees": {
+    "info": {
+      "native_token": {
+        "denom": "uhuahua"
+      }
+    },
+    "amount": "47516"
+  }
+}
+```
+
+| Key    | Type  | Description              |
+| ------ | ----- |--------------------------|
+| `fees` | Asset | Fees burned by the vault |
 
 
 {% endtab %}

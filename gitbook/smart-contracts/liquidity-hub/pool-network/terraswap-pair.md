@@ -85,6 +85,9 @@ Instantiates the pair.
     },
     "swap_fee": {
       "share": "0.02"
+    },
+    "burn_fee": {
+      "share": "0.01"
     }
   },
   "fee_collector_addr": "juno1..."
@@ -267,6 +270,9 @@ Updates the configuration of the pool.
       },
       "swap_fee": {
         "share": "0.02"
+      },
+      "burn_fee": {
+        "share": "0.01"
       }
     },
     "feature_toggle": {
@@ -339,6 +345,9 @@ Retrieves the configuration of the pool.
     },
     "swap_fee": {
       "share": "0.002"
+    },
+    "burn_fee": {
+      "share": "0.001"
     }
   },
   "feature_toggle": {
@@ -494,6 +503,48 @@ Alternatively, if `asset_id` is set the accrued fees (non collected) for that sp
 {% endtab %}
 {% endtabs %}
 
+### Burned fees
+
+Retrieves the fees that have been burned by pool. If `asset_id` is set, only the burned fees for that specific 
+asset will be returned, otherwise it returns burned fees for both assets in the pool.
+
+{% tabs %}
+{% tab title="Query" %}
+```json
+{
+  "burned_fees": {
+    "asset_id": "uhuahua"
+  }
+}
+```
+
+| Key        | Type            | Description                            |
+| ---------- | --------------- |----------------------------------------|
+| `asset_id` | Option\<String> | Asset id to return the burned fees for |
+{% endtab %}
+
+{% tab title="Response (ProtocolFeesResponse)" %}
+```json
+{
+  "fees": [
+    {
+      "info": {
+        "native_token": {
+          "denom": "uhuahua"
+        }
+      },
+      "amount": "42661"
+    }
+  ]
+}
+```
+
+| Key    | Type        | Description             |
+| ------ | ----------- |-------------------------|
+| `fees` | Vec\<Asset> | Fees burned by the pair |
+{% endtab %}
+{% endtabs %}
+
 ### Simulation
 
 Performs a swap simulation for the given token.
@@ -547,16 +598,18 @@ Performs a swap simulation for the given token.
   "return_amount": "206395",
   "spread_amount": "1",
   "swap_fee_amount": "414",
-  "protocol_fee_amount": "207"
+  "protocol_fee_amount": "207",
+  "burn_fee_amount": "207"
 }
 ```
 
 | Key                   | Type    | Description                                                          |
-| --------------------- | ------- | -------------------------------------------------------------------- |
+|-----------------------| ------- |----------------------------------------------------------------------|
 | `return_amount`       | Uint128 | Amount that would be delivered to the user after the swap            |
 | `spread_amount`       | Uint128 | Spread the swap would have                                           |
 | `swap_fee_amount`     | Uint128 | Swap fees amount that would be distributed among liquidity providers |
 | `protocol_fee_amount` | Uint128 | Protocol fees amount                                                 |
+| `burn_fee_amount`     | Uint128 | Fees that would be burned, if any, by executing the swap             |
 {% endtab %}
 {% endtabs %}
 
@@ -613,15 +666,17 @@ Performs a reverse swap simulation, i.e. given the ask asset, how much of the of
   "offer_amount": "207639",
   "spread_amount": "0",
   "swap_fee_amount": "2",
-  "protocol_fee_amount": "1"
+  "protocol_fee_amount": "1",
+  "burn_fee_amount": "1"
 }
 ```
 
 | Key                   | Type    | Description                                                          |
-| --------------------- | ------- | -------------------------------------------------------------------- |
+| --------------------- | ------- |----------------------------------------------------------------------|
 | `offer_amount`        | Uint128 | Offer asset amount that is needed to get the given ask asset         |
 | `spread_amount`       | Uint128 | Spread the swap would have                                           |
 | `swap_fee_amount`     | Uint128 | Swap fees amount that would be distributed among liquidity providers |
 | `protocol_fee_amount` | Uint128 | Protocol fees amount                                                 |
+| `burn_fee_amount`     | Uint128 | Fees that would be burned, if any, by executing the swap             |
 {% endtab %}
 {% endtabs %}
