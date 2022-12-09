@@ -1,7 +1,7 @@
 <a href="https://whitewhale.money/">
   <h1 align="center">
     <picture>
-      <img alt="Flutter" src="https://miro.medium.com/max/1400/1*29OYRJqqddosWtWo-c3TYQ.png">
+      <img alt="White Whale Migaloo" src="https://miro.medium.com/max/1400/1*29OYRJqqddosWtWo-c3TYQ.png">
     </picture>
   </h1>
 </a>
