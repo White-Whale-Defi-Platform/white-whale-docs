@@ -5,25 +5,25 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "722",
-      "version": "1.0.4",
+      "code_id": "838",
+      "version": "1.0.5",
       "contract_address": "terra1w8402njz8936ag4rlcmvek4zcns6hlkaapsd4qwz5us0ewwyghrsx7k47w"
     },
     {
       "wasm": "terraswap_factory.wasm",
-      "code_id": "770",
-      "version": "1.1.1",
+      "code_id": "839",
+      "version": "1.1.2",
       "contract_address": "terra1f4cr4sr5eulp3f2us8unu6qv8a5rhjltqsg7ujjx6f2mrlqh923sljwhn3"
     },
     {
       "wasm": "terraswap_pair.wasm",
-      "code_id": "752",
-      "version": "1.1.0"
+      "code_id": "841",
+      "version": "1.2.0"
     },
     {
       "wasm": "terraswap_router.wasm",
-      "code_id": "753",
-      "version": "1.0.5",
+      "code_id": "842",
+      "version": "1.0.7",
       "contract_address": "terra1p37jrwlaqpklzlu4rwjyjrmzuezdgk3pyuyk2zclc4rda6awkm3qnj6f0a"
     },
     {
@@ -33,19 +33,19 @@
     },
     {
       "wasm": "vault_factory.wasm",
-      "code_id": "727",
-      "version": "1.0.8",
+      "code_id": "843",
+      "version": "1.0.9",
       "contract_address": "terra1vcn8h6fc26nv4f20p6g870a00nqzdpjwvshud9ku3qfaqhv7l69s9l29y2"
     },
     {
       "wasm": "vault.wasm",
-      "code_id": "728",
-      "version": "1.1.2"
+      "code_id": "845",
+      "version": "1.2.0"
     },
     {
       "wasm": "vault_router.wasm",
-      "code_id": "729",
-      "version": "1.1.2",
+      "code_id": "846",
+      "version": "1.1.3",
       "contract_address": "terra1c8tpvta3umr4mpufvxmq39gyuw2knpyxyfgq8thpaeyw2r6a80qsg5wa00"
     }
   ],
