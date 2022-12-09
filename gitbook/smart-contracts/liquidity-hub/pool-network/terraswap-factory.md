@@ -90,6 +90,9 @@ Creates a pool with the given assets and pool fees. If the pool already exists, 
       },
       "swap_fee": {
         "share": "0.003"
+      },
+      "burn_fee": {
+        "share": "0.0"
       }
     }
   }
@@ -186,6 +189,9 @@ Updates the configuration of the pair created by the factory.
       },
       "swap_fee": {
         "share": "0.002"
+      },
+      "burn_fee": {
+        "share": "0.0"
       }
     },
     "feature_toggle": {

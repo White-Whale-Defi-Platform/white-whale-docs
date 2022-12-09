@@ -65,6 +65,9 @@ Creates a vault. Includes token info and vault fees.
       },
       "flash_loan_fee": {
         "share": "0.02"
+      },
+      "burn_fee": {
+        "share": "0.0"
       }
     }
   }
@@ -90,6 +93,9 @@ Creates a vault. Includes token info and vault fees.
       },
       "flash_loan_fee": {
         "share": "0.02"
+      },
+      "burn_fee": {
+        "share": "0.0"
       }
     }
   }
@@ -207,6 +213,9 @@ Updates the configuration of the given vault with the provided `UpdateConfigPara
         },
         "flash_loan_fee": {
           "share": "0.03"
+        },
+        "burn_fee": {
+          "share": "0.0"
         }
       },
       "new_fee_collector_addr": "inj1..."
