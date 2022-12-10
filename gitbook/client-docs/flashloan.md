@@ -1,7 +1,7 @@
 <!-- Documents examples of flashloan usages -->
 # Calling Flashloans
 
-The White Whale Flashloan operation is a specific property of each of the [Vaults](/smart-contracts/liquidity-hub/vault-network/vault.md) deployed by White Whale. However, these flashloan messages are only executable by smart-contracts by design. So, to enable users (off-chain clients) to use flashloans without writing smart contracts, White Whale deployed a "Generalized Flashloan Router" [contract](../smart-contracts/liquidity-hub/vault-network/vault-router.md). This contract (also called vault-router) is able to perform all the required flashloan operations without the user to specify each step. 
+The White Whale Flashloan operation is a specific property of each of the [Vaults](/smart-contracts/liquidity-hub/vault-network/vault.md) deployed by White Whale. However, these flashloan messages are only executable by smart-contracts by design. To enable users (off-chain clients) to use flashloans without writing smart contracts, White Whale deployed a "Generalized Flashloan Router" [contract](../smart-contracts/liquidity-hub/vault-network/vault-router.md). This contract (also called vault-router) is able to perform all the required flashloan operations without the user to specify each step. 
 A very important property of this contract is that it is able to "route" the requested asset by the user to the right vault, thus, we only need **one** flashloan router contract for all vaults deployed on a chain and a user simply has to provide the requested asset.
 {% hint style="warning" %}
 Note: all assets the contract holds after executing all messages will be returned to the **sender**.
@@ -101,7 +101,7 @@ The `assets` field holds a list of `asset` types, which has the following struct
 {% endtabs %}
 
 ### `Msgs` field
-The Msgs holds all messages that the contract should execute sequentially. Meaning it will first execute the first message, then the second and so on. This gives the opportunity to use the results from the first message in the second message, which is really helpful in arbitrage for example. 
+The Msgs field holds all messages that the contract should execute sequentially. Meaning it will first execute the first message, then the second and so on. This gives the opportunity to use the results from the first message in the second message, which is really helpful in arbitrage for example. 
 Every entry in `Msgs` should have the format of the type of message the user wants to send. For example when using a WasmExecuteMessage:
 ```json
       "wasm": {
@@ -112,7 +112,7 @@ Every entry in `Msgs` should have the format of the type of message the user wan
         }
       }
 ```
-However this might as well be an BankSendMessage:
+However, any `CosmosMsg` is able to be sent, so it is also possible to have a bank send message in the flashloan router for example:
 ```json
 {
     "bank": {
