@@ -77,25 +77,25 @@ FACTORIES_TO_ROUTERS_MAPPING='{"factory":"terra1f4cr4sr5eulp3f2us8unu6qv8a5rhjlt
 {"factory":"terra14x9fr055x5hvr48hzy2t4q7kvjvfttsvxusa4xsdcy702mnzsvuqprer8r","router":"terra1j8hayvehh3yy02c2vtw5fdhz9f4drhtee8p5n5rguvg3nyd6m83qd2y90a"}'
 ```
 
-A full example of a `.env` file can be found [here](./bots/configexample.md)
+A full example of a `.env` file can be found [here](/gitbook/client-docs/bots/configexample.md)
 
 ### Your First Run 
 After following the instructions described above we can start the bot for the first time. It will look for arbitrage opportunities on the provided pools on a 2-hop basis as well as a 3-hop basis. 
 In the root folder:
-{ %tabs% }
-{ %tab title="Linux"% }
+{ % tabs % }
+{ % tab title="Linux" % }
 ```typescript 
 npm start
 ```
 in console
-{ %endtab%}
-{ %tab title="Windows"% }
+{ % endtab %}
+{ % tab title="Windows" % }
 ```typescript
 npm run build && node out/index.js
 ```
 in console
-{ %endtab%}
-{ %endtabs%}
+{ % endtab %}
+{ % endtabs %}
 
 The bot will start running and initialising the entered configuration file, example output:
 Every 150 blocks it will log a sign of life, if `SLACK_TOKEN` is provided this will happen to the provided `SLACK_CHANNEL`, if not it will log to `stdout`. Every trade attempt will also be logged.
