@@ -77,7 +77,7 @@ FACTORIES_TO_ROUTERS_MAPPING='{"factory":"terra1f4cr4sr5eulp3f2us8unu6qv8a5rhjlt
 {"factory":"terra14x9fr055x5hvr48hzy2t4q7kvjvfttsvxusa4xsdcy702mnzsvuqprer8r","router":"terra1j8hayvehh3yy02c2vtw5fdhz9f4drhtee8p5n5rguvg3nyd6m83qd2y90a"}'
 ```
 
-A full example of a `.env` file can be found [here](/client-docs/configexample.md)
+A full example of a `.env` file can be found [here](configexample.md)
 
 ### Your First Run 
 After following the instructions described above we can start the bot for the first time. It will look for arbitrage opportunities on the provided pools on a 2-hop basis as well as a 3-hop basis. 

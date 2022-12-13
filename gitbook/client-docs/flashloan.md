@@ -167,4 +167,4 @@ The `funds` field should hold a list of assets that have to be used to perform `
 }
 ```
 As said it is possible to use the result of the first message in the second message and so on. This allowed for chained swaps to be executed sequentially with the previous message's result as input. 
-see [example](/client-docs/flashloan_example.md) for a full example.
+see [example](flashloan_example.md) for a full example.
