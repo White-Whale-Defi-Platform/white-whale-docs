@@ -29,8 +29,8 @@ root
 ## The Configuration File (`.env `)
 There are multiple properties that are required to be set for the bot to function properly.  Also, there are a few properties that are optional and influence the bots behaviour, although they are not required, it is adviced to include them in the `.env` anyways and make sure they are switched off. Below a full list of configuration settings used by the bot, all settings are to be formatted as `string`.  
 ### **General Settings**
-| Setting          | Required | Values                            | Description                                                                                                                                                                                                                                                                                              |  |
-|------------------|----------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--|
+| Setting          | Required | Values| Description                                                                                                                                                                                                                                                                                              |
+|------------------|----------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | WALLET_MNEMONIC  | yes      | 24-words forming the mnemonic key | The mnemonic used to sign transactions and pay the gas fee                                                                                                                                                                                                                                               |  |
 | USE_MEMPOOL      | yes      | "1"/"0"                           | States whether the bot should use mempool to project potential transactions on the actual blockstate and calculate potential arbitrage that arises. **note:** this incurs extra risk of failed transactions and lost gas fees. Defaulted to "1"                                                                            |  |
 | GAS_UNIT_USAGES  | yes      | "number,number"                   | Denotes the amount of gas units the bot will use for transactions. The first number corresponds to a 2-message arbitrage transaction and the second to a 3-or-more-message arbitrage transaction. **note:** will only be used when using USE_MEMPOOL=1, else the client will estimate gas units and fees |  |
@@ -82,20 +82,20 @@ A full example of a `.env` file can be found [here](/gitbook/client-docs/bots/co
 ### Your First Run 
 After following the instructions described above we can start the bot for the first time. It will look for arbitrage opportunities on the provided pools on a 2-hop basis as well as a 3-hop basis. 
 In the root folder:
-{ % tabs % }
-{ % tab title="Linux" % }
+{% tabs %}
+{% tab title="Linux" %}
 ```typescript 
 npm start
 ```
 in console
-{ % endtab %}
-{ % tab title="Windows" % }
+{% endtab %}
+{% tab title="Windows" %}
 ```typescript
 npm run build && node out/index.js
 ```
 in console
-{ % endtab %}
-{ % endtabs %}
+{% endtab %}
+{% endtabs %}
 
 The bot will start running and initialising the entered configuration file, example output:
 Every 150 blocks it will log a sign of life, if `SLACK_TOKEN` is provided this will happen to the provided `SLACK_CHANNEL`, if not it will log to `stdout`. Every trade attempt will also be logged.
