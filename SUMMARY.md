@@ -32,5 +32,5 @@
 ## Client Documentation
 * [⚡ Calling Flashloans](./gitbook/client-docs/flashloan.md)
   * [Example](./gitbook/client-docs/flashloan_example.md)
-* [🤖 Overview](./gitbook/client-docs/overview.md)
+* [🤖 Arbitrage Bots](./gitbook/client-docs/arbitrage_bots.md)
 

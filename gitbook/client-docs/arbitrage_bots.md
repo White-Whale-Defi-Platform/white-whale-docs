@@ -1,34 +1,24 @@
-# Bot Client Docs 
-White Whale Arbitrage Bot Client Documentation
+# White Whale Arbitrage Documentation
 
-## Overview
-
-The White Whale protocol is designed as an interchain liquidity platform within the Cosmos Ecosystem. Read everything about the protocol at our website: https://whitewhale.money/.
-An important part of the White Whale mission is making arbitrage more accessible to the bigger crowd and the development of open-sourced arbitrage bots is one of the strategies to achieve this. 
-These docs are designed as a manual for running the arbitrage bots and will contain additional information regarding the off-chain usage of the on-chain protocol (smart contracts) as well.
-
-## Quick Links
-
-+ [The White Whale Protocol](https://whitewhale.money)
-+ [The White Whale Protocol App](https://app.whitewhale.money)
-
-## Prerequisites 
-
-The White Whale Arbitrage bot is built in [TypeScript](https://www.typescriptlang.org/) and makes use of the [CosmJS](https://cosmos.github.io/cosmjs/) package
 
 ## Setup
 
 + Install [NodeJS]() and make sure its added to Path
-+ Clone the White Whale Bot repository to your machine
++ Install your favorite IDE that supports TypeScript (Like VSCode)
++ Clone the White Whale Bot [repository](https://github.com/White-Whale-Defi-Platform/migaloo-bots) to your machine
++ Open the repository folder in your IDE as root folder
++ In Console type `npm install` to make sure the required packages are added to the project
++ In Console type `npm run build` to build the project for the first time
++ You are ready to go
 
-## Configuration
-The bot uses an environment file (.env) as configuration. This file needs to be provided in the root directory of the code in order for the bot to function properly. A typical working directory would look like this (after first a first build). 
-```
+## Project Folder Outline
+The bot uses an environment file (.env) for the required configuration settings. This file needs to be provided in the root directory of the code in order for the bot to function properly. A typical working directory would look like this (after first a first build with `npm run build`). 
+```bash
 root
 ├── node_modules
 ├── out
 ├── src
-├── .env
+├── .env  #-- you have to add this file yourself
 ├── .gitignore
 ├── package.json
 ├── package-lock.json
@@ -36,8 +26,14 @@ root
 └── tsconfig.json
 ```
 
-### Properties
-There are multiple properties to be set in the .env file. You will be prompted if one or more are missing. 
+## The Configuration File (`.env `)
+There are multiple properties that are required to be set for the bot to function properly.  Also, there are a few properties that are optional and influence the bots behaviour, although they are not required, it is adviced to include them in the `.env` anyways and make sure they are switched off. Below a full list of configuration settings used by the bot, all settings are to be formatted as `string`.  
+
+|Setting |Optional  | Description                        |
+|--------|----------|------------------------------------|
+|test    | test     | test                               | 
+|test    | test     | test                               | 
+
 WALLET_MNEMONIC
 The mnemonic key that will be used for signing transactions and paying fees.
 WALLET_MNEMONIC="white whale is awesome we wish we had open sourced arbitrage bots way earlier when it was still a bull market and make some money"
