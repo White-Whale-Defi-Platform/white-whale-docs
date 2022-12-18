@@ -33,5 +33,5 @@
 * [⚡ Calling Flashloans](./gitbook/client-docs/flashloan.md)
   * [Example](./gitbook/client-docs/flashloan_example.md)
 * [🤖 Arbitrage Bots](./gitbook/client-docs/arbitrage_bots.md)
-  * [Config Example](./gitbook//client-docs//configexample.md)
-
+  * [⚙️ Config Example](./gitbook//client-docs//configexample.md)
+  * [🐳 Running in Docker](./gitbook//client-docs//docker_deployment_bots.md)
