@@ -14,6 +14,7 @@
   * [🐶 Chihuahua](./gitbook/smart-contracts/deployments/chihuahua.md)
   * [🗽 Juno](./gitbook/smart-contracts/deployments/juno.md)
   * [🌕 Terra](./gitbook/smart-contracts/deployments/terra.md)
+  * [🥷 Injective](./gitbook/smart-contracts/deployments/injective.md)
 
 ### Liquidity Hub
 
