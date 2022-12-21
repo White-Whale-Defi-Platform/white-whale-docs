@@ -100,3 +100,19 @@
   "pool_factory_address": "terra1f4cr4sr5eulp3f2us8unu6qv8a5rhjltqsg7ujjx6f2mrlqh923sljwhn3"
 }
 ```
+
+```json
+{
+  "vaults": [
+    {
+      "asset": "uluna",
+      "vault_address": "terra1clwlcv2kekklzxdud2d938d0kyrgjryvr4a86qfal4n7wjerxrvsey7ch9",
+      "lp_address": "terra1pm6s5x770t27xajnj2qqkn6mku8s4k44ujs0m53h9epqqcarulnqwva8nt",
+      "vault_code_id": "845",
+      "lp_code_id": "353"
+    }
+  ],
+  "chain_id": "phoenix-1",
+  "vault_factory_addr": "terra1vcn8h6fc26nv4f20p6g870a00nqzdpjwvshud9ku3qfaqhv7l69s9l29y2"
+}
+```
