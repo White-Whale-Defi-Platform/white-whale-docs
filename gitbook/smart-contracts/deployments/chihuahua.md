@@ -88,3 +88,19 @@
   "pool_factory_address": "chihuahua1s8ehad3r9wxyk08ls2nmz8mqh4vlfmaxd2nw0crxwh04t4l5je4s8ljv0j"
 }
 ```
+
+```json
+{
+  "vaults": [
+    {
+      "asset": "uhuahua",
+      "vault_address": "chihuahua1j37gdce2l5wuy7tdv4hygc98ajd8jswe352erlwgyw2ve3v58a5qv688fs",
+      "lp_address": "chihuahua12pl0k32gvzn259qhx6qce45kg85tysftt65xuek3rgf47s0gca4sut5nme",
+      "vault_code_id": "118",
+      "lp_code_id": "32"
+    }
+  ],
+  "chain_id": "chihuahua-1",
+  "vault_factory_addr": "chihuahua1j37gdce2l5wuy7tdv4hygc98ajd8jswe352erlwgyw2ve3v58a5qv688fs"
+}
+```

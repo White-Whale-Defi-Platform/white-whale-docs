@@ -100,3 +100,19 @@
   "pool_factory_address": "juno14m9rd2trjytvxvu4ldmqvru50ffxsafs8kequmfky7jh97uyqrxqs5xrnx"
 }
 ```
+
+```json
+{
+  "vaults": [
+    {
+      "asset": "ujuno",
+      "vault_address": "juno1gz9qhtcafjc0c9hnvrn2au253yaae6qunymt5yrgvagxejr2n2lquk6ss8",
+      "lp_address": "juno1menz0s2rgu62c0lrrfw7zswrs2deeh9emnawt5jjgdfgvja4uqmq50hfhp",
+      "vault_code_id": "1536",
+      "lp_code_id": "757"
+    }
+  ],
+  "chain_id": "juno-1",
+  "vault_factory_addr": "juno1qnfsrwx4c0qnvcnscwm7r55nxr8rpfckq6v8yvuvg7zuqj0uk2hsrssj2n"
+}
+```
