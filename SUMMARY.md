@@ -15,6 +15,8 @@
   * [🗽 Juno](./gitbook/smart-contracts/deployments/juno.md)
   * [🌕 Terra](./gitbook/smart-contracts/deployments/terra.md)
   * [🥷 Injective](./gitbook/smart-contracts/deployments/injective.md)
+  * [⭐ Stargaze](./gitbook/smart-contracts/deployments/stargaze.md)
+  * [©️ Comdex](./gitbook/smart-contracts/deployments/comdex.md)
 
 ### Liquidity Hub
 
