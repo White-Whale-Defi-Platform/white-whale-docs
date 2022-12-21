@@ -51,6 +51,10 @@ Migratest the pool factory.
 Used to validate native or ibc tokens, adding them to a whitelist so pools can be created with them. Along with this 
 message, a small amount of the token should be transferred.
 
+{% hint style="warning" %}
+Note: This should be called **before** a pool with the given native/ibc token can be created.
+{% endhint %}
+
 ```json
 {
   "add_native_token_decimals": {
