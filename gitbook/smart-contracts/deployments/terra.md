@@ -116,3 +116,83 @@
   "vault_factory_addr": "terra1vcn8h6fc26nv4f20p6g870a00nqzdpjwvshud9ku3qfaqhv7l69s9l29y2"
 }
 ```
+
+# Terra testnet (pisco-1)
+
+```json
+{
+  "contracts": [
+    {
+      "wasm": "fee_collector.wasm",
+      "code_id": "5202",
+      "version": "1.0.3",
+      "contract_address": "terra1ldqxud3myhfluw0y0ds0swdftqsj4fhkss9ge4y28cz3yy93rqksvvc7ut"
+    },
+    {
+      "wasm": "terraswap_factory.wasm",
+      "code_id": "5203",
+      "version": "1.0.4",
+      "contract_address": "terra15d7gjn0rtu93nxkjt7kqj0sz62gcgy7p5srjeefp74hjsyjry9uqdz5zc7"
+    },
+    {
+      "wasm": "terraswap_pair.wasm",
+      "code_id": "5204",
+      "version": "1.0.1"
+    },
+    {
+      "wasm": "terraswap_router.wasm",
+      "code_id": "5205",
+      "version": "1.0.0",
+      "contract_address": "terra1ssrdlwawevh52k2dr6r25aeflgzcnwm097gqlga4tee7au35a4ss4wkdxw"
+    },
+    {
+      "wasm": "terraswap_token.wasm",
+      "code_id": "5206",
+      "version": "1.0.1"
+    },
+    {
+      "wasm": "vault_factory.wasm",
+      "code_id": "5207",
+      "version": "1.0.7",
+      "contract_address": "terra1je4wvk8cfzdvxvtfp2sg4vfh0sw6vgu6penuye0rlhqmkmczxqus4ksgdd"
+    },
+    {
+      "wasm": "vault_router.wasm",
+      "code_id": "5208",
+      "version": "1.0.0",
+      "contract_address": "terra1kjwf4ft34g8m7naxexgzh4mg9d82kyc49w2rz9hd8djp2vdlhdnqfh2w4e"
+    },
+    {
+      "wasm": "vault.wasm",
+      "code_id": "5209",
+      "version": "1.1.1"
+    }
+  ],
+  "date": "2022-10-28T11:50:45+0000",
+  "initial_block_height": "2445856",
+  "final_block_height": "2445856",
+  "chain_id": "pisco-1",
+  "deployer_address": "terra1rmzydhhpgqpr3v8sfu82ewj7fj9rl6sfnnrcu8"
+}
+```
+
+```json
+{
+  "pools": [
+    {
+      "pair": "lunafour-lunafive",
+      "assets": [
+        "{\"token\":{\"contract_addr\":\"terra1e8sqchdyrgtgf2jwsq0jerj0gp0wkezelj9sjw98z22g3s0v0qrqjwr39u\"}}",
+        "{\"token\":{\"contract_addr\":\"terra1rzvdn9cc7efpqsgl4ha7q5egqlpnyfdkgu0at6fkzmmj9dr7aspsy4a5js\"}}"
+      ],
+      "pool_address": "terra1x0v3qrgtg4gvku6hcdu28mgaadp7cdu8kntk5v04wlxx8qgnm7gqg64y55",
+      "lp_address": "terra1497udqamdn53kqlc0gkxje8zje66du6edtxfa2dwz52plr0g48ssz34syx",
+      "pool_code_id": "5204",
+      "lp_code_id": "5206"
+    }
+  ],
+  "date": "2022-11-02T14:43:09+0000",
+  "chain_id": "pisco-1",
+  "pool_factory_addr": "terra15d7gjn0rtu93nxkjt7kqj0sz62gcgy7p5srjeefp74hjsyjry9uqdz5zc7"
+}
+```
