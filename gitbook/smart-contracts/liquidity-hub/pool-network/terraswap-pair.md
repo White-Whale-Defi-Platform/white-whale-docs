@@ -124,7 +124,12 @@ Sends the accrued protocol fees to the Fee Collector. This action can be trigger
 
 ### Provide liquidity
 
-Provides liquidity to the pool. Note that in case of providing liquidity with a cw20 token, the message [increase\_allowance](terraswap-token.md#increase-allowance) should be called on the cw20 token contract before you can transfer cw20 tokens to the pool.
+Provides liquidity to the pool.
+
+{% hint style="warning" %}
+Note: in case of providing liquidity with a cw20 token, the message [increase\_allowance](terraswap-token.md#increase-allowance) should be called on the cw20 token contract **before** cw20 tokens can be transferred to the pool.
+{% endhint %}
+
 
 {% tabs %}
 {% tab title="Native/IBC token" %}
