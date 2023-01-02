@@ -70,6 +70,17 @@
       "lp_address": "comdex16yzagwlqrzjkjlnaecam5fwvtzgae5zujtcch7y2uf6q9fyksncqm4rrk6",
       "pool_code_id": "7",
       "lp_code_id": "12"
+    },
+    {
+      "pair": "ucmdx-uharbor",
+      "assets": [
+        "{\"native_token\":{\"denom\":\"ucmdx\"}}",
+        "{\"native_token\":{\"denom\":\"uharbor\"}}"
+      ],
+      "pool_address": "comdex19hlynxzedrlqv99v6qscww7d3crhl86qtd0vprpltg5g9xx6jk9qcmxed5",
+      "lp_address": "comdex1guczj53xxl4347adagh23eelyhnxvugw2nqq0q0dr6kws7q35jyqzf9hkm",
+      "pool_code_id": "7",
+      "lp_code_id": "12"
     }
   ],
   "date": "2022-12-20T11:23:56+0000",
