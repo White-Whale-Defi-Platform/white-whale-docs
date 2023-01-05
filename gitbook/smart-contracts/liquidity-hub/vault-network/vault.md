@@ -6,11 +6,13 @@ Flash loan vaults are a great source of yield with no impermanent loss.
 
 ## Fees
 
-There are two types of fees associated to the vaults, namely `flash_loan_fee` and `protocol_fee`. The `flash_loan_fee` 
+There are three types of fees associated to the vaults, namely `flash_loan_fee`, `protocol_fee` and `burn_fee`. The `flash_loan_fee` 
 remains in the vault, which makes the share's value of the liquidity provides to increase, benefiting all LPs.
 
 The `protocol_fee` goes to the protocol, and it is to be collected by the Fee Collector contract of the Liquidity Hub.
 The protocol revenue is then distributed to WHALE stakers in the form of token buybacks.
+
+The `burn_fee` is used to burn a portion of the tokens when a flash-loan takes place.
 
 ## Feature toggle
 

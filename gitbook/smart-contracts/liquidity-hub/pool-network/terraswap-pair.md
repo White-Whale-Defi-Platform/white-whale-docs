@@ -42,9 +42,13 @@ A user or bot can provide liquidity by sending a `provide_liquidity` message and
 
 ## Fees
 
-There are two types of fees associated to the pools, namely `swap_fee` and `protocol_fee`. The `swap_fee` remains in the pool, causing a permanent increase in the constant product K. The value of this permanently increased pool goes to all LPs.
+There are three types of fees associated to the pools, namely `swap_fee`, `protocol_fee` and `burn_fee`. The `swap_fee` 
+remains in the pool, causing a permanent increase in the constant product K. The value of this permanently increased pool goes to all LPs.
 
-The `protocol_fee` goes to the protocol, and it is to be collected by the Fee Collector contract of the Liquidity Hub. The protocol revenue is then distributed to WHALE stakers in the form of token buybacks.
+The `protocol_fee` goes to the protocol, and it is to be collected by the Fee Collector contract of the Liquidity Hub. 
+The protocol revenue is then distributed to WHALE stakers in the form of token buybacks.
+
+The `burn_fee` is a percentage of the tokens that is burned whenever a swap takes place.
 
 ## Feature toggle
 
