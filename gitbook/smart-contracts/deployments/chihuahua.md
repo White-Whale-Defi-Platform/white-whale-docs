@@ -81,11 +81,44 @@
       "label": "uhuahua-rHUAHUA pair",
       "contract": "chihuahua19du4llehge50k23pwwckj93lnvp9cyyer8ve9as663mz64nrhq9qn2gauk",
       "lp_token": "chihuahua1v5yqf0jcw3hl8uc8ucug8fr98n45krwfl0k5ktxrevqpu3c60f7qsjys7v"
+    },
+    {
+      "pair": "BDOG-uhuahua",
+      "assets": [
+        "{\"token\":{\"contract_addr\":\"chihuahua1077rtmdp5dd5xr83hqx3m9r4gepzp0xj0q9e2rl2c7e92qtcewzqf6gdaz\"}}",
+        "{\"native_token\":{\"denom\":\"uhuahua\"}}"
+      ],
+      "pool_address": "chihuahua1nfu3nv6jxksf9kzs8hqt2ueqw63xdapqwfmsw98adj3e8836685shdv8hp",
+      "lp_address": "chihuahua1stvvl7rvgle8grcgum92hxx4mzlxr5246atmyrtphgnjp57tqldsu6wytz",
+      "pool_code_id": "144",
+      "lp_code_id": "116"
+    },
+    {
+      "pair": "ASH-GDOG",
+      "assets": [
+        "{\"token\":{\"contract_addr\":\"chihuahua1y5tm6vstar43r65umu7tvv9lyxncfnlyyxyhzqq4pxqfq9uwz8xqakjg6v\"}}",
+        "{\"token\":{\"contract_addr\":\"chihuahua10qe2wuwcjcavg2waazmjlekhmsh4m9g7l3dtmu9vaxylla6697tszmp0c0\"}}"
+      ],
+      "pool_address": "chihuahua1zr0pz0pgwkk9mfznhlmp29eqa0vzkf9ywfhwxfyfh7gwga3zzxkq5sluvv",
+      "lp_address": "chihuahua1d5zvqw4vlsx5fa8635t2z98ktwf9pel0cf5d9vy23ts6p3twnxyssxj3tp",
+      "pool_code_id": "144",
+      "lp_code_id": "116"
+    },
+    {
+      "pair": "ASH-BDOG",
+      "assets": [
+        "{\"token\":{\"contract_addr\":\"chihuahua1y5tm6vstar43r65umu7tvv9lyxncfnlyyxyhzqq4pxqfq9uwz8xqakjg6v\"}}",
+        "{\"token\":{\"contract_addr\":\"chihuahua1077rtmdp5dd5xr83hqx3m9r4gepzp0xj0q9e2rl2c7e92qtcewzqf6gdaz\"}}"
+      ],
+      "pool_address": "chihuahua1lvmq3rlg4j354ysgzkeq8sleu8yk639yp2gml9mghuqygdk0zsuq8fch62",
+      "lp_address": "chihuahua19grlsf4dxnqwqh36sh44qszqzqd054c9yyq3c7yfqwsd5c5vv9asyyscgg",
+      "pool_code_id": "144",
+      "lp_code_id": "116"
     }
   ],
-  "date": "2022-09-29T20:50:49+0000",
+  "date": "2023-01-05T15:59:41+0000",
   "chain_id": "chihuahua-1",
-  "pool_factory_address": "chihuahua1s8ehad3r9wxyk08ls2nmz8mqh4vlfmaxd2nw0crxwh04t4l5je4s8ljv0j"
+  "pool_factory_addr": "chihuahua1s8ehad3r9wxyk08ls2nmz8mqh4vlfmaxd2nw0crxwh04t4l5je4s8ljv0j"
 }
 ```
 
