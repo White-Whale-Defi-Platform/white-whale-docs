@@ -171,8 +171,10 @@ Updates the configuration of the vault router.
 
 ```json
 {
-  "owner": "juno1...",
-  "vault_factory_addr": "juno1..."
+   "update_config":{
+      "owner":"juno1...",
+      "vault_factory_addr":"juno1..."
+   }
 }
 ```
 
