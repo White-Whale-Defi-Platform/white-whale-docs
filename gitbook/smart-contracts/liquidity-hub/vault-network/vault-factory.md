@@ -6,7 +6,7 @@ meaning
 the messages can only be executed by the owner of the contract.
 
 The code for the vault factory contract can be
-found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/vault-network/vault_factory)
+found [here](https://github.com/White-Whale-Defi-Platform/white-whale-core/tree/main/contracts/liquidity_hub/vault-network/vault_factory)
 .
 
 ---

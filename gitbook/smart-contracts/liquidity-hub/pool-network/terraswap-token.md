@@ -6,7 +6,7 @@ contracts that wish to implement this spec, or by contracts that call to any sta
 
 The token contract is used by the pool contract to create LP tokens.
 
-The code for the token contract can be found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/pool-network/terraswap_token).
+The code for the token contract can be found [here](https://github.com/White-Whale-Defi-Platform/white-whale-core/tree/main/contracts/liquidity_hub/pool-network/terraswap_token).
 
 ---
 

@@ -6,7 +6,7 @@ remainder is sent to the interchain collector as protocol revenue. The protocol 
 stakers in the form of token buybacks.
 
 The code for the fee collector contract can be
-found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/fee_collector).
+found [here](https://github.com/White-Whale-Defi-Platform/white-whale-core/tree/main/contracts/liquidity_hub/fee_collector).
 
 ---
 

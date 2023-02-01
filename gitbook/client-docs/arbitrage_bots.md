@@ -5,7 +5,7 @@
 
 + Install [NodeJS]() and make sure its added to Path
 + Install your favorite IDE that supports TypeScript (Like VSCode)
-+ Clone the White Whale Bot [repository](https://github.com/White-Whale-Defi-Platform/migaloo-bots) to your machine
++ Clone the White Whale Bot [repository](https://github.com/White-Whale-Defi-Platform/white-whale-bots) to your machine
 + Open the repository folder in your IDE as root folder
 + In Console type `npm install` to make sure the required packages are added to the project
 + In Console type `npm run build` to build the project for the first time

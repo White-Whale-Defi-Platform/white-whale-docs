@@ -54,7 +54,7 @@ The `burn_fee` is a percentage of the tokens that is burned whenever a swap take
 
 Pools contain a feature toggle, containing the following properties: `withdrawals_enabled`, `deposits_enabled` and `swaps_enabled`. Those features are \`ON by default, but could be changed via governance. They could be changed in different scenarios, the ones we could envision include for example if a critical bug is found in a given feature, it could be shut down while is being fixed to avoid exploits. Additionally, if for example liquidity is desired to be migrated to another pool, deposits could be disabled to prevent bots or users to deposit liquidity in the pool.
 
-The code for the pair contract can be found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity\_hub/pool-network/terraswap\_pair).
+The code for the pair contract can be found [here](https://github.com/White-Whale-Defi-Platform/white-whale-core/tree/main/contracts/liquidity\_hub/pool-network/terraswap\_pair).
 
 ***
 
