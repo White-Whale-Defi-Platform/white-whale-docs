@@ -39,3 +39,4 @@
 * [🤖 Arbitrage Bots](./gitbook/client-docs/arbitrage_bots.md)
   * [⚙️   Config Example](./gitbook//client-docs//configexample.md)
   * [🐳 Running in Docker](./gitbook//client-docs//docker_deployment_bots.md)
+  * [👤 Running with pm2](./gitbook//client-docs//pm2_deployment_bots.md)
