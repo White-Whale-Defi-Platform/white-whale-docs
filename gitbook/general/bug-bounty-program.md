@@ -1,8 +1,8 @@
 # Bug Bounty Program
 The White Whale Bug Bounty Program encourages developers and researchers to find and report bugs in the following repositories:
-- [Migaloo Core](https://github.com/White-Whale-Defi-Platform/migaloo-core)
-- [Migaloo Front-End](https://github.com/White-Whale-Defi-Platform/migaloo-frontend)
-- [Migaloo Bots](https://github.com/White-Whale-Defi-Platform/migaloo-bots)
+- [White Whale Core](https://github.com/White-Whale-Defi-Platform/white-whale-core)
+- [White Whale Front-End](https://github.com/White-Whale-Defi-Platform/white-whale-frontend)
+- [White Whale Bots](https://github.com/White-Whale-Defi-Platform/white-whale-bots)
 
 Before reporting a bug, please read this document carefully!
 

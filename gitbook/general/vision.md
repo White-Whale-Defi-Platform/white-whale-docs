@@ -1,4 +1,4 @@
-# Migaloo's Vision
+# White Whale's Vision
 
 ## Problem in Cosmos Ecosystem
 

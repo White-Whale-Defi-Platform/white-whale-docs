@@ -7,7 +7,7 @@ will take care of communicating and requesting the funds to the appropriate vaul
 An interesting feature that the White Whale Vault Router is pioneering is the possibility to take multiple flash loans at 
 once.
 
-The code for the vault router can be found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/vault-network/vault_router).
+The code for the vault router can be found [here](https://github.com/White-Whale-Defi-Platform/white-whale-core/tree/main/contracts/liquidity_hub/vault-network/vault_router).
 
 ---
 

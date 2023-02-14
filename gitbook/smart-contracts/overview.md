@@ -1,6 +1,6 @@
 # Summary of Smart Contracts
 
-The following is a general overview of the smart contracts used by Migaloo:
+The following is a general overview of the smart contracts used by White Whale:
 
 - **Pool network**: a coordinated network of LPs (e.g., Atom-Luna; and Atom-Juno) for each supported token on selected 
 chains (e.g., Terra and Juno)

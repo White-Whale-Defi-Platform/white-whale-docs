@@ -1,7 +1,7 @@
 <a href="https://whitewhale.money/">
   <h1 align="center">
     <picture>
-      <img alt="White Whale Migaloo" src="https://miro.medium.com/max/1400/1*29OYRJqqddosWtWo-c3TYQ.png">
+      <img alt="White Whale V2" src="https://miro.medium.com/max/1400/1*29OYRJqqddosWtWo-c3TYQ.png">
     </picture>
   </h1>
 </a>
@@ -17,18 +17,19 @@
 [Twitter handle]: https://img.shields.io/twitter/follow/WhiteWhaleDefi.svg?style=social&label=Follow
 [Twitter badge]: https://twitter.com/intent/follow?screen_name=WhiteWhaleDefi
 
-# Migaloo Docs
-This repository contains the public-facing documentation of the open-source and decentralized Migaloo Protocol. Here you will find both general information and specific documentation on our repositories:
-- [Migaloo Smart Contracts](https://github.com/White-Whale-Defi-Platform/migaloo-core/)
-- [Migaloo Frontend](https://github.com/White-Whale-Defi-Platform/migaloo-frontend/)
-- [Migaloo Bots](https://github.com/White-Whale-Defi-Platform/migaloo-bots/)
+# White Whale Docs
+This repository contains the public-facing documentation of the open-source and decentralized White Whale Protocol. 
+Here you will find both general information and specific documentation on our repositories:
+- [White Whale Smart Contracts](https://github.com/White-Whale-Defi-Platform/white-whale-core/)
+- [White Whale Frontend](https://github.com/White-Whale-Defi-Platform/white-whale-frontend/)
+- [White Whale Bots](https://github.com/White-Whale-Defi-Platform/white-whale-bots/)
 
 If you are looking for our V1 documentation, you can find it [here](https://white-whale-defi-platform.github.io/docs/).
 
 ## Resources
 1. [Website](https://whitewhale.money/)
 2. [LitePaper](https://whitewhale.money/LitepaperV2.pdf)
-3. [Docs](https://ww0-1.gitbook.io/migaloo-docs/)
+3. [Docs](https://docs.whitewhale.money/white-whale-docs/)
 4. [Discord](https://discord.com/invite/tSxyyCWgYX)
 5. [Twitter](https://twitter.com/WhiteWhaleDefi)
 6. [Telegram](https://t.me/whitewhaleofficial)

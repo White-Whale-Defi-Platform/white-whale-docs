@@ -1,6 +1,6 @@
 # Common Types
 
-The following are common data types used across Migaloo contracts. There might be few more that are used internally, though 
+The following are common data types used across White Whale's contracts. There might be few more that are used internally, though 
 this list contains the types that are exposed via the entry points.
 
 | Struct               | Description                                                    | Contains                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |

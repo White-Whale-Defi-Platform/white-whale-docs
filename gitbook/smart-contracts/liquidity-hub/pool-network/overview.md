@@ -10,7 +10,7 @@ effectively decreases price disparities. Currently, users can find price dispari
 White Whale's pool network is based on [Terraswap](https://github.com/terraswap/terraswap), a Uniswap-inspired automated 
 market-maker (AMM) protocol.
 
-The code for the pool network can be found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/pool-network). 
+The code for the pool network can be found [here](https://github.com/White-Whale-Defi-Platform/white-whale-core/tree/main/contracts/liquidity_hub/pool-network). 
 
 ## Contracts
 
@@ -38,7 +38,7 @@ cargo build
 cargo wasm
 ```
 
-Or for a production-ready (optimized) build, run the following from the `migaloo-core` repository:
+Or for a production-ready (optimized) build, run the following from the `white-whale-core` repository:
 
 ```
 scripts/build_release.sh
