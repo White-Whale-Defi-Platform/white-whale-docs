@@ -11,7 +11,7 @@ used any of their own capital.
 Depositors of tokens into flash loan vaults benefit from fees paid when their vault is accessed for flash loans; 
 the greater the volume, the more fees generated. Flash loan vaults are a great source of yield with no impermanent loss.
 
-The code for the vault network can be found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/vault-network).
+The code for the vault network can be found [here](https://github.com/White-Whale-Defi-Platform/white-whale-core/tree/main/contracts/liquidity_hub/vault-network).
 
 ## Contracts
 

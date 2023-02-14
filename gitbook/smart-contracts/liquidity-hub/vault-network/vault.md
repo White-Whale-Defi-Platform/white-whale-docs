@@ -22,7 +22,7 @@ we could envision include for example if a critical bug is found in a given feat
 fixed to avoid exploits. Additionally, if for example liquidity is desired to be migrated to another pool, deposits could
 be disabled to prevent bots or users to deposit liquidity in the pool.
 
-The code for the vault contract can be found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/vault-network/vault).
+The code for the vault contract can be found [here](https://github.com/White-Whale-Defi-Platform/white-whale-core/tree/main/contracts/liquidity_hub/vault-network/vault).
 
 ---
 

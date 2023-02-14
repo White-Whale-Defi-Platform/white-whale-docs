@@ -6,7 +6,7 @@ swap operations so that it becomes possible to swap ATOM for LUNA via JUNO, i.e.
 
 The router is mainly used by bots and the UI.
 
-The code for the router contract can be found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/pool-network/terraswap_router).
+The code for the router contract can be found [here](https://github.com/White-Whale-Defi-Platform/white-whale-core/tree/main/contracts/liquidity_hub/pool-network/terraswap_router).
 
 ---
 

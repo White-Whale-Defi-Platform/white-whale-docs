@@ -1,6 +1,6 @@
 # Factory
 
-Migaloo's factory contract is used to create pair (pool) contracts. Pools are comprised of two tokens, which can be either 
+White Whale's factory contract is used to create pair (pool) contracts. Pools are comprised of two tokens, which can be either 
 native, ibc or cw20 tokens. Once a pool is created it's stored in state, meaning the factory acts as a pool registry, which 
 can be queried for reference. Note that **the pool factory is permissioned**, meaning the messages can only be executed by the 
 owner of the contract.
@@ -11,7 +11,7 @@ Creating a pair (pool) can be done via the `create_pair` message. Note that for 
 `add_native_token_decimals` should be called in advance with a small amount of the desired asset (say one micro unit). This 
 is used to whitelist native/ibc tokens, allowing pools to be created with those.
 
-The code for the Factory contract can be found [here](https://github.com/White-Whale-Defi-Platform/migaloo-core/tree/main/contracts/liquidity_hub/pool-network/terraswap_factory).
+The code for the Factory contract can be found [here](https://github.com/White-Whale-Defi-Platform/white-whale-core/tree/main/contracts/liquidity_hub/pool-network/terraswap_factory).
 
 ---
 

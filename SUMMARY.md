@@ -2,7 +2,7 @@
 
 * [👋 Welcome](./README.md)
 * [📜 Abstract](./gitbook/general/abstract.md)
-* [🚀 Migaloo's Vision](./gitbook/general/vision.md)
+* [🚀 White Whale's Vision](./gitbook/general/vision.md)
 * [🌉 Architecture](./gitbook/general/architecture.md)
 * [🐞 Bug Bounty Program](./gitbook/general/bug-bounty-program.md)
 
@@ -37,5 +37,5 @@
 * [⚡ Calling Flashloans](./gitbook/client-docs/flashloan.md)
   * [Example](./gitbook/client-docs/flashloan_example.md)
 * [🤖 Arbitrage Bots](./gitbook/client-docs/arbitrage_bots.md)
-  * [⚙️   Config Example](./gitbook//client-docs//configexample.md)
-  * [🐳 Running in Docker](./gitbook//client-docs//docker_deployment_bots.md)
+  * [⚙️ Config Example](./gitbook/client-docs/configexample.md)
+  * [🐳 Running in Docker](./gitbook/client-docs/docker_deployment_bots.md)
