@@ -37,6 +37,6 @@ If you are looking for our V1 documentation, you can find it [here](https://whit
 
 ## Contributing
 
-[Code of Conduct](./docs/CODE_OF_CONDUCT.md)
+[Code of Conduct](./docs/CODE_OF_CONDUCT)
 
-[License](./LICENSE)
+[License](./LICENSE.md)
