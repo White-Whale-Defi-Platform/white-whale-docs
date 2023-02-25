@@ -93,12 +93,6 @@
       "label": "ujuno-ibc/EAC3...8034 pair",
       "contract": "juno1wkjy5wl0pd5xxvwtrx37r7ydkt3dkwvghs00tvvqyd3xnjukah7qpj0vj7",
       "lp_token": "juno19mkjyvydnq440a3ms4fccpltrzmxlvlz6nvz6qul0mgxvse42n2q9qkf72"
-    },
-    {
-      "pair": "WHALE-axlUSDC",
-      "label": "ibc/36A0...B8DB-ibc/B350...C9E4 pair",
-      "contract": "juno13n76adxh4xudhgfh2hxr55h7xmjnfrnnvgkxg3g2htgj56c7pm5sysdqgt",
-      "lp_token": "juno1spejuegy6d75xhx2w2tulh4rk8dqnz0y5rp4py85nm20tf5nh4kqelhdgn"
     }
   ],
   "date": "2022-08-25T11:52:10+0000",
