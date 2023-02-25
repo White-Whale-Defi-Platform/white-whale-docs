@@ -59,40 +59,52 @@
 {
   "pools": [
     {
-      "pair": "Atom-Luna",
+      "pair": "ATOM-LUNA",
       "label": "ibc/2739...5EB2-uluna pair",
       "contract": "terra1frfcj4xhvx0emkup4vel5jun9zun0797j5yhn7ant3r4jzy9mkxqzcwev6",
       "lp_token": "terra1adp223mw8937arxcfl36acjjyn2dcf7wzp8h09jek5k0gw3vch8sqlq6su"
     },
     {
-      "pair": "Atom-Juno",
+      "pair": "ATOM-JUNO",
       "label": "ibc/2739...5EB2-ibc/4CD5...3D04 pair",
       "contract": "terra1p2xgcr2ewnetug8ahqms5y3k6rxyh2xglnzzx500ylh4420h9ucqz8w7x5",
       "lp_token": "terra1avfsch3ee82wyrpwlawecyz6zktr9jln0zaxp58xuvmxyl5g305q3rwuj3"
     },
     {
-      "pair": "Atom-Usdc",
+      "pair": "ATOM-axlUSDC",
       "label": "ibc/2739...5EB2-ibc/B350...C9E4 pair",
       "contract": "terra17l9xj8f6m8smumhn8wgpgnswr3mu60wfkcm6pjc69drxp0t398rs7335vn",
       "lp_token": "terra17ly9laewec70qu6tl0e3qrwh2vhz9akpf2jd7mxqram63xg2n0rsj36xvr"
     },
     {
-      "pair": "Luna-LunaX",
+      "pair": "LUNA-LUNAX",
       "label": "uluna-LunaX pair",
       "contract": "terra1qzux5j9he9nv95kq3unkuzy0hddf080um2t243raatg3f6requwsaahpqp",
       "lp_token": "terra1lt586fhwyuccktk58v8k96ugzp9szurhqvmlnjxhyn6yapa6v2jsmc468d"
     },
     {
-      "pair": "Luna-Astro",
+      "pair": "LUNA-ASTRO",
       "label": "uluna-ASTRO pair",
       "contract": "terra1e6t37fgjkxrzdx2s95fyq6jdra5s82720vhtmxvx4yhcvnsrey4ssmrya6",
       "lp_token": "terra19glrs2vtgxaxww39cq5acxapgv2v8hyw562zmsk7ucn4yznmyv3sljewv9"
     },
     {
-      "pair": "Luna-Usdc",
+      "pair": "LUNA-axlUSDC",
       "label": "uluna-ibc/B350...C9E4 pair",
       "contract": "terra1ck8nkz35sa8mmqez3lqrm77vh36n2gd2f0dxjde4uemkwsjt22pqgk49zj",
       "lp_token": "terra1rlmjwapg7y3p39aucq2rq5rffyns7z94twm8acl59na4d9aehu9sl2dfkc"
+    },
+    {
+      "pair": "ampWHALE-WHALE",
+      "label": "ibc/B3F6...EC36-ibc/36A0...B8DB pair",
+      "contract": "terra1ntx595elf3ukxcd0wy76h24rzztcv2p6n3wmfd358ks95prv42fs9mn63n",
+      "lp_token": "terra16z3ksy6aqjkug8l3u48q0kvdaqk3dgaytl7ykt6vg2he9d6z9rgslr4k7l"
+    },
+    {
+      "pair": "WHALE-axlUSDC",
+      "label": "ibc/36A0...B8DB-ibc/B350...C9E4 pair",
+      "contract": "terra1qdu4g5zxxtmwsd95v8vjslq5874nkcull7ejycm0gy2v7p5qc67qenkf8t",
+      "lp_token": "terra1necjy4mmes4fvsvjvne5kkl3zhszg7s3s3jayfgzudsshnpv69kss5m2k2"
     }
   ],
   "date": "2022-08-25T11:52:10+0000",

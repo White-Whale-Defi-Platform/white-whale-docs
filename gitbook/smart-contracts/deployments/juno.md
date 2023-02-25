@@ -59,40 +59,46 @@
 {
   "pools": [
     {
-      "pair": "Atom-Luna",
+      "pair": "ATOM-LUNA",
       "label": "ibc/C4CF...19F9-ibc/107D...5CBF pair",
       "contract": "juno1k9cw9yghf04cqlu290n4zlveker5cev5ahweqkh07y7zc3xq9hrshjruk8",
       "lp_token": "juno1fkejwm7alyfnjngtpgtxvreqfcz8uwer2jgwjn40suvgq20tm8ss73cj05"
     },
     {
-      "pair": "Atom-Juno",
+      "pair": "ATOM-JUNO",
       "label": "ibc/C4CF...19F9-ujuno pair",
       "contract": "juno1p9z8xe96fyvg3h5gtvnpjjv2u47q6l7sdhg6asmyfgc6q8l8ttgqfvxnxh",
       "lp_token": "juno1g3549wm0tffdzdpasufjr0nccu9ynzpzway5g3u6ucmhfd4ds05swswasc"
     },
     {
-      "pair": "Atom-Usdc",
+      "pair": "ATOM-axlUSDC",
       "label": "ibc/C4CF...19F9-ibc/EAC3...8034 pair",
       "contract": "juno1v6stcdrvwrthfvcwvlmmzht32ft9g9nw85tthcjqer242xg3nvdq8fjasx",
       "lp_token": "juno12caca3ymhxr7a73wtdefye86djs69704ktzkv02xkf59se8hx72qwyxq72"
     },
     {
-      "pair": "Juno-Raw",
+      "pair": "JUNO-RAW",
       "label": "ujuno-Raw pair",
       "contract": "juno1xpt9mkncxadadn5t8s4t74nmw5zlarghmpme26857s07xz388d6sukvtnz",
       "lp_token": "juno1zetjfu8j0ndt4d3mgewhatgpfrj8pwhev2tdp3sa9dwwmqlgdxws4257we"
     },
     {
-      "pair": "Juno-Loop",
+      "pair": "JUNO-LOOP",
       "label": "ujuno-LOOP pair",
       "contract": "juno158mcxa5ajpjfxgy60asrg3m0823m2el5n333xdypcw8h5uwhuvyqkyc4a7",
       "lp_token": "juno1zmsgdpdej4g4m4fc5y5p6wr8gn6peh9vx5dk5vf7v7w32jjmcetshl0yw4"
     },
     {
-      "pair": "Juno-Usdc",
+      "pair": "JUNO-axlUSDC",
       "label": "ujuno-ibc/EAC3...8034 pair",
       "contract": "juno1wkjy5wl0pd5xxvwtrx37r7ydkt3dkwvghs00tvvqyd3xnjukah7qpj0vj7",
       "lp_token": "juno19mkjyvydnq440a3ms4fccpltrzmxlvlz6nvz6qul0mgxvse42n2q9qkf72"
+    },
+    {
+      "pair": "WHALE-axlUSDC",
+      "label": "ibc/36A0...B8DB-ibc/B350...C9E4 pair",
+      "contract": "juno13n76adxh4xudhgfh2hxr55h7xmjnfrnnvgkxg3g2htgj56c7pm5sysdqgt",
+      "lp_token": "juno1spejuegy6d75xhx2w2tulh4rk8dqnz0y5rp4py85nm20tf5nh4kqelhdgn"
     }
   ],
   "date": "2022-08-25T11:52:10+0000",
