@@ -1,5 +1,7 @@
 # White Whale Arbitrage Documentation
 
+## Version
+These docs are updated to be used alongside [bot version v1.1.0](https://github.com/White-Whale-Defi-Platform/white-whale-bots/releases/tag/v1.1.0).
 
 ## Setup
 
