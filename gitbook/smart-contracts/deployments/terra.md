@@ -95,16 +95,22 @@
       "lp_token": "terra1rlmjwapg7y3p39aucq2rq5rffyns7z94twm8acl59na4d9aehu9sl2dfkc"
     },
     {
+      "pair": "WHALE-axlUSDC",
+      "label": "ibc/36A0...B8DB-ibc/B350...C9E4 pair",
+      "contract": "terra1qdu4g5zxxtmwsd95v8vjslq5874nkcull7ejycm0gy2v7p5qc67qenkf8t",
+      "lp_token": "terra1necjy4mmes4fvsvjvne5kkl3zhszg7s3s3jayfgzudsshnpv69kss5m2k2"
+    },
+    {
       "pair": "ampWHALE-WHALE",
       "label": "ibc/B3F6...EC36-ibc/36A0...B8DB pair",
       "contract": "terra1ntx595elf3ukxcd0wy76h24rzztcv2p6n3wmfd358ks95prv42fs9mn63n",
       "lp_token": "terra16z3ksy6aqjkug8l3u48q0kvdaqk3dgaytl7ykt6vg2he9d6z9rgslr4k7l"
     },
     {
-      "pair": "WHALE-axlUSDC",
-      "label": "ibc/36A0...B8DB-ibc/B350...C9E4 pair",
-      "contract": "terra1qdu4g5zxxtmwsd95v8vjslq5874nkcull7ejycm0gy2v7p5qc67qenkf8t",
-      "lp_token": "terra1necjy4mmes4fvsvjvne5kkl3zhszg7s3s3jayfgzudsshnpv69kss5m2k2"
+      "pair": "boneWHALE-WHALE",
+      "label": "ibc/517E...D84E-ibc/36A0...B8DB pair",
+      "contract": "terra1j9jmsplecj9ay2py27953p84nfmv7f6ce75ms5fleyhd0aecpc7q0hgmsa",
+      "lp_token": "terra1le46uu9qjk53aktjs8dev96sl9sd2ujvcpspk75pdeg0txfvhyuswm6653"
     }
   ],
   "date": "2022-08-25T11:52:10+0000",
