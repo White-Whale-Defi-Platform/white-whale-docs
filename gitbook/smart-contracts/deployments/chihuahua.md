@@ -115,6 +115,28 @@
       "pool_code_id": "144",
       "lp_code_id": "116"
     }
+    {
+      "pair": "bHUAHUA-HUAHUA",
+      "assets": [
+        "{\"token\":{\"contract_addr\":\"chihuahua1jz5n4aynhpxx7clf2m8hrv9dp5nz83k67fgaxhy4p9dfwl6zssrq3ymr6w\"}}",
+        "{\"token\":{\"native_token\":\"uhuahua\"}}"
+      ],
+      "pool_address": "chihuahua1py86y6946ed07g8v24thess2havjjgpg3uvjdu4v805czmge37hsvlt6qz",
+      "lp_address": "chihuahua1ju5ecz9xcfly70g7fvh4yflh60d2uyf9g3hxl8xahra8szzy2jdsg6p63r",
+      "pool_code_id": "144",
+      "lp_code_id": "116"
+    },
+    {
+      "pair": "ampHUAHUA-HUAHUA",
+      "assets": [
+        "{\"token\":{\"contract_addr\":\"chihuahua1xu6hgwy3rayh4e8s43nhz5x9js9gd20fsl8zpem67mkynyl5hs6qsxar2d\"}}",
+        "{\"token\":{\"native_token\":\"uhuahua\"}}"
+      ],
+      "pool_address": "chihuahua1a6xwgvyvrmzgue6hectem3fwdzquny44a4y20a9wvlrtalhlsk9sryz5t9",
+      "lp_address": "chihuahua1zcv45lr7gu7amg6plr6z0rmx29wts3d9gklm9g53klwj45qat84qm2cvld",
+      "pool_code_id": "144",
+      "lp_code_id": "116"
+    }
   ],
   "date": "2023-01-05T15:59:41+0000",
   "chain_id": "chihuahua-1",
