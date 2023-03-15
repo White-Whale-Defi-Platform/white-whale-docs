@@ -114,6 +114,39 @@
       "lp_address": "chihuahua19grlsf4dxnqwqh36sh44qszqzqd054c9yyq3c7yfqwsd5c5vv9asyyscgg",
       "pool_code_id": "144",
       "lp_code_id": "116"
+    },
+    {
+      "pair": "ampWhale-Whale",
+      "assets": [
+        "{\"token\":{\"native_token\":\"ibc/1ABC53B2BB5F76F5DE57F6A6640DAC100F5D078075768115FC3B8E83C54FD9FF\"}}",
+        "{\"token\":{\"native_token\":\"ibc/FA7112322CE7656DC84D441E49BAEAB9DC0AB3C7618A178A212CDE8B3F17C70B\"}}"
+      ],
+      "pool_address": "chihuahua1ndkl0wln9maj9vlwzcv7fhzk6r27f8w3t44rsng0qg3y70jah8dqerwgy6",
+      "lp_address": "chihuahua1wsxgq90w0sz7z5pzf828fdymtjfw9zutfxscpmjt8y024feaky5s5ugwvr",
+      "pool_code_id": "144",
+      "lp_code_id": "116"
+    },
+    {
+      "pair": "bWhale-Whale",
+      "assets": [
+        "{\"token\":{\"native_token\":\"ibc/E452FABA9C51E85726BAB567EB582FEA1541B9D26543C6876996B61112DE72F7\"}}",
+        "{\"token\":{\"native_token\":\"ibc/FA7112322CE7656DC84D441E49BAEAB9DC0AB3C7618A178A212CDE8B3F17C70B\"}}"
+      ],
+      "pool_address": "chihuahua1pwdlm72srpfr6tdvfln0fagcczl93etj0mhh9w55czwg2je3k6pqdmqa3h",
+      "lp_address": "chihuahua1qj4qexx7flmwwv8fauzegshk3yh36f666kte72p9ede09q22n78s3vyrue",
+      "pool_code_id": "144",
+      "lp_code_id": "116"
+    },
+    {
+      "pair": "HUAHUA-Whale",
+      "assets": [
+        "{\"token\":{\"native_token\":\"ibc/FA7112322CE7656DC84D441E49BAEAB9DC0AB3C7618A178A212CDE8B3F17C70B\"}}",
+        "{\"token\":{\"native_token\":\"uhuahua\"}}"
+      ],
+      "pool_address": "chihuahua1l4735tn25cr0tjyjtdlcla020843hgjvtmvwrdtazfp9ut0a9arsd5w4ys",
+      "lp_address": "chihuahua1hv3yeyapzwnpc0jm0zn49pnulm8pa70qflxzwm0jw4k2zreyujmq2cx65e",
+      "pool_code_id": "144",
+      "lp_code_id": "116"
     }
   ],
   "date": "2023-01-05T15:59:41+0000",
