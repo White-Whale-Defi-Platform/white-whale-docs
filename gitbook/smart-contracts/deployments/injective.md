@@ -99,13 +99,13 @@
         "{\"native_token\":{\"denom\":\"ibc/ECB0AA28D6001EF985047558C410B65581FC85BD92D4E3CFCCA0D3D964C67CC2\"}}",
         "{\"native_token\":{\"denom\":\"ibc/D6E6A20ABDD600742D22464340A7701558027759CE14D12590F8EA869CCCF445\"}}"
       ],
-      "pool_address": "inj1a6tcf60pyz8qq2n532dzcs7s7sj8klcmj94nhd",
-      "lp_address": "inj17dez7atlgwrl7lxzszxjy7gzuj325n8re3f7mh",
+      "pool_address": "inj17dez7atlgwrl7lxzszxjy7gzuj325n8re3f7mh",
+      "lp_address": "inj1a6tcf60pyz8qq2n532dzcs7s7sj8klcmj94nhd",
       "pool_code_id": "18",
       "lp_code_id": "17"
     },
     {
-      "pair": "ibc/ECB0...7CC2-ibc/D6E6...F445 pair",
+      "pair": "ibc/ECB0...7CC2-ibc/D6E6...F445 pair(inactive)",
       "assets": [
         "{\"native_token\":{\"denom\":\"peggy0xdAC17F958D2ee523a2206206994597C13D831ec7\"}}",
         "{\"native_token\":{\"denom\":\"ibc/D6E6A20ABDD600742D22464340A7701558027759CE14D12590F8EA869CCCF445\"}}"
