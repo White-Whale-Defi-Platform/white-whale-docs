@@ -165,6 +165,30 @@
       "lp_address": "juno1a68d46fyzyq50t3geqe5c50kmswhrezyec8hz6sfngts6k4e77nqqd3yd0",
       "pool_code_id": "1532",
       "lp_code_id": "1440"
+    },
+    {
+      "label": "ampJUNO-ujuno",
+      "pair": "ampJUNO-ujuno",
+      "assets": [
+        "{\"token\":{\"contract_addr\":\"juno1a0khag6cfzu5lrwazmyndjgvlsuk7g4vn9jd8ceym8f4jf6v2l9q6d348a\"}}",
+        "{\"native_token\":{\"denom\":\"ujuno\"}}"
+      ],
+      "pool_address": "juno137593pljsgltp9863sawquejpxzmtpvuafg0c7tpqqer3hkz48eslwrl4l",
+      "lp_address": "juno1th5zf95xevutfgqc2a4cexqpeykx0y0q87jzexhd7pmzdxnpg4qs8tg3t5",
+      "pool_code_id": "1532",
+      "lp_code_id": "1440"
+    },
+    {
+      "label": "bJuno-ujuno",
+      "pair": "bJuno-ujuno",
+      "assets": [
+        "{\"token\":{\"contract_addr\":\"juno1mvkgcr5uce2rnpzr4qrzf50hx4qreuwzlt7fzsjrhjud3xnjmttq5mkh2m\"}}"
+        "{\"native_token\":{\"denom\":\"ujuno\"}}"
+      ],
+      "pool_address": "juno12w6f755zx9l0vflfvql2jvl2jlyv348esyh7utvx727nwpy2jg5qsjemyx",
+      "lp_address": "juno1qdj9shhfasyjuvncawstvmcqp2afxet0x36jaaxt0udp6gq27ftq9xr5d4",
+      "pool_code_id": "1532",
+      "lp_code_id": "1440"
     }
   ],
   "date": "2022-08-25T11:52:10+0000",
