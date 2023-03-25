@@ -196,6 +196,28 @@
       "lp_address": "comdex1guczj53xxl4347adagh23eelyhnxvugw2nqq0q0dr6kws7q35jyqzf9hkm",
       "pool_code_id": "7",
       "lp_code_id": "12"
+    },
+    {
+      "pair": "ibc/412D...F278-ibc/1A8D...A5E2",
+      "assets": [
+        "{\"native_token\":{\"denom\":\"ibc/412DE088BAD7A3AB5BF299E1AEEDDBA88E6F3E1BCFEC5EC0BDDEC2A5A062F278\"}}",
+        "{\"native_token\":{\"denom\":\"ibc/1A8D30507F3EAC6A99666EDCB8CD147D1453B35E68F4331B63848B2040E9A5E2\"}}"
+      ],
+      "pool_address": "comdex10788fkzah89xrdm27zkj5yvhj9x3494lxawzm5qq3vvxcqz2yzaq4j6rgw",
+      "lp_address": "comdex1ecgazyd0waaj3g7l9cmy5gulhxkps2gmxu9ghducvuypjq68mq2s9q82rn",
+      "pool_code_id": "7",
+      "lp_code_id": "12"
+    },
+    {
+      "pair": "ibc/BED9...522C-ibc/1A8D...A5E2",
+      "assets": [
+        "{\"native_token\":{\"denom\":\"ibc/BED9212E5BA494E6EA522D82D55972A3C148BB0232FE2B4366FF5356FB3E522C\"}}",
+        "{\"native_token\":{\"denom\":\"ibc/1A8D30507F3EAC6A99666EDCB8CD147D1453B35E68F4331B63848B2040E9A5E2\"}}"
+      ],
+      "pool_address": "comdex177yh38g3ctu7cemxpa3c2kvwh2yslfxfeej4ze7rpghrwmh30ukqfqrvng",
+      "lp_address": "comdex1ts83c0ldh0jjmdmqtv33k74pljr0jsm5t3csyndrsealujwtsfwsskrdvj",
+      "pool_code_id": "7",
+      "lp_code_id": "12"
     }
   ],
   "date": "2022-12-20T11:23:56+0000",
