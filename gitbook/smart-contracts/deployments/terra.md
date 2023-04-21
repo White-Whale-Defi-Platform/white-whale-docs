@@ -5,9 +5,15 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "838",
-      "version": "1.0.5",
+      "code_id": "1423",
+      "version": "1.1.0",
       "contract_address": "terra1w8402njz8936ag4rlcmvek4zcns6hlkaapsd4qwz5us0ewwyghrsx7k47w"
+    },
+    {
+      "wasm": "fee_distributor.wasm",
+      "code_id": "1424",
+      "version": "0.8.0",
+      "contract_address": "terra1xm0yh8cv8rww6g87h3q0megt6ntxqzw6p6hgh5l4jrhed4fe7hnq9cvzm5"
     },
     {
       "wasm": "terraswap_factory.wasm",
@@ -47,6 +53,12 @@
       "code_id": "846",
       "version": "1.1.3",
       "contract_address": "terra1c8tpvta3umr4mpufvxmq39gyuw2knpyxyfgq8thpaeyw2r6a80qsg5wa00"
+    },
+    {
+      "wasm": "whale_lair.wasm",
+      "code_id": "1425",
+      "version": "0.8.0",
+      "contract_address": "terra1qa5a8fkynmthlrh9wsae4sqnuxdrespsls7c7acayqqvs5s63eksm53snj"
     }
   ],
   "date": "2022-08-23T15:43:25+0000",
