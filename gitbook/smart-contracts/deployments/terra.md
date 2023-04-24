@@ -11,8 +11,8 @@
     },
     {
       "wasm": "fee_distributor.wasm",
-      "code_id": "1424",
-      "version": "0.8.0",
+      "code_id": "1429",
+      "version": "0.8.1",
       "contract_address": "terra1xm0yh8cv8rww6g87h3q0megt6ntxqzw6p6hgh5l4jrhed4fe7hnq9cvzm5"
     },
     {
@@ -56,8 +56,8 @@
     },
     {
       "wasm": "whale_lair.wasm",
-      "code_id": "1425",
-      "version": "0.8.0",
+      "code_id": "1430",
+      "version": "0.8.1",
       "contract_address": "terra1qa5a8fkynmthlrh9wsae4sqnuxdrespsls7c7acayqqvs5s63eksm53snj"
     }
   ],
