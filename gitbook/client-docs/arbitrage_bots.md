@@ -17,11 +17,22 @@ These docs are updated to be used alongside [bot version v1.2.0](https://github.
 The bot uses an environment file (.env) for the required configuration settings. This file needs to be provided in the root directory of the code in order for the bot to function properly. A typical working directory would look like this (after first a first build with `npm run build`). 
 ```bash
 root
+├── .github
+├── docs
 ├── node_modules
 ├── out
 ├── src
+├── .dockerignore
+├── .env.injective.example
+├── .env.juno.example
+├── .env.terra.example
 ├── .env  #-- you have to add this file yourself
+├── .eslintrc
+├── .gitattributes
 ├── .gitignore
+├── docker-compose.yml
+├── Dockerfile
+├── LICENSE
 ├── package.json
 ├── package-lock.json
 ├── README.md
