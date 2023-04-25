@@ -1,7 +1,7 @@
 # White Whale Arbitrage Documentation
 
 ## Version
-These docs are updated to be used alongside [bot version v1.1.0](https://github.com/White-Whale-Defi-Platform/white-whale-bots/releases/tag/v1.1.0).
+These docs are updated to be used alongside [bot version v1.2.0](https://github.com/White-Whale-Defi-Platform/white-whale-bots/releases/tag/v1.2.0).
 
 ## Setup
 
@@ -17,11 +17,22 @@ These docs are updated to be used alongside [bot version v1.1.0](https://github.
 The bot uses an environment file (.env) for the required configuration settings. This file needs to be provided in the root directory of the code in order for the bot to function properly. A typical working directory would look like this (after first a first build with `npm run build`). 
 ```bash
 root
+├── .github
+├── docs
 ├── node_modules
 ├── out
 ├── src
+├── .dockerignore
+├── .env.injective.example
+├── .env.juno.example
+├── .env.terra.example
 ├── .env  #-- you have to add this file yourself
+├── .eslintrc
+├── .gitattributes
 ├── .gitignore
+├── docker-compose.yml
+├── Dockerfile
+├── LICENSE
 ├── package.json
 ├── package-lock.json
 ├── README.md
@@ -34,7 +45,7 @@ There are multiple properties that are required to be set for the bot to functio
 | Setting          | Required | Values| Description                                                                                                                                                                                                                                                                                              |
 |------------------|----------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | WALLET_MNEMONIC  | yes      | 24-words forming the mnemonic key | The mnemonic used to sign transactions and pay the gas fee                                                                                                                                                                                                                                               |  |
-| USE_MEMPOOL      | yes      | "1"/"0"                           | States whether the bot should use mempool to project potential transactions on the actual blockstate and calculate potential arbitrage that arises. **note:** this incurs extra risk of failed transactions and lost gas fees. Defaulted to "1"                                                                            |  |
+| USE_MEMPOOL      | yes      | "1" \|\| "0"                            | States whether the bot should use mempool to project potential transactions on the actual blockstate and calculate potential arbitrage that arises. **note:** this incurs extra risk of failed transactions and lost gas fees. Defaulted to "1"                                                                            |  |
 | GAS_USAGE_PER_HOP  | yes      | "number"                   | Denotes the amount of gas units the bot will use for each hop in a transaction's path. <br />**note:** will only be used when using USE_MEMPOOL=1 or USE_SKIP=1, else the client will estimate gas units and fees |  |
 | MAX_PATH_HOPS  | yes      | "number"                   | Denotes the number of pools allowed in one path. E.g. 4 means we will allow paths up to 4 pools to be used in arbitrage |  |
 | PROFIT_THRESHOLD | yes      | "number"                          | States the minimal profit threshold the bot will trade, denominated in BASE_DENOM |  |
@@ -48,7 +59,7 @@ Note: only relevant when `USE_SKIP = "1"` from general settings
 
 | Setting                      | Required | Values                    | Description                                                                                                                                     |
 |------------------------------|----------|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| USE_SKIP         | no       | "1"/"0"                           | Whether or not to use Skip Protocol for bidding on blockspace to use the bot as MEV arbitrage bot. Defaulted to "0". See [skip specific settings](#skip-specific-settings) for further setup                                                                                                                                                                                      |  |
+| USE_SKIP         | no       | "1" \|\| "0"                            | Whether or not to use Skip Protocol for bidding on blockspace to use the bot as MEV arbitrage bot. Defaulted to "0". See [skip specific settings](#skip-specific-settings) for further setup                                                                                                                                                                                      |  |
 | SKIP_URL      | yes       | "tokenstring"                     | The skip url to send transaction bundles to for this specific chain. This url is provided by skip.                                                                                                                                                                                                                        |  |
 | SKIP_BID_WALLET    | yes       | "channel"                         | The auction house wallet for this specific blockchain. This walletaddress is provided by skip.                                                                                                                                                                                                                                                         |  |
 | SKIP_BID_RATE    | yes       | "channel"                         | The bid rate to use with respect to the expected profit of a trade                                                                                                                                                                                                                                                       |  |
@@ -63,17 +74,19 @@ Note: only relevant when `USE_SKIP = "1"` from general settings
 | TELEGRAM_BOT_TOKEN    | no       | "tokenstring"                         | The token for the telegram bot logger                                                                                                                                                                                                                                                         |  |
 | DISCORD_WEBHOOK_URL    | no       | "webhookstring"                         | Discord webhook url to use for logging into discord                                                                                                                                                                                                                                                         |  |
 | EXTERNAL_EXEMPT_CODES    | no       | "webhookstring"                         | Specific SKIP errors to ignore, only relevant if `USE_SKIP`="1"                                                                                                                                                                                                                                                         |  |
-| SIGN_OF_LIFE    | no       | "webhookstring"                         | The frequency in minutes for which the bot will send a sign-of-life message                                                                                                                                                                                                                                                         |  |
+| SIGN_OF_LIFE    | no       | "number"                         | The frequency in minutes for which the bot will send a sign-of-life message                                                                                                                                                                                                                                                         |  |
 ### **Chain Specific Settings**
 | Setting                      | Required | Values                    | Description                                                                                                                                     |
 |------------------------------|----------|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | BASE_DENOM                   | yes      | "denom"                   | Denom from which the bot will arb from and to. Also the denom that will be used to pay the transaction fees with                                |
 | CHAIN_PREFIX                 | yes      | "prefix"                  | Prefix used by the specific chain the bot will run on. E.g. for the Terra chain this means "terra", for Juno chain this means "juno"            |
-| RPC_URL                      | yes      | "url"                     | The RPC-endpoint to be used for the bot, this can be either a publicly available endpoint or your own private endpoint                          |
+| RPC_URL                      | yes      | "["url",...]" \|\| "url"  | The RPC-endpoint/s to be used for the bot, this can be either a publicly available endpoint or your own private endpoint **note:** Not required if USE_RPC_URL_SCRAPER = "1"                        |
+| USE_RPC_URL_SCRAPER          | no       | "1" \|\| "0"              | Query RPCs from the chainregistry and add to RPC_URL. Urls set in `RPC_URL` are used first.                                                      |
+| IGNORE_ADDRESSES             | no       | "["address",...]"         | Add addresses whose trades you want to ignore. Used against mempool spammer.                                                                    |
 | GAS_UNIT_PRICE               | yes      | "number"                  | The price in `BASE_DENOM` per gas unit                                                                                                          |
 | POOLS                        | yes      | "{pool},{pool},..,{pool}" | The list of pools that will be used to arb with. This setting is explained in more detail below                                                 |
-| FACTORIES_TO_ROUTERS_MAPPING | no      | "{mapping},{mapping}"     | A list of mappings from specific pair-factories with their corresponding trade router contracts. This setting is explained in more detail below |
-| FLASHLOAN_FEE                     | yes       | "number"                 | The flashloan fee white whale charges on taking a loan in percentages, currently 0.15%.                                                    |
+| FACTORIES_TO_ROUTERS_MAPPING | no       | "{mapping},{mapping}"     | A list of mappings from specific pair-factories with their corresponding trade router contracts. This setting is explained in more detail below |
+| FLASHLOAN_FEE                | yes      | "number"                  | The flashloan fee white whale charges on taking a loan in percentages, currently 0.15%.                                                         |
                                                            
 
 {% hint style="danger" %} Important: Do not expose the `MNEMONIC` setting described above. Be careful with sharing `.env` files. White Whale will never ask for your MNEMONIC {% endhint %}
