@@ -16,20 +16,25 @@
       "contract_address": "terra1xm0yh8cv8rww6g87h3q0megt6ntxqzw6p6hgh5l4jrhed4fe7hnq9cvzm5"
     },
     {
+      "wasm": "stableswap_3pool.wasm",
+      "code_id": "1450",
+      "version": "1.2.0"
+    },
+    {
       "wasm": "terraswap_factory.wasm",
-      "code_id": "839",
-      "version": "1.1.2",
+      "code_id": "1444",
+      "version": "1.2.0",
       "contract_address": "terra1f4cr4sr5eulp3f2us8unu6qv8a5rhjltqsg7ujjx6f2mrlqh923sljwhn3"
     },
     {
       "wasm": "terraswap_pair.wasm",
-      "code_id": "841",
-      "version": "1.2.0"
+      "code_id": "1445",
+      "version": "1.3.0"
     },
     {
       "wasm": "terraswap_router.wasm",
-      "code_id": "842",
-      "version": "1.0.7",
+      "code_id": "1446",
+      "version": "1.1.0",
       "contract_address": "terra1p37jrwlaqpklzlu4rwjyjrmzuezdgk3pyuyk2zclc4rda6awkm3qnj6f0a"
     },
     {
@@ -39,19 +44,19 @@
     },
     {
       "wasm": "vault_factory.wasm",
-      "code_id": "843",
-      "version": "1.0.9",
+      "code_id": "1452",
+      "version": "1.1.2",
       "contract_address": "terra1vcn8h6fc26nv4f20p6g870a00nqzdpjwvshud9ku3qfaqhv7l69s9l29y2"
     },
     {
       "wasm": "vault.wasm",
-      "code_id": "845",
-      "version": "1.2.0"
+      "code_id": "1453",
+      "version": "1.2.2"
     },
     {
       "wasm": "vault_router.wasm",
-      "code_id": "846",
-      "version": "1.1.3",
+      "code_id": "1451",
+      "version": "1.1.5",
       "contract_address": "terra1c8tpvta3umr4mpufvxmq39gyuw2knpyxyfgq8thpaeyw2r6a80qsg5wa00"
     },
     {
@@ -156,8 +161,8 @@
       "asset": "uluna",
       "vault_address": "terra1clwlcv2kekklzxdud2d938d0kyrgjryvr4a86qfal4n7wjerxrvsey7ch9",
       "lp_address": "terra1pm6s5x770t27xajnj2qqkn6mku8s4k44ujs0m53h9epqqcarulnqwva8nt",
-      "vault_code_id": "845",
-      "lp_code_id": "353"
+      "vault_code_id": "1453",
+      "lp_code_id": "726"
     }
   ],
   "chain_id": "phoenix-1",
