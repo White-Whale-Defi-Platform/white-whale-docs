@@ -169,6 +169,17 @@
       "lp_address": "chihuahua1zcv45lr7gu7amg6plr6z0rmx29wts3d9gklm9g53klwj45qat84qm2cvld",
       "pool_code_id": "144",
       "lp_code_id": "116"
+    },
+    {
+      "pair": "ROAR-HUAHUA",
+      "assets": [
+        "{\"token\":{\"contract_addr\":\"ibc/6BB4ADB45B1903AE497710FBC24E73C2C578A79D25EF923BD2E784A7FD0FC59F\"}}",
+        "{\"token\":{\"native_token\":\"uhuahua\"}}"
+      ],
+      "pool_address": "chihuahua1qekdpx5su9hhsswr0w4qq2szss0rwywl7y9gp4dawmp7jnm98mgss84zgv",
+      "lp_address": "chihuahua1r2un7qsaqfmurm8ytcwqtylhrufhkkfwvrqdxa90c74ghgcpa9ps5tqn9n",
+      "pool_code_id": "144",
+      "lp_code_id": "116"
     }
   ],
   "date": "2023-01-05T15:59:41+0000",
