@@ -147,6 +147,12 @@
       "contract": "terra1shd0wd8atmevjtryzcqzu6sxsmc4hjek43kxqsz08wxwk4nt0wvsav9004",
       "lp_token": "terra19sddeagdmflr7fh4tqkj37chv6zjpef2nnvfzfjlykwz0zvg6f4scvy5dr"
     }
+    {
+      "pair": "WHALE-ROAR",
+      "label": "WHALE-ROAR pair",
+      "contract": "terra1g8clplgv3ah405qjrf9yhkgur9zqlqayt8ftrvkuzsm5am7pr9ls7s26rx",
+      "lp_token": "terra1j7zej67gl6kjmgc2tl2hggp4xcvchnrn5reffc489u6ffsvm7aeq5k4sas"
+    }
   ],
   "date": "2022-08-25T11:52:10+0000",
   "chain_id": "phoenix-1",
