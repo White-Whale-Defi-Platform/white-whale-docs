@@ -1,10 +1,11 @@
 # Assets and related info
 
-## Migaloo on each zone
+## Whale token on each zone
 
 | Name       | Denom                                                                               | Logo |
 |------------|------------------------------------------------------------------------------------|------|
 | Osmosis    | ibc/EDD6F0D66BCD49C1084FB2C35353B4ACD7B9191117CE63671B61320548F7C89D             |   [![WHALE logo](https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.png)](https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.png)    |
+| Terra      | ibc/36A02FFC4E74DF4F64305130C3DFA1B06BEAC775648927AA44467C76A77AB8DB             |   [![WHALE logo](https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.png)](https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.png)    |
 | Juno       | ibc/3A6ADE78FB8169C034C29C4F2E1A61CE596EC8235366F22381D981A98F1F5A5C             |  [![WHALE logo](https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.png)](https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.png)     |
 | Chihuahua  | ibc/FA7112322CE7656DC84D441E49BAEAB9DC0AB3C7618A178A212CDE8B3F17C70B             |   [![WHALE logo](https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.png)](https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.png)    |
 | Injective  | IBC/D6E6A20ABDD600742D22464340A7701558027759CE14D12590F8EA869CCCF445             |   [![WHALE logo](https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.png)](https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.png)    |
