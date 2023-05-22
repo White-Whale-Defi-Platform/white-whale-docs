@@ -5,25 +5,36 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "153",
-      "version": "1.0.5",
+      "code_id": "345",
+      "version": "1.1.0",
       "contract_address": "chihuahua1z6fjtpsa9fhnkuxvef5lkcaafuw40zc3hr0wml0tngqahtl0s58sxdkwrm"
     },
     {
+      "wasm": "fee_distributor.wasm",
+      "code_id": "346",
+      "version": "0.8.1",
+      "contract_address": "chihuahua15umr63cfrav8qk572x57rzjfcyqtfnret6rpfasju9ayeqmxrhjq5k0y8c"
+    },
+    {
+      "wasm": "stableswap_3pool.wasm",
+      "code_id": "347",
+      "version": "1.2.1"
+    },
+    {
       "wasm": "terraswap_factory.wasm",
-      "code_id": "147",
-      "version": "1.1.2",
+      "code_id": "348",
+      "version": "1.2.0",
       "contract_address": "chihuahua1s8ehad3r9wxyk08ls2nmz8mqh4vlfmaxd2nw0crxwh04t4l5je4s8ljv0j"
     },
     {
       "wasm": "terraswap_pair.wasm",
-      "code_id": "144",
-      "version": "1.2.0"
+      "code_id": "349",
+      "version": "1.3.1"
     },
     {
       "wasm": "terraswap_router.wasm",
-      "code_id": "150",
-      "version": "1.0.7",
+      "code_id": "350",
+      "version": "1.1.0",
       "contract_address": "chihuahua1w3z9kpv08ya8ketrd8sc9008wxq6ygeuur40dlvh3df2u54pcdmq52sguh"
     },
     {
@@ -33,20 +44,26 @@
     },
     {
       "wasm": "vault_factory.wasm",
-      "code_id": "154",
-      "version": "1.0.9",
+      "code_id": "352",
+      "version": "1.1.2",
       "contract_address": "chihuahua1mlhardte7nznkkupn64vw58nt48fa5r5frluxt7y5gkrkws39scqagvdm7"
     },
     {
       "wasm": "vault.wasm",
-      "code_id": "145",
-      "version": "1.2.0"
+      "code_id": "354",
+      "version": "1.2.2"
     },
     {
       "wasm": "vault_router.wasm",
-      "code_id": "155",
-      "version": "1.1.3",
+      "code_id": "353",
+      "version": "1.1.5",
       "contract_address": "chihuahua1qe6jsllyvrlmtz2xqef9k7q67xeyj3zcuc09wzptnvev3wyyd4fs4y4ce9"
+    },
+    {
+      "wasm": "whale_lair.wasm",
+      "code_id": "355",
+      "version": "0.8.2",
+      "contract_address": "chihuahua1dd7e5l7jf7yu23u8ehjw36aahsk7jjls9llcgm34szq0qemj6a9q8h30j7"
     }
   ],
   "date": "2022-09-29T20:50:49+0000",
