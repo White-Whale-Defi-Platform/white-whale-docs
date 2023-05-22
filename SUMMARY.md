@@ -10,14 +10,14 @@
 
 * [🖼 Overview](./gitbook/smart-contracts/overview.md)
 * [📚 Common Types](./gitbook/smart-contracts/common-types/overview.md)
-* 🌐 Deployments
-  * [🐶 Chihuahua](./gitbook/smart-contracts/deployments/chihuahua.md)
-  * [🗽 Juno](./gitbook/smart-contracts/deployments/juno.md)
-  * [🌕 Terra](./gitbook/smart-contracts/deployments/terra.md)
-  * [🥷 Injective](./gitbook/smart-contracts/deployments/injective.md)
-  * [⭐ Stargaze](./gitbook/smart-contracts/deployments/stargaze.md)
-  * [©️ Comdex](./gitbook/smart-contracts/deployments/comdex.md)
-  * [⛵️ Sei](./gitbook/smart-contracts/deployments/sei.md)
+* 🌐 Liquidity Hub Deployments
+  * [🐶 Chihuahua](./gitbook/smart-contracts/deployments/liquidity-hub/chihuahua.md)
+  * [🗽 Juno](./gitbook/smart-contracts/deployments/liquidity-hub/juno.md)
+  * [🌕 Terra](./gitbook/smart-contracts/deployments/liquidity-hub/terra.md)
+  * [🥷 Injective](./gitbook/smart-contracts/deployments/liquidity-hub/injective.md)
+  * [⭐ Stargaze](./gitbook/smart-contracts/deployments/liquidity-hub/stargaze.md)
+  * [©️ Comdex](./gitbook/smart-contracts/deployments/liquidity-hub/comdex.md)
+  * [⛵️ Sei](./gitbook/smart-contracts/deployments/liquidity-hub/sei.md)
 
 ### Liquidity Hub
 
