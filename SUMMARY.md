@@ -10,7 +10,7 @@
 
 * [🖼 Overview](./gitbook/smart-contracts/overview.md)
 * [📚 Common Types](./gitbook/smart-contracts/common-types/overview.md)
-* [🪙 WHALE Token Address on Each Chain](./gitbook/smart-contracts/assets%20/denoms.md)
+* [🪙 WHALE Token Address on Each Chain](./gitbook/smart-contracts/assets/denoms.md)
 * 🌐 Liquidity Hub Deployments
   * [🐶 Chihuahua](./gitbook/smart-contracts/deployments/liquidity-hub/chihuahua.md)
   * [🗽 Juno](./gitbook/smart-contracts/deployments/liquidity-hub/juno.md)
@@ -33,6 +33,10 @@
   * [🏭 Vault Factory](./gitbook/smart-contracts/liquidity-hub/vault-network/vault-factory.md)
   * [🛡 Vault](./gitbook/smart-contracts/liquidity-hub/vault-network/vault.md)
   * [🔀 Vault Router](./gitbook/smart-contracts/liquidity-hub/vault-network/vault-router.md)
+
+### Liquidity Hub Procedures
+
+* [🤑 Updating Fees](./gitbook/smart-contracts/procedures/update-fees.md)
 
 ## Client Documentation
 * [⚡ Calling Flashloans](./gitbook/client-docs/flashloan.md)
