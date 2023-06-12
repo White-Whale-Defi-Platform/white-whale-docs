@@ -197,6 +197,17 @@
       "lp_address": "chihuahua1r2un7qsaqfmurm8ytcwqtylhrufhkkfwvrqdxa90c74ghgcpa9ps5tqn9n",
       "pool_code_id": "144",
       "lp_code_id": "116"
+    },
+    {
+      "pair": "TREATZ-HUAHUA",
+      "assets": [
+        "{\"token\":{\"contract_addr\":\"chihuahua1se7z0mx6rs84zvd89c7v9lf7kum90y2hsevhht2c3pdww35n2m6sm5gg9x\"}}",
+        "{\"token\":{\"native_token\":\"uhuahua\"}}"
+      ],
+      "pool_address": "chihuahua19x48cf5d5lm0z2dmqptgh4mhfglsy0nvvznra36zd3fpvjp277vqeyd2x6",
+      "lp_address": "chihuahua1e3ets9mwmffnzuuj03w53g3ch6jmazdwtpqhu0f2wc5a6z6yxaks6r3lrs",
+      "pool_code_id": "144",
+      "lp_code_id": "116"
     }
   ],
   "date": "2023-01-05T15:59:41+0000",
