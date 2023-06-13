@@ -24,6 +24,8 @@
 
 * [🖼 Overview](./gitbook/smart-contracts/liquidity-hub/overview.md)
 * [🪄 Fee Collector](./gitbook/smart-contracts/liquidity-hub/fee-collector.md)
+* [🤑 Fee Distributor](./gitbook/smart-contracts/liquidity-hub/fee-distributor.md)
+* [🐳 Whale Lair](./gitbook/smart-contracts/liquidity-hub/whale-lair/whale-lair.md)
 * [💱 Pool Network](./gitbook/smart-contracts/liquidity-hub/pool-network/overview.md)
   * [🏭 Factory](./gitbook/smart-contracts/liquidity-hub/pool-network/terraswap-factory.md)
   * [💱 Pair](./gitbook/smart-contracts/liquidity-hub/pool-network/terraswap-pair.md)
