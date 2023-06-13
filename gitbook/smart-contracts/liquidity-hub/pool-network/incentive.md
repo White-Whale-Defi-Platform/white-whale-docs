@@ -159,3 +159,105 @@ Claims the flow rewards.
 }
 ```
 
+
+## QueryMsg
+
+### Config
+
+Retrieves the current contract configuration.
+
+```json
+{
+    "config": {}
+}
+```
+
+### Flow
+
+Retrieves a specific flow.
+
+```json
+{
+    "flow": {
+      "flow_id": 123
+    }
+}
+```
+
+| Key       | Type | Description         |
+| --------- | ---- | ------------------- |
+| `flow_id` | u64  | The id of the flow. |
+
+### Flows
+
+Retrieves the current flows.
+
+```json
+{
+    "flows": {}
+}
+```
+
+### Positions
+
+Retrieves the positions for an address.
+
+```json
+{
+    "positions": {
+      "address": "juno1..."
+    }
+}
+```
+
+| Key       | Type   | Description           |
+| --------- | ------ | --------------------- |
+| `address` | String | The address to query. |
+
+### Rewards
+
+Retrieves the rewards for an address.
+
+```json
+{
+    "rewards": {
+      "address": "juno1..."
+    }
+}
+```
+
+| Key       | Type   | Description           |
+| --------- | ------ | --------------------- |
+| `address` | String | The address to query. |
+
+### GlobalWeight
+
+Retrieves the global weight for an epoch.
+
+```json
+{
+    "global_weight": {
+      "epoch_id": 123
+    }
+}
+```
+
+| Key        | Type | Description         |
+| ---------- | ---- | ------------------- |
+| `epoch_id` | u64  | The epoch to query. |
+
+### CurrentEpochRewardsShare
+
+Retrieves the rewards share of an address for the current epoch.
+
+```json
+{
+    "current_epoch_rewards_share": {
+      "address": "juno1..."
+    }
+}
+```
+
+| Key       | Type   | Description           |
+| --------- | ------ | --------------------- |
+| `address` | String | The address to query. |
