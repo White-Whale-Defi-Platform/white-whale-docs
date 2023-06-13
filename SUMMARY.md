@@ -29,6 +29,8 @@
 * [💱 Pool Network](./gitbook/smart-contracts/liquidity-hub/pool-network/overview.md)
   * [🏭 Factory](./gitbook/smart-contracts/liquidity-hub/pool-network/terraswap-factory.md)
   * [💱 Pair](./gitbook/smart-contracts/liquidity-hub/pool-network/terraswap-pair.md)
+  * [🏭 Incentive Factory](./gitbook/smart-contracts/liquidity-hub/pool-network/incentive-factory.md)
+  * [🔰 Incentive](./gitbook/smart-contracts/liquidity-hub/pool-network/incentive.md)
   * [🔀 Router](./gitbook/smart-contracts/liquidity-hub/pool-network/terraswap-router.md)
   * [🪙 Token](./gitbook/smart-contracts/liquidity-hub/pool-network/terraswap-token.md)
 * [🏦 Vault Network](./gitbook/smart-contracts/liquidity-hub/vault-network/overview.md)
