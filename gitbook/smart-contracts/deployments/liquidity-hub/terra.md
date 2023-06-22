@@ -5,13 +5,13 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "1423",
+      "code_id": "1600",
       "version": "1.1.0",
       "contract_address": "terra1w8402njz8936ag4rlcmvek4zcns6hlkaapsd4qwz5us0ewwyghrsx7k47w"
     },
     {
       "wasm": "fee_distributor.wasm",
-      "code_id": "1429",
+      "code_id": "1636",
       "version": "0.8.1",
       "contract_address": "terra1xm0yh8cv8rww6g87h3q0megt6ntxqzw6p6hgh5l4jrhed4fe7hnq9cvzm5"
     },
@@ -61,7 +61,7 @@
     },
     {
       "wasm": "whale_lair.wasm",
-      "code_id": "1438",
+      "code_id": "1602",
       "version": "0.8.2",
       "contract_address": "terra1qa5a8fkynmthlrh9wsae4sqnuxdrespsls7c7acayqqvs5s63eksm53snj"
     }
