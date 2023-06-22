@@ -6,7 +6,7 @@
     {
       "wasm": "fee_collector.wasm",
       "code_id": "1600",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "contract_address": "terra1w8402njz8936ag4rlcmvek4zcns6hlkaapsd4qwz5us0ewwyghrsx7k47w"
     },
     {
@@ -14,6 +14,24 @@
       "code_id": "1636",
       "version": "0.8.1",
       "contract_address": "terra1xm0yh8cv8rww6g87h3q0megt6ntxqzw6p6hgh5l4jrhed4fe7hnq9cvzm5"
+    },
+    {
+      "wasm": "frontend_helper.wasm",
+      "code_id": "1595",
+      "version": "1.0.0",
+      "contract_address": "terra1tslnzaadfhwdj67dzfvxhhy2agp0w69dt5uk5nfeaecevdqkh52sufhfrd"
+    },
+    {
+      "wasm": "incentive_factory.wasm",
+      "code_id": "1592",
+      "version": "0.9.0",
+      "contract_address": "terra1qsfcuketm4slntdp92kg3ltnn57j7dzq3wg3yqjr8xhsnae6fn3sjmle9y"
+    },
+    {
+      "wasm": "incentive.wasm",
+      "code_id": "1604",
+      "version": "1.0.1",
+      "contract_address": "terra1qsfcuketm4slntdp92kg3ltnn57j7dzq3wg3yqjr8xhsnae6fn3sjmle9y"
     },
     {
       "wasm": "stableswap_3pool.wasm",
@@ -62,7 +80,7 @@
     {
       "wasm": "whale_lair.wasm",
       "code_id": "1602",
-      "version": "0.8.2",
+      "version": "0.9.0",
       "contract_address": "terra1qa5a8fkynmthlrh9wsae4sqnuxdrespsls7c7acayqqvs5s63eksm53snj"
     }
   ],
