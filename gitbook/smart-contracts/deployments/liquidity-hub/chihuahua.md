@@ -5,14 +5,14 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "345",
-      "version": "1.1.0",
+      "code_id": "456",
+      "version": "1.1.1",
       "contract_address": "chihuahua1z6fjtpsa9fhnkuxvef5lkcaafuw40zc3hr0wml0tngqahtl0s58sxdkwrm"
     },
     {
       "wasm": "fee_distributor.wasm",
-      "code_id": "346",
-      "version": "0.8.1",
+      "code_id": "452",
+      "version": "0.9.0",
       "contract_address": "chihuahua15umr63cfrav8qk572x57rzjfcyqtfnret6rpfasju9ayeqmxrhjq5k0y8c"
     },
     {
@@ -61,10 +61,28 @@
     },
     {
       "wasm": "whale_lair.wasm",
-      "code_id": "355",
-      "version": "0.8.2",
+      "code_id": "451",
+      "version": "0.9.0",
       "contract_address": "chihuahua1dd7e5l7jf7yu23u8ehjw36aahsk7jjls9llcgm34szq0qemj6a9q8h30j7"
-    }
+    },
+    {
+      "wasm": "frontend_helper.wasm",
+      "code_id": "453",
+      "version": "1.0.0",
+      "contract_address": "chihuahua1u28kmt7m6vkfjpxq0gz6vgud59ahwfd3vsewarjjtgdtrtlcvmhq79qws0"
+    },
+    {
+      "wasm": "incentive_factory.wasm",
+      "code_id": "454",
+      "version": "1.0.0",
+      "contract_address": "chihuahua1wzde4vn8p8deskata2vy7z4cfvfzll0syjg8x659suhxnwqy7a8s6fhl4w"
+    },
+    {
+      "wasm": "incentive.wasm",
+      "code_id": "455",
+      "version": "1.0.0",
+      "contract_address": "terra1qsfcuketm4slntdp92kg3ltnn57j7dzq3wg3yqjr8xhsnae6fn3sjmle9y"
+    },
   ],
   "date": "2022-09-29T20:50:49+0000",
   "chain_id": "chihuahua-1",
