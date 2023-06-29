@@ -1,5 +1,6 @@
 # Juno (juno-1)
 
+### Contracts, deployed contract addresses, CODEID and Versions
 ```json
 {
   "contracts": [
@@ -83,6 +84,8 @@
   "deployer_address": "juno1dpx7ytug647wefe7ajxmg5ejt68gxcfv4h7g8t"
 }
 ```
+
+### Pools and LPs
 
 ```json
 {
@@ -225,6 +228,77 @@
   "pool_factory_address": "juno14m9rd2trjytvxvu4ldmqvru50ffxsafs8kequmfky7jh97uyqrxqs5xrnx"
 }
 ```
+
+### Pool Incentives 
+
+```json
+{
+  "pool_incentives": [
+    {
+      "pool": "juno158mcxa5ajpjfxgy60asrg3m0823m2el5n333xdypcw8h5uwhuvyqkyc4a7",
+      "pool_label": "ujuno-LOOP",
+      "incentive_contract": "juno1mhq2reglyzq63n7cnvrc5fefa6ztyxa56nmehsaan4yamu84ntcs70jetd"
+    },
+    {
+      "pool": "juno160uh2xtegzvc7ekte5x377aud0y40hw75m9l92h7pkqk3l3eg9vqltel48",
+      "pool_label": "ibc/01BA...2ABF-ibc/3A6A...5A5C",
+      "incentive_contract": "juno18a3qpkw5xh8m6r3lkughhv3ccqapjqgzq8923vw8tz6aqepxj5sqxet2gh"
+    },
+    {
+      "pool": "juno1k9cw9yghf04cqlu290n4zlveker5cev5ahweqkh07y7zc3xq9hrshjruk8",
+      "pool_label": "ibc/C4CF...19F9-ibc/107D...5CBF",
+      "incentive_contract": "juno1k7sqayt87x8vdeyj8unqtxgrg0s60kut4w95zzgn8ks6puf6udmq4gzt2n"
+    },
+    {
+      "pool": "juno1dwmrkyhed4szdxxk6l0c98hseancjtdet58n77tfhv2as8cdjdlq7vps00",
+      "pool_label": "ibc/2F7C...C0AF-ibc/3A6A...5A5C",
+      "incentive_contract": "juno198znyptksrfsrv0lvwcz65g07fx89hew6qq8gl58wtn3gualfa9s5jtzem"
+    },
+    {
+      "pool": "juno1g7ctm7dynjsduf597d8nvt36kwvhfutmzrczdnm00tsz48uryvzqp7p32h",
+      "pool_label": "ibc/3A6A...5A5C-ibc/EAC3...8034",
+      "incentive_contract": "juno13wl6hktnurvt6y529a8knzn0w0ml5ff6szlwhkfrwzjhl0zm2nlqgwwec9"
+    },
+    {
+      "pool": "juno1v6stcdrvwrthfvcwvlmmzht32ft9g9nw85tthcjqer242xg3nvdq8fjasx",
+      "pool_label": "ibc/C4CF...19F9-ibc/EAC3...8034",
+      "incentive_contract": "juno1r8t9e6agehtyack3vsskx885jepynf9jku48g2z96rgaz2u6jshs2gs28f"
+    },
+    {
+      "pool": "juno1p9z8xe96fyvg3h5gtvnpjjv2u47q6l7sdhg6asmyfgc6q8l8ttgqfvxnxh",
+      "pool_label": "ibc/C4CF...19F9-ujuno",
+      "incentive_contract": "juno1krkuxv305q946x9vx5mvs406lp7zcxgyr09kdlr7xqvkgasdg6aqe88w35"
+    },
+    {
+      "pool": "juno1wkjy5wl0pd5xxvwtrx37r7ydkt3dkwvghs00tvvqyd3xnjukah7qpj0vj7",
+      "pool_label": "ujuno-ibc/EAC3...8034",
+      "incentive_contract": "juno12zk3vhpukhqucpkv9xd2j9xrxlqc0v5yuw0sdd7n3jg2cts4rdaqaf02vr"
+    },
+    {
+      "pool": "juno1xpt9mkncxadadn5t8s4t74nmw5zlarghmpme26857s07xz388d6sukvtnz",
+      "pool_label": "ujuno-RAW",
+      "incentive_contract": "juno1qs4qn7cqqqjcfp02qdw5fv7jmjy6lj4s05pd99a6z7ey6arhrlwsu9lf8y"
+    },
+    {
+      "pool": "juno12w6f755zx9l0vflfvql2jvl2jlyv348esyh7utvx727nwpy2jg5qsjemyx",
+      "pool_label": "bJuno-ujuno",
+      "incentive_contract": "juno1nwrtue0vjftecegzyarhxdtedh0263akfle3522x0dx5jr0decms3vpd4t"
+    },
+    {
+      "pool": "juno137593pljsgltp9863sawquejpxzmtpvuafg0c7tpqqer3hkz48eslwrl4l",
+      "pool_label": "ampJUNO-ujuno",
+      "incentive_contract": "juno1zzs9fv6qz8sjn0v36d22900txv9c7m7u9vlt66t07kwjvl6srcyqq2q63z"
+    }
+  ],
+  "date": "2023-06-29T13:55:41+0000",
+  "initial_block_height": "8920163",
+  "final_block_height": "8920186",
+  "chain_id": "juno-1",
+  "deployer_address": "juno1dpx7ytug647wefe7ajxmg5ejt68gxcfv4h7g8t"
+}
+```
+
+### Vaults 
 
 ```json
 {
