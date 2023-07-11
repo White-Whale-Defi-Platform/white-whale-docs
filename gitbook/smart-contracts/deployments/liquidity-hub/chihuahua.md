@@ -11,8 +11,8 @@
     },
     {
       "wasm": "fee_distributor.wasm",
-      "code_id": "452",
-      "version": "0.9.0",
+      "code_id": "487",
+      "version": "0.9.4",
       "contract_address": "chihuahua15umr63cfrav8qk572x57rzjfcyqtfnret6rpfasju9ayeqmxrhjq5k0y8c"
     },
     {
@@ -61,8 +61,8 @@
     },
     {
       "wasm": "whale_lair.wasm",
-      "code_id": "451",
-      "version": "0.9.0",
+      "code_id": "458",
+      "version": "0.9.2",
       "contract_address": "chihuahua1dd7e5l7jf7yu23u8ehjw36aahsk7jjls9llcgm34szq0qemj6a9q8h30j7"
     },
     {

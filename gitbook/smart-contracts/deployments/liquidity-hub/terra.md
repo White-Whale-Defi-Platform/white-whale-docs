@@ -79,8 +79,8 @@
     },
     {
       "wasm": "whale_lair.wasm",
-      "code_id": "1602",
-      "version": "0.9.0",
+      "code_id": "1680",
+      "version": "0.9.1",
       "contract_address": "terra1qa5a8fkynmthlrh9wsae4sqnuxdrespsls7c7acayqqvs5s63eksm53snj"
     }
   ],
