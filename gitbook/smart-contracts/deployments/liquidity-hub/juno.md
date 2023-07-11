@@ -12,8 +12,8 @@
     },
     {
       "wasm": "fee_distributor.wasm",
-      "code_id": "3209",
-      "version": "0.9.0",
+      "code_id": "3308",
+      "version": "0.9.1",
       "contract_address": "juno184ghwgprva7dlr2hwhzgvt6mem6zx78fygk0cpw7klssmzyf67tqdtwt3h"
     },
     {
@@ -74,8 +74,8 @@
     },
     {
       "wasm": "whale_lair.wasm",
-      "code_id": "3220",
-      "version": "0.9.0",
+      "code_id": "3307",
+      "version": "0.9.1",
       "contract_address": "juno1n8slcc79dmwuzdxhsesvhcncaqfg9h4czdm5t5ey8x25ajmn3xzqyde4wv"
     }
   ],
