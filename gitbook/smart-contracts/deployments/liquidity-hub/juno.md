@@ -221,6 +221,18 @@
       "lp_address": "juno1qdj9shhfasyjuvncawstvmcqp2afxet0x36jaaxt0udp6gq27ftq9xr5d4",
       "pool_code_id": "1532",
       "lp_code_id": "1440"
+    },
+    {
+      "label": "WHALE-RAC",
+      "pair": "uwhale-urac",
+      "assets": [
+        "{\"native_token\":{\"denom\":\"ibc/3A6ADE78FB8169C034C29C4F2E1A61CE596EC8235366F22381D981A98F1F5A5C\"}}"
+        "{\"native_token\":{\"denom\":\"ibc/2F7C2A3D5D42553ED46F57D8B0DE3733B1B5FF571E2C6A051D34525904B4C0AF\"}}"
+      ],
+      "pool_address": "juno1dwmrkyhed4szdxxk6l0c98hseancjtdet58n77tfhv2as8cdjdlq7vps00",
+      "lp_address": "juno1cvnwcgkhxaj70gjg7x57fh447m2wj5yx7p2puu4mqgtf62qphtds88mdsd",
+      "pool_code_id": "1532",
+      "lp_code_id": "1440"
     }
   ],
   "date": "2022-08-25T11:52:10+0000",

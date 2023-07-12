@@ -226,6 +226,18 @@
       "lp_address": "chihuahua1e3ets9mwmffnzuuj03w53g3ch6jmazdwtpqhu0f2wc5a6z6yxaks6r3lrs",
       "pool_code_id": "144",
       "lp_code_id": "116"
+    },
+    {
+      "label": "WHALE-RAC",
+      "pair": "uwhale-urac",
+      "assets": [
+        "{\"native_token\":{\"denom\":\"ibc/E45945EAF3F1587CA3013FFC6CE0B5EEE0F49DAFED2CE51370B5B6A0C3AA258E\"}}"
+        "{\"native_token\":{\"denom\":\"ibc/FA7112322CE7656DC84D441E49BAEAB9DC0AB3C7618A178A212CDE8B3F17C70B\"}}"
+      ],
+      "pool_address": "chihuahua1vl35p9erd4g7ytwwc3fcux30c7jnhnp2tas7zp837wrl65073cws57qwve",
+      "lp_address": "chihuahua12p7mqzxq30y47v4g39zxgy2zvy45as9ylhelvvp4z8wnjga7kajqjhwq9u",
+      "pool_code_id": "1532",
+      "lp_code_id": "1440"
     }
   ],
   "date": "2023-01-05T15:59:41+0000",
