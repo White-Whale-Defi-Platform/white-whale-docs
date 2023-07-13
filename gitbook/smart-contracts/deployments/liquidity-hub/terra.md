@@ -12,7 +12,7 @@
     {
       "wasm": "fee_distributor.wasm",
       "code_id": "1636",
-      "version": "0.8.1",
+      "version": "0.9.1",
       "contract_address": "terra1xm0yh8cv8rww6g87h3q0megt6ntxqzw6p6hgh5l4jrhed4fe7hnq9cvzm5"
     },
     {
@@ -164,7 +164,7 @@
       "label": "bLUNA-SOLID pair",
       "contract": "terra1shd0wd8atmevjtryzcqzu6sxsmc4hjek43kxqsz08wxwk4nt0wvsav9004",
       "lp_token": "terra19sddeagdmflr7fh4tqkj37chv6zjpef2nnvfzfjlykwz0zvg6f4scvy5dr"
-    }
+    },
     {
       "pair": "WHALE-ROAR",
       "label": "WHALE-ROAR pair",
