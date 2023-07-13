@@ -227,10 +227,10 @@
       "pair": "uwhale-urac",
       "assets": [
         "{\"native_token\":{\"denom\":\"ibc/3A6ADE78FB8169C034C29C4F2E1A61CE596EC8235366F22381D981A98F1F5A5C\"}}"
-        "{\"native_token\":{\"denom\":\"ibc/2F7C2A3D5D42553ED46F57D8B0DE3733B1B5FF571E2C6A051D34525904B4C0AF\"}}"
+        "{\"native_token\":{\"denom\":\"ibc/D8D6271EC54E3A96C6B9FB6C2BA9E99692B07CEB42754638029657072EA48337\"}}"
       ],
-      "pool_address": "juno1dwmrkyhed4szdxxk6l0c98hseancjtdet58n77tfhv2as8cdjdlq7vps00",
-      "lp_address": "juno1cvnwcgkhxaj70gjg7x57fh447m2wj5yx7p2puu4mqgtf62qphtds88mdsd",
+      "pool_address": "juno1sw7cs84qt5477spwpdfrjlu7ftn3772f2sp5zahjvjafkph4yvlscxmp58",
+      "lp_address": "factory/juno1sw7cs84qt5477spwpdfrjlu7ftn3772f2sp5zahjvjafkph4yvlscxmp58/uLP",
       "pool_code_id": "1532",
       "lp_code_id": "1440"
     }
