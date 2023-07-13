@@ -18,7 +18,8 @@
     {
       "wasm": "frontend_helper.wasm",
       "code_id": "26",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "contract_address": "migaloo1yk896ldldnfd4y4f3xgxwnpapmyezgdqw5czp4zz6nnvetl70lkq42mp8u"
     },
     {
       "wasm": "incentive.wasm",
@@ -28,7 +29,8 @@
     {
       "wasm": "incentive_factory.wasm",
       "code_id": "28",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "contract_address": "migaloo1rqfr752hn6auzm3vzzyr2pd8rt6fapf208vm8qfpejstt69uxfwqcdrdq3"
     },
     {
       "wasm": "stableswap_3pool.wasm",
