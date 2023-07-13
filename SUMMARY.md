@@ -12,9 +12,10 @@
 * [📚 Common Types](./gitbook/smart-contracts/common-types/overview.md)
 * [🪙 WHALE Token Address on Each Chain](./gitbook/smart-contracts/assets/denoms.md)
 * 🌐 Liquidity Hub Deployments
+  * [🐳 Migaloo](./gitbook/smart-contracts/deployments/liquidity-hub/migaloo.md)
+  * [🌕 Terra](./gitbook/smart-contracts/deployments/liquidity-hub/terra.md)
   * [🐶 Chihuahua](./gitbook/smart-contracts/deployments/liquidity-hub/chihuahua.md)
   * [🗽 Juno](./gitbook/smart-contracts/deployments/liquidity-hub/juno.md)
-  * [🌕 Terra](./gitbook/smart-contracts/deployments/liquidity-hub/terra.md)
   * [🥷 Injective](./gitbook/smart-contracts/deployments/liquidity-hub/injective.md)
   * [⭐ Stargaze](./gitbook/smart-contracts/deployments/liquidity-hub/stargaze.md)
   * [©️ Comdex](./gitbook/smart-contracts/deployments/liquidity-hub/comdex.md)
