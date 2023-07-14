@@ -80,8 +80,7 @@
     {
       "wasm": "incentive.wasm",
       "code_id": "455",
-      "version": "1.0.0",
-      "contract_address": "terra1qsfcuketm4slntdp92kg3ltnn57j7dzq3wg3yqjr8xhsnae6fn3sjmle9y"
+      "version": "1.0.0"
     }
   ],
   "date": "2022-09-29T20:50:49+0000",

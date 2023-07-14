@@ -30,8 +30,7 @@
     {
       "wasm": "incentive.wasm",
       "code_id": "1604",
-      "version": "1.0.1",
-      "contract_address": "terra1qsfcuketm4slntdp92kg3ltnn57j7dzq3wg3yqjr8xhsnae6fn3sjmle9y"
+      "version": "1.0.1"
     },
     {
       "wasm": "stableswap_3pool.wasm",
