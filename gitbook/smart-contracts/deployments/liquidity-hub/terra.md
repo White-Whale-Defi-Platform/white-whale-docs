@@ -169,6 +169,12 @@
       "label": "WHALE-ROAR pair",
       "contract": "terra1g8clplgv3ah405qjrf9yhkgur9zqlqayt8ftrvkuzsm5am7pr9ls7s26rx",
       "lp_token": "terra1j7zej67gl6kjmgc2tl2hggp4xcvchnrn5reffc489u6ffsvm7aeq5k4sas"
+    },
+    {
+      "pair": "LUNA-WHALE",
+      "label": "LUNA-WHALE pair",
+      "contract": "terra1zushwxgqdkg22mtv9p946yp53r6den6lv427esjaadua3ftzyjpsqgtl5z",
+      "lp_token": "factory/terra1zushwxgqdkg22mtv9p946yp53r6den6lv427esjaadua3ftzyjpsqgtl5z/uLP"
     }
   ],
   "date": "2022-08-25T11:52:10+0000",

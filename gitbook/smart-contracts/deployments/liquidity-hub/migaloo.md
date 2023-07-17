@@ -123,7 +123,20 @@
       "lp_address": "factory/migaloo1u4npx7xvprwanpru7utv8haq99rtfmdzzw6p3hpfc38n7zmzm42q8ydga3/uLP",
       "pool_code_id": "31",
       "lp_code_id": "33"
+    },
+    {
+      "pair": "AMPWHALE-ARBWHALE",
+      "assets": [
+        "{\"token\":{\"native_token\":\"factory/migaloo1436kxs0w2es6xlqpp9rd35e3d0cjnw4sv8j3a7483sgks29jqwgshqdky4/ampWHALE\"}}",
+        "{\"token\":{\"native_token\":\"factory/migaloo1ey4sn2mkmhew4pdrzk90l9acluvas25qlhuvsfgssw42ugz8yjlqx92j9l/arbWHALE\"}}",
+      ],
+      "pool_address": "migaloo12z46dq46hprpyv8j4k7xtqk8gdx7leqzgan2pjpdaktx4ukj53lqar6tsf",
+      "lp_address": "factory/migaloo12z46dq46hprpyv8j4k7xtqk8gdx7leqzgan2pjpdaktx4ukj53lqar6tsf/uLP",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
     }
+
+    
   ]
 }
 ```
