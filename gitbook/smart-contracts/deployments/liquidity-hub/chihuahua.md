@@ -79,8 +79,8 @@
     },
     {
       "wasm": "incentive.wasm",
-      "code_id": "455",
-      "version": "1.0.0"
+      "code_id": "499",
+      "version": "1.0.2"
     }
   ],
   "date": "2022-09-29T20:50:49+0000",

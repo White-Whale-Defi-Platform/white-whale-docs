@@ -23,8 +23,8 @@
     },
     {
       "wasm": "incentive.wasm",
-      "code_id": "27",
-      "version": "1.0.1"
+      "code_id": "61",
+      "version": "1.0.2"
     },
     {
       "wasm": "incentive_factory.wasm",

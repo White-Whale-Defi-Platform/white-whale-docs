@@ -30,8 +30,8 @@
     },
     {
       "wasm": "incentive.wasm",
-      "code_id": "3212",
-      "version": "1.0.1"
+      "code_id": "3343",
+      "version": "1.0.2"
     },
     {
       "wasm": "terraswap_factory.wasm",

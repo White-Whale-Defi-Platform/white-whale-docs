@@ -24,13 +24,13 @@
     {
       "wasm": "incentive_factory.wasm",
       "code_id": "1592",
-      "version": "0.9.0",
+      "version": "1.0.0",
       "contract_address": "terra1qsfcuketm4slntdp92kg3ltnn57j7dzq3wg3yqjr8xhsnae6fn3sjmle9y"
     },
     {
       "wasm": "incentive.wasm",
-      "code_id": "1604",
-      "version": "1.0.1"
+      "code_id": "1703",
+      "version": "1.0.2"
     },
     {
       "wasm": "stableswap_3pool.wasm",
