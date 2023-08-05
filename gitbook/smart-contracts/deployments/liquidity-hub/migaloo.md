@@ -134,9 +134,18 @@
       "lp_address": "factory/migaloo12z46dq46hprpyv8j4k7xtqk8gdx7leqzgan2pjpdaktx4ukj53lqar6tsf/uLP",
       "pool_code_id": "31",
       "lp_code_id": "33"
-    }
-
-    
+    },
+    {
+      "pair": "uwhale-ibc/80E8...8040",
+      "assets": [
+        "{\"token\":{\"native_token\":\"uwhale\"}}",
+        "{\"token\":{\"native_token\":\"ibc/80E8F826480B995AE28C1EE86106C1BE2034FF1966579D29951CF61885458040\"}}"
+      ],
+      "pool_address": "migaloo1nha6qlam4p92cf9j64qv9he40xyf3akl2m9w5dukftmf2ryrxz5qy650zh",
+      "lp_address": "factory/migaloo1nha6qlam4p92cf9j64qv9he40xyf3akl2m9w5dukftmf2ryrxz5qy650zh/uLP",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
+    },
   ]
 }
 ```
