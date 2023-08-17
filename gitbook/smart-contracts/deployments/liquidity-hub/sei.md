@@ -85,7 +85,50 @@
   "chain_id": "pacific-1",
   "deployer_address": "sei1n9x0jnrve7e7t3lcc08qm27uzv59266z87yv5m"
 }
+```
 
+### Pools on Sei
+
+```json 
+{
+  "pools": [
+    {
+      "pair": "uwhale-usei",
+      "assets": [
+        "{\"token\":{\"native_token\":\"ibc/6ACE79F5ABD607D2075FAD4ABE284CBC5BB6A96C16555FFB901644E9D17411AC\"}}",
+        "{\"token\":{\"native_token\":\"usei\"}}"
+      ],
+      "pool_address": "sei155lc2utpd66unfhyh533yu729ltmrd8eeqw0qq5r7jws9pfc9k0sp65zul",
+      "lp_address": "sei1zq2mleg8r9l9sa7x350wtvqety0l5crvv9a6znz634cwdjpec36slquzlx",
+      "pool_code_id": "125",
+      "lp_code_id": "127"
+    }
+  ]
+}
+```
+
+### Vaults on Sei
+
+```json
+{
+  "vaults": [
+    {
+      "asset": {
+        "native_token": {
+          "denom": "usei"
+        }
+      },
+      "vault_address": "sei153ww606x9h6ft7nq5h4fl4jq3n2sx4936m53xtrmag236j8n2rnqv6hgd3",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "sei1j9qyhqf29hgze9p2gdh5uyq44v8yy5cnwf7mdln8ud5sva0khy4syjrwjl"
+        }
+      },
+      "vault_code_id": "129",
+      "lp_code_id": "127"
+    }
+  ]
+}
 ```
 
 # Sei testnet (sei-devnet-1)

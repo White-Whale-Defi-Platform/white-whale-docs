@@ -145,7 +145,7 @@
       "lp_address": "factory/migaloo1nha6qlam4p92cf9j64qv9he40xyf3akl2m9w5dukftmf2ryrxz5qy650zh/uLP",
       "pool_code_id": "31",
       "lp_code_id": "33"
-    },
+    }
   ]
 }
 ```
