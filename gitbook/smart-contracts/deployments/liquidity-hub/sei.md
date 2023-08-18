@@ -12,12 +12,14 @@
     {
       "wasm": "fee_distributor.wasm",
       "code_id": "118",
-      "version": "0.9.1"
+      "version": "0.9.1",
+      "contract_address": "sei10n6x0a9cmvmkar088j7fa46xq5ykx5mfl86jmxgjjew8rt0ceeqqrzc5w9"
     },
     {
       "wasm": "frontend_helper.wasm",
       "code_id": "119",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "contract_address": "sei1gpk097wjqtrtgcdmv04keee59rfpg0ldlhp5kv2r5hf4apn5e6qsxzzl8g"
     },
     {
       "wasm": "incentive.wasm",
@@ -27,7 +29,8 @@
     {
       "wasm": "incentive_factory.wasm",
       "code_id": "121",
-      "version": "1.0.1"
+      "version": "1.0.1",
+      "contract_address": "sei18gc92uh8xnkzysxm2rj0262vdpp66j695qce5kyd66mkppmr4u2s5jd0pa"
     },
     {
       "wasm": "stableswap_3pool.wasm",
@@ -76,10 +79,11 @@
     {
       "wasm": "whale_lair.wasm",
       "code_id": "132",
-      "version": "0.9.1"
+      "version": "0.9.1",
+      "contract_address": "sei1u52l9n8jwcjdt9t3het7zyu0j38st2u0fwg7ntakjp4jp0m03qaqvnl3tr"
     }
   ],
-  "date": "2023-08-16T15:21:23+0000",
+  "date": "2023-08-18T15:01:14+0000",
   "initial_block_height": "null",
   "final_block_height": "null",
   "chain_id": "pacific-1",
