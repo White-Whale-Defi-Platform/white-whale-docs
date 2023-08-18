@@ -135,6 +135,25 @@
 }
 ```
 
+### Incentives on Sei
+
+```json
+{
+  "pool_incentives": [
+    {
+      "pool": "sei155lc2utpd66unfhyh533yu729ltmrd8eeqw0qq5r7jws9pfc9k0sp65zul",
+      "pool_label": "ibc/6ACE...11AC-usei",
+      "incentive_contract": "sei1suwp7tt0tfzmjytus6clx64zx8tz3e8pd0vjuqjvy233um8v6nuqu9qhdt"
+    }
+  ],
+  "date": "2023-08-18T15:06:04+0000",
+  "initial_block_height": "null",
+  "final_block_height": "null",
+  "chain_id": "pacific-1",
+  "deployer_address": "sei1n9x0jnrve7e7t3lcc08qm27uzv59266z87yv5m"
+}
+```
+
 # Sei testnet (sei-devnet-1)
 
 ```json
