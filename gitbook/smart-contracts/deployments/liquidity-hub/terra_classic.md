@@ -18,7 +18,8 @@
     {
       "wasm": "frontend_helper.wasm",
       "code_id": "7901",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "contract_address": "terra1n26k9zssr2thr49ah522sf2fjhs8jjhly4qwfv6y8ns2ss22wsqqhsp8ye"
     },
     {
       "wasm": "incentive.wasm",
