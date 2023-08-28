@@ -20,6 +20,7 @@
   * [⭐ Stargaze](./gitbook/smart-contracts/deployments/liquidity-hub/stargaze.md)
   * [©️ Comdex](./gitbook/smart-contracts/deployments/liquidity-hub/comdex.md)
   * [⛵️ Sei](./gitbook/smart-contracts/deployments/liquidity-hub/sei.md) 
+  * [🌖️ Terra Classic](./gitbook/smart-contracts/deployments/liquidity-hub/terra_classic.md) 
 
 ### Liquidity Hub
 
