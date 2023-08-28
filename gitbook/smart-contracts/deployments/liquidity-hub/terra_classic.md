@@ -107,7 +107,28 @@
     }
   ]
 }
+```
 
+```json
+{
+  "pool_incentives": [
+    {
+      "pool": "terra1t02akvjklp7h8swg7vhdjryegj9z7q83hjhyq8xssc4v0qv7a67s6um6up",
+      "pool_label": "uluna-ibc/077E...C0EB",
+      "incentive_contract": "terra1q5sllf7rw9ftnw2epvsdkvuaukwlf9ht7ccvvh9uej4y0a6w3klqndsetr"
+    },
+    {
+      "pool": "terra1wm3jtcq0fuftvmfq0skmqyxnl3x3j42x8ae56q7eg7v6jsf5eg4qmz36ts",
+      "pool_label": "uluna-uusd",
+      "incentive_contract": "terra14890k8rl6y4lpmuu39x8w2dkhd2dsajz3ucthedh8fnhg5sx89vqswx7cy"
+    }
+  ],
+  "date": "2023-08-28T13:39:26+0000",
+  "initial_block_height": "14302781",
+  "final_block_height": "14302786",
+  "chain_id": "columbus-5",
+  "deployer_address": "terra1rudglghm48d2k2u9eljh3h4m5pdv2s3h60s3hx"
+}
 ```
 
 # Terra Classic testnet (rebel-2)
