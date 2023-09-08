@@ -5,14 +5,14 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "7899",
-      "version": "1.1.1",
+      "code_id": "7968",
+      "version": "1.1.2",
       "contract_address": "terra1mlw8qmxjxwru5ctp4hkxhsxtzzxr0pkvsytkqwg32axfyhnxca2qv8gxgx"
     },
     {
       "wasm": "fee_distributor.wasm",
-      "code_id": "7900",
-      "version": "0.9.1",
+      "code_id": "7969",
+      "version": "0.9.2",
       "contract_address": "terra1d2p6vqyynhn2eraf74qtedaugfuknt32wnsm8e4uskfqv2jersdqkstzer"
     },
     {
