@@ -82,6 +82,36 @@ Opens a new liquidity flow.
 | `flow_asset`  | Asset           | The asset to be distributed in this flow.                                                                                             |
 | `flow_label`  | Option\<String> | If set, the label will be used to identify the flow, in addition to the flow_id.                                                      |
 
+
+### Expand Flow
+
+Expands an existing flow.
+
+```json
+{
+  "expand_flow": {
+    "flow_identifier": {
+      "label": "my_alias"
+    },
+    "end_epoch": 123,
+    "flow_asset": {
+      "amount": "1000000",
+      "info": {
+        "native_token": {
+          "denom": "uwhale"
+        }
+      }
+    }
+  }
+}
+```
+
+| Key               | Type           | Description                                                                                                 |
+|-------------------|----------------|-------------------------------------------------------------------------------------------------------------|
+| `flow_identifier` | FlowIdentifier | The identifier of the flow to expand, whether an id or a label.                                             |
+| `end_epoch`       | Option\<u64>   | The epoch at which the flow should end. If not set, the flow will be expanded a default value of 14 epochs. |
+| `flow_asset`      | Asset          | The asset to expand this flow with.                                                                         |
+
 ### CloseFlow
 
 Closes an existing liquidity flow.
@@ -196,35 +226,6 @@ Claims the flow rewards.
   "claim": {}
 }
 ```
-
-### Expand Flow
-
-Expands an existing flow.
-
-```json
-{
-  "expand_flow": {
-    "flow_identifier": {
-      "label": "my_alias"
-    },
-    "end_epoch": 123,
-    "flow_asset": {
-      "amount": "1000000",
-      "info": {
-        "native_token": {
-          "denom": "uwhale"
-        }
-      }
-    }
-  }
-}
-```
-
-| Key               | Type           | Description                                                                                                 |
-|-------------------|----------------|-------------------------------------------------------------------------------------------------------------|
-| `flow_identifier` | FlowIdentifier | The identifier of the flow to expand, whether an id or a label.                                             |
-| `end_epoch`       | Option\<u64>   | The epoch at which the flow should end. If not set, the flow will be expanded a default value of 14 epochs. |
-| `flow_asset`      | Asset          | The asset to expand this flow with.                                                                         |
 
 ## QueryMsg
 
