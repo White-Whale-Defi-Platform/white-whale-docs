@@ -62,7 +62,7 @@ Opens a new liquidity flow.
   "open_flow": {
     "start_epoch": 123,
     "end_epoch": 123,
-    "curve": "Linear",
+    "curve": "linear",
     "flow_asset": {
       "amount": "1000000",
       "native_token": {
