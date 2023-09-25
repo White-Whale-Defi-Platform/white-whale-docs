@@ -24,14 +24,14 @@
     },
     {
       "wasm": "incentive_factory.wasm",
-      "code_id": "3213",
-      "version": "1.0.0",
+      "code_id": "3653",
+      "version": "1.0.1",
       "contract_address": "juno1gg3y2f3kn337qhxwsumpd7wt4avl7knadp7vne4278whw0n3qf5quksw06"
     },
     {
       "wasm": "incentive.wasm",
-      "code_id": "3343",
-      "version": "1.0.2"
+      "code_id": "3654",
+      "version": "1.0.6"
     },
     {
       "wasm": "terraswap_factory.wasm",
