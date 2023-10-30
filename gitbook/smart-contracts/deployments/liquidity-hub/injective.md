@@ -144,8 +144,8 @@
         "{\"native_token\":{\"denom\":\"peggy0xdAC17F958D2ee523a2206206994597C13D831ec7\"}}",
         "{\"native_token\":{\"denom\":\"ibc/D6E6A20ABDD600742D22464340A7701558027759CE14D12590F8EA869CCCF445\"}}"
       ],
-      "pool_address": "inj1869zena97sctemj78sgjmu737p2g9490esftk5",
-      "lp_address": "inj1t9daxn85sz688vkn8wu4w47jnrak296hh2q579",
+      "pool_address": "inj1t9daxn85sz688vkn8wu4w47jnrak296hh2q579",
+      "lp_address": "inj1869zena97sctemj78sgjmu737p2g9490esftk5",
       "pool_code_id": "161",
       "lp_code_id": "17"
     }
@@ -171,6 +171,43 @@
   "chain_id": "injective-1",
   "vault_factory_addr": "inj1wastjc07zuuy46mzzl3egz4uzy6fs59758vrwr",
   "vault_router_addr": "inj1hyja4uyjktpeh0fxzuw2fmjudr85rk2qxgqkvu"
+}
+```
+
+```json
+{
+  "pool_incentives": [
+    {
+      "pool": "inj1gyxlm5j537d8pvl5eqfswya93delvh3nlhustk",
+      "pool_label": "ibc/168C...0A32-ibc/D6E6...F445",
+      "incentive_contract": "inj12x7vzmsgj496ps0n9gt0xzmec0vw2wgvqgjxys"
+    },
+    {
+      "pool": "inj14zykjnz94dr9nj4v2yzpvnlrw5uurk5hhea8xw",
+      "pool_label": "ibc/C4CF...19F9-peggy0xdAC...ec7",
+      "incentive_contract": "inj1r7tm9zndwyw898hjt3xgmdecugret22vc3ecdw"
+    },
+    {
+      "pool": "inj17dez7atlgwrl7lxzszxjy7gzuj325n8re3f7mh",
+      "pool_label": "ibc/ECB0...7CC2-ibc/D6E6...F445",
+      "incentive_contract": "inj10udnevccyg50e80gkeynr0s9gx70j699jgepzl"
+    },
+    {
+      "pool": "inj1t9daxn85sz688vkn8wu4w47jnrak296hh2q579",
+      "pool_label": "peggy0xdAC...ec7-ibc/D6E6...F445",
+      "incentive_contract": "inj1f9j7u5mf8lzgkqqyx00mkeze2nlk9sqf0hv35d"
+    },
+    {
+      "pool": "inj1zfw930csx0k5qzf35vndaulwada4wa3pywekyx",
+      "pool_label": "inj-peggy0xdAC...ec7",
+      "incentive_contract": "inj1pm4vll4c0q5y6q0qcvvx94377tq670k5gdyuyg"
+    }
+  ],
+  "date": "2023-10-30T13:53:00+0000",
+  "initial_block_height": "49751492",
+  "final_block_height": "49751534",
+  "chain_id": "injective-1",
+  "deployer_address": "inj189rhgt2d78a7djv0x6mulwy7kre07n9x3z72nd"
 }
 ```
 
