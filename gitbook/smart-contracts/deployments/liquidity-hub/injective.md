@@ -5,25 +5,53 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "9",
-      "version": "1.0.4",
+      "code_id": "162",
+      "version": "1.1.2",
       "contract_address": "inj1g6kht9c5s4jwn4akfjt3zmsfh4nvguewuevmk0"
     },
     {
+      "wasm": "fee_distributor.wasm",
+      "code_id": "163",
+      "version": "0.9.1",
+      "contract_address": "inj1s0q949jwm6n502sspvjmnaj4zjuv36fzpl33rr"
+    },
+    {
+      "wasm": "frontend_helper.wasm",
+      "code_id": "164",
+      "version": "1.0.0",
+      "contract_address": "inj1fwfudkjv95qtj9h32agcfwpg0wwzz352jlyk58"
+    },
+    {
+      "wasm": "incentive.wasm",
+      "code_id": "156",
+      "version": "1.0.6"
+    },
+    {
+      "wasm": "incentive_factory.wasm",
+      "code_id": "155",
+      "version": "1.0.1",
+      "contract_address": "inj189rhgt2d78a7djv0x6mulwy7kre07n9x3z72nd"
+    },
+    {
+      "wasm": "stableswap_3pool.wasm",
+      "code_id": "157",
+      "version": "1.2.2"
+    },
+    {
       "wasm": "terraswap_factory.wasm",
-      "code_id": "10",
-      "version": "1.1.1",
+      "code_id": "165",
+      "version": "1.2.0",
       "contract_address": "inj1x22q8lfhz7qcvtzs0dakhgx2th64l79kfye5lk"
     },
     {
       "wasm": "terraswap_pair.wasm",
-      "code_id": "18",
-      "version": "1.1.0"
+      "code_id": "161",
+      "version": "1.3.3"
     },
     {
       "wasm": "terraswap_router.wasm",
-      "code_id": "12",
-      "version": "1.0.6",
+      "code_id": "166",
+      "version": "1.1.1",
       "contract_address": "inj1657pee2jhf4jk8pq6yq64e758ngvum45nft8rf"
     },
     {
@@ -33,27 +61,33 @@
     },
     {
       "wasm": "vault_factory.wasm",
-      "code_id": "15",
-      "version": "1.0.8",
+      "code_id": "160",
+      "version": "1.1.3",
       "contract_address": "inj1wastjc07zuuy46mzzl3egz4uzy6fs59758vrwr"
     },
     {
       "wasm": "vault.wasm",
-      "code_id": "19",
-      "version": "1.1.3"
+      "code_id": "158",
+      "version": "1.2.6"
     },
     {
       "wasm": "vault_router.wasm",
-      "code_id": "16",
-      "version": "1.1.2",
+      "code_id": "159",
+      "version": "1.1.6",
       "contract_address": "inj1hyja4uyjktpeh0fxzuw2fmjudr85rk2qxgqkvu"
+    },
+    {
+      "wasm": "whale_lair.wasm",
+      "code_id": "167",
+      "version": "0.9.1",
+      "contract_address": "inj1vz5g8pfdk4pjjhnf8vy000nq7evc2kgnfmrxt9"
     }
   ],
-  "date": "2022-12-18T10:56:50+0000",
+  "date": "2023-10-30T13:43:00+0000",
   "initial_block_height": "null",
   "final_block_height": "21861859",
   "chain_id": "injective-1",
-  "deployer_address": "inj1k433snt7qdn8tztuhf2wh90uyze2ga3hwpfsug"
+  "deployer_address": "inj1xzzu4jt274zzj0w9c3szg5u0mz68y0m7de7ftw"
 }
 ```
 
@@ -68,7 +102,7 @@
       ],
       "pool_address": "inj1zfw930csx0k5qzf35vndaulwada4wa3pywekyx",
       "lp_address": "inj14n26cr7dj79smrgg44hfylhph9y45h4yx5gvzm",
-      "pool_code_id": "18",
+      "pool_code_id": "161",
       "lp_code_id": "17"
     },
     {
@@ -79,7 +113,7 @@
       ],
       "pool_address": "inj14zykjnz94dr9nj4v2yzpvnlrw5uurk5hhea8xw",
       "lp_address": "inj1j30wx6kjfsessdx5mlp32hqwklj48ufvxx6tyc",
-      "pool_code_id": "18",
+      "pool_code_id": "161",
       "lp_code_id": "17"
     },
     {
@@ -90,7 +124,7 @@
       ],
       "pool_address": "inj1gyxlm5j537d8pvl5eqfswya93delvh3nlhustk",
       "lp_address": "inj185gqewrlde8vrqw7j8lpad67v8jfrx9u28w38t",
-      "pool_code_id": "18",
+      "pool_code_id": "161",
       "lp_code_id": "17"
     },
     {
@@ -101,7 +135,7 @@
       ],
       "pool_address": "inj17dez7atlgwrl7lxzszxjy7gzuj325n8re3f7mh",
       "lp_address": "inj1a6tcf60pyz8qq2n532dzcs7s7sj8klcmj94nhd",
-      "pool_code_id": "18",
+      "pool_code_id": "161",
       "lp_code_id": "17"
     },
     {
@@ -112,7 +146,7 @@
       ],
       "pool_address": "inj1869zena97sctemj78sgjmu737p2g9490esftk5",
       "lp_address": "inj1t9daxn85sz688vkn8wu4w47jnrak296hh2q579",
-      "pool_code_id": "18",
+      "pool_code_id": "161",
       "lp_code_id": "17"
     }
   ],
