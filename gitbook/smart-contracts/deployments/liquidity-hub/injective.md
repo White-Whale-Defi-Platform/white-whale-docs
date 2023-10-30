@@ -163,7 +163,7 @@
       "asset": "peggy0xdAC17F958D2ee523a2206206994597C13D831ec7",
       "vault_address": "inj17kfjhj8mf7l5qus4kjqxtxext2rtnpqzdjz2qm",
       "lp_address": "inj1s66zhks8v3fm24974crzxufh7w6ktt694g9t3j",
-      "vault_code_id": "19",
+      "vault_code_id": "158",
       "lp_code_id": "17"
     }
   ],
