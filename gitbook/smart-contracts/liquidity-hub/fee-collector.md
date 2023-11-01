@@ -48,13 +48,13 @@ Collects the fees accrued by the pools or vaults. It can be triggered in differe
       "contracts": {
         "contracts": [
           {
-            "address": "terra1...",
+            "address": "migaloo1...",
             "contract_type": {
               "vault": {}
             }
           },
           {
-            "address": "terra1...",
+            "address": "migaloo1...",
             "contract_type": {
               "pool": {}
             }
@@ -67,7 +67,7 @@ Collects the fees accrued by the pools or vaults. It can be triggered in differe
 ```
 
 | Key                | Type           | Description                                                      |
-| ------------------ |----------------|------------------------------------------------------------------|
+|--------------------|----------------|------------------------------------------------------------------|
 | `collect_fees_for` | CollectFeesFor | Enum specifiying to collect fees for either Contracts or Factory |
 | `contracts`        | Vec\<Contract> | Contracts to collect fees from                                   |
 
@@ -80,7 +80,7 @@ Collects the fees accrued by the pools or vaults. It can be triggered in differe
   "collect_fees": {
     "collect_fees_for": {
       "factory": {
-        "factory_addr": "terra1...",
+        "factory_addr": "migaloo1...",
         "factory_type": {
           "pool": {}
         }
@@ -91,7 +91,7 @@ Collects the fees accrued by the pools or vaults. It can be triggered in differe
 ```
 
 | Key                | Type           | Description                                                      |
-| ------------------ | -------------- | ---------------------------------------------------------------- |
+|--------------------|----------------|------------------------------------------------------------------|
 | `collect_fees_for` | CollectFeesFor | Enum specifiying to collect fees for either Contracts or Factory |
 | `factory`          | Factory        | Factory data to collect fees from                                |
 
@@ -104,7 +104,7 @@ Collects the fees accrued by the pools or vaults. It can be triggered in differe
   "collect_fees": {
     "collect_fees_for": {
       "factory": {
-        "factory_addr": "terra1...",
+        "factory_addr": "migaloo1...",
         "factory_type": {
           "vault": {}
         }
@@ -115,7 +115,7 @@ Collects the fees accrued by the pools or vaults. It can be triggered in differe
 ```
 
 | Key                | Type           | Description                                                      |
-| ------------------ | -------------- | ---------------------------------------------------------------- |
+|--------------------|----------------|------------------------------------------------------------------|
 | `collect_fees_for` | CollectFeesFor | Enum specifiying to collect fees for either Contracts or Factory |
 | `factory`          | Factory        | Factory data to collect fees from                                |
 
@@ -129,14 +129,22 @@ Updates the configuration of the fee collector.
 ```json
 {
   "update_config": {
-    "owner": "terra1..."
+    "owner": "migaloo1...",
+    "pool_router": "migaloo1...",
+    "fee_distributor": "migaloo1...",
+    "pool_factory": "migaloo1...",
+    "vault_factory": "migaloo1..."
   }
 }
 ```
 
-| Key     | Type            | Description               |
-| ------- |-----------------| ------------------------- |
-| `owner` | Option\<String> | New owner of the contract |
+| Key               | Type            | Description                  |
+|-------------------|-----------------|------------------------------|
+| `owner`           | Option\<String> | New owner of the contract    |
+| `pool_router`     | Option\<String> | New pool router contract     |
+| `fee_distributor` | Option\<String> | New fee distributor contract |
+| `pool_factory`    | Option\<String> | New pool factory contract    |
+| `vault_factory`   | Option\<String> | New vault factory contract   |
 
 ## Queries
 
@@ -159,14 +167,21 @@ Retrieves the configuration of the contract in a `Config` response.
 
 ```json
 {
-  "owner": "terra1..."
+  "owner": "migaloo1...",
+  "pool_router": "migaloo1...",
+  "fee_distributor": "migaloo1...",
+  "pool_factory": "migaloo1...",
+  "vault_factory": "migaloo1..."
 }
 ```
 
-| Key     | Type | Description          |
-| ------- |------|----------------------|
-| `owner` | Addr | Address of the owner |
-
+| Key               | Type | Description              |
+|-------------------|------|--------------------------|
+| `owner`           | Addr | Address of the owner     |
+| `pool_router`     | Addr | Pool router contract     |
+| `fee_distributor` | Addr | Fee distributor contract |
+| `pool_factory`    | Addr | Pool factory contract    |
+| `vault_factory`   | Addr | Vault factory contract   |
 
 {% endtab %}
 {% endtabs %}
@@ -186,13 +201,13 @@ fees collected by a given pool or vault factory's children.
       "contracts": {
         "contracts": [
           {
-            "address": "terra1...",
+            "address": "migaloo1...",
             "contract_type": {
               "pool": {}
             }
           },
           {
-            "address": "terra1...",
+            "address": "migaloo1...",
             "contract_type": {
               "vault": {}
             }
@@ -206,7 +221,7 @@ fees collected by a given pool or vault factory's children.
 ```
 
 | Key              | Type           | Description                                                                                                                                                                                                                      |
-| ---------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `query_fees_for` | QueryFeesFor   | Enum specifying to query fees for either Contracts or Factory                                                                                                                                                                    |
 | `contracts`      | Vec\<Contract> | Contracts to query fees from                                                                                                                                                                                                     |
 | `all_time`       | Option\<bool>  | If `true`, it will return the fees collected since the inception of the pool/vault. On the other hand, if `false`, only the fees that has been accrued by the pool/vault but not collected by the fee collector will be returned |
@@ -220,7 +235,7 @@ fees collected by a given pool or vault factory's children.
   "fees": {
     "query_fees_for": {
       "factory": {
-        "factory_addr": "terra1...",
+        "factory_addr": "migaloo1...",
         "factory_type": {
           "pool": {}
         }
@@ -232,7 +247,7 @@ fees collected by a given pool or vault factory's children.
 ```
 
 | Key              | Type          | Description                                                                                                                                                                                                                      |
-| ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `query_fees_for` | QueryFeesFor  | Enum specifying to query fees for either Contracts or Factory                                                                                                                                                                    |
 | `factory`        | Factory       | Factory data to query fees from                                                                                                                                                                                                  |
 | `all_time`       | Option\<bool> | If `true`, it will return the fees collected since the inception of the pool/vault. On the other hand, if `false`, only the fees that has been accrued by the pool/vault but not collected by the fee collector will be returned |
@@ -246,7 +261,7 @@ fees collected by a given pool or vault factory's children.
   "fees": {
     "query_fees_for": {
       "factory": {
-        "factory_addr": "terra1...",
+        "factory_addr": "migaloo1...",
         "factory_type": {
           "vault": {}
         }
@@ -258,7 +273,7 @@ fees collected by a given pool or vault factory's children.
 ```
 
 | Key              | Type          | Description                                                                                                                                                                                                                      |
-| ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `query_fees_for` | QueryFeesFor  | Enum specifying to query fees for either Contracts or Factory                                                                                                                                                                    |
 | `factory`        | Factory       | Factory data to query fees from                                                                                                                                                                                                  |
 | `all_time`       | Option\<bool> | If `true`, it will return the fees collected since the inception of the pool/vault. On the other hand, if `false`, only the fees that has been accrued by the pool/vault but not collected by the fee collector will be returned |
@@ -280,7 +295,7 @@ fees collected by a given pool or vault factory's children.
   {
     "Asset": {
       "token": {
-        "contract_addr": "terra1..."
+        "contract_addr": "migaloo1..."
       }
     },
     "amount": "19610016"
@@ -297,7 +312,7 @@ fees collected by a given pool or vault factory's children.
 ```
 
 | Key      | Type      | Description                                                   |
-| -------- | --------- | ------------------------------------------------------------- |
+|----------|-----------|---------------------------------------------------------------|
 | `info`   | AssetInfo | Enum specifying whether the asset is native/ibc or cw20 token |
 | `amount` | Uint128   | Asset amount                                                  |
 
