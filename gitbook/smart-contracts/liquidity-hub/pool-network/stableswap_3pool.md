@@ -1,44 +1,12 @@
-# 💱 Pair
+# 💱 Stableswap 3pool
 
-The pair contract is the pool. Creating a new pool should be done via the pool factory, so that the pool is indexed in
-the pool registry stored by the factory. A pool can be created with native, ibc or cw20 tokens.
+This is the contract for the 3pool stableswap. Creating a new pool should be done via the pool factory, so that the pool
+is indexed in the pool registry stored by the factory. A pool can be created with native, ibc or cw20 tokens.
 
-## Constant Product <a href="#constant-product" id="constant-product"></a>
+## Stableswap Curve
 
-For now, White Whale pools make prices based on a **constant product invariant:**&#x20;
-
-$$
-XY=k
-$$
-
-Where _**X**_ and _**Y**_ are the reserves for each token in the pool, while _**k**_ is a constant. The product of the
-number of tokens on each side of the pool should remain constant across trading operations. With _**X**_ being the
-current balance of the pool's source asset and and _**Y**_ being that of the target asset:
-
-$$
-XY=k=(X+∆x
-​
-)(Y−∆y
-​
-)
-$$
-
-To determine the value of the ask asset _**∆y**_ given the trader's offered asset _**∆x**_:
-
-$$
-∆y = Y∆x/(X+∆x)
-$$
-
-The market price is calculated by dividing the number of pool's target token into the source asset (also called the pool
-ratio).
-
-The spread between the executed and the expected trade is:
-
-$$
-spread= (Y∆x/X) − (Y∆x/ (X+∆x))​
-$$
-
-The deeper the pool the smaller the spread.
+This contract implements the StableSwap curve described by the Curve
+protocol @ https://curve.fi/files/stableswap-paper.pdf.
 
 ## Liquidity Provision
 
@@ -69,33 +37,39 @@ different scenarios, the ones we could envision include for example if a critica
 could be shut down while is being fixed to avoid exploits. Additionally, if for example liquidity is desired to be
 migrated to another pool, deposits could be disabled to prevent bots or users to deposit liquidity in the pool.
 
-The code for the pair contract can be
-found [here](https://github.com/White-Whale-Defi-Platform/white-whale-core/tree/main/contracts/liquidity\_hub/pool-network/terraswap\_pair).
+The code for the trio contract can be
+found [here](https://github.com/White-Whale-Defi-Platform/white-whale-core/tree/main/contracts/liquidity_hub/pool-network/stableswap_3pool).
 
 ***
 
-The following are the messages that can be executed on the pair contract:
+The following are the messages that can be executed on the trio contract:
 
 ## Instantiate
 
-Instantiates the pair.
+Instantiates the trio.
 
 ```json
 {
   "asset_infos": [
     {
       "native_token": {
-        "denom": "uwhale"
+        "denom": "usdc"
       }
     },
     {
-      "token": {
-        "contract_addr": "migaloo1..."
+      "native_token": {
+        "denom": "usdt"
+      }
+    },
+    {
+      "native_token": {
+        "denom": "axlusdc"
       }
     }
   ],
   "token_code_id": 123,
   "asset_decimals": [
+    6,
     6,
     6
   ],
@@ -111,23 +85,23 @@ Instantiates the pair.
     }
   },
   "fee_collector_addr": "migaloo1...",
-  "pair_type": "constant_product",
+  "amp_factor": 85,
   "token_factory_lp": true
 }
 ```
 
-| Key                | Type            | Description                                                                                                     |
-|--------------------|-----------------|-----------------------------------------------------------------------------------------------------------------|
-| `asset_infos`      | \[AssetInfo; 2] | Information about the two assets                                                                                |
-| `token_code_id`    | u64             | Code if for the token contract. Used by the factory to create the LP token contract                             |
-| `asset_decimals`   | \[u8; 2]        | Decimal places for the given assets                                                                             |
-| `pool_fees`        | PoolFee         | Pool fees for the given pair                                                                                    |
-| `pair_type`        | String          | The variant of pair to create, it can be ConstantProduct or StableSwap                                          |
-| `token_factory_lp` | String          | If true, the pair will use the token factory to create the LP token. If false, it will use a cw20 token instead |
+| Key                | Type            | Description                                                                                                                               |
+|--------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| `asset_infos`      | \[AssetInfo; 3] | Information about the two assets                                                                                                          |
+| `token_code_id`    | u64             | Code if for the token contract. Used by the factory to create the LP token contract                                                       |
+| `asset_decimals`   | \[u8; 3]        | Decimal places for the given assets                                                                                                       |
+| `pool_fees`        | PoolFee         | Pool fees for the given trio                                                                                                              |
+| `amp_factor`       | String          | Amplification factor to use for the 3 pool. This affects the swap curve, see https://curve.fi/files/stableswap-paper.pdf for more details |
+| `token_factory_lp` | String          | If true, the trio will use the token factory to create the LP token. If false, it will use a cw20 token instead                           |
 
 ## Migrate
 
-Migrates a pair. This is to be triggered by the owner of the contract, i.e. the pool factory, via the `migrate_pair`
+Migrates a trio. This is to be triggered by the owner of the contract, i.e. the pool factory, via the `migrate_trio`
 message.
 
 ```json
@@ -166,7 +140,7 @@ message [increase\_allowance](terraswap-token.md#increase-allowance) should be c
       {
         "info": {
           "native_token": {
-            "denom": "uwhale"
+            "denom": "uusdc"
           }
         },
         "amount": "1000"
@@ -175,6 +149,14 @@ message [increase\_allowance](terraswap-token.md#increase-allowance) should be c
         "info": {
           "native_token": {
             "denom": "ibc/B3504E092456BA618CC28AC671A71FB08C6CA0FD0BE7C8A5B5A3E2DD933CC9E4"
+          }
+        },
+        "amount": "1000"
+      },
+      {
+        "info": {
+          "native_token": {
+            "denom": "usdt"
           }
         },
         "amount": "1000"
@@ -209,6 +191,14 @@ message [increase\_allowance](terraswap-token.md#increase-allowance) should be c
           }
         },
         "amount": "1000"
+      },
+      {
+        "info": {
+          "native_token": {
+            "denom": "usdc"
+          }
+        },
+        "amount": "1000"
       }
     ],
     "slippage_tolerance": "0.01",
@@ -222,7 +212,7 @@ message [increase\_allowance](terraswap-token.md#increase-allowance) should be c
 
 | Key                  | Type             | Description                                                                                                |
 |----------------------|------------------|------------------------------------------------------------------------------------------------------------|
-| `assets`             | \[Asset; 2]      | Assets to provide liquidity with                                                                           |
+| `assets`             | \[Asset; 3]      | Assets to provide liquidity with                                                                           |
 | `slippage_tolerance` | Option\<Decimal> | If set, the transaction will succeed if the price in the pool moves less than the given slippage tolerance |
 | `receiver`           | Option\<String>  | Receiver address for the LP tokens in case it is different from the sender                                 |
 
@@ -240,12 +230,17 @@ Swap a token, either native/ibc/factory token or cw20 token.
       "amount": "100000",
       "info": {
         "native_token": {
-          "denom": "uwhale"
+          "denom": "usdc"
         }
       }
     },
-    "belief_price": "0.3524",
-    "max_spread": "0.05",
+    "ask_asset": {
+      "native_token": {
+        "denom": "usdt"
+      }
+    },
+    "belief_price": "1.0",
+    "max_spread": "0.005",
     "to": "to_address"
   }
 }
@@ -254,10 +249,10 @@ Swap a token, either native/ibc/factory token or cw20 token.
 | Key            | Type             | Description                                                            |
 |----------------|------------------|------------------------------------------------------------------------|
 | `offer_asset`  | Asset            | Asset to swap                                                          |
+| `ask_asset`    | AssetInfo        | The desired asset to get from the pool                                 |
 | `belief_price` | Option\<Decimal> | Belief price of the asset                                              |
 | `max_spread`   | Option\<Decimal> | Max desired spread to perform the swap with                            |
 | `to`           | Option\<String>  | Receiver address for ask asset in case it is different from the sender |
-
 
 {% endtab %}
 
@@ -270,18 +265,23 @@ This message is to be sent to the cw20 token contract address.
   "send": {
     "contract": "pool_contract_address",
     "amount": "1000",
-    "msg": "ewogICJzd2FwIjogewogICAgImJlbGllZl9wcmljZSI6ICIwLjM1MjQiLAogICAgIm1heF9zcHJlYWQiOiAiMC4wNSIsCiAgICAidG8iOiAidG9fYWRkcmVzcyIKICB9Cn0="
+    "msg": "ewogICJzd2FwIjogewogICAgImFza19hc3NldCI6IHsKICAgICAgIm5hdGl2ZV90b2tlbiI6IHsKICAgICAgICAiZGVub20iOiAidXNkdCIKICAgICAgfQogICAgfSwKICAgICJiZWxpZWZfcHJpY2UiOiAiMS4wIiwKICAgICJtYXhfc3ByZWFkIjogIjAuMDA1IiwKICAgICJ0byI6ICJ0b19hZGRyZXNzIgogIH0KfQ=="
   }
 }
 ```
 
-where `ewogICJ...IKICB9Cn0=` is the following message, encoded in base64:
+where `ewogICJzd2FwIjoge...yZXNzIgogIH0KfQ==` is the following message, encoded in base64:
 
 ```json
 {
   "swap": {
-    "belief_price": "0.3524",
-    "max_spread": "0.05",
+    "ask_asset": {
+      "native_token": {
+        "denom": "usdt"
+      }
+    },
+    "belief_price": "1.0",
+    "max_spread": "0.005",
     "to": "to_address"
   }
 }
@@ -289,10 +289,10 @@ where `ewogICJ...IKICB9Cn0=` is the following message, encoded in base64:
 
 | Key            | Type             | Description                                                            |
 |----------------|------------------|------------------------------------------------------------------------|
+| `ask_asset`    | AssetInfo        | The desired asset to get from the pool                                 |
 | `belief_price` | Option\<Decimal> | Belief price of the asset                                              |
 | `max_spread`   | Option\<Decimal> | Max desired spread to perform the swap with                            |
 | `to`           | Option\<String>  | Receiver address for ask asset in case it is different from the sender |
-
 
 {% endtab %}
 {% endtabs %}
@@ -321,6 +321,10 @@ Updates the configuration of the pool.
       "withdrawals_enabled": true,
       "deposits_enabled": true,
       "swaps_enabled": true
+    },
+    "amp_factor": {
+      "future_a": 80,
+      "future_block": 1337
     }
   }
 }
@@ -332,6 +336,7 @@ Updates the configuration of the pool.
 | `fee_collector_addr` | Option\<String>        | New fee collector address                                                            |
 | `pool_fees`          | Option\<PoolFee>       | New pool fees                                                                        |
 | `feature_toggle`     | Option\<FeatureToggle> | If set, toggles features on/off based on the parameters specified in `FeatureToggle` |
+| `amp_factor`         | Option\<RampAmp>       | New settings for the amplification factor                                            |
 
 ### Withdraw
 
@@ -417,48 +422,61 @@ Retrieves the configuration of the pool.
     "withdrawals_enabled": true,
     "deposits_enabled": true,
     "swaps_enabled": true
-  }
+  },
+  "initial_amp": 80,
+  "future_amp": 85,
+  "initial_amp_block": 1337,
+  "future_amp_block": 5336
 }
 ```
 
-| Key                  | Type          | Description                        |
-|----------------------|---------------|------------------------------------|
-| `owner`              | Addr          | The contract's owner               |
-| `fee_collector_addr` | Addr          | The fee collector contract address |
-| `pool_fees`          | PoolFee       | Pool fees                          |
-| `feature_toggle`     | FeatureToggle | Settings for the feature toggle    |
+| Key                  | Type          | Description                                                                      |
+|----------------------|---------------|----------------------------------------------------------------------------------|
+| `owner`              | Addr          | The contract's owner                                                             |
+| `fee_collector_addr` | Addr          | The fee collector contract address                                               |
+| `pool_fees`          | PoolFee       | Pool fees                                                                        |
+| `feature_toggle`     | FeatureToggle | Settings for the feature toggle                                                  |
+| `initial_amp`        | u64           | Initial amp factor. Property used when changing the amplification factor         |
+| `future_amp`         | u64           | Future or final amp factor. Property used when changing the amplification factor |
+| `initial_amp_block`  | u64           | Block at which the initial amplification factor applies                          |
+| `future_amp_block`   | u64           | Block at which the future amplification factor applies                           |
 
 {% endtab %}
 {% endtabs %}
 
-### Pair
+### Trio
 
-Retrieves information of the pool pair.
+Retrieves information of the trio.
 
 {% tabs %}
 {% tab title="Query" %}
 
 ```json
 {
-  "pair": {}
+  "trio": {}
 }
 ```
 
 {% endtab %}
 
-{% tab title="Response (PairInfo)" %}
+{% tab title="Response (TrioInfo)" %}
 
 ```json
 {
   "asset_infos": [
     {
       "native_token": {
-        "denom": "uwhale"
+        "denom": "usdc"
       }
     },
     {
-      "token": {
-        "contract_addr": "migaloo1..."
+      "native_token": {
+        "denom": "usdt"
+      }
+    },
+    {
+      "native_token": {
+        "denom": "axlusdc"
       }
     }
   ],
@@ -470,19 +488,18 @@ Retrieves information of the pool pair.
   },
   "asset_decimals": [
     6,
+    6,
     6
-  ],
-  "pair_type": "constant_product"
+  ]
 }
 ```
 
-| Key               | Type            | Description                                                            |
-|-------------------|-----------------|------------------------------------------------------------------------|
-| `asset_infos`     | \[AssetInfo; 2] | Asset infos for the pair                                               |
-| `contract_addr`   | String          | Pair contract address                                                  |
-| `liquidity_token` | AssetInfo       | LP token `AssetInfo` for the pair                                      |
-| `asset_decimals`  | \[u8; 2]        | Decimals for the assets within the pool                                |
-| `pair_type`       | PairType        | The variant of pair to create, it can be ConstantProduct or StableSwap |
+| Key               | Type            | Description                             |
+|-------------------|-----------------|-----------------------------------------|
+| `asset_infos`     | \[AssetInfo; 3] | Asset infos for the trio                |
+| `contract_addr`   | String          | Trio contract address                   |
+| `liquidity_token` | AssetInfo       | LP token `AssetInfo` for the trio       |
+| `asset_decimals`  | \[u8; 3]        | Decimals for the assets within the pool |
 
 {% endtab %}
 {% endtabs %}
@@ -510,10 +527,10 @@ Retrieves information about the pool, i.e. liquidity provided, asset infos and t
     {
       "info": {
         "native_token": {
-          "denom": "uwhale"
+          "denom": "usdc"
         }
       },
-      "amount": "178102491"
+      "amount": "1000"
     },
     {
       "info": {
@@ -521,16 +538,24 @@ Retrieves information about the pool, i.e. liquidity provided, asset infos and t
           "contract_addr": "migaloo1..."
         }
       },
-      "amount": "36870272692"
+      "amount": "1000"
+    },
+    {
+      "info": {
+        "native_token": {
+          "denom": "usdt"
+        }
+      },
+      "amount": "1000"
     }
   ],
-  "total_share": "1720147158"
+  "total_share": "31622776601683"
 }
 ```
 
 | Key           | Type        | Description                         |
 |---------------|-------------|-------------------------------------|
-| `assets`      | \[Asset; 2] | Assets within the pool              |
+| `assets`      | \[Asset; 3] | Assets within the pool              |
 | `total_share` | Uint128     | Total supply of the pool's LP token |
 
 {% endtab %}
@@ -582,7 +607,7 @@ Alternatively, if `asset_id` is set the accrued fees (non collected) for that sp
 
 | Key    | Type        | Description                |
 |--------|-------------|----------------------------|
-| `fees` | Vec\<Asset> | Fees collected by the pair |
+| `fees` | Vec\<Asset> | Fees collected by the trio |
 
 {% endtab %}
 {% endtabs %}
@@ -628,7 +653,7 @@ asset will be returned, otherwise it returns burned fees for both assets in the 
 
 | Key    | Type        | Description             |
 |--------|-------------|-------------------------|
-| `fees` | Vec\<Asset> | Fees burned by the pair |
+| `fees` | Vec\<Asset> | Fees burned by the trio |
 
 {% endtab %}
 {% endtabs %}
