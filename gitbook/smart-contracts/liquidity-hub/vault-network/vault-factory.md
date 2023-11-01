@@ -28,7 +28,7 @@ can be provided.
 ```
 
 | Key                  | Type   | Description                                  |
-| -------------------- | ------ | -------------------------------------------- |
+|----------------------|--------|----------------------------------------------|
 | `owner`              | String | The owner of the factory                     |
 | `vault_id`           | u64    | The code ID for the vault contract           |
 | `token_id`           | u64    | The code ID for the liquidity token contract |
@@ -69,7 +69,8 @@ Creates a vault. Includes token info and vault fees.
       "burn_fee": {
         "share": "0.0"
       }
-    }
+    },
+    "token_factory_lp": true
   }
 }
 
@@ -97,7 +98,8 @@ Creates a vault. Includes token info and vault fees.
       "burn_fee": {
         "share": "0.0"
       }
-    }
+    },
+    "token_factory_lp": false
   }
 }
 ```
@@ -105,10 +107,11 @@ Creates a vault. Includes token info and vault fees.
 {% endtab %}
 {% endtabs %}
 
-| Key          | Type      | Description                       |
-| ------------ | --------- | --------------------------------- |
-| `asset_info` | AssetInfo | Asset info to create a vault with |
-| `fees`       | VaultFee  | Fees for the vault                |
+| Key                | Type      | Description                                                                                                                      |
+|--------------------|-----------|----------------------------------------------------------------------------------------------------------------------------------|
+| `asset_info`       | AssetInfo | Asset info to create a vault with                                                                                                |
+| `fees`             | VaultFee  | Fees for the vault                                                                                                               |
+| `token_factory_lp` | bool      | If true, the factory will use the token factory to create the LP token for the vault. If false, it will use a cw20 token instead |
 
 ### Migrate vaults
 
@@ -126,7 +129,7 @@ Otherwise, it migrates all the vaults created by the factory.
 ```
 
 | Key             | Type            | Description                                 |
-| --------------- | --------------- | ------------------------------------------- |
+|-----------------|-----------------|---------------------------------------------|
 | `vault_addr`    | Option\<String> | Vault address to migrate                    |
 | `vault_code_id` | u64             | Code id of the vault contract to migrate to |
 
@@ -146,7 +149,7 @@ Updates the configuration of the vault factory.
 ```
 
 | Key                  | Type            | Description                                   |
-| -------------------- | --------------- | --------------------------------------------- |
+|----------------------|-----------------|-----------------------------------------------|
 | `owner`              | Option\<String> | New owner of the factory                      |
 | `fee_collector_addr` | Option\<String> | New fee collector address                     |
 | `vault_id`           | Option\<u64>    | New code id for creating vault contracts with |
@@ -191,7 +194,7 @@ Removes a vault from the factory's registry.
 {% endtabs %}
 
 | Key          | Type      | Description                               |
-| ------------ | --------- | ----------------------------------------- |
+|--------------|-----------|-------------------------------------------|
 | `asset_info` | AssetInfo | The asset_info of the vault to be removed |
 
 ### Update vault config
@@ -225,7 +228,7 @@ Updates the configuration of the given vault with the provided `UpdateConfigPara
 ```
 
 | Key          | Type               | Description                          |
-| ------------ | ------------------ | ------------------------------------ |
+|--------------|--------------------|--------------------------------------|
 | `vault_addr` | String             | Vault address                        |
 | `params`     | UpdateConfigParams | Parameters to update the config with |
 
@@ -258,7 +261,7 @@ Retrieves the configuration of the contract in a `Config` response.
 ```
 
 | Key                  | Type | Description                    |
-| -------------------- | ---- | ------------------------------ |
+|----------------------|------|--------------------------------|
 | `owner`              | Addr | The factory owner              |
 | `vault_id`           | u64  | Code id for the vault contract |
 | `token_id`           | u64  | Code id for the token contract |
@@ -279,7 +282,7 @@ Retrieves the vault address given the `AssetInfo`.
   "vault": {
     "asset_info": {
       "native_token": {
-        "denom": "ujuno"
+        "denom": "uwhale"
       }
     }
   }
@@ -287,7 +290,7 @@ Retrieves the vault address given the `AssetInfo`.
 ```
 
 | Key          | Type      | Description                                        |
-| ------------ | --------- | -------------------------------------------------- |
+|--------------|-----------|----------------------------------------------------|
 | `asset_info` | AssetInfo | Asset info of the vault to retrieve the address of |
 
 {% endtab %}
@@ -299,7 +302,7 @@ Retrieves the vault address given the `AssetInfo`.
   "vault": {
     "asset_info": {
       "token": {
-        "contract_addr": "juno1..."
+        "contract_addr": "migaloo1..."
       }
     }
   }
@@ -307,7 +310,7 @@ Retrieves the vault address given the `AssetInfo`.
 ```
 
 | Key          | Type      | Description                                        |
-| ------------ | --------- | -------------------------------------------------- |
+|--------------|-----------|----------------------------------------------------|
 | `asset_info` | AssetInfo | Asset info of the vault to retrieve the address of |
 
 {% endtab %}
@@ -316,7 +319,7 @@ Retrieves the vault address given the `AssetInfo`.
 
 ```json
 {
-  "data": "juno1..."
+  "data": "migaloo1..."
 }
 ```
 
@@ -350,7 +353,7 @@ Retrieves the addresses for all the vaults. Returns an `Option<Vec<String>>`.
 ```
 
 | Key           | Type             | Description                                                |
-| ------------- | ---------------- | ---------------------------------------------------------- |
+|---------------|------------------|------------------------------------------------------------|
 | `start_after` | Option\<Vec<u8>> | Asset info reference (as bytes) to paginate from           |
 | `limit`       | Option\<u32>     | How many items to fetch at once. Default is `10`, max `30` |
 
@@ -362,7 +365,12 @@ Retrieves the addresses for all the vaults. Returns an `Option<Vec<String>>`.
 {
   "vaults": [
     {
-      "vault": "juno1...",
+      "vault": "migaloo1...",
+      "asset_info": {
+        "native_token": {
+          "denom": "usdc"
+        }
+      },
       "asset_info_reference": [
         1,
         2,
@@ -373,7 +381,12 @@ Retrieves the addresses for all the vaults. Returns an `Option<Vec<String>>`.
       ]
     },
     {
-      "vault": "juno1...",
+      "vault": "migaloo1...",
+      "asset_info": {
+        "native_token": {
+          "denom": "uwhale"
+        }
+      },
       "asset_info_reference": [
         1,
         2,
@@ -388,7 +401,7 @@ Retrieves the addresses for all the vaults. Returns an `Option<Vec<String>>`.
 ```
 
 | Key      | Type            | Description                        |
-| -------- | --------------- | ---------------------------------- |
+|----------|-----------------|------------------------------------|
 | `vaults` | Vec\<VaultInfo> | Vault infos for the queried vaults |
 
 {% endtab %}
