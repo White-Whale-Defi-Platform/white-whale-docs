@@ -5,8 +5,8 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "1600",
-      "version": "1.1.1",
+      "code_id": "1937",
+      "version": "1.1.2",
       "contract_address": "terra1w8402njz8936ag4rlcmvek4zcns6hlkaapsd4qwz5us0ewwyghrsx7k47w"
     },
     {
@@ -34,8 +34,8 @@
     },
     {
       "wasm": "stableswap_3pool.wasm",
-      "code_id": "1450",
-      "version": "1.2.0"
+      "code_id": "1936",
+      "version": "1.2.2"
     },
     {
       "wasm": "terraswap_factory.wasm",
@@ -45,13 +45,13 @@
     },
     {
       "wasm": "terraswap_pair.wasm",
-      "code_id": "1445",
-      "version": "1.3.0"
+      "code_id": "1935",
+      "version": "1.3.2"
     },
     {
       "wasm": "terraswap_router.wasm",
-      "code_id": "1446",
-      "version": "1.1.0",
+      "code_id": "1934",
+      "version": "1.1.1",
       "contract_address": "terra1p37jrwlaqpklzlu4rwjyjrmzuezdgk3pyuyk2zclc4rda6awkm3qnj6f0a"
     },
     {
