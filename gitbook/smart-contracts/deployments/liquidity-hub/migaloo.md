@@ -145,6 +145,18 @@
       "lp_address": "factory/migaloo1nha6qlam4p92cf9j64qv9he40xyf3akl2m9w5dukftmf2ryrxz5qy650zh/uLP",
       "pool_code_id": "31",
       "lp_code_id": "33"
+    },
+    {
+      "label": "WHALE-ampMANTA",
+      "pair": "uwhale-ibc/0102...2E87",
+      "assets": [
+        "{\"token\":{\"native_token\":\"uwhale\"}}",
+        "{\"token\":{\"native_token\":\"ibc/0102CC6E28D29F57444C645C86AE2F4E8789C3A85445A3B185E51F0A23862E87\"}}"
+      ],
+      "pool_address": "migaloo1hcfxtr40txsay0y59e88q099qu78cy9kqe6w5yr9swr0v08ydecsss8h4z",
+      "lp_address": "factory/migaloo1hcfxtr40txsay0y59e88q099qu78cy9kqe6w5yr9swr0v08ydecsss8h4z/uLP",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
     }
   ]
 }
