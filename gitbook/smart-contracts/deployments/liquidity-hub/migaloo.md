@@ -147,14 +147,16 @@
       "lp_code_id": "33"
     },
     {
-      "label": "WHALE-ampMANTA",
-      "pair": "uwhale-ibc/0102...2E87",
+      "label": "ampMANTA-WHALE",
+      "pair": "ibc/0102...2E87-uwhale",
       "assets": [
-        "{\"token\":{\"native_token\":\"uwhale\"}}",
-        "{\"token\":{\"native_token\":\"ibc/0102CC6E28D29F57444C645C86AE2F4E8789C3A85445A3B185E51F0A23862E87\"}}"
+        
+        "{\"token\":{\"native_token\":\"ibc/0102CC6E28D29F57444C645C86AE2F4E8789C3A85445A3B185E51F0A23862E87\"}}",
+        "{\"token\":{\"native_token\":\"uwhale\"}}"
       ],
-      "pool_address": "migaloo1hcfxtr40txsay0y59e88q099qu78cy9kqe6w5yr9swr0v08ydecsss8h4z",
-      "lp_address": "factory/migaloo1hcfxtr40txsay0y59e88q099qu78cy9kqe6w5yr9swr0v08ydecsss8h4z/uLP",
+      "pool_address": "migaloo1wxnc6vd83pxudrfjf0ql8v73x3xute65fefxm7x5qxsehy5g0pzskclu2r",
+      "lp_address": "factory/migaloo1wxnc6vd83pxudrfjf0ql8v73x3xute65fefxm7x5qxsehy5g0pzskclu2r/uLP",
+      "staking_address": "migaloo1nplqhfd64jru7cj5ng2f3kh9g70gr3l3yut7wsu85z4q599hag5s0enjy8",
       "pool_code_id": "31",
       "lp_code_id": "33"
     }
