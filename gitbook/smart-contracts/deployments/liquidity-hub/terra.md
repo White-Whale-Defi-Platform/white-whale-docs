@@ -175,6 +175,12 @@
       "label": "LUNA-WHALE pair",
       "contract": "terra1zushwxgqdkg22mtv9p946yp53r6den6lv427esjaadua3ftzyjpsqgtl5z",
       "lp_token": "factory/terra1zushwxgqdkg22mtv9p946yp53r6den6lv427esjaadua3ftzyjpsqgtl5z/uLP"
+    },
+    {
+      "pair": "wBTC-LUNA",
+      "label": "wBTC-LUNA pair",
+      "contract": "terra1xhhr7x8yhv9p336t3squh5f8t2827ttrevnwrwwvqrp88nkt665qy0w07c",
+      "lp_token": "factory/terra1xhhr7x8yhv9p336t3squh5f8t2827ttrevnwrwwvqrp88nkt665qy0w07c/uLP"
     }
   ],
   "date": "2022-08-25T11:52:10+0000",
