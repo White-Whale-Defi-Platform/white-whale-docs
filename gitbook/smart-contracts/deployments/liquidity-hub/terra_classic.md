@@ -106,7 +106,10 @@
       "pool_code_id": "7906",
       "lp_code_id": "7908"
     }
-  ]
+  ],
+  "date": "2023-01-05T15:59:41+0000",
+  "chain_id": "columbus-5",
+  "pool_factory_addr": ""
 }
 ```
 
