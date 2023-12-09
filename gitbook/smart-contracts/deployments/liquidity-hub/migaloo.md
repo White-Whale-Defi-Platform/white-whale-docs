@@ -84,6 +84,8 @@
     }
   ],
   "date": "2022-08-24T11:04:29+0000",
+  "initial_block_height": "null",
+  "final_block_height": "null",
   "chain_id": "migaloo-1",
   "deployer_address": ""
 }
