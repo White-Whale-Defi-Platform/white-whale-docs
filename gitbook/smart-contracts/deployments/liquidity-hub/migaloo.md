@@ -160,7 +160,10 @@
       "pool_code_id": "31",
       "lp_code_id": "33"
     }
-  ]
+  ],
+  "date": "2022-08-25T11:52:10+0000",
+  "chain_id": "migaloo-1",
+  "pool_factory_address": ""
 }
 ```
 
