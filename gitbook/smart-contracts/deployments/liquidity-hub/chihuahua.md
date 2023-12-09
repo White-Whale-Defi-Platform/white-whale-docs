@@ -259,6 +259,7 @@
     }
   ],
   "chain_id": "chihuahua-1",
-  "vault_factory_addr": "chihuahua1j37gdce2l5wuy7tdv4hygc98ajd8jswe352erlwgyw2ve3v58a5qv688fs"
+  "vault_factory_addr": "chihuahua1j37gdce2l5wuy7tdv4hygc98ajd8jswe352erlwgyw2ve3v58a5qv688fs",
+  "vault_router_addr": "null"
 }
 ```
