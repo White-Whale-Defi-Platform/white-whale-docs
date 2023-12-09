@@ -204,7 +204,8 @@
   ],
   "date": "2023-01-04T11:31:36+0000",
   "chain_id": "phoenix-1",
-  "vault_factory_addr": "terra1vcn8h6fc26nv4f20p6g870a00nqzdpjwvshud9ku3qfaqhv7l69s9l29y2"
+  "vault_factory_addr": "terra1vcn8h6fc26nv4f20p6g870a00nqzdpjwvshud9ku3qfaqhv7l69s9l29y2",
+  "vault_router_addr": "null"
 }
 ```
 
