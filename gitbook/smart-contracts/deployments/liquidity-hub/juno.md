@@ -80,6 +80,8 @@
     }
   ],
   "date": "2022-08-24T11:04:29+0000",
+  "initial_block_height": "null",
+  "final_block_height": "null",
   "chain_id": "juno-1",
   "deployer_address": "juno1dpx7ytug647wefe7ajxmg5ejt68gxcfv4h7g8t"
 }
