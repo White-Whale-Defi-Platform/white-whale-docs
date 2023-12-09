@@ -84,6 +84,8 @@
     }
   ],
   "date": "2022-09-29T20:50:49+0000",
+  "initial_block_height": "null",
+  "final_block_height": "null",
   "chain_id": "chihuahua-1",
   "deployer_address": "chihuahua1dpx7ytug647wefe7ajxmg5ejt68gxcfvqssap4"
 }
