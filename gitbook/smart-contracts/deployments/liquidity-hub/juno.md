@@ -326,7 +326,8 @@
     }
   ],
   "chain_id": "juno-1",
-  "vault_factory_addr": "juno1qnfsrwx4c0qnvcnscwm7r55nxr8rpfckq6v8yvuvg7zuqj0uk2hsrssj2n"
+  "vault_factory_addr": "juno1qnfsrwx4c0qnvcnscwm7r55nxr8rpfckq6v8yvuvg7zuqj0uk2hsrssj2n",
+  "vault_router_addr": "null"
 }
 ```
 
