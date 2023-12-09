@@ -109,7 +109,8 @@
   ],
   "date": "2023-01-04T11:31:36+0000",
   "chain_id": "comdex-1",
-  "vault_factory_addr": "comdex149ltwdnpxrhx9al42s359glcjnsuc6x3dalz28f04dsxhlu7jhmq3anmuq"
+  "vault_factory_addr": "comdex149ltwdnpxrhx9al42s359glcjnsuc6x3dalz28f04dsxhlu7jhmq3anmuq",
+  "vault_router_addr": "null"
 }
 ```
 
