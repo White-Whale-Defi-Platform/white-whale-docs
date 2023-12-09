@@ -84,6 +84,8 @@
     }
   ],
   "date": "2022-08-23T15:43:25+0000",
+  "initial_block_height": "null",
+  "final_block_height": "null",
   "chain_id": "phoenix-1",
   "deployer_address": "terra1z5m4yq93glzzxfjhppgj7qzep2ndf9jk6xkhp3"
 }
