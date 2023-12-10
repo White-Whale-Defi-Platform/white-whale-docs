@@ -109,7 +109,7 @@
   ],
   "date": "2023-01-05T15:59:41+0000",
   "chain_id": "columbus-5",
-  "pool_factory_addr": ""
+  "pool_factory_addr": "null"
 }
 ```
 
