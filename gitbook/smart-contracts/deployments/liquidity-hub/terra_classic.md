@@ -261,6 +261,30 @@
       "lp_address": "terra1prfue6fhreqsu7ry2cuw294kc35u68refsdkq6r5d4m5nm235xjqay0y87",
       "pool_code_id": "31",
       "lp_code_id": "33"
+    },
+    {
+      "pair": "FROG-LUNC",
+      "assets": [
+        "{\"token\":{\"native_token\":\"uluna\"}}",
+        "{\"token\":{\"token\":\"terra1wez9puj43v4s25vrex7cv3ut3w75w4h6j5e537sujyuxj0r5ne2qp9uwl9\"}}"
+      ],
+      "pool_address": "terra1qq4q844eevmv9k8an47gq6s04er4sd4wnkhv0s7aftwuc304guuqlwzhpl",
+      "lp_address": "terra1prfue6fhreqsu7ry2cuw294kc35u68refsdkq6r5d4m5nm235xjqay0y87",
+      "staking": "terra1djdcg0a5g6tj39ld6yewjvzgeyd0v4v7tdvdek7ljn53n79r7hgq0cmqsg",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
+    },
+    {
+      "pair": "BASE-LUNC",
+      "assets": [
+        "{\"token\":{\"native_token\":\"uluna\"}}",
+        "{\"token\":{\"token\":\"terra1r9f8c768dg6kt48fjuxh494m5fm075dcjwm0c9cxmpa37y49xzesqmu6fv\"}}"
+      ],
+      "pool_address": "terra1znxah0scl3xq747wtuzjg3k0tlml3fvvmxgt0m3jywcmqwn5867s7x29tx",
+      "lp_address": "terra1zkg24q3cxzag6md3lq9h7a69ekkwehf6p2x5mpc8ua5vhjq9hnyssk20qr",
+      "staking": "terra1zuyalae3t5qg4gkumff0mj5he6auv73n467jknj4p6pr00wqmnjqdxv6cx",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
     }
   ]
 }
