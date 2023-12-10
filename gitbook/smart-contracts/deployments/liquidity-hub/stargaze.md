@@ -91,6 +91,7 @@
   ],
   "date": "2022-12-21T15:14:35+0000",
   "chain_id": "elgafar-1",
-  "vault_factory_addr": "stars1hskve2k97qpmz9cfetum9x5t5fywvwkxn3arehgpu5zpld0k9udshfqs7q"
+  "vault_factory_addr": "stars1hskve2k97qpmz9cfetum9x5t5fywvwkxn3arehgpu5zpld0k9udshfqs7q",
+  "vault_router_addr": "null"
 }
 ```

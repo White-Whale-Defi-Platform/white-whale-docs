@@ -84,6 +84,8 @@
     }
   ],
   "date": "2022-08-23T15:43:25+0000",
+  "initial_block_height": "null",
+  "final_block_height": "null",
   "chain_id": "phoenix-1",
   "deployer_address": "terra1z5m4yq93glzzxfjhppgj7qzep2ndf9jk6xkhp3"
 }
@@ -200,8 +202,10 @@
       "lp_code_id": "726"
     }
   ],
+  "date": "2023-01-04T11:31:36+0000",
   "chain_id": "phoenix-1",
-  "vault_factory_addr": "terra1vcn8h6fc26nv4f20p6g870a00nqzdpjwvshud9ku3qfaqhv7l69s9l29y2"
+  "vault_factory_addr": "terra1vcn8h6fc26nv4f20p6g870a00nqzdpjwvshud9ku3qfaqhv7l69s9l29y2",
+  "vault_router_addr": "null"
 }
 ```
 

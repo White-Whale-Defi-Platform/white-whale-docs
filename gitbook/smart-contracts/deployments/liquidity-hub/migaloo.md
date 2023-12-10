@@ -82,7 +82,12 @@
       "version": "0.9.1",
       "contract_address": "migaloo1692nylpkryu7q00eukt93egtqu657z33nf0tedp0ps6htm8aty6qjdlpvh"
     }
-  ]
+  ],
+  "date": "2022-08-24T11:04:29+0000",
+  "initial_block_height": "null",
+  "final_block_height": "null",
+  "chain_id": "migaloo-1",
+  "deployer_address": "null"
 }
 ```
 
@@ -160,7 +165,10 @@
       "pool_code_id": "31",
       "lp_code_id": "33"
     }
-  ]
+  ],
+  "date": "2022-08-25T11:52:10+0000",
+  "chain_id": "migaloo-1",
+  "pool_factory_address": "null"
 }
 ```
 

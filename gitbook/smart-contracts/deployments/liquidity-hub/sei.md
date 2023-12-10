@@ -107,7 +107,10 @@
       "pool_code_id": "125",
       "lp_code_id": "127"
     }
-  ]
+  ],
+  "date": "2022-11-02T15:31:36+0000",
+  "chain_id": "pacific-1",
+  "pool_factory_addr": "null"
 }
 ```
 
@@ -131,7 +134,11 @@
       "vault_code_id": "129",
       "lp_code_id": "127"
     }
-  ]
+  ],
+  "date": "2022-12-15T16:09:30+0000",
+  "chain_id": "pacific-1",
+  "vault_factory_addr": "null",
+  "vault_router_addr": "null"
 }
 ```
 
@@ -204,7 +211,10 @@
       "code_id": "26",
       "version": "1.2.0"
     }
-  ]
+  ],
+  "date": "2022-08-24T11:04:29+0000",
+  "chain_id": "sei-devnet-1",
+  "deployer_address": "null"
 }
 ```
 

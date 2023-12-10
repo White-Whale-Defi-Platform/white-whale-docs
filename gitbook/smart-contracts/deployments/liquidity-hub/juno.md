@@ -80,6 +80,8 @@
     }
   ],
   "date": "2022-08-24T11:04:29+0000",
+  "initial_block_height": "null",
+  "final_block_height": "null",
   "chain_id": "juno-1",
   "deployer_address": "juno1dpx7ytug647wefe7ajxmg5ejt68gxcfv4h7g8t"
 }
@@ -324,7 +326,8 @@
     }
   ],
   "chain_id": "juno-1",
-  "vault_factory_addr": "juno1qnfsrwx4c0qnvcnscwm7r55nxr8rpfckq6v8yvuvg7zuqj0uk2hsrssj2n"
+  "vault_factory_addr": "juno1qnfsrwx4c0qnvcnscwm7r55nxr8rpfckq6v8yvuvg7zuqj0uk2hsrssj2n",
+  "vault_router_addr": "null"
 }
 ```
 
