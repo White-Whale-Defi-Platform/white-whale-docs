@@ -87,7 +87,7 @@
   "initial_block_height": "null",
   "final_block_height": "null",
   "chain_id": "migaloo-1",
-  "deployer_address": ""
+  "deployer_address": "null"
 }
 ```
 
@@ -168,7 +168,7 @@
   ],
   "date": "2022-08-25T11:52:10+0000",
   "chain_id": "migaloo-1",
-  "pool_factory_address": ""
+  "pool_factory_address": "null"
 }
 ```
 
