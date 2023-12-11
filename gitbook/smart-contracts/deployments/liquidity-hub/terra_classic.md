@@ -122,7 +122,7 @@
       "pair": "BASE-LUNC",
       "assets": [
         "{\"token\":{\"token\":\"terra1r9f8c768dg6kt48fjuxh494m5fm075dcjwm0c9cxmpa37y49xzesqmu6fv\"}}",
-        "{\"token\":{\"native_token\":\"uluna\"}}
+        "{\"token\":{\"native_token\":\"uluna\"}}"
       ],
       "pool_address": "terra1znxah0scl3xq747wtuzjg3k0tlml3fvvmxgt0m3jywcmqwn5867s7x29tx",
       "lp_address": "terra1zkg24q3cxzag6md3lq9h7a69ekkwehf6p2x5mpc8ua5vhjq9hnyssk20qr",
