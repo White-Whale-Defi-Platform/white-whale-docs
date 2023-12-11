@@ -106,7 +106,7 @@
       "pool_code_id": "7906",
       "lp_code_id": "7908"
     },
-{
+    {
       "pair": "FROG-LUNC",
       "assets": [
         "{\"token\":{\"token\":\"terra1wez9puj43v4s25vrex7cv3ut3w75w4h6j5e537sujyuxj0r5ne2qp9uwl9\"}}",
