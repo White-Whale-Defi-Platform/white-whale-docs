@@ -29,6 +29,7 @@ found [here](https://github.com/White-Whale-Defi-Platform/white-whale-core/tree/
 | [`terraswap_token`](https://app.gitbook.com/o/fVZwd36itixTM6EMRcZt/s/PtAatYv3uVRxf7beAOPp/liquidity-hub/overview-1/terraswap-token)     | CW20 (ERC20 equivalent) token implementation. Used for creating LP tokens.                      |
 | [`incentive-factory`](https://app.gitbook.com/o/fVZwd36itixTM6EMRcZt/s/PtAatYv3uVRxf7beAOPp/liquidity-hub/overview-1/incentive-factory) | Factory to create incentive contracts for the pools.                                            |
 | [`incentive`](https://app.gitbook.com/o/fVZwd36itixTM6EMRcZt/s/PtAatYv3uVRxf7beAOPp/liquidity-hub/overview-1/incentive)                 | Contract spawned by the Incentive Factory to incentivize liquidity provision on specific pools. |
+| [`frontend_helper`](https://app.gitbook.com/o/fVZwd36itixTM6EMRcZt/s/PtAatYv3uVRxf7beAOPp/liquidity-hub/overview-1/frontend_helper)     | Contract to facilitate providing liquidity and locking it for incentives in one go.             |
 
 ## Running the Pool Network
 
