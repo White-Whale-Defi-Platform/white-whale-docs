@@ -190,3 +190,209 @@
   "vault_router_addr": "migaloo19pze0n07guzj6yla2708q2feh38q9n8gxmkk8fjnuprfh6y9ngjqs90hcy"
 }
 ```
+
+
+# Migaloo testnet (narwhal-1)
+
+```json
+{
+  "contracts": [
+    {
+      "wasm": "fee_collector.wasm",
+      "code_id": "209",
+      "version": "1.1.4",
+      "contract_address": "migaloo1e3tccaxd3l7g3kq4z7ttae646luzh68sszdx7p8u9nqfxzf2585qt9mur5"
+    },
+    {
+      "wasm": "fee_distributor.wasm",
+      "code_id": "210",
+      "version": "0.9.1",
+      "contract_address": "migaloo19k5skr08s9ztwtfyrpl7kx777stuusjyy3ftqlag5aezfg8guhyseykyg6"
+    },
+    {
+      "wasm": "frontend_helper.wasm",
+      "code_id": "211",
+      "version": "1.0.0",
+      "contract_address": "migaloo18t2l4gasku8gj658ag94h0rdr6yxalxxysm3adnkykmasguafkkqrqyh37"
+    },
+    {
+      "wasm": "incentive.wasm",
+      "code_id": "212",
+      "version": "1.0.6"
+    },
+    {
+      "wasm": "incentive_factory.wasm",
+      "code_id": "213",
+      "version": "1.0.1",
+      "contract_address": "migaloo1404cq7mmpky48yct7u0fskx68fka7w8juuv2yl5cpn38vylkh9xs3t0y53"
+    },
+    {
+      "wasm": "stableswap_3pool.wasm",
+      "code_id": "214",
+      "version": "1.2.2"
+    },
+    {
+      "wasm": "terraswap_factory.wasm",
+      "code_id": "215",
+      "version": "1.2.0",
+      "contract_address": "migaloo13zayyqtuam0wq5e057m6cq3ye8gw2f8t8svm9xlcc0m200x9wp5qx54gm5"
+    },
+    {
+      "wasm": "terraswap_pair.wasm",
+      "code_id": "216",
+      "version": "1.3.3"
+    },
+    {
+      "wasm": "terraswap_router.wasm",
+      "code_id": "217",
+      "version": "1.1.1",
+      "contract_address": "migaloo13ur49a5c7ej6vy2t3wj6h9vjp4ketvc6c9e7m2h0zd6tcydxzqtqqkkwdp"
+    },
+    {
+      "wasm": "terraswap_token.wasm",
+      "code_id": "218",
+      "version": "1.0.2"
+    },
+    {
+      "wasm": "vault.wasm",
+      "code_id": "219",
+      "version": "1.2.6"
+    },
+    {
+      "wasm": "vault_factory.wasm",
+      "code_id": "220",
+      "version": "1.1.3",
+      "contract_address": "migaloo1zj4h6jvsv07rw6x74jax028leywdekfhahzm0544qevlwvpzc0gs2yt96t"
+    },
+    {
+      "wasm": "vault_router.wasm",
+      "code_id": "221",
+      "version": "1.1.6",
+      "contract_address": "migaloo1c7c8jh4nfkp52pdhl8r2rjvs8fkhlzmv3ku9v7d9ygrewpkkvfxsq5tgqt"
+    },
+    {
+      "wasm": "whale_lair.wasm",
+      "code_id": "222",
+      "version": "0.9.1",
+      "contract_address": "migaloo1zmudfkljvltcrh5h8n2sppm0rj7qew02w7xsupr3levdzd9mhspqecxc5a"
+    }
+  ],
+  "date": "2023-12-12T13:29:04+0000",
+  "initial_block_height": "null",
+  "final_block_height": "4916900",
+  "chain_id": "narwhal-1",
+  "deployer_address": "migaloo1ut7pkdz4hgy689v98vf3dj650frynyaj285zge"
+}
+```
+
+### Pools 
+
+```json
+{
+  "pools": [
+    {
+      "pair": "uwhale-willyk",
+      "assets": [
+        "{\"token\":{\"native_token\":\"uwhale\"}}",
+        "{\"token\":{\"token\":\"migaloo1se4zqd573xe5afhf6gg06f8jsrhts77tha8nsw8u4qyqdfz0l2jsyccl6x\"}}"
+      ],
+      "pool_address": "migaloo13kua4jtwkfcx3ngz829axpvrjcns5za3qclvprfqwldk8ucfrsusp3nudu",
+      "lp_address": "migaloo1x50n9q55wkthlphtr8evplwkjx0vxnh4jngen76gq0njl0kna3aqx7px7p",
+      "pool_code_id": "216",
+      "lp_code_id": "218"
+    },
+    {
+      "pair": "uwhale-willyo",
+      "assets": [
+        "{\"token\":{\"native_token\":\"uwhale\"}}",
+        "{\"token\":{\"token\":\"migaloo1cykfsqqk4ywgzzqm83thsujsln3lpngaz9ugsxufx398s2vq79dqkn2nlt\"}}"
+      ],
+      "pool_address": "migaloo1kj4dfhfkgw7ek9gfxw8elnycpzdv5n6amhnxca5ys9udqapaplrqyp66mu",
+      "lp_address": "migaloo1xdvymjx3m6lxk5kh8hu6t0qugrtxwzyz4pspg8z4lkxss84j6raqeesc5v",
+      "pool_code_id": "216",
+      "lp_code_id": "218"
+    }
+  ]
+}
+```
+
+### Tokens
+```json
+{
+  "test_tokens": [
+    {
+      "token_address": "migaloo1se4zqd573xe5afhf6gg06f8jsrhts77tha8nsw8u4qyqdfz0l2jsyccl6x",
+      "code_id": "218",
+      "symbol": "willyk",
+      "decimals": "6",
+      "amount": "1000000000000000000000",
+      "minted_to": "migaloo1ut7pkdz4hgy689v98vf3dj650frynyaj285zge",
+      "tx_hash": "FD38632CDE4A6C604ABFD68DD07C7C6DE6A1631E72B0A70EB95DCA2F7ECBEAC1"
+    },
+    {
+      "token_address": "migaloo1cykfsqqk4ywgzzqm83thsujsln3lpngaz9ugsxufx398s2vq79dqkn2nlt",
+      "code_id": "218",
+      "symbol": "willyo",
+      "decimals": "6",
+      "amount": "1000000000000000000000",
+      "minted_to": "migaloo1ut7pkdz4hgy689v98vf3dj650frynyaj285zge",
+      "tx_hash": "6EA9AF79188FBC772CB06EAE13639B1DD6E5E11D0F7DB702AF58B04FC2E8A7E6"
+    },
+    {
+      "token_address": "migaloo1f8d5n66wshja6vj38avckruwgheu7m7n7frjeurtlgd3h20sr39qtw9c7x",
+      "code_id": "218",
+      "symbol": "willyo",
+      "decimals": "6",
+      "amount": "1000000000000000000000",
+      "minted_to": "migaloo1ut7pkdz4hgy689v98vf3dj650frynyaj285zge",
+      "tx_hash": "45BA0690F5AE283DB9617040AFE80BC9E24619C560CABBCBFEE2D99D23D178E7"
+    }
+  ],
+  "date": "2023-12-12T13:34:33+0000",
+  "chain_id": "narwhal-1",
+  "minted_to": "migaloo1ut7pkdz4hgy689v98vf3dj650frynyaj285zge"
+}
+```
+
+### Incentives
+
+```json
+{
+  "pool_incentives": [
+    {
+      "pool": "migaloo13kua4jtwkfcx3ngz829axpvrjcns5za3qclvprfqwldk8ucfrsusp3nudu",
+      "pool_label": "uwhale-willyk",
+      "incentive_contract": "migaloo1kf4uncj48rvrp94hmwtl3cup4gayapq7awcayw92urrq5x59q7tsppzmcv"
+    },
+    {
+      "pool": "migaloo1kj4dfhfkgw7ek9gfxw8elnycpzdv5n6amhnxca5ys9udqapaplrqyp66mu",
+      "pool_label": "uwhale-willyo",
+      "incentive_contract": "migaloo1cgxsz3g6ryhehn0fnqcf99lektyd26x5uu52mv86wtyu54mdr8zqvz7gzz"
+    }
+  ],
+  "date": "2023-12-12T13:43:04+0000",
+  "initial_block_height": "4917049",
+  "final_block_height": "4917054",
+  "chain_id": "narwhal-1",
+  "deployer_address": "migaloo1ut7pkdz4hgy689v98vf3dj650frynyaj285zge"
+}
+```
+
+### Vaults
+
+```json
+{
+  "vaults": [
+    {
+      "asset": "uwhale",
+      "vault_address": "migaloo1r9kshk9m4k5k0sdggkm3zlpy7h7304tkw7s6c3ddxaz0xfp34z5skzy63a",
+      "lp_address": "migaloo1ymkc5f204ul48wc642a8c32c8cqprvc6dczlnldtfs3t5hv8tk4qk53885",
+      "vault_code_id": "219",
+      "lp_code_id": "218"
+    }
+  ],
+  "date": "2023-12-12T13:46:56+0000",
+  "chain_id": "narwhal-1",
+  "vault_factory_addr": "migaloo1zj4h6jvsv07rw6x74jax028leywdekfhahzm0544qevlwvpzc0gs2yt96t"
+}
+```
