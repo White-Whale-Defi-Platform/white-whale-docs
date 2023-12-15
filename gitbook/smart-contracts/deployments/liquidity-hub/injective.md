@@ -95,64 +95,126 @@
 {
   "pools": [
     {
-      "pair": "inj-peggy0xdAC...ec7",
+      "pair": "ampWHALE-uwhale",
       "assets": [
-        "{\"native_token\":{\"denom\":\"inj\"}}",
-        "{\"native_token\":{\"denom\":\"peggy0xdAC17F958D2ee523a2206206994597C13D831ec7\"}}"
-      ],
-      "pool_address": "inj1zfw930csx0k5qzf35vndaulwada4wa3pywekyx",
-      "lp_address": "inj14n26cr7dj79smrgg44hfylhph9y45h4yx5gvzm",
-      "pool_code_id": "161",
-      "lp_code_id": "17"
-    },
-    {
-      "pair": "ibc/C4CF...19F9-peggy0xdAC...ec7",
-      "assets": [
-        "{\"native_token\":{\"denom\":\"ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9\"}}",
-        "{\"native_token\":{\"denom\":\"peggy0xdAC17F958D2ee523a2206206994597C13D831ec7\"}}"
-      ],
-      "pool_address": "inj14zykjnz94dr9nj4v2yzpvnlrw5uurk5hhea8xw",
-      "lp_address": "inj1j30wx6kjfsessdx5mlp32hqwklj48ufvxx6tyc",
-      "pool_code_id": "161",
-      "lp_code_id": "17"
-    },
-    {
-      "pair": "ibc/168C...0A32-ibc/D6E6...F445 pair",
-      "assets": [
-        "{\"native_token\":{\"denom\":\"ibc/168C3904C45C6FE3539AE85A8892DF87371D00EA7942515AFC50AA43C4BB0A32\"}}",
-        "{\"native_token\":{\"denom\":\"ibc/D6E6A20ABDD600742D22464340A7701558027759CE14D12590F8EA869CCCF445\"}}"
+        {
+          "native_token": {
+            "denom": "ibc/168C3904C45C6FE3539AE85A8892DF87371D00EA7942515AFC50AA43C4BB0A32"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/D6E6A20ABDD600742D22464340A7701558027759CE14D12590F8EA869CCCF445"
+          }
+        }
       ],
       "pool_address": "inj1gyxlm5j537d8pvl5eqfswya93delvh3nlhustk",
-      "lp_address": "inj185gqewrlde8vrqw7j8lpad67v8jfrx9u28w38t",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "inj185gqewrlde8vrqw7j8lpad67v8jfrx9u28w38t"
+        }
+      },
+      "incentive_contract": "inj12x7vzmsgj496ps0n9gt0xzmec0vw2wgvqgjxys",
       "pool_code_id": "161",
       "lp_code_id": "17"
     },
     {
-      "pair": "ibc/ECB0...7CC2-ibc/D6E6...F445 pair",
+      "pair": "uatom-peggy0xdAC17F958D2ee523a2206206994597C13D831ec7",
       "assets": [
-        "{\"native_token\":{\"denom\":\"ibc/ECB0AA28D6001EF985047558C410B65581FC85BD92D4E3CFCCA0D3D964C67CC2\"}}",
-        "{\"native_token\":{\"denom\":\"ibc/D6E6A20ABDD600742D22464340A7701558027759CE14D12590F8EA869CCCF445\"}}"
+        {
+          "native_token": {
+            "denom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "peggy0xdAC17F958D2ee523a2206206994597C13D831ec7"
+          }
+        }
+      ],
+      "pool_address": "inj14zykjnz94dr9nj4v2yzpvnlrw5uurk5hhea8xw",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "inj1j30wx6kjfsessdx5mlp32hqwklj48ufvxx6tyc"
+        }
+      },
+      "incentive_contract": "inj1r7tm9zndwyw898hjt3xgmdecugret22vc3ecdw",
+      "pool_code_id": "161",
+      "lp_code_id": "17"
+    },
+    {
+      "pair": "boneWhale-uwhale",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "ibc/ECB0AA28D6001EF985047558C410B65581FC85BD92D4E3CFCCA0D3D964C67CC2"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/D6E6A20ABDD600742D22464340A7701558027759CE14D12590F8EA869CCCF445"
+          }
+        }
       ],
       "pool_address": "inj17dez7atlgwrl7lxzszxjy7gzuj325n8re3f7mh",
-      "lp_address": "inj1a6tcf60pyz8qq2n532dzcs7s7sj8klcmj94nhd",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "inj1a6tcf60pyz8qq2n532dzcs7s7sj8klcmj94nhd"
+        }
+      },
+      "incentive_contract": "inj10udnevccyg50e80gkeynr0s9gx70j699jgepzl",
       "pool_code_id": "161",
       "lp_code_id": "17"
     },
     {
-      "pair": "ibc/ECB0...7CC2-ibc/D6E6...F445 pair(inactive)",
+      "pair": "peggy0xdAC17F958D2ee523a2206206994597C13D831ec7-uwhale",
       "assets": [
-        "{\"native_token\":{\"denom\":\"peggy0xdAC17F958D2ee523a2206206994597C13D831ec7\"}}",
-        "{\"native_token\":{\"denom\":\"ibc/D6E6A20ABDD600742D22464340A7701558027759CE14D12590F8EA869CCCF445\"}}"
+        {
+          "native_token": {
+            "denom": "peggy0xdAC17F958D2ee523a2206206994597C13D831ec7"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/D6E6A20ABDD600742D22464340A7701558027759CE14D12590F8EA869CCCF445"
+          }
+        }
       ],
       "pool_address": "inj1t9daxn85sz688vkn8wu4w47jnrak296hh2q579",
-      "lp_address": "inj1869zena97sctemj78sgjmu737p2g9490esftk5",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "inj1869zena97sctemj78sgjmu737p2g9490esftk5"
+        }
+      },
+      "incentive_contract": "inj1f9j7u5mf8lzgkqqyx00mkeze2nlk9sqf0hv35d",
+      "pool_code_id": "161",
+      "lp_code_id": "17"
+    },
+    {
+      "pair": "inj-peggy0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "inj"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "peggy0xdAC17F958D2ee523a2206206994597C13D831ec7"
+          }
+        }
+      ],
+      "pool_address": "inj1zfw930csx0k5qzf35vndaulwada4wa3pywekyx",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "inj14n26cr7dj79smrgg44hfylhph9y45h4yx5gvzm"
+        }
+      },
+      "incentive_contract": "inj1pm4vll4c0q5y6q0qcvvx94377tq670k5gdyuyg",
       "pool_code_id": "161",
       "lp_code_id": "17"
     }
-  ],
-  "date": "2022-12-18T16:05:09+0000",
-  "chain_id": "injective-1",
-  "pool_factory_addr": "inj1x22q8lfhz7qcvtzs0dakhgx2th64l79kfye5lk"
+  ]
 }
 ```
 
