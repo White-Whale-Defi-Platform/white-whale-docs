@@ -91,24 +91,36 @@
 }
 ```
 
-### Pools on Sei
-
 ```json 
 {
   "pools": [
     {
       "pair": "uwhale-usei",
       "assets": [
-        "{\"token\":{\"native_token\":\"ibc/6ACE79F5ABD607D2075FAD4ABE284CBC5BB6A96C16555FFB901644E9D17411AC\"}}",
-        "{\"token\":{\"native_token\":\"usei\"}}"
+        {
+          "native_token": {
+            "denom": "ibc/6ACE79F5ABD607D2075FAD4ABE284CBC5BB6A96C16555FFB901644E9D17411AC"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "usei"
+          }
+        }
       ],
       "pool_address": "sei155lc2utpd66unfhyh533yu729ltmrd8eeqw0qq5r7jws9pfc9k0sp65zul",
-      "lp_address": "sei1zq2mleg8r9l9sa7x350wtvqety0l5crvv9a6znz634cwdjpec36slquzlx",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "sei1zq2mleg8r9l9sa7x350wtvqety0l5crvv9a6znz634cwdjpec36slquzlx"
+        }
+      },
+      "incentive_contract": "sei1suwp7tt0tfzmjytus6clx64zx8tz3e8pd0vjuqjvy233um8v6nuqu9qhdt",
       "pool_code_id": "125",
       "lp_code_id": "127"
     }
   ]
 }
+
 ```
 
 ### Vaults on Sei
