@@ -85,159 +85,298 @@
 }
 ```
 
-### Pools and LPs
-
 ```json
 {
   "pools": [
     {
-      "label": "uatom-uluna",
-      "pair": "ibc/C4CF...19F9-ibc/107D...5CBF",
+      "pair": "ujuno-LOOP",
       "assets": [
-        "{\"native_token\":{\"denom\":\"ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9\"}}",
-        "{\"native_token\":{\"denom\":\"ibc/107D152BB3176FAEBF4C2A84C5FFDEEA7C7CB4FE1BBDAB710F1FD25BCD055CBF\"}}"
-      ],
-      "pool_address": "juno1k9cw9yghf04cqlu290n4zlveker5cev5ahweqkh07y7zc3xq9hrshjruk8",
-      "lp_address": "juno1fkejwm7alyfnjngtpgtxvreqfcz8uwer2jgwjn40suvgq20tm8ss73cj05",
-      "pool_code_id": "3226",
-      "lp_code_id": "1440"
-    },
-    {
-      "label": "uatom-ujuno",
-      "pair": "ibc/C4CF...19F9-ujuno",
-      "assets": [
-        "{\"native_token\":{\"denom\":\"ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9\"}}",
-        "{\"native_token\":{\"denom\":\"ujuno\"}}"
-      ],
-      "pool_address": "juno1p9z8xe96fyvg3h5gtvnpjjv2u47q6l7sdhg6asmyfgc6q8l8ttgqfvxnxh",
-      "lp_address": "juno1g3549wm0tffdzdpasufjr0nccu9ynzpzway5g3u6ucmhfd4ds05swswasc",
-      "pool_code_id": "3226",
-      "lp_code_id": "1440"
-    },
-    {
-      "label": "uatom-axlUSDC",
-      "pair": "ibc/C4CF...19F9-ibc/EAC3...8034",
-      "assets": [
-        "{\"native_token\":{\"denom\":\"ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9\"}}",
-        "{\"native_token\":{\"denom\":\"ibc/EAC38D55372F38F1AFD68DF7FE9EF762DCF69F26520643CF3F9D292A738D8034\"}}"
-      ],
-      "pool_address": "juno1v6stcdrvwrthfvcwvlmmzht32ft9g9nw85tthcjqer242xg3nvdq8fjasx",
-      "lp_address": "juno12caca3ymhxr7a73wtdefye86djs69704ktzkv02xkf59se8hx72qwyxq72",
-      "pool_code_id": "3226",
-      "lp_code_id": "1440"
-    },
-    {
-      "label": "ujuno-raw",
-      "pair": "ujuno-raw",
-      "assets": [
-        "{\"native_token\":{\"denom\":\"ujuno\"}}",
-        "{\"token\":{\"contract_addr\":\"\"}}"
-      ],
-      "pool_address": "juno1xpt9mkncxadadn5t8s4t74nmw5zlarghmpme26857s07xz388d6sukvtnz",
-      "lp_address": "juno1zetjfu8j0ndt4d3mgewhatgpfrj8pwhev2tdp3sa9dwwmqlgdxws4257we",
-      "pool_code_id": "3226",
-      "lp_code_id": "1440"
-    },
-    {
-      "label": "ujuno-loop",
-      "pair": "ujuno-loop",
-      "assets": [
-        "{\"native_token\":{\"denom\":\"ujuno\"}}",
-        "{\"token\":{\"contract_addr\":\"\"}}"
+        {
+          "native_token": {
+            "denom": "ujuno"
+          }
+        },
+        {
+          "token": {
+            "contract_addr": "juno1qsrercqegvs4ye0yqg93knv73ye5dc3prqwd6jcdcuj8ggp6w0us66deup"
+          }
+        }
       ],
       "pool_address": "juno158mcxa5ajpjfxgy60asrg3m0823m2el5n333xdypcw8h5uwhuvyqkyc4a7",
-      "lp_address": "juno1zmsgdpdej4g4m4fc5y5p6wr8gn6peh9vx5dk5vf7v7w32jjmcetshl0yw4",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "juno1zmsgdpdej4g4m4fc5y5p6wr8gn6peh9vx5dk5vf7v7w32jjmcetshl0yw4"
+        }
+      },
+      "incentive_contract": "juno1mhq2reglyzq63n7cnvrc5fefa6ztyxa56nmehsaan4yamu84ntcs70jetd",
       "pool_code_id": "3226",
       "lp_code_id": "1440"
     },
     {
-      "label": "ujuno-axlUSDC",
-      "pair": "ujuno-ibc/EAC3...8034",
+      "pair": "boneWhale-uwhale",
       "assets": [
-        "{\"native_token\":{\"denom\":\"ujuno\"}}",
-        "{\"token\":{\"contract_addr\":\"ibc/EAC38D55372F38F1AFD68DF7FE9EF762DCF69F26520643CF3F9D292A738D8034\"}}"
-      ],
-      "pool_address": "juno1wkjy5wl0pd5xxvwtrx37r7ydkt3dkwvghs00tvvqyd3xnjukah7qpj0vj7",
-      "lp_address": "juno19mkjyvydnq440a3ms4fccpltrzmxlvlz6nvz6qul0mgxvse42n2q9qkf72",
-      "pool_code_id": "3226",
-      "lp_code_id": "1440"
-    },
-    {
-      "label": "uwhale-axlUSDC",
-      "pair": "ibc/3A6A...5A5C-ibc/EAC3...8034",
-      "assets": [
-        "{\"native_token\":{\"denom\":\"ibc/3A6ADE78FB8169C034C29C4F2E1A61CE596EC8235366F22381D981A98F1F5A5C\"}}",
-        "{\"native_token\":{\"denom\":\"ibc/EAC38D55372F38F1AFD68DF7FE9EF762DCF69F26520643CF3F9D292A738D8034\"}}"
-      ],
-      "pool_address": "juno1g7ctm7dynjsduf597d8nvt36kwvhfutmzrczdnm00tsz48uryvzqp7p32h",
-      "lp_address": "juno1lqc9u7lv52jpqgewhtl4w2yjch0234ewfz2z3ykl0z2q67xyfrnsjqw95j",
-      "pool_code_id": "3226",
-      "lp_code_id": "1440"
-    },
-    {
-      "label": "ampWHALE-uwhale",
-      "pair": "ibc/2F7C...C0AF-ibc/3A6A...5A5C",
-      "assets": [
-        "{\"native_token\":{\"denom\":\"ibc/2F7C2A3D5D42553ED46F57D8B0DE3733B1B5FF571E2C6A051D34525904B4C0AF\"}}",
-        "{\"native_token\":{\"denom\":\"ibc/3A6ADE78FB8169C034C29C4F2E1A61CE596EC8235366F22381D981A98F1F5A5C\"}}"
-      ],
-      "pool_address": "juno1dwmrkyhed4szdxxk6l0c98hseancjtdet58n77tfhv2as8cdjdlq7vps00",
-      "lp_address": "juno1cvnwcgkhxaj70gjg7x57fh447m2wj5yx7p2puu4mqgtf62qphtds88mdsd",
-      "pool_code_id": "3226",
-      "lp_code_id": "1440"
-    },
-    {
-      "label": "boneWhale-uwhale",
-      "pair": "ibc/01BA...2ABF-ibc/3A6A...5A5C",
-      "assets": [
-        "{\"native_token\":{\"denom\":\"ibc/01BAE2E69D02670B22758FBA74E4114B6E88FC1878936C919DA345E6C6C92ABF\"}}",
-        "{\"native_token\":{\"denom\":\"ibc/3A6ADE78FB8169C034C29C4F2E1A61CE596EC8235366F22381D981A98F1F5A5C\"}}"
+        {
+          "native_token": {
+            "denom": "ibc/01BAE2E69D02670B22758FBA74E4114B6E88FC1878936C919DA345E6C6C92ABF"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/3A6ADE78FB8169C034C29C4F2E1A61CE596EC8235366F22381D981A98F1F5A5C"
+          }
+        }
       ],
       "pool_address": "juno160uh2xtegzvc7ekte5x377aud0y40hw75m9l92h7pkqk3l3eg9vqltel48",
-      "lp_address": "juno1a68d46fyzyq50t3geqe5c50kmswhrezyec8hz6sfngts6k4e77nqqd3yd0",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "juno1a68d46fyzyq50t3geqe5c50kmswhrezyec8hz6sfngts6k4e77nqqd3yd0"
+        }
+      },
+      "incentive_contract": "juno18a3qpkw5xh8m6r3lkughhv3ccqapjqgzq8923vw8tz6aqepxj5sqxet2gh",
       "pool_code_id": "3226",
       "lp_code_id": "1440"
     },
     {
-      "label": "ampJUNO-ujuno",
-      "pair": "ampJUNO-ujuno",
+      "pair": "uatom-uluna",
       "assets": [
-        "{\"token\":{\"contract_addr\":\"juno1a0khag6cfzu5lrwazmyndjgvlsuk7g4vn9jd8ceym8f4jf6v2l9q6d348a\"}}",
-        "{\"native_token\":{\"denom\":\"ujuno\"}}"
+        {
+          "native_token": {
+            "denom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/107D152BB3176FAEBF4C2A84C5FFDEEA7C7CB4FE1BBDAB710F1FD25BCD055CBF"
+          }
+        }
       ],
-      "pool_address": "juno137593pljsgltp9863sawquejpxzmtpvuafg0c7tpqqer3hkz48eslwrl4l",
-      "lp_address": "juno1th5zf95xevutfgqc2a4cexqpeykx0y0q87jzexhd7pmzdxnpg4qs8tg3t5",
+      "pool_address": "juno1k9cw9yghf04cqlu290n4zlveker5cev5ahweqkh07y7zc3xq9hrshjruk8",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "juno1fkejwm7alyfnjngtpgtxvreqfcz8uwer2jgwjn40suvgq20tm8ss73cj05"
+        }
+      },
+      "incentive_contract": "juno1k7sqayt87x8vdeyj8unqtxgrg0s60kut4w95zzgn8ks6puf6udmq4gzt2n",
       "pool_code_id": "3226",
       "lp_code_id": "1440"
     },
     {
-      "label": "bJuno-ujuno",
-      "pair": "bJuno-ujuno",
+      "pair": "ampWHALE-uwhale",
       "assets": [
-        "{\"token\":{\"contract_addr\":\"juno1mvkgcr5uce2rnpzr4qrzf50hx4qreuwzlt7fzsjrhjud3xnjmttq5mkh2m\"}}",
-        "{\"native_token\":{\"denom\":\"ujuno\"}}"
+        {
+          "native_token": {
+            "denom": "ibc/2F7C2A3D5D42553ED46F57D8B0DE3733B1B5FF571E2C6A051D34525904B4C0AF"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/3A6ADE78FB8169C034C29C4F2E1A61CE596EC8235366F22381D981A98F1F5A5C"
+          }
+        }
       ],
-      "pool_address": "juno12w6f755zx9l0vflfvql2jvl2jlyv348esyh7utvx727nwpy2jg5qsjemyx",
-      "lp_address": "juno1qdj9shhfasyjuvncawstvmcqp2afxet0x36jaaxt0udp6gq27ftq9xr5d4",
+      "pool_address": "juno1dwmrkyhed4szdxxk6l0c98hseancjtdet58n77tfhv2as8cdjdlq7vps00",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "juno1cvnwcgkhxaj70gjg7x57fh447m2wj5yx7p2puu4mqgtf62qphtds88mdsd"
+        }
+      },
+      "incentive_contract": "juno198znyptksrfsrv0lvwcz65g07fx89hew6qq8gl58wtn3gualfa9s5jtzem",
       "pool_code_id": "3226",
       "lp_code_id": "1440"
     },
     {
-      "label": "RAC-WHALE",
       "pair": "urac-uwhale",
       "assets": [
-        "{\"native_token\":{\"denom\":\"ibc/D8D6271EC54E3A96C6B9FB6C2BA9E99692B07CEB42754638029657072EA48337\"}}",
-        "{\"native_token\":{\"denom\":\"ibc/3A6ADE78FB8169C034C29C4F2E1A61CE596EC8235366F22381D981A98F1F5A5C\"}}"
+        {
+          "native_token": {
+            "denom": "ibc/D8D6271EC54E3A96C6B9FB6C2BA9E99692B07CEB42754638029657072EA48337"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/3A6ADE78FB8169C034C29C4F2E1A61CE596EC8235366F22381D981A98F1F5A5C"
+          }
+        }
       ],
       "pool_address": "juno1qv337g245ger3cx294m3vu74z74ku7lpf4944qxf8nhx29s8568q4uwrmk",
-      "lp_address": "factory/juno1qv337g245ger3cx294m3vu74z74ku7lpf4944qxf8nhx29s8568q4uwrmk/uLP",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/juno1qv337g245ger3cx294m3vu74z74ku7lpf4944qxf8nhx29s8568q4uwrmk/uLP"
+        }
+      },
+      "incentive_contract": "juno1f0qafvc7jhqcx5qdcnh9y05gfucpxuefztqgnd66hr594nvqmamql3uap2",
+      "pool_code_id": "3226",
+      "lp_code_id": "1440"
+    },
+    {
+      "pair": "uwhale-uusdc",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "ibc/3A6ADE78FB8169C034C29C4F2E1A61CE596EC8235366F22381D981A98F1F5A5C"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/EAC38D55372F38F1AFD68DF7FE9EF762DCF69F26520643CF3F9D292A738D8034"
+          }
+        }
+      ],
+      "pool_address": "juno1g7ctm7dynjsduf597d8nvt36kwvhfutmzrczdnm00tsz48uryvzqp7p32h",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "juno1lqc9u7lv52jpqgewhtl4w2yjch0234ewfz2z3ykl0z2q67xyfrnsjqw95j"
+        }
+      },
+      "incentive_contract": "juno13wl6hktnurvt6y529a8knzn0w0ml5ff6szlwhkfrwzjhl0zm2nlqgwwec9",
+      "pool_code_id": "3226",
+      "lp_code_id": "1440"
+    },
+    {
+      "pair": "uatom-uusdc",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/EAC38D55372F38F1AFD68DF7FE9EF762DCF69F26520643CF3F9D292A738D8034"
+          }
+        }
+      ],
+      "pool_address": "juno1v6stcdrvwrthfvcwvlmmzht32ft9g9nw85tthcjqer242xg3nvdq8fjasx",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "juno12caca3ymhxr7a73wtdefye86djs69704ktzkv02xkf59se8hx72qwyxq72"
+        }
+      },
+      "incentive_contract": "juno1r8t9e6agehtyack3vsskx885jepynf9jku48g2z96rgaz2u6jshs2gs28f",
+      "pool_code_id": "3226",
+      "lp_code_id": "1440"
+    },
+    {
+      "pair": "uatom-ujuno",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ujuno"
+          }
+        }
+      ],
+      "pool_address": "juno1p9z8xe96fyvg3h5gtvnpjjv2u47q6l7sdhg6asmyfgc6q8l8ttgqfvxnxh",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "juno1g3549wm0tffdzdpasufjr0nccu9ynzpzway5g3u6ucmhfd4ds05swswasc"
+        }
+      },
+      "incentive_contract": "juno1krkuxv305q946x9vx5mvs406lp7zcxgyr09kdlr7xqvkgasdg6aqe88w35",
+      "pool_code_id": "3226",
+      "lp_code_id": "1440"
+    },
+    {
+      "pair": "ujuno-uusdc",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "ujuno"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/EAC38D55372F38F1AFD68DF7FE9EF762DCF69F26520643CF3F9D292A738D8034"
+          }
+        }
+      ],
+      "pool_address": "juno1wkjy5wl0pd5xxvwtrx37r7ydkt3dkwvghs00tvvqyd3xnjukah7qpj0vj7",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "juno19mkjyvydnq440a3ms4fccpltrzmxlvlz6nvz6qul0mgxvse42n2q9qkf72"
+        }
+      },
+      "incentive_contract": "juno12zk3vhpukhqucpkv9xd2j9xrxlqc0v5yuw0sdd7n3jg2cts4rdaqaf02vr",
+      "pool_code_id": "3226",
+      "lp_code_id": "1440"
+    },
+    {
+      "pair": "ujuno-RAW",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "ujuno"
+          }
+        },
+        {
+          "token": {
+            "contract_addr": "juno15u3dt79t6sxxa3x3kpkhzsy56edaa5a66wvt3kxmukqjz2sx0hes5sn38g"
+          }
+        }
+      ],
+      "pool_address": "juno1xpt9mkncxadadn5t8s4t74nmw5zlarghmpme26857s07xz388d6sukvtnz",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "juno1zetjfu8j0ndt4d3mgewhatgpfrj8pwhev2tdp3sa9dwwmqlgdxws4257we"
+        }
+      },
+      "incentive_contract": "juno1qs4qn7cqqqjcfp02qdw5fv7jmjy6lj4s05pd99a6z7ey6arhrlwsu9lf8y",
+      "pool_code_id": "3226",
+      "lp_code_id": "1440"
+    },
+    {
+      "pair": "bJuno-ujuno",
+      "assets": [
+        {
+          "token": {
+            "contract_addr": "juno1mvkgcr5uce2rnpzr4qrzf50hx4qreuwzlt7fzsjrhjud3xnjmttq5mkh2m"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ujuno"
+          }
+        }
+      ],
+      "pool_address": "juno12w6f755zx9l0vflfvql2jvl2jlyv348esyh7utvx727nwpy2jg5qsjemyx",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "juno1qdj9shhfasyjuvncawstvmcqp2afxet0x36jaaxt0udp6gq27ftq9xr5d4"
+        }
+      },
+      "incentive_contract": "juno1nwrtue0vjftecegzyarhxdtedh0263akfle3522x0dx5jr0decms3vpd4t",
+      "pool_code_id": "3226",
+      "lp_code_id": "1440"
+    },
+    {
+      "pair": "ampJUNO-ujuno",
+      "assets": [
+        {
+          "token": {
+            "contract_addr": "juno1a0khag6cfzu5lrwazmyndjgvlsuk7g4vn9jd8ceym8f4jf6v2l9q6d348a"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ujuno"
+          }
+        }
+      ],
+      "pool_address": "juno137593pljsgltp9863sawquejpxzmtpvuafg0c7tpqqer3hkz48eslwrl4l",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "juno1th5zf95xevutfgqc2a4cexqpeykx0y0q87jzexhd7pmzdxnpg4qs8tg3t5"
+        }
+      },
+      "incentive_contract": "juno1zzs9fv6qz8sjn0v36d22900txv9c7m7u9vlt66t07kwjvl6srcyqq2q63z",
       "pool_code_id": "3226",
       "lp_code_id": "1440"
     }
-  ],
-  "date": "2022-08-25T11:52:10+0000",
-  "chain_id": "juno-1",
-  "pool_factory_address": "juno14m9rd2trjytvxvu4ldmqvru50ffxsafs8kequmfky7jh97uyqrxqs5xrnx"
+  ]
 }
 ```
 
