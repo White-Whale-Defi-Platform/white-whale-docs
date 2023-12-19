@@ -236,6 +236,30 @@
       "lp_code_id": "33"
     },
     {
+      "pair": "cw20:terra1xp9hrhthzddnl7j5du83gqqr4wmdjm5t0guzg9jp6jwrtpukwfjsjgy4f3-uwhale",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "ibc/106B438A78C581C5291E114B21588C41F98532E04D5369CFEE5825D95D465278"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "uwhale"
+          }
+        }
+      ],
+      "pool_address": "migaloo1ke0krjh5v3emzv5wdut6q7l0gednv7cx7naxqweae44jz8cxxq9srhy6dz",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/migaloo1ke0krjh5v3emzv5wdut6q7l0gednv7cx7naxqweae44jz8cxxq9srhy6dz/uLP"
+        }
+      },
+      "incentive_contract": "migaloo1kwdf63gwzhdwyy7hmmn67p3dex57e5ek4na8g27hvd7kn9cj7nmqgsxyz7",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
+    },
+    {
       "pair": "uwhale-uusdc",
       "assets": [
         {
