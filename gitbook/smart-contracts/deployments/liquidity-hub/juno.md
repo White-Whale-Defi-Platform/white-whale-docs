@@ -329,6 +329,30 @@
       "lp_code_id": "1440"
     },
     {
+      "pair": "SGNL-ujuno",
+      "assets": [
+        {
+          "token": {
+            "contract_addr": "juno14lycavan8gvpjn97aapzvwmsj8kyrvf644p05r0hu79namyj3ens87650k"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ujuno"
+          }
+        }
+      ],
+      "pool_address": "juno1pkyvelj5vfp6r8dq2utruw86vw9fvkjrd5c2x7m43m6cext8lzxs4k57dt",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/juno1pkyvelj5vfp6r8dq2utruw86vw9fvkjrd5c2x7m43m6cext8lzxs4k57dt/uLP"
+        }
+      },
+      "incentive_contract": "juno1fgh87cfgm6nkezsjfsswtsfedvf2u2k63wynkvcw6900pv80rn0qxv0u9r",
+      "pool_code_id": "3226",
+      "lp_code_id": "1440"
+    },
+    {
       "pair": "bJuno-ujuno",
       "assets": [
         {
