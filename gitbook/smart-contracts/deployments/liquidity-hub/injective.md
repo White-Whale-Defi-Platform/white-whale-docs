@@ -167,6 +167,30 @@
       "lp_code_id": "17"
     },
     {
+      "pair": "inj-uwhale",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "inj"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/D6E6A20ABDD600742D22464340A7701558027759CE14D12590F8EA869CCCF445"
+          }
+        }
+      ],
+      "pool_address": "inj109ptsw60g2mx69guq0rzurvsw7krpcjzht3p5l",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "inj126raxkq6fvpqearfjpx3exa6rg26c6m7367de6"
+        }
+      },
+      "incentive_contract": "inj1kgssa2jy5ygzealwvuaat8x8zytjv3f6j0tlqv",
+      "pool_code_id": "161",
+      "lp_code_id": "17"
+    },
+    {
       "pair": "peggy0xdAC17F958D2ee523a2206206994597C13D831ec7-uwhale",
       "assets": [
         {
