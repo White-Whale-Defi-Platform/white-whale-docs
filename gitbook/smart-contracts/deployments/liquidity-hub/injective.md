@@ -93,6 +93,8 @@
 
 ```json
 {
+  "chain": "injective-1",
+  "pool_factory_addr": "inj1x22q8lfhz7qcvtzs0dakhgx2th64l79kfye5lk",
   "pools": [
     {
       "pair": "ampWHALE-uwhale",
@@ -244,19 +246,40 @@
 
 ```json
 {
+  "chain": "injective-1",
+  "vault_factory_addr": "inj1wastjc07zuuy46mzzl3egz4uzy6fs59758vrwr",
   "vaults": [
     {
-      "asset": "peggy0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      "vault_address": "inj17kfjhj8mf7l5qus4kjqxtxext2rtnpqzdjz2qm",
-      "lp_address": "inj1s66zhks8v3fm24974crzxufh7w6ktt694g9t3j",
+      "vault": "inj1csmzuxsp5vp2ng5cue7wdknudk8m69wlr62rq5",
+      "asset": {
+        "native_token": {
+          "denom": "inj"
+        }
+      },
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/inj1csmzuxsp5vp2ng5cue7wdknudk8m69wlr62rq5/uLP"
+        }
+      },
+      "vault_code_id": "158",
+      "lp_code_id": "17"
+    },
+    {
+      "vault": "inj17kfjhj8mf7l5qus4kjqxtxext2rtnpqzdjz2qm",
+      "asset": {
+        "native_token": {
+          "denom": "peggy0xdAC17F958D2ee523a2206206994597C13D831ec7"
+        }
+      },
+      "lp_asset": {
+        "token": {
+          "contract_addr": "inj1s66zhks8v3fm24974crzxufh7w6ktt694g9t3j"
+        }
+      },
       "vault_code_id": "158",
       "lp_code_id": "17"
     }
-  ],
-  "date": "2022-12-18T16:02:30+0000",
-  "chain_id": "injective-1",
-  "vault_factory_addr": "inj1wastjc07zuuy46mzzl3egz4uzy6fs59758vrwr",
-  "vault_router_addr": "inj1hyja4uyjktpeh0fxzuw2fmjudr85rk2qxgqkvu"
+  ]
 }
 ```
 
