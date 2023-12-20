@@ -87,6 +87,8 @@
 
 ```json
 {
+  "chain": "juno-1",
+  "pool_factory_addr": "juno14m9rd2trjytvxvu4ldmqvru50ffxsafs8kequmfky7jh97uyqrxqs5xrnx",
   "pools": [
     {
       "pair": "ujuno-LOOP",
@@ -477,17 +479,25 @@
 
 ```json
 {
+  "chain": "juno-1",
+  "vault_factory_addr": "juno1qnfsrwx4c0qnvcnscwm7r55nxr8rpfckq6v8yvuvg7zuqj0uk2hsrssj2n",
   "vaults": [
     {
-      "asset": "ujuno",
-      "vault_address": "juno1gz9qhtcafjc0c9hnvrn2au253yaae6qunymt5yrgvagxejr2n2lquk6ss8",
-      "lp_address": "juno1menz0s2rgu62c0lrrfw7zswrs2deeh9emnawt5jjgdfgvja4uqmq50hfhp",
-      "vault_code_id": "1536",
-      "lp_code_id": "757"
+      "vault": "juno1gz9qhtcafjc0c9hnvrn2au253yaae6qunymt5yrgvagxejr2n2lquk6ss8",
+      "asset": {
+        "native_token": {
+          "denom": "ujuno"
+        }
+      },
+      "lp_asset": {
+        "token": {
+          "contract_addr": "juno1menz0s2rgu62c0lrrfw7zswrs2deeh9emnawt5jjgdfgvja4uqmq50hfhp"
+        }
+      },
+      "vault_code_id": "3217",
+      "lp_code_id": "1440"
     }
-  ],
-  "chain_id": "juno-1",
-  "vault_factory_addr": "juno1qnfsrwx4c0qnvcnscwm7r55nxr8rpfckq6v8yvuvg7zuqj0uk2hsrssj2n"
+  ]
 }
 ```
 
