@@ -86,10 +86,10 @@
 }
 ```
 
-### Pools on Migaloo 
-
 ```json 
 {
+  "chain": "migaloo-1",
+  "pool_factory_addr": "migaloo1z89funaazn4ka8vrmmw4q27csdykz63hep4ay8q2dmlspc6wtdgq92u369",
   "pools": [
     {
       "pair": "ampWHALE-arbWHALE",
@@ -236,7 +236,7 @@
       "lp_code_id": "33"
     },
     {
-      "pair": "cw20:terra1xp9hrhthzddnl7j5du83gqqr4wmdjm5t0guzg9jp6jwrtpukwfjsjgy4f3-uwhale",
+      "pair": "SAYVE-uwhale",
       "assets": [
         {
           "native_token": {
@@ -311,17 +311,18 @@
 }
 ```
 
-### Vaults on Migaloo
 ```json
 {
+  "chain": "migaloo-1",
+  "vault_factory_addr": "migaloo1g2xwx805epc897rwyrykskjque07yxfmc4qq2p4ef5dwd6znl30qkgw8w7",
   "vaults": [
     {
+      "vault": "migaloo16ku76pxpt2uhsvj2aemrehgz69aru5d76a0pqk4fpj8s2wt3lnhqtnvghe",
       "asset": {
         "native_token": {
           "denom": "uwhale"
         }
       },
-      "vault_address": "migaloo16ku76pxpt2uhsvj2aemrehgz69aru5d76a0pqk4fpj8s2wt3lnhqtnvghe",
       "lp_asset": {
         "native_token": {
           "denom": "factory/migaloo16ku76pxpt2uhsvj2aemrehgz69aru5d76a0pqk4fpj8s2wt3lnhqtnvghe/uLP"
@@ -330,11 +331,7 @@
       "vault_code_id": "44",
       "lp_code_id": "33"
     }
-  ],
-  "date": "2023-07-04T13:24:26+0000",
-  "chain_id": "migaloo-1",
-  "vault_factory_addr": "migaloo1g2xwx805epc897rwyrykskjque07yxfmc4qq2p4ef5dwd6znl30qkgw8w7",
-  "vault_router_addr": "migaloo19pze0n07guzj6yla2708q2feh38q9n8gxmkk8fjnuprfh6y9ngjqs90hcy"
+  ]
 }
 ```
 
