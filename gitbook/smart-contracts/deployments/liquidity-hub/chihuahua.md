@@ -91,6 +91,8 @@
 
 ```json
 {
+  "chain": "chihuahua-1",
+  "pool_factory_addr": "chihuahua1s8ehad3r9wxyk08ls2nmz8mqh4vlfmaxd2nw0crxwh04t4l5je4s8ljv0j",
   "pools": [
     {
       "pair": "ASH-GDOG",
@@ -213,7 +215,7 @@
       "lp_code_id": "116"
     },
     {
-      "pair": "cw20:terra1lxx40s29qvkrcj8fsa3yzyehy7w50umdvvnls2r830rys6lu2zns63eelv-uhuahua",
+      "pair": "ROAR-uhuahua",
       "assets": [
         {
           "native_token": {
@@ -458,16 +460,24 @@
 
 ```json
 {
+  "chain": "chihuahua-1",
+  "vault_factory_addr": "chihuahua1mlhardte7nznkkupn64vw58nt48fa5r5frluxt7y5gkrkws39scqagvdm7",
   "vaults": [
     {
-      "asset": "uhuahua",
-      "vault_address": "chihuahua1j37gdce2l5wuy7tdv4hygc98ajd8jswe352erlwgyw2ve3v58a5qv688fs",
-      "lp_address": "chihuahua12pl0k32gvzn259qhx6qce45kg85tysftt65xuek3rgf47s0gca4sut5nme",
-      "vault_code_id": "118",
-      "lp_code_id": "32"
+      "vault": "chihuahua1j37gdce2l5wuy7tdv4hygc98ajd8jswe352erlwgyw2ve3v58a5qv688fs",
+      "asset": {
+        "native_token": {
+          "denom": "uhuahua"
+        }
+      },
+      "lp_asset": {
+        "token": {
+          "contract_addr": "chihuahua12pl0k32gvzn259qhx6qce45kg85tysftt65xuek3rgf47s0gca4sut5nme"
+        }
+      },
+      "vault_code_id": "354",
+      "lp_code_id": "116"
     }
-  ],
-  "chain_id": "chihuahua-1",
-  "vault_factory_addr": "chihuahua1j37gdce2l5wuy7tdv4hygc98ajd8jswe352erlwgyw2ve3v58a5qv688fs"
+  ]
 }
 ```
