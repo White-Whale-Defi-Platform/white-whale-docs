@@ -97,6 +97,30 @@
   "pool_factory_addr": "inj1x22q8lfhz7qcvtzs0dakhgx2th64l79kfye5lk",
   "pools": [
     {
+      "pair": "HACHI-uwhale",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "factory/inj13ze65lwstqrz4qy6vvxx3lglnkkuan436aw45e/HACHI"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/D6E6A20ABDD600742D22464340A7701558027759CE14D12590F8EA869CCCF445"
+          }
+        }
+      ],
+      "pool_address": "inj1sgvrzysd32xdqtscaen2gprrjyg997lkn2h4wg",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/inj1sgvrzysd32xdqtscaen2gprrjyg997lkn2h4wg/uLP"
+        }
+      },
+      "incentive_contract": "inj1zzejvfk8anr2skycj8et5zmhcuzlnn7se8zpca",
+      "pool_code_id": "161",
+      "lp_code_id": "17"
+    },
+    {
       "pair": "ampWHALE-uwhale",
       "assets": [
         {
