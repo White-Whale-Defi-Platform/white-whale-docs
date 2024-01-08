@@ -164,6 +164,30 @@
       "lp_code_id": "33"
     },
     {
+      "pair": "uguppy-ash",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "factory/migaloo1etlu2h30tjvv8rfa4fwdc43c92f6ul5w9acxzk/uguppy"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "factory/migaloo1erul6xyq0gk6ws98ncj7lnq9l4jn4gnnu9we73gdz78yyl2lr7qqrvcgup/ash"
+          }
+        }
+      ],
+      "pool_address": "migaloo16yra8pf3ntm6ljjnja2w046zka3wm68fvd3x08htfdpn2mumqwkst7mllv",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/migaloo16yra8pf3ntm6ljjnja2w046zka3wm68fvd3x08htfdpn2mumqwkst7mllv/uLP"
+        }
+      },
+      "incentive_contract": "migaloo1mh36nwy4et6fvku9e73m87g9dnhr7z3xge67d9g8f2yl7cn6lpuqyf3cnc",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
+    },
+    {
       "pair": "ash-uwhale",
       "assets": [
         {
@@ -208,6 +232,30 @@
         }
       },
       "incentive_contract": "migaloo1ns355ukd2aww4wrpwxp9cdkmx6rsc4gkwea58ng92pfwkrtpltlssyeghn",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
+    },
+    {
+      "pair": "ophir-uwhale",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "factory/migaloo1t862qdu9mj5hr3j727247acypym3ej47axu22rrapm4tqlcpuseqltxwq5/ophir"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "uwhale"
+          }
+        }
+      ],
+      "pool_address": "migaloo1p5adwk3nl9pfmjjx6fu9mzn4xfjry4l2x086yq8u8sahfv6cmuyspryvyu",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/migaloo1p5adwk3nl9pfmjjx6fu9mzn4xfjry4l2x086yq8u8sahfv6cmuyspryvyu/uLP"
+        }
+      },
+      "incentive_contract": "null",
       "pool_code_id": "31",
       "lp_code_id": "33"
     },
@@ -304,6 +352,30 @@
         }
       },
       "incentive_contract": "migaloo18t2kn6j5l0dw3lfsnllclum9j9ktr63mrlpqjlkeugj8msj9xasqks7m5p",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
+    },
+    {
+      "pair": "uplnk-uwhale",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "ibc/E49A6D116739E0920F8F2D68A8F0A8E07DC272FA1421F70CAD738463AA296724"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "uwhale"
+          }
+        }
+      ],
+      "pool_address": "migaloo195rkvthzyndrguzxhulca4wmgten7aja49vvj4pq9wfm7azd3ahq84r3d2",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/migaloo195rkvthzyndrguzxhulca4wmgten7aja49vvj4pq9wfm7azd3ahq84r3d2/uLP"
+        }
+      },
+      "incentive_contract": "null",
       "pool_code_id": "31",
       "lp_code_id": "33"
     }
