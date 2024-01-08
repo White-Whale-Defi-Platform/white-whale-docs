@@ -255,7 +255,7 @@
           "denom": "factory/migaloo1p5adwk3nl9pfmjjx6fu9mzn4xfjry4l2x086yq8u8sahfv6cmuyspryvyu/uLP"
         }
       },
-      "incentive_contract": "null",
+      "incentive_contract": "migaloo1gjuv6570dupd7l5t6tz6m45jhnjv0x73qh7d629a4d4aze2lktjs85aj8y",
       "pool_code_id": "31",
       "lp_code_id": "33"
     },
@@ -375,7 +375,7 @@
           "denom": "factory/migaloo195rkvthzyndrguzxhulca4wmgten7aja49vvj4pq9wfm7azd3ahq84r3d2/uLP"
         }
       },
-      "incentive_contract": "null",
+      "incentive_contract": "migaloo1sf6nld2a56urwvxf8aj4964c5v3awt0hxjnz88dx9f9r4c2cjtxqr3842d",
       "pool_code_id": "31",
       "lp_code_id": "33"
     }
