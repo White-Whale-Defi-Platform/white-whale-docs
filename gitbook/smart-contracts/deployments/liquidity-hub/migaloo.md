@@ -317,30 +317,6 @@
         },
         {
           "native_token": {
-            "denom": "ibc/80E8F826480B995AE28C1EE86106C1BE2034FF1966579D29951CF61885458040"
-          }
-        }
-      ],
-      "pool_address": "migaloo1nha6qlam4p92cf9j64qv9he40xyf3akl2m9w5dukftmf2ryrxz5qy650zh",
-      "lp_asset": {
-        "native_token": {
-          "denom": "factory/migaloo1nha6qlam4p92cf9j64qv9he40xyf3akl2m9w5dukftmf2ryrxz5qy650zh/uLP"
-        }
-      },
-      "incentive_contract": "null",
-      "pool_code_id": "31",
-      "lp_code_id": "33"
-    },
-    {
-      "pair": "uwhale-uusdc",
-      "assets": [
-        {
-          "native_token": {
-            "denom": "uwhale"
-          }
-        },
-        {
-          "native_token": {
             "denom": "ibc/BC5C0BAFD19A5E4133FDA0F3E04AE1FBEE75A4A226554B2CBB021089FF2E1F8A"
           }
         }
