@@ -407,6 +407,30 @@
       "lp_code_id": "116"
     },
     {
+      "pair": "achihuahuawifhat-uhuahua",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "factory/chihuahua1x4q2vkrz4dfgd9hcw0p5m2f2nuv2uqmt9xr8k2/achihuahuawifhat"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "uhuahua"
+          }
+        }
+      ],
+      "pool_address": "chihuahua1gt0h2h3mgv7tp2fv2wyvh7mpncc8j0j4qal5q0wjhy859h0kfczsutmqru",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "chihuahua1z2syjz0hmpvf36m3jpa9xdx4uj0890xwftcn8rghp04gyqq294esdfea6m"
+        }
+      },
+      "incentive_contract": "chihuahua1phnpz3cwhtel6z42wt04dzytrdvfqkxr9lcllepufhlrgeamxmxqepy2g4",
+      "pool_code_id": "349",
+      "lp_code_id": "116"
+    },
+    {
       "pair": "TRTZ-uhuahua",
       "assets": [
         {
