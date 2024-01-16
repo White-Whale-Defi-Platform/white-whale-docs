@@ -188,6 +188,30 @@
       "lp_code_id": "33"
     },
     {
+      "pair": "uguppy-uwhale",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "factory/migaloo1etlu2h30tjvv8rfa4fwdc43c92f6ul5w9acxzk/uguppy"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "uwhale"
+          }
+        }
+      ],
+      "pool_address": "migaloo14p3r422qp04p345mnqe5umjy3vqx75hpxf54f8enf59wf27fksvqltavjp",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/migaloo14p3r422qp04p345mnqe5umjy3vqx75hpxf54f8enf59wf27fksvqltavjp/uLP"
+        }
+      },
+      "incentive_contract": "migaloo1ur4j7x270ascx74k5j65r6zd2dyq0y407jdewk2nse9gpzg9mrds5czrtn",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
+    },
+    {
       "pair": "ash-uwhale",
       "assets": [
         {
