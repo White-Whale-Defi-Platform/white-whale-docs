@@ -42,12 +42,14 @@ Bonds the specified [Asset]. This assumes the [Asset] is already white-listed fo
 ```json
 {
   "bond": {
-    "info": {
-      "native_token": {
-        "denom": "ampWHALE"
-      }
-    },
-    "amount": "1000"
+    "asset": {
+      "info": {
+        "native_token": {
+          "denom": "ampWHALE"
+        }
+      },
+      "amount": "1000"
+    }
   }
 }
 ```
@@ -99,10 +101,12 @@ Updates the Config of the contract.
 
 ```json
 {
-  "owner": "migaloo1...",
-  "unbonding_period": "172800000000000",
-  "growth_rate": "0.02",
-  "fee_distributor_addr": "migaloo1..."
+  "update_config": {
+    "owner": "migaloo1...",
+    "unbonding_period": "172800000000000",
+    "growth_rate": "0.02",
+    "fee_distributor_addr": "migaloo1..."
+  }
 }
 ```
 
