@@ -121,6 +121,30 @@
       "lp_code_id": "17"
     },
     {
+      "pair": "coping-uwhale",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "factory/inj1qczkutnsy3nmt909xtyjy4rsrkl2q4dm6aq960/coping"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/D6E6A20ABDD600742D22464340A7701558027759CE14D12590F8EA869CCCF445"
+          }
+        }
+      ],
+      "pool_address": "inj1tuemzz3xa2gurzv828y795r7uycmcafr0ktzwk",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/inj1tuemzz3xa2gurzv828y795r7uycmcafr0ktzwk/uLP"
+        }
+      },
+      "incentive_contract": "inj1yxp40zt6fhrfqjz6l7cgl97plw8qfyxyracfj3",
+      "pool_code_id": "161",
+      "lp_code_id": "17"
+    },
+    {
       "pair": "ampWHALE-uwhale",
       "assets": [
         {
