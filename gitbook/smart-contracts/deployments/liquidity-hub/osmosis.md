@@ -88,3 +88,84 @@
   "deployer_address": "osmo1v767q4apajgksqlg5ejdakn8auszecje5t6rdx"
 }
 ```
+
+```json
+{
+  "chain": "osmosis-1",
+  "pool_factory_addr": "osmo1vuzkc4nzzav7g6t20f2vp0ed4sm3vaqnkpzy7yq3kujxs2g2hawqwnwy5w",
+  "pools": [
+    {
+      "pair": "ampOSMO-uosmo",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "factory/osmo1dv8wz09tckslr2wy5z86r46dxvegylhpt97r9yd6qc3kyc6tv42qa89dr9/ampOSMO"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "uosmo"
+          }
+        }
+      ],
+      "pool_address": "osmo1692tluwzzmnx56tm5v7r0n8v5fg32nrd9nuukp9jz458ap7wmcls9cz20m",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/osmo1692tluwzzmnx56tm5v7r0n8v5fg32nrd9nuukp9jz458ap7wmcls9cz20m/uLP"
+        }
+      },
+      "incentive_contract": "osmo1u5vvxk38gpkt3dlfrsq7s47ugjg6ar8zswyz52379jxdswef8s6qelq0tx",
+      "pool_code_id": "448",
+      "lp_code_id": "450"
+    },
+    {
+      "pair": "sail-uwhale",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/EDD6F0D66BCD49C1084FB2C35353B4ACD7B9191117CE63671B61320548F7C89D"
+          }
+        }
+      ],
+      "pool_address": "osmo1w8e2wyzhrg3y5ghe9yg0xn0u7548e627zs7xahfvn5l63ry2x8zstaraxs",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/osmo1w8e2wyzhrg3y5ghe9yg0xn0u7548e627zs7xahfvn5l63ry2x8zstaraxs/uLP"
+        }
+      },
+      "incentive_contract": "osmo1jszerakl59dafwkxek2ue28wpd6gec6d7gj6xtrqp2ettpv5sqcq4fu6lx",
+      "pool_code_id": "448",
+      "lp_code_id": "450"
+    },
+    {
+      "pair": "uwhale-uosmo",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "ibc/EDD6F0D66BCD49C1084FB2C35353B4ACD7B9191117CE63671B61320548F7C89D"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "uosmo"
+          }
+        }
+      ],
+      "pool_address": "osmo18r35luyyfqp7jter6jc93vzhft5zjgvsgt2tgx76qez2lpjpzfxqwx4ynk",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/osmo18r35luyyfqp7jter6jc93vzhft5zjgvsgt2tgx76qez2lpjpzfxqwx4ynk/uLP"
+        }
+      },
+      "incentive_contract": "osmo1xrs9qtmvvv69xh34r9gtd0w0v8y99n8ywn89saryd923e5aay4aqev2zxn",
+      "pool_code_id": "448",
+      "lp_code_id": "450"
+    }
+  ]
+}
+```
