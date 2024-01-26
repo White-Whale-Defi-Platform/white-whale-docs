@@ -99,14 +99,14 @@ Updates the configuration of the contract.
 | `min_unbonding_duration` | Option\<u64>    | The minimum amount of seconds that a user must bond their tokens for. If unspecified, the `min_unbonding_duration` will not change.                     |
 | `max_unbonding_duration` | Option\<u64>    | The maximum amount of seconds that a user must bond their tokens for. If unspecified, the `max_unbonding_duration` will not change.                     |
 
-### Migrate Incentive
+### Migrate Incentives
 
-Migrates an incentive contract to a new code ID. If `incentive_address` is not provided, migrates all incentive
-contracts registered in the factory.
+Migrates incentive contracts to the given code id. If `incentive_address` is provided, the message migrates only that given
+incentive contract. Otherwise, it migrates all the incentives created by the factory.
 
 ```json
 {
-  "migrate_incentive": {
+  "migrate_incentives": {
     "incentive_address": "migaloo1...",
     "code_id": 123
   }
@@ -243,18 +243,23 @@ Retrieves a list of incentive contracts. Allows pagination.
   "data": [
     {
       "incentive_address": "migaloo1...",
-      "lp_reference": [9 18 52 54]
+      "lp_reference": [
+        9
+        18
+        52
+        54
+      ]
     }
   ]
 }
 ```
+
 pub type IncentivesResponse = Vec<IncentivesContract>;
 
 | Key           | Type               | Description                                                                                                     |
 |---------------|--------------------|-----------------------------------------------------------------------------------------------------------------|
 | `start_after` | Option\<AssetInfo> | An optional parameter specifying what incentive contract to start searching after.                              |
 | `limit`       | Option\<u32>       | The amount of incentive contracts to return. If unspecified, will default to a value specified by the contract. |
-
 
 {% endtab %}
 {% endtabs %}
