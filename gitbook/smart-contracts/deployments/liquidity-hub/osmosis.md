@@ -11,8 +11,8 @@
     },
     {
       "wasm": "fee_distributor.wasm",
-      "code_id": "441",
-      "version": "0.9.1",
+      "code_id": "473",
+      "version": "0.9.2",
       "contract_address": "osmo1ec7fqky6cq9xds6hq0e46f25ldnkkvjjkml7644y8la59ucqmtfsyyhh75"
     },
     {
