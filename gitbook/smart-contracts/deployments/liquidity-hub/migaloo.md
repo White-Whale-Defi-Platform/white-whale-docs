@@ -378,6 +378,54 @@
       "incentive_contract": "migaloo1sf6nld2a56urwvxf8aj4964c5v3awt0hxjnz88dx9f9r4c2cjtxqr3842d",
       "pool_code_id": "31",
       "lp_code_id": "33"
+    },
+    {
+      "pair": "guppy-gash",
+      "assets": [
+        {
+        "native_token": {
+          "denom": "factory/migaloo1etlu2h30tjvv8rfa4fwdc43c92f6ul5w9acxzk/uguppy"
+        }
+        },
+        {
+          "native_token": {
+            "denom": "factory/migaloo1r9x8fz4alekzr78k42rpmr9unpa7egsldpqeynmwl2nfvzexue9sn8l5rg/gash"
+          }
+        }
+      ],
+      "pool_address": "migaloo1huj5syg78rm3nuslzf9py73ccegcth2lkfpf5pvaq6q68pakldmsahxmfl",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/migaloo1huj5syg78rm3nuslzf9py73ccegcth2lkfpf5pvaq6q68pakldmsahxmfl/uLP"
+        }
+      },
+      "incentive_contract": "migaloo10knl076uc8sjqsz6k49j94phv5aqqp0v7u8aaqjx6s3pdrmtsmzskjepd6",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
+    },
+    {
+      "pair": "uwhale-wBTC",
+      "assets": [
+        {
+        "native_token": {
+          "denom": "uwhale"
+        }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/B65E189D3168DB40C88C6A6C92CA3D3BB0A8B6310325D4C43AB5702F06ECD60B"
+          }
+        }
+      ],
+      "pool_address": "migaloo1j2dtdu2kjf7l555fkej9cv5cmp79c6g5q8p67gt3yhvm2auzclvsq429y3",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/migaloo1j2dtdu2kjf7l555fkej9cv5cmp79c6g5q8p67gt3yhvm2auzclvsq429y3/uLP"
+        }
+      },
+      "incentive_contract": "migaloo17m88zthuym6rajrfl8gjnh9j3hzu3zhkmmsrys9qp6y28v58vgus3hwksm",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
     }
   ]
 }
