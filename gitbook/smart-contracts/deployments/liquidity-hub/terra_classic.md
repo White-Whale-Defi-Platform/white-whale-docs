@@ -5,14 +5,14 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "7968",
-      "version": "1.1.2",
+      "code_id": "8450",
+      "version": "1.1.4",
       "contract_address": "terra1mlw8qmxjxwru5ctp4hkxhsxtzzxr0pkvsytkqwg32axfyhnxca2qv8gxgx"
     },
     {
       "wasm": "fee_distributor.wasm",
-      "code_id": "7969",
-      "version": "0.9.2",
+      "code_id": "8451",
+      "version": "0.9.3",
       "contract_address": "terra1d2p6vqyynhn2eraf74qtedaugfuknt32wnsm8e4uskfqv2jersdqkstzer"
     },
     {
@@ -23,35 +23,35 @@
     },
     {
       "wasm": "incentive.wasm",
-      "code_id": "7927",
-      "version": "1.0.3"
+      "code_id": "8452",
+      "version": "1.0.6"
     },
     {
       "wasm": "incentive_factory.wasm",
-      "code_id": "7926",
-      "version": "1.0.0",
+      "code_id": "8453",
+      "version": "1.0.1",
       "contract_address": "terra1zuyalae3t5qg4gkumff0mj5he6auv73n467jknj4p6pr00wqmnjqdxv6cx"
     },
     {
       "wasm": "stableswap_3pool.wasm",
-      "code_id": "7904",
-      "version": "1.2.1"
+      "code_id": "8454",
+      "version": "1.2.3"
     },
     {
       "wasm": "terraswap_factory.wasm",
-      "code_id": "7905",
-      "version": "1.2.0",
+      "code_id": "8455",
+      "version": "1.2.1",
       "contract_address": "terra1wyqd3gk7pdknt5xtapdgzlr658a9tn3jryn0rzxwnvv6f0jhlcesl758m0"
     },
     {
       "wasm": "terraswap_pair.wasm",
-      "code_id": "7906",
-      "version": "1.3.1"
+      "code_id": "8456",
+      "version": "1.3.4"
     },
     {
       "wasm": "terraswap_router.wasm",
-      "code_id": "7907",
-      "version": "1.1.0",
+      "code_id": "8457",
+      "version": "1.1.1",
       "contract_address": "terra1prptgzfnpahp7fl9f7um7npkt9xw3mve9cfnxkglu60x840qaw9qpk2cqn"
     },
     {
@@ -92,7 +92,7 @@
       ],
       "pool_address": "terra1t02akvjklp7h8swg7vhdjryegj9z7q83hjhyq8xssc4v0qv7a67s6um6up",
       "lp_address": "terra1cfjnwpjswp9a94y5he2tz0e9rhlcd8rslydsrrfes6xafrx0wzrsaerydc",
-      "pool_code_id": "7906",
+      "pool_code_id": "8456",
       "lp_code_id": "7908"
     },
     {
@@ -103,7 +103,7 @@
       ],
       "pool_address": "terra1wm3jtcq0fuftvmfq0skmqyxnl3x3j42x8ae56q7eg7v6jsf5eg4qmz36ts",
       "lp_address": "terra1tlg8cvzfhc9z5d4lyr8c6gvy555a8wtat3mj3nmf69nl3ypndj7sfvr0au",
-      "pool_code_id": "7906",
+      "pool_code_id": "8456",
       "lp_code_id": "7908"
     }
   ]
