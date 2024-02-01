@@ -68,7 +68,7 @@ Collects the fees accrued by the pools or vaults. It can be triggered in differe
 
 | Key                | Type           | Description                                                      |
 |--------------------|----------------|------------------------------------------------------------------|
-| `collect_fees_for` | CollectFeesFor | Enum specifiying to collect fees for either Contracts or Factory |
+| `collect_fees_for` | FeesFor        | Enum specifiying to collect fees for either Contracts or Factory |
 | `contracts`        | Vec\<Contract> | Contracts to collect fees from                                   |
 
 {% endtab %}
@@ -90,10 +90,10 @@ Collects the fees accrued by the pools or vaults. It can be triggered in differe
 }
 ```
 
-| Key                | Type           | Description                                                      |
-|--------------------|----------------|------------------------------------------------------------------|
-| `collect_fees_for` | CollectFeesFor | Enum specifiying to collect fees for either Contracts or Factory |
-| `factory`          | Factory        | Factory data to collect fees from                                |
+| Key                | Type    | Description                                                      |
+|--------------------|---------|------------------------------------------------------------------|
+| `collect_fees_for` | FeesFor | Enum specifiying to collect fees for either Contracts or Factory |
+| `factory`          | Factory | Factory data to collect fees from                                |
 
 {% endtab %}
 
@@ -114,10 +114,10 @@ Collects the fees accrued by the pools or vaults. It can be triggered in differe
 }
 ```
 
-| Key                | Type           | Description                                                      |
-|--------------------|----------------|------------------------------------------------------------------|
-| `collect_fees_for` | CollectFeesFor | Enum specifiying to collect fees for either Contracts or Factory |
-| `factory`          | Factory        | Factory data to collect fees from                                |
+| Key                | Type    | Description                                                      |
+|--------------------|---------|------------------------------------------------------------------|
+| `collect_fees_for` | FeesFor | Enum specifiying to collect fees for either Contracts or Factory |
+| `factory`          | Factory | Factory data to collect fees from                                |
 
 {% endtab %}
 {% endtabs %}
@@ -145,6 +145,176 @@ Updates the configuration of the fee collector.
 | `fee_distributor` | Option\<String> | New fee distributor contract |
 | `pool_factory`    | Option\<String> | New pool factory contract    |
 | `vault_factory`   | Option\<String> | New vault factory contract   |
+
+### Aggregate fees
+
+Aggregates the fees in the fee collector.
+
+{% tabs %}
+{% tab title="Pool fees" %}
+
+```json
+{
+  "aggregate_fees": {
+    "aggregate_fees_for": {
+      "factory": {
+        "factory_addr": "migaloo1...",
+        "factory_type": {
+          "pool": {}
+        }
+      }
+    }
+  }
+}
+```
+
+| Key                  | Type    | Description                                                      |
+|----------------------|---------|------------------------------------------------------------------|
+| `aggregate_fees_for` | FeesFor | Enum specifiying to collect fees for either Contracts or Factory |
+| `factory`            | Factory | Factory data to collect fees from                                |
+
+{% endtab %}
+
+{% tab title="Vault fees" %}
+
+```json
+{
+  "aggregate_fees": {
+    "aggregate_fees_for": {
+      "factory": {
+        "factory_addr": "migaloo1...",
+        "factory_type": {
+          "vault": {}
+        }
+      }
+    }
+  }
+}
+```
+
+| Key                  | Type    | Description                                                      |
+|----------------------|---------|------------------------------------------------------------------|
+| `aggregate_fees_for` | FeesFor | Enum specifiying to collect fees for either Contracts or Factory |
+| `factory`            | Factory | Factory data to collect fees from                                |
+
+{% endtab %}
+{% tab title="Contract fees" %}
+
+```json
+{
+  "aggregate_fees": {
+    "aggregate_fees_for": {
+      "contracts": {
+        "contracts": [
+          {
+            "address": "migaloo1...",
+            "contract_type": {
+              "vault": {}
+            }
+          },
+          {
+            "address": "migaloo1...",
+            "contract_type": {
+              "pool": {}
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+| Key                  | Type           | Description                                                      |
+|----------------------|----------------|------------------------------------------------------------------|
+| `aggregate_fees_for` | FeesFor        | Enum specifiying to collect fees for either Contracts or Factory |
+| `contracts`          | Vec\<Contract> | Contracts to collect fees from                                   |
+
+{% endtab %}
+{% endtabs %}
+
+### Forward fees
+
+Forward fees to the fee distributor. This is called when creating a new epoch on the fee distributor. this will collect
+and aggregate the fees, to send them back to the fee distributor.
+
+{% hint style="warning" %}
+Note: can only be called by the owner of the contract or the fee distributor.
+{% endhint %}
+
+```json
+{
+  "forward_fees": {
+    "epoch": {
+      "id": "1",
+      "start_time": "1698851118",
+      "total": [
+        {
+          "amount": "1000",
+          "info": {
+            "native_token": {
+              "denom": "uwhale"
+            }
+          }
+        }
+      ],
+      "available": [
+        {
+          "amount": "300",
+          "info": {
+            "native_token": {
+              "denom": "uwhale"
+            }
+          }
+        }
+      ],
+      "claimed": [
+        {
+          "amount": "700",
+          "info": {
+            "native_token": {
+              "denom": "uwhale"
+            }
+          }
+        }
+      ],
+      "global_index": {
+        "bonded_amount": "3000",
+        "bonded_assets": [
+          {
+            "info": {
+              "native_token": {
+                "denom": "ampWHALE"
+              }
+            },
+            "amount": "1500"
+          },
+          {
+            "info": {
+              "native_token": {
+                "denom": "bWHALE"
+              }
+            },
+            "amount": "1500"
+          }
+        ],
+        "timestamp": "1698851118",
+        "weight": "1500000"
+      }
+    },
+    "forward_fees_as": {
+      "native_token": {
+        "denom": "uwhale"
+      }
+    }
+  }
+}
+```
+
+| Key               | Type      | Description                                                                                                              |
+|-------------------|-----------|--------------------------------------------------------------------------------------------------------------------------|
+| `epoch`           | Epoch     | Epoch to be created once the msg is succesful. This variable is prebuilt on the fee distributor when calling `new_epoch` |
+| `forward_fees_as` | AssetInfo | The asset to forward fees as. Currently not used, value taken from the fee distributor config.                           |
 
 ## Queries
 
