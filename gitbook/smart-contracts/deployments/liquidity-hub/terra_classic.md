@@ -5,8 +5,8 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "8450",
-      "version": "1.1.4",
+      "code_id": "8459",
+      "version": "1.1.5",
       "contract_address": "terra1mlw8qmxjxwru5ctp4hkxhsxtzzxr0pkvsytkqwg32axfyhnxca2qv8gxgx"
     },
     {
@@ -83,27 +83,103 @@
 
 ```json
 {
+  "chain": "columbus-5",
+  "pool_factory_addr": "terra1wyqd3gk7pdknt5xtapdgzlr658a9tn3jryn0rzxwnvv6f0jhlcesl758m0",
   "pools": [
     {
       "pair": "uluna-uwhale",
       "assets": [
-        "{\"token\":{\"native_token\":\"uluna\"}}",
-        "{\"token\":{\"native_token\":\"ibc/077EE5F87CE5CD419436D26533329BDC7BEE6850AD64BC316486B0DCCB13C0EB\"}}"
+        {
+          "native_token": {
+            "denom": "uluna"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/077EE5F87CE5CD419436D26533329BDC7BEE6850AD64BC316486B0DCCB13C0EB"
+          }
+        }
       ],
       "pool_address": "terra1t02akvjklp7h8swg7vhdjryegj9z7q83hjhyq8xssc4v0qv7a67s6um6up",
-      "lp_address": "terra1cfjnwpjswp9a94y5he2tz0e9rhlcd8rslydsrrfes6xafrx0wzrsaerydc",
-      "pool_code_id": "8456",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "terra1cfjnwpjswp9a94y5he2tz0e9rhlcd8rslydsrrfes6xafrx0wzrsaerydc"
+        }
+      },
+      "incentive_contract": "terra174njy7232hrzx80cfrktl6s24f2xcusyu3mf986yfatrmrv3ryask45wl9",
+      "pool_code_id": "7906",
       "lp_code_id": "7908"
     },
     {
       "pair": "uluna-uusd",
       "assets": [
-        "{\"token\":{\"native_token\":\"uluna\"}}",
-        "{\"token\":{\"native_token\":\"uusd\"}}"
+        {
+          "native_token": {
+            "denom": "uluna"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "uusd"
+          }
+        }
       ],
       "pool_address": "terra1wm3jtcq0fuftvmfq0skmqyxnl3x3j42x8ae56q7eg7v6jsf5eg4qmz36ts",
-      "lp_address": "terra1tlg8cvzfhc9z5d4lyr8c6gvy555a8wtat3mj3nmf69nl3ypndj7sfvr0au",
-      "pool_code_id": "8456",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "terra1tlg8cvzfhc9z5d4lyr8c6gvy555a8wtat3mj3nmf69nl3ypndj7sfvr0au"
+        }
+      },
+      "incentive_contract": "terra1w088w23xywkfndukqgcj3d9j73tsr459l370suycmvsj6yedr6qqfn2w7g",
+      "pool_code_id": "7906",
+      "lp_code_id": "7908"
+    },
+    {
+      "pair": "terra1wez9puj43v4s25vrex7cv3ut3w75w4h6j5e537sujyuxj0r5ne2qp9uwl9-uluna",
+      "assets": [
+        {
+          "token": {
+            "contract_addr": "terra1wez9puj43v4s25vrex7cv3ut3w75w4h6j5e537sujyuxj0r5ne2qp9uwl9"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "uluna"
+          }
+        }
+      ],
+      "pool_address": "terra1lepapewkdnt9mclq6gp8zmtsvhpuzhvg4dg9pastdk4rvjcw6gaqpaqvpf",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "terra1qhqzjmqchumnnffrns4sj5c83hul828hfjjcr03jr7pn49wszphqmxafpp"
+        }
+      },
+      "incentive_contract": "terra1djdcg0a5g6tj39ld6yewjvzgeyd0v4v7tdvdek7ljn53n79r7hgq0cmqsg",
+      "pool_code_id": "7906",
+      "lp_code_id": "7908"
+    },
+    {
+      "pair": "terra1uewxz67jhhhs2tj97pfm2egtk7zqxuhenm4y4m-uluna",
+      "assets": [
+        {
+          "token": {
+            "contract_addr": "terra1uewxz67jhhhs2tj97pfm2egtk7zqxuhenm4y4m"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "uluna"
+          }
+        }
+      ],
+      "pool_address": "terra1znxah0scl3xq747wtuzjg3k0tlml3fvvmxgt0m3jywcmqwn5867s7x29tx",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "terra1zkg24q3cxzag6md3lq9h7a69ekkwehf6p2x5mpc8ua5vhjq9hnyssk20qr"
+        }
+      },
+      "incentive_contract": "terra1tcuq2hr2dz4cazvely6capqtcjrc3gkz0k44lgt2pnuy76wl9tms23cmz4",
+      "pool_code_id": "7906",
       "lp_code_id": "7908"
     }
   ]
