@@ -233,6 +233,65 @@ into a single token by passing the offer and ask asset.
 |---------------|-----------------|------------------------------------------------|
 | `swap_routes` | Vec\<SwapRoute> | The swap routes to be recorded into the router |
 
+### RemoveSwapRoutes
+
+Removes swap routes from the router. This is needed to clean up swap routes from state when are not needed anymore.
+
+```json
+{
+  "delete_swap_routes": {
+    "swap_routes": [
+      {
+        "offer_asset_info": {
+          "token": {
+            "contract_addr": "migaloo1..."
+          }
+        },
+        "ask_asset_info": {
+          "native_token": {
+            "denom": "uwhale"
+          }
+        },
+        "swap_operations": [
+          {
+            "terra_swap": {
+              "offer_asset_info": {
+                "token": {
+                  "contract_addr": "migaloo1..."
+                }
+              },
+              "ask_asset_info": {
+                "native_token": {
+                  "denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
+                }
+              }
+            }
+          },
+          {
+            "terra_swap": {
+              "offer_asset_info": {
+                "native_token": {
+                  "denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
+                }
+              },
+              "ask_asset_info": {
+                "native_token": {
+                  "denom": "uwhale"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+| Key           | Type            | Description                                    |
+|---------------|-----------------|------------------------------------------------|
+| `swap_routes` | Vec\<SwapRoute> | The swap routes to be removed from the router |
+
 ## Queries
 
 ### Config
