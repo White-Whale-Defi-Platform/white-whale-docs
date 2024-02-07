@@ -5,36 +5,36 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "456",
-      "version": "1.1.1",
+      "code_id": "520",
+      "version": "1.1.4",
       "contract_address": "chihuahua1z6fjtpsa9fhnkuxvef5lkcaafuw40zc3hr0wml0tngqahtl0s58sxdkwrm"
     },
     {
       "wasm": "fee_distributor.wasm",
-      "code_id": "490",
-      "version": "0.9.5",
+      "code_id": "536",
+      "version": "0.9.6",
       "contract_address": "chihuahua15umr63cfrav8qk572x57rzjfcyqtfnret6rpfasju9ayeqmxrhjq5k0y8c"
     },
     {
       "wasm": "stableswap_3pool.wasm",
-      "code_id": "347",
-      "version": "1.2.1"
+      "code_id": "525",
+      "version": "1.2.3"
     },
     {
       "wasm": "terraswap_factory.wasm",
-      "code_id": "348",
-      "version": "1.2.0",
+      "code_id": "526",
+      "version": "1.2.2",
       "contract_address": "chihuahua1s8ehad3r9wxyk08ls2nmz8mqh4vlfmaxd2nw0crxwh04t4l5je4s8ljv0j"
     },
     {
       "wasm": "terraswap_pair.wasm",
-      "code_id": "349",
-      "version": "1.3.1"
+      "code_id": "527",
+      "version": "1.3.5"
     },
     {
       "wasm": "terraswap_router.wasm",
-      "code_id": "350",
-      "version": "1.1.0",
+      "code_id": "528",
+      "version": "1.1.1",
       "contract_address": "chihuahua1w3z9kpv08ya8ketrd8sc9008wxq6ygeuur40dlvh3df2u54pcdmq52sguh"
     },
     {
@@ -44,25 +44,25 @@
     },
     {
       "wasm": "vault_factory.wasm",
-      "code_id": "352",
-      "version": "1.1.2",
+      "code_id": "531",
+      "version": "1.1.3",
       "contract_address": "chihuahua1mlhardte7nznkkupn64vw58nt48fa5r5frluxt7y5gkrkws39scqagvdm7"
     },
     {
       "wasm": "vault.wasm",
-      "code_id": "354",
-      "version": "1.2.2"
+      "code_id": "530",
+      "version": "1.2.6"
     },
     {
       "wasm": "vault_router.wasm",
-      "code_id": "353",
-      "version": "1.1.5",
+      "code_id": "532",
+      "version": "1.1.6",
       "contract_address": "chihuahua1qe6jsllyvrlmtz2xqef9k7q67xeyj3zcuc09wzptnvev3wyyd4fs4y4ce9"
     },
     {
       "wasm": "whale_lair.wasm",
-      "code_id": "458",
-      "version": "0.9.2",
+      "code_id": "537",
+      "version": "0.9.3",
       "contract_address": "chihuahua1dd7e5l7jf7yu23u8ehjw36aahsk7jjls9llcgm34szq0qemj6a9q8h30j7"
     },
     {
@@ -73,19 +73,19 @@
     },
     {
       "wasm": "incentive_factory.wasm",
-      "code_id": "454",
-      "version": "1.0.0",
+      "code_id": "524",
+      "version": "1.0.1",
       "contract_address": "chihuahua1wzde4vn8p8deskata2vy7z4cfvfzll0syjg8x659suhxnwqy7a8s6fhl4w"
     },
     {
       "wasm": "incentive.wasm",
-      "code_id": "499",
-      "version": "1.0.2"
+      "code_id": "523",
+      "version": "1.0.6"
     }
   ],
   "date": "2022-09-29T20:50:49+0000",
   "chain_id": "chihuahua-1",
-  "deployer_address": "chihuahua1dpx7ytug647wefe7ajxmg5ejt68gxcfvqssap4"
+  "deployer_address": "chihuahua1v767q4apajgksqlg5ejdakn8auszecjel9ya6k"
 }
 ```
 
@@ -115,7 +115,7 @@
         }
       },
       "incentive_contract": "chihuahua1amwakfdvp797uuh8608clzvy64644vk6dklpxzzmvql95csefc2qquzena",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -139,7 +139,7 @@
         }
       },
       "incentive_contract": "chihuahua1js2ja2kpv8d2fcvhueqz874w3mnged2lal3u9gd7nzfzsrj26xcsy0kxne",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -163,7 +163,7 @@
         }
       },
       "incentive_contract": "chihuahua1aw3zagmje4mv9vynxvxu6vh2nxnxy30alhv48cxj9wz7h6ywtrfsrflg4d",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -187,7 +187,7 @@
         }
       },
       "incentive_contract": "chihuahua1ec5ntzgj3mmw6enqhwcccvu9v620hm32jxknfnnncnfajuunvl0syc53yw",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -211,7 +211,7 @@
         }
       },
       "incentive_contract": "chihuahua16tejyjn0e7kx7ukhjlu6cjq9wd2d2yea6w9c2uapzx8qd4wkpwqqkntpsr",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -235,7 +235,7 @@
         }
       },
       "incentive_contract": "chihuahua145mca73sdpemqucqhrqq22qvp4hy06undghxtq48g6458ux9mm8s7ml92t",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -259,7 +259,7 @@
         }
       },
       "incentive_contract": "chihuahua1gdnn2kkfgpvwuf0axeu5r4ry9lyfyzwl8zzywhqu9xxy0mnxr6lqyxxaa8",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -283,7 +283,7 @@
         }
       },
       "incentive_contract": "chihuahua1e3q4tzq8x8tehxtm9c4pt23jetamjl6f28ythh3j554wj5erq0ds5ye82t",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -307,7 +307,7 @@
         }
       },
       "incentive_contract": "chihuahua1uqwzmywh29a8twj8vq2sectvmrrsrrhcujuanemgdf9fxkpkj8pscm7jcw",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -331,7 +331,7 @@
         }
       },
       "incentive_contract": "chihuahua1339gxe6dkhc8nk37mn8m0nke34m0yhnttg2ydquku3detwruqk4swk2jf3",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -355,7 +355,7 @@
         }
       },
       "incentive_contract": "chihuahua1rweychser0d7qcg5qfglaqp7l8w425z5edpfrya2jx4gpzwc83aqj9qm83",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -379,7 +379,7 @@
         }
       },
       "incentive_contract": "chihuahua1z847h0qxxaq2khqd7muawea5n6slj0h3k5v2pgdrlc3xqkt08clsm4hp6d",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -403,7 +403,7 @@
         }
       },
       "incentive_contract": "chihuahua1yfnx28esgksf8dpqadsq3khdgzevhkgkgwksh4ntxkcyscru6x9qc66qx8",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -427,7 +427,7 @@
         }
       },
       "incentive_contract": "chihuahua1phnpz3cwhtel6z42wt04dzytrdvfqkxr9lcllepufhlrgeamxmxqepy2g4",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -451,7 +451,7 @@
         }
       },
       "incentive_contract": "chihuahua1n0js6p3ea68hc825x2t6y569y7xkll0e2xqra52a223kchn66tusj6wrh4",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     },
     {
@@ -475,7 +475,7 @@
         }
       },
       "incentive_contract": "chihuahua15lajuj879gh9aqyzc74hvgd0lyv2jmu7p24ssa9ght9as0y59n2s5sracw",
-      "pool_code_id": "349",
+      "pool_code_id": "527",
       "lp_code_id": "116"
     }
   ]
@@ -499,7 +499,7 @@
           "contract_addr": "chihuahua12pl0k32gvzn259qhx6qce45kg85tysftt65xuek3rgf47s0gca4sut5nme"
         }
       },
-      "vault_code_id": "354",
+      "vault_code_id": "530",
       "lp_code_id": "116"
     }
   ]
