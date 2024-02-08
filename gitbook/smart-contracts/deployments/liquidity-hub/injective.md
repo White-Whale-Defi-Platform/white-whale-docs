@@ -5,8 +5,8 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "162",
-      "version": "1.1.2",
+      "code_id": "451",
+      "version": "1.1.4",
       "contract_address": "inj1g6kht9c5s4jwn4akfjt3zmsfh4nvguewuevmk0"
     },
     {
@@ -34,19 +34,19 @@
     },
     {
       "wasm": "stableswap_3pool.wasm",
-      "code_id": "157",
-      "version": "1.2.2"
+      "code_id": "452",
+      "version": "1.2.3"
     },
     {
       "wasm": "terraswap_factory.wasm",
-      "code_id": "165",
-      "version": "1.2.0",
+      "code_id": "453",
+      "version": "1.2.1",
       "contract_address": "inj1x22q8lfhz7qcvtzs0dakhgx2th64l79kfye5lk"
     },
     {
       "wasm": "terraswap_pair.wasm",
-      "code_id": "161",
-      "version": "1.3.3"
+      "code_id": "454",
+      "version": "1.3.4"
     },
     {
       "wasm": "terraswap_router.wasm",
@@ -83,7 +83,7 @@
       "contract_address": "inj1vz5g8pfdk4pjjhnf8vy000nq7evc2kgnfmrxt9"
     }
   ],
-  "date": "2023-10-30T13:43:00+0000",
+  "date": "2022-12-18T10:56:50+0000",
   "initial_block_height": "null",
   "final_block_height": "21861859",
   "chain_id": "injective-1",
