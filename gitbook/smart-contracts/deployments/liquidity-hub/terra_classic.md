@@ -361,6 +361,18 @@
       "staking": "terra1zuyalae3t5qg4gkumff0mj5he6auv73n467jknj4p6pr00wqmnjqdxv6cx",
       "pool_code_id": "31",
       "lp_code_id": "33"
+    },
+    {
+      "pair": "sFROG-FROG",
+      "assets": [
+        "{\"token\":{\"token\":\"terra13ckj8swv4xpnh98z4ltpa664ryg7suu89tlqlz8zecwp9pc2r2xstdn7r2\"}}"
+        "{\"token\":{\"token\":\"terra1wez9puj43v4s25vrex7cv3ut3w75w4h6j5e537sujyuxj0r5ne2qp9uwl9\"}}"
+      ],
+      "pool_address": "terra1mzgu3gxar6j707ns7f0h8n7ase0sne8yq9c9kmd95qp5qj056tjsq734v0",
+      "lp_address": "terra1gjejk5vmncvzh67eh8vvhll4symzc2kdgtucg9fm5s9fckaezqnsmwfe5k",
+      "staking": "terra1cq382eerwanlf03rwtsselxrs75tjn25mzcjg039gd38kulx8hwsfr77yg",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
     }
   ]
 }
