@@ -6,14 +6,14 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "3210",
-      "version": "1.1.1",
+      "code_id": "4186",
+      "version": "1.1.4",
       "contract_address": "juno1dk7uekpslkla89cdh83tgjejhara7c4aasdnc9a2hq9d0652pqmsdr4ldy"
     },
     {
       "wasm": "fee_distributor.wasm",
-      "code_id": "3308",
-      "version": "0.9.1",
+      "code_id": "3209",
+      "version": "0.9.0",
       "contract_address": "juno184ghwgprva7dlr2hwhzgvt6mem6zx78fygk0cpw7klssmzyf67tqdtwt3h"
     },
     {
@@ -24,30 +24,30 @@
     },
     {
       "wasm": "incentive_factory.wasm",
-      "code_id": "3653",
-      "version": "1.0.1",
+      "code_id": "3213",
+      "version": "1.0.0",
       "contract_address": "juno1gg3y2f3kn337qhxwsumpd7wt4avl7knadp7vne4278whw0n3qf5quksw06"
     },
     {
       "wasm": "incentive.wasm",
-      "code_id": "3654",
-      "version": "1.0.6"
+      "code_id": "3212",
+      "version": "1.0.1"
     },
     {
       "wasm": "terraswap_factory.wasm",
-      "code_id": "3214",
-      "version": "1.2.0",
+      "code_id": "4190",
+      "version": "1.2.1",
       "contract_address": "juno14m9rd2trjytvxvu4ldmqvru50ffxsafs8kequmfky7jh97uyqrxqs5xrnx"
     },
     {
       "wasm": "terraswap_pair.wasm",
-      "code_id": "3226",
-      "version": "1.3.1"
+      "code_id": "4187",
+      "version": "1.3.4"
     },
     {
       "wasm": "terraswap_router.wasm",
-      "code_id": "3216",
-      "version": "1.1.0",
+      "code_id": "4195",
+      "version": "1.1.1",
       "contract_address": "juno128lewlw6kv223uw4yzdffl8rnh3k9qs8vrf6kef28579w8ygccyq7m90n2"
     },
     {
@@ -57,31 +57,31 @@
     },
     {
       "wasm": "vault_factory.wasm",
-      "code_id": "3218",
-      "version": "1.1.2",
+      "code_id": "4191",
+      "version": "1.1.3",
       "contract_address": "juno1qnfsrwx4c0qnvcnscwm7r55nxr8rpfckq6v8yvuvg7zuqj0uk2hsrssj2n"
     },
     {
       "wasm": "vault.wasm",
-      "code_id": "3217",
-      "version": "1.2.2"
+      "code_id": "4192",
+      "version": "1.2.6"
     },
     {
       "wasm": "vault_router.wasm",
-      "code_id": "3219",
-      "version": "1.1.5",
+      "code_id": "4193",
+      "version": "1.1.6",
       "contract_address": "juno1qa7vdlm6zgq3radal5sltyl4t4qd32feug9qs50kcxda46q230pqzny48s"
     },
     {
       "wasm": "whale_lair.wasm",
-      "code_id": "3307",
-      "version": "0.9.1",
+      "code_id": "3220",
+      "version": "0.9.0",
       "contract_address": "juno1n8slcc79dmwuzdxhsesvhcncaqfg9h4czdm5t5ey8x25ajmn3xzqyde4wv"
     }
   ],
   "date": "2022-08-24T11:04:29+0000",
   "chain_id": "juno-1",
-  "deployer_address": "juno1dpx7ytug647wefe7ajxmg5ejt68gxcfv4h7g8t"
+  "deployer_address": "juno1v767q4apajgksqlg5ejdakn8auszecje2z2gug"
 }
 ```
 
