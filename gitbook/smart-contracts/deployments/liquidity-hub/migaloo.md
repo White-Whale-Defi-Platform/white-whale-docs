@@ -5,8 +5,8 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "24",
-      "version": "1.1.1",
+      "code_id": "373",
+      "version": "1.1.4",
       "contract_address": "migaloo14dcwvg4zplrc28g5q3802n2mmnp3fsp2yh7mn7gkxssnrjqp4ycq76wy6h"
     },
     {
@@ -23,35 +23,35 @@
     },
     {
       "wasm": "incentive.wasm",
-      "code_id": "61",
-      "version": "1.0.2"
+      "code_id": "374",
+      "version": "1.0.6"
     },
     {
       "wasm": "incentive_factory.wasm",
-      "code_id": "28",
-      "version": "1.0.0",
+      "code_id": "375",
+      "version": "1.0.1",
       "contract_address": "migaloo1rqfr752hn6auzm3vzzyr2pd8rt6fapf208vm8qfpejstt69uxfwqcdrdq3"
     },
     {
       "wasm": "stableswap_3pool.wasm",
-      "code_id": "29",
-      "version": "1.2.1"
+      "code_id": "386",
+      "version": "1.2.3"
     },
     {
       "wasm": "terraswap_factory.wasm",
-      "code_id": "30",
-      "version": "1.2.0",
+      "code_id": "384",
+      "version": "1.2.1",
       "contract_address": "migaloo1z89funaazn4ka8vrmmw4q27csdykz63hep4ay8q2dmlspc6wtdgq92u369"
     },
     {
       "wasm": "terraswap_pair.wasm",
-      "code_id": "31",
-      "version": "1.3.1"
+      "code_id": "385",
+      "version": "1.3.4"
     },
     {
       "wasm": "terraswap_router.wasm",
-      "code_id": "32",
-      "version": "1.1.0",
+      "code_id": "379",
+      "version": "1.1.1",
       "contract_address": "migaloo1tma28exp38q92c69r8uujhphxy95xa4awq2cudqqg3nhzkhnrg5s4r60en"
     },
     {
@@ -67,13 +67,13 @@
     },
     {
       "wasm": "vault.wasm",
-      "code_id": "44",
-      "version": "1.2.3"
+      "code_id": "402",
+      "version": "1.2.6"
     },
     {
       "wasm": "vault_router.wasm",
-      "code_id": "45",
-      "version": "1.1.5",
+      "code_id": "381",
+      "version": "1.1.6",
       "contract_address": "migaloo19pze0n07guzj6yla2708q2feh38q9n8gxmkk8fjnuprfh6y9ngjqs90hcy"
     },
     {
