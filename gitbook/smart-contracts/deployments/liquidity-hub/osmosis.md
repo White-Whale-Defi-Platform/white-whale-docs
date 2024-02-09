@@ -45,8 +45,8 @@
     },
     {
       "wasm": "terraswap_pair.wasm",
-      "code_id": "448",
-      "version": "1.3.3"
+      "code_id": "502",
+      "version": "1.3.5"
     },
     {
       "wasm": "terraswap_router.wasm",
@@ -115,7 +115,7 @@
         }
       },
       "incentive_contract": "osmo1u5vvxk38gpkt3dlfrsq7s47ugjg6ar8zswyz52379jxdswef8s6qelq0tx",
-      "pool_code_id": "448",
+      "pool_code_id": "502",
       "lp_code_id": "450"
     },
     {
@@ -139,7 +139,7 @@
         }
       },
       "incentive_contract": "osmo1jszerakl59dafwkxek2ue28wpd6gec6d7gj6xtrqp2ettpv5sqcq4fu6lx",
-      "pool_code_id": "448",
+      "pool_code_id": "502",
       "lp_code_id": "450"
     },
     {
@@ -163,7 +163,7 @@
         }
       },
       "incentive_contract": "osmo1xrs9qtmvvv69xh34r9gtd0w0v8y99n8ywn89saryd923e5aay4aqev2zxn",
-      "pool_code_id": "448",
+      "pool_code_id": "502",
       "lp_code_id": "450"
     }
   ]
