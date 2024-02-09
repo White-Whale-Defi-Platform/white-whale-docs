@@ -5,8 +5,8 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "117",
-      "version": "1.1.1",
+      "code_id": "2657",
+      "version": "1.1.4",
       "contract_address": "sei1kgq4e2469nhdghnyn7xgrzppsxhth772z4dvxrcl60q2gksls8uqy6vl5t"
     },
     {
@@ -23,8 +23,8 @@
     },
     {
       "wasm": "incentive.wasm",
-      "code_id": "120",
-      "version": "1.0.3"
+      "code_id": "2658",
+      "version": "1.0.6"
     },
     {
       "wasm": "incentive_factory.wasm",
@@ -34,24 +34,24 @@
     },
     {
       "wasm": "stableswap_3pool.wasm",
-      "code_id": "122",
-      "version": "1.2.1"
+      "code_id": "2659",
+      "version": "1.2.3"
     },
     {
       "wasm": "terraswap_factory.wasm",
-      "code_id": "124",
-      "version": "1.2.0",
+      "code_id": "2662",
+      "version": "1.2.1",
       "contract_address": "sei1tcx434euh2aszzfsjxqzvjmc4cww54rxvfvv8v7jz353rg779l2st699q0"
     },
     {
       "wasm": "terraswap_pair.wasm",
-      "code_id": "125",
-      "version": "1.3.1"
+      "code_id": "2660",
+      "version": "1.3.4"
     },
     {
       "wasm": "terraswap_router.wasm",
-      "code_id": "126",
-      "version": "1.1.0",
+      "code_id": "2661",
+      "version": "1.1.1",
       "contract_address": "sei1f5utu2sx9f43cxl6c37ur5z57x6n3qmvpzse38hmhz6mspp4krsqccyu80"
     },
     {
@@ -61,8 +61,8 @@
     },
     {
       "wasm": "vault.wasm",
-      "code_id": "129",
-      "version": "1.2.3"
+      "code_id": "2666",
+      "version": "1.2.6"
     },
     {
       "wasm": "vault_factory.wasm",
@@ -72,8 +72,8 @@
     },
     {
       "wasm": "vault_router.wasm",
-      "code_id": "131",
-      "version": "1.1.5",
+      "code_id": "2664",
+      "version": "1.1.6",
       "contract_address": "sei1mtgsxpjw8h8873udcg6l7y5rupp40v63p7jeg7essznucfgjpdzshnhcvc"
     },
     {
@@ -115,7 +115,7 @@
         }
       },
       "incentive_contract": "sei1suwp7tt0tfzmjytus6clx64zx8tz3e8pd0vjuqjvy233um8v6nuqu9qhdt",
-      "pool_code_id": "125",
+      "pool_code_id": "2660",
       "lp_code_id": "127"
     }
   ]
@@ -140,7 +140,7 @@
           "contract_addr": "sei1j9qyhqf29hgze9p2gdh5uyq44v8yy5cnwf7mdln8ud5sva0khy4syjrwjl"
         }
       },
-      "vault_code_id": "129",
+      "vault_code_id": "2666",
       "lp_code_id": "127"
     }
   ]
