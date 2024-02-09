@@ -404,7 +404,7 @@
       "lp_code_id": "33"
     },
     {
-      "pair": "uwhale-wBTC",
+      "pair": "uwhale-wBTC.axl",
       "assets": [
         {
         "native_token": {
@@ -469,6 +469,30 @@
       "lp_asset": {
         "native_token": {
           "denom": "factory/migaloo1azqqmeg7zcj9vdtqpc65dmr2fkmkf3x6dcyhnau6d6er0w2r3arq470dzj/uLP"
+        }
+      },
+      "incentive_contract": "",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
+    },
+    {
+      "pair": "uwhale-wBTC",
+      "assets": [
+        {
+        "native_token": {
+          "denom": "uwhale"
+        }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/6E5BF71FE1BEBBD648C8A7CB7A790AEF0081120B2E5746E6563FC95764716D61"
+          }
+        }
+      ],
+      "pool_address": "migaloo1axtz4y7jyvdkkrflknv9dcut94xr5k8m6wete4rdrw4fuptk896su44x2z",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/migaloo1axtz4y7jyvdkkrflknv9dcut94xr5k8m6wete4rdrw4fuptk896su44x2z/uLP"
         }
       },
       "incentive_contract": "",
