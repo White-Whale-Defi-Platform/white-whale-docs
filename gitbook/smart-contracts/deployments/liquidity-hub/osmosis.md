@@ -98,6 +98,20 @@
       "interface": "osmo14zdnsp658g6tf7s5863ygeuj9ce5g00szud3tup6sqpwhuxmdwusc2eq7v",
       "pool_id": "1461", 
       "code_id": "503"
+    },
+    {
+      "pair": "sail-uwhale",
+      "pool_address": "osmo1w8e2wyzhrg3y5ghe9yg0xn0u7548e627zs7xahfvn5l63ry2x8zstaraxs",
+      "interface": "osmo1suf8z9ypyv3kk4egr7plde00dfetw7rcm4m9ecut7x3720z8l46q23663a",
+      "pool_id": "1462", 
+      "code_id": "503"
+    },
+    {
+      "pair": "ampOSMO-uosmo",
+      "pool_address": "osmo18r35luyyfqp7jter6jc93vzhft5zjgvsgt2tgx76qez2lpjpzfxqwx4ynk",
+      "interface": "osmo184utpa0q2x5d79ctpewwvskea50x7tr3fkgj7ge2r0uavhqexququsj3xq",
+      "pool_id": "1463", 
+      "code_id": "503"
     }
   ]
 }
