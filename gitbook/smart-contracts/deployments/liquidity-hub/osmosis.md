@@ -95,8 +95,9 @@
     {
       "pair": "ampOSMO-uosmo",
       "pool_address": "osmo1692tluwzzmnx56tm5v7r0n8v5fg32nrd9nuukp9jz458ap7wmcls9cz20m",
-      "code_id": "503",
-      "interface": "osmo14zdnsp658g6tf7s5863ygeuj9ce5g00szud3tup6sqpwhuxmdwusc2eq7v"
+      "interface": "osmo14zdnsp658g6tf7s5863ygeuj9ce5g00szud3tup6sqpwhuxmdwusc2eq7v",
+      "pool_id": "1461", 
+      "code_id": "503"
     }
   ]
 }
