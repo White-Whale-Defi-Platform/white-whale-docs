@@ -39,8 +39,8 @@
     },
     {
       "wasm": "terraswap_factory.wasm",
-      "code_id": "447",
-      "version": "1.2.1",
+      "code_id": "506",
+      "version": "1.2.3",
       "contract_address": "osmo1vuzkc4nzzav7g6t20f2vp0ed4sm3vaqnkpzy7yq3kujxs2g2hawqwnwy5w"
     },
     {
@@ -86,6 +86,19 @@
   "date": "2024-01-23T15:01:19+0000",
   "chain_id": "osmosis-1",
   "deployer_address": "osmo1v767q4apajgksqlg5ejdakn8auszecje5t6rdx"
+}
+```
+
+```json
+{
+  "pool_interfaces": [
+    {
+      "pair": "ampOSMO-uosmo",
+      "pool_address": "osmo1692tluwzzmnx56tm5v7r0n8v5fg32nrd9nuukp9jz458ap7wmcls9cz20m",
+      "code_id": "503",
+      "interface": "osmo14zdnsp658g6tf7s5863ygeuj9ce5g00szud3tup6sqpwhuxmdwusc2eq7v"
+    }
+  ]
 }
 ```
 
