@@ -171,6 +171,30 @@
       "lp_code_id": "450"
     },
     {
+      "pair": "ROAR-uosmo",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "ibc/98BCD43F190C6960D0005BC46BB765C827403A361C9C03C2FF694150A30284B0"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "uosmo"
+          }
+        }
+      ],
+      "pool_address": "osmo13c5k2wxq3cx5xanqnqjdyrwvgw0qs8ea7k8c9dzdddlthg55suhqpvjnq7",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/osmo13c5k2wxq3cx5xanqnqjdyrwvgw0qs8ea7k8c9dzdddlthg55suhqpvjnq7/uLP"
+        }
+      },
+      "incentive_contract": "osmo17w06dzncqlsz9m2assacrzmrqvmlc7y79updfzd0834q2jty9w6qwdvg9q",
+      "pool_code_id": "502",
+      "lp_code_id": "450"
+    },
+    {
       "pair": "uwhale-uosmo",
       "assets": [
         {
@@ -196,4 +220,5 @@
     }
   ]
 }
+
 ```
