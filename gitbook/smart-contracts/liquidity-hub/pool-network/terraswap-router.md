@@ -239,7 +239,7 @@ Removes swap routes from the router. This is needed to clean up swap routes from
 
 ```json
 {
-  "delete_swap_routes": {
+  "remove_swap_routes": {
     "swap_routes": [
       {
         "offer_asset_info": {
