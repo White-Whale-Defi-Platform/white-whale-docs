@@ -11,8 +11,8 @@
     },
     {
       "wasm": "fee_distributor.wasm",
-      "code_id": "1636",
-      "version": "0.9.1",
+      "code_id": "2605",
+      "version": "0.9.2",
       "contract_address": "terra1xm0yh8cv8rww6g87h3q0megt6ntxqzw6p6hgh5l4jrhed4fe7hnq9cvzm5"
     },
     {
@@ -29,24 +29,24 @@
     },
     {
       "wasm": "incentive.wasm",
-      "code_id": "1791/1800",
-      "version": "1.0.3/1.0.4"
+      "code_id": "2647",
+      "version": "1.0.6"
     },
     {
       "wasm": "stableswap_3pool.wasm",
-      "code_id": "1936",
-      "version": "1.2.2"
+      "code_id": "2607",
+      "version": "1.2.3"
     },
     {
       "wasm": "terraswap_factory.wasm",
-      "code_id": "1444",
-      "version": "1.2.0",
+      "code_id": "2608",
+      "version": "1.2.3",
       "contract_address": "terra1f4cr4sr5eulp3f2us8unu6qv8a5rhjltqsg7ujjx6f2mrlqh923sljwhn3"
     },
     {
       "wasm": "terraswap_pair.wasm",
-      "code_id": "1935",
-      "version": "1.3.2"
+      "code_id": "2609",
+      "version": "1.3.5"
     },
     {
       "wasm": "terraswap_router.wasm",
@@ -61,19 +61,19 @@
     },
     {
       "wasm": "vault_factory.wasm",
-      "code_id": "1452",
-      "version": "1.1.2",
+      "code_id": "2610",
+      "version": "1.1.3",
       "contract_address": "terra1vcn8h6fc26nv4f20p6g870a00nqzdpjwvshud9ku3qfaqhv7l69s9l29y2"
     },
     {
       "wasm": "vault.wasm",
-      "code_id": "1453",
-      "version": "1.2.2"
+      "code_id": "2613",
+      "version": "1.2.6"
     },
     {
       "wasm": "vault_router.wasm",
-      "code_id": "1451",
-      "version": "1.1.5",
+      "code_id": "2612",
+      "version": "1.1.6",
       "contract_address": "terra1c8tpvta3umr4mpufvxmq39gyuw2knpyxyfgq8thpaeyw2r6a80qsg5wa00"
     },
     {
@@ -115,7 +115,7 @@
         }
       },
       "incentive_contract": "terra1zudg2pz9qcr2dazx70tth0kudvel0zcx69zc9k64nh6uaj3w0lgqgt4s3g",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -139,7 +139,7 @@
         }
       },
       "incentive_contract": "terra1me4wdxxtv4e4ctrgjc9ks9npmxhtfppcq9czecun8gwkervw060sc5eu23",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -163,7 +163,7 @@
         }
       },
       "incentive_contract": "null",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -187,7 +187,7 @@
         }
       },
       "incentive_contract": "terra1ckguuv8s8rg0rd5cdn0y3fynwrpqf32jxvjdyzclu49se3tv6nvs6gpu62",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -211,7 +211,7 @@
         }
       },
       "incentive_contract": "terra1jjkwz5fluaa87a4w5xd2yku8c6vrqsuhrt9yaax3pyhfl5ftp9wsy6na3x",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -235,7 +235,7 @@
         }
       },
       "incentive_contract": "terra1zwk4ajwy9v7tugqvfyldl8f3sj8uev7naafpelfd4jftx9czsxxsm0ncw5",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -259,7 +259,7 @@
         }
       },
       "incentive_contract": "terra1avs33y34j9t23e6ujuzpa5x58ru0cfk4c5nglm5l0etn7vaq6h8qhszt66",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -283,7 +283,7 @@
         }
       },
       "incentive_contract": "terra1hnd5e4w9q7afmj3ql7nam5qna978qapmts839hfuvuueeq6f5lgqykrejn",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -307,7 +307,7 @@
         }
       },
       "incentive_contract": "terra19a63jwphxh2f8j8r5cn74kyrrjlu35gk4h4y7uj9zam8lquqrnzsjtxlhl",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -331,7 +331,7 @@
         }
       },
       "incentive_contract": "terra12gzs5fezplmeg0gpz5wxw28fmssu398a362r95u2uj3cmdfqm3gqcsz96k",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -355,7 +355,7 @@
         }
       },
       "incentive_contract": "terra1y967zn8xhlx3k67c8quaatqxaugw9kmvu2pu4tddk2rjxhcfegaqvdvtv7",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -379,7 +379,7 @@
         }
       },
       "incentive_contract": "terra1guwyktv5uhjkvmnmtvrwevgpgcl3f4zzy74959whju8qglrc66fqgrqs40",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -403,7 +403,7 @@
         }
       },
       "incentive_contract": "terra1valpnysajk756uwesegkfeq6gqt9ld8ez8ke247ghhpfh4wjjgase0hhl8",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -427,7 +427,7 @@
         }
       },
       "incentive_contract": "terra1u8qcwwxychcpf6m0gtecyu46m8fjvzu8t7wdhxa7k3vwtlw6vmrq96cg0k",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -451,7 +451,7 @@
         }
       },
       "incentive_contract": "terra1aw872zyt2y0qzzxn7x00mefympk5n9at04mmfmmxqpe42ev2pj0qax89d8",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -475,7 +475,7 @@
         }
       },
       "incentive_contract": "terra10vu0f9nknuhj89xq00aymqxxypmztgx8hwty5jj7cutnkx4j5sjshagm9a",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     },
     {
@@ -499,7 +499,7 @@
         }
       },
       "incentive_contract": "null",
-      "pool_code_id": "1935",
+      "pool_code_id": "2609",
       "lp_code_id": "726"
     }
   ]
