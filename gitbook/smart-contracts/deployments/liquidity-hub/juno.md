@@ -401,6 +401,30 @@
       "incentive_contract": "juno1zzs9fv6qz8sjn0v36d22900txv9c7m7u9vlt66t07kwjvl6srcyqq2q63z",
       "pool_code_id": "3226",
       "lp_code_id": "1440"
+    },
+    {
+      "pair": "uwind-ujuno",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "factory/juno1h6y8tkceau4d8zyv5aa0fwdj2pa2y0gz2hx0tq/uwind"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ujuno"
+          }
+        }
+      ],
+      "pool_address": "juno1afeaafyznk0dyk4hvg8dv3pykm7lvzvqzr3drx6w0sk4rws636vsk4lw78",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/juno1afeaafyznk0dyk4hvg8dv3pykm7lvzvqzr3drx6w0sk4rws636vsk4lw78/uLP"
+        }
+      },
+      "incentive_contract": "juno1hpck2jg3mveycqpsktxxysfp9zs56ezed6estnpcuk2d4yq5du4swd9z5r",
+      "pool_code_id": "3226",
+      "lp_code_id": "1440"
     }
   ]
 }
