@@ -373,6 +373,18 @@
       "staking": "terra1cq382eerwanlf03rwtsselxrs75tjn25mzcjg039gd38kulx8hwsfr77yg",
       "pool_code_id": "31",
       "lp_code_id": "33"
+    },
+    {
+      "pair": "FRG-uluna",
+      "assets": [
+        "{\"token\":{\"token\":\"terra14rfnhc2aru7jp304lht3yf903necsnrt4cxd464cftsfcksw0rtsgundnt\"}}"
+        "{\"token\":{\"native_token\":\"uluna\"}}",
+      ],
+      "pool_address": "terra1gk4z4hx32nx5zwgjz3ya6q88fzscl24ws0vy0fckkuwur8d57nhs60mug8",
+      "lp_address": "terra1vhgx54r9gaqlqj4ez5xew7d85mzeg68286nsqun2nc7znluxlv3q67sw7r",
+      "staking": "terra1txpc4vvlmkglx6u8mrtnxhlf0hql0xesmkkd6gaf2xvt9meeaj8q4qwqwp",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
     }
   ]
 }
