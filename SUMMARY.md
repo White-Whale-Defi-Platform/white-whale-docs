@@ -5,7 +5,7 @@
 * [🚀 White Whale's Vision](./gitbook/general/vision.md)
 * [🌉 Architecture](./gitbook/general/architecture.md)
 * [🐞 Bug Bounty Program](./gitbook/general/bug-bounty-program.md)
-
+  
 ## Smart Contracts
 
 * [🖼 Overview](./gitbook/smart-contracts/overview.md)
@@ -22,6 +22,7 @@
   * [©️ Comdex](./gitbook/smart-contracts/deployments/liquidity-hub/comdex.md)
   * [⛵️ Sei](./gitbook/smart-contracts/deployments/liquidity-hub/sei.md) 
   * [🌖️ Terra Classic](./gitbook/smart-contracts/deployments/liquidity-hub/terra_classic.md) 
+* [🛡️ Audits](./gitbook/smart-contracts/audits.md)
 
 ### Liquidity Hub
 
