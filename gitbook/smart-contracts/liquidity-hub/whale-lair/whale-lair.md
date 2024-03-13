@@ -65,12 +65,14 @@ Unbonds the specified [Asset].
 ```json
 {
   "unbond": {
-    "info": {
-      "native_token": {
-        "denom": "ampWHALE"
-      }
-    },
-    "amount": "1000"
+    "asset": {
+      "info": {
+        "native_token": {
+          "denom": "ampWHALE"
+        }
+      },
+      "amount": "1000"
+    }
   }
 }
 ```
