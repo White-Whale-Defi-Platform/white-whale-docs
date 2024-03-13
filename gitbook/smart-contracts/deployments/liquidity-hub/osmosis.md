@@ -114,7 +114,7 @@
       "code_id": "572"
     },
     {
-      "pair": "ampOSMO-uosmo",
+      "pair": "ROAR-uosmo",
       "pool_address": "osmo13c5k2wxq3cx5xanqnqjdyrwvgw0qs8ea7k8c9dzdddlthg55suhqpvjnq7",
       "interface": "osmo1hnlw8ajwhgg7rsyke2t34uknp4jjcmm23zeygsu7n8cwjqnt2jsqju3nz4",
       "pool_id": "1575", 
