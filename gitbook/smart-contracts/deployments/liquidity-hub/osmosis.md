@@ -162,7 +162,7 @@
           "denom": "factory/osmo1nkjck7774semslqk6f8n058m4gwcw5spqtza0hrjf8e2kshn4x6svjrc0m/uLP"
         }
       },
-      "incentive_contract": "null",
+      "incentive_contract": "osmo1c9gunhvzpffr3sms0f97qtwefjw9jzlntp9w6873nkhjflewn36srjl0sk",
       "pool_code_id": "502",
       "lp_code_id": "450"
     },
