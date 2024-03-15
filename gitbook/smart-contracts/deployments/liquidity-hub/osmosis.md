@@ -244,10 +244,17 @@
       "code_id": "572"
     },
     {
+      "pair": "ampOSMO-uosmo (duplicated)",
+      "pool_address": "osmo1692tluwzzmnx56tm5v7r0n8v5fg32nrd9nuukp9jz458ap7wmcls9cz20m",
+      "interface": "osmo1g883rt8ytjlhawxey39m3w90nyaxg2vfmlfh6jvnv9ec3py2hgxq9qdz53",
+      "pool_id": "1514",
+      "code_id": "572"
+    },
+    {
       "pair": "ROAR-uosmo",
       "pool_address": "osmo13c5k2wxq3cx5xanqnqjdyrwvgw0qs8ea7k8c9dzdddlthg55suhqpvjnq7",
       "interface": "osmo1hnlw8ajwhgg7rsyke2t34uknp4jjcmm23zeygsu7n8cwjqnt2jsqju3nz4",
-      "pool_id": "1575", 
+      "pool_id": "1575",
       "code_id": "572"
     },
     {
