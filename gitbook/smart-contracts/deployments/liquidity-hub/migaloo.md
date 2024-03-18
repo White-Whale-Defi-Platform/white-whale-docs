@@ -498,6 +498,31 @@
       "incentive_contract": "",
       "pool_code_id": "31",
       "lp_code_id": "33"
+    },
+    {
+      "pair": "shark-uwhale",
+      "assets": [
+        
+        {
+          "native_token": {
+            "denom": "factory/migaloo1eqntnl6tzcj9h86psg4y4h6hh05g2h9nj8e09l/shark"
+          }
+        },
+        {
+        "native_token": {
+          "denom": "uwhale"
+        }
+        },
+      ],
+      "pool_address": "migaloo14emfp5urhu0nnnk5warexg3fdfl8gltru9y3ylzx6cay6utdgpdsyh99r7",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/migaloo14emfp5urhu0nnnk5warexg3fdfl8gltru9y3ylzx6cay6utdgpdsyh99r7/uLP"
+        }
+      },
+      "incentive_contract": "",
+      "pool_code_id": "31",
+      "lp_code_id": "33"
     }
   ]
 }
