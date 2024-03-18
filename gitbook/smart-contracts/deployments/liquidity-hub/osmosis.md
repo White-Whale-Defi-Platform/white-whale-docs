@@ -213,8 +213,34 @@
       "incentive_contract": "osmo1xrs9qtmvvv69xh34r9gtd0w0v8y99n8ywn89saryd923e5aay4aqev2zxn",
       "pool_code_id": "502",
       "lp_code_id": "450"
+    },
+    {
+      "pair": "boneOsmo-uosmo",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "factory/osmo1s3l0lcqc7tu0vpj6wdjz9wqpxv8nk6eraevje4fuwkyjnwuy82qsx3lduv/boneOsmo"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "uosmo"
+          }
+        }
+      ],
+      "pool_address": "osmo166yrd7anjg3h7epjsjghlf2uu403phjflk4gygmlelykwlustwysxvgv4c",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/osmo166yrd7anjg3h7epjsjghlf2uu403phjflk4gygmlelykwlustwysxvgv4c/uLP"
+        }
+      },
+      "incentive_contract": "osmo1fzmaeuptmzv2l5la7trmv7ez6uhsr3tde0l2vqm4sazcfg7jd78slvhzek",
+      "pool_code_id": "502",
+      "lp_code_id": "450"
     }
   ]
+
+  
 }
 
 ```
