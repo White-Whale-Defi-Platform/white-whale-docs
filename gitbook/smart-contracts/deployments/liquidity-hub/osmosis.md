@@ -95,6 +95,30 @@
   "pool_factory_addr": "osmo1vuzkc4nzzav7g6t20f2vp0ed4sm3vaqnkpzy7yq3kujxs2g2hawqwnwy5w",
   "pools": [
     {
+      "pair": "LAB-uosmo",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "factory/osmo17fel472lgzs87ekt9dvk0zqyh5gl80sqp4sk4n/LAB"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "uosmo"
+          }
+        }
+      ],
+      "pool_address": "osmo12zk0xmacanpz9huy8huth2wee98smf9kktg4lltu9zrk3x9w58aq7k64cz",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/osmo12zk0xmacanpz9huy8huth2wee98smf9kktg4lltu9zrk3x9w58aq7k64cz/uLP"
+        }
+      },
+      "incentive_contract": "osmo1ux4t64n28drgq8xcv42lswfjeqfn3syzutjs80t3c97al7caan4s8h5nsn",
+      "pool_code_id": "502",
+      "lp_code_id": "450"
+    },
+    {
       "pair": "ampOSMO-uosmo",
       "assets": [
         {
@@ -139,6 +163,54 @@
         }
       },
       "incentive_contract": "osmo1jszerakl59dafwkxek2ue28wpd6gec6d7gj6xtrqp2ettpv5sqcq4fu6lx",
+      "pool_code_id": "502",
+      "lp_code_id": "450"
+    },
+    {
+      "pair": "boneOsmo-uosmo",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "factory/osmo1s3l0lcqc7tu0vpj6wdjz9wqpxv8nk6eraevje4fuwkyjnwuy82qsx3lduv/boneOsmo"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "uosmo"
+          }
+        }
+      ],
+      "pool_address": "osmo166yrd7anjg3h7epjsjghlf2uu403phjflk4gygmlelykwlustwysxvgv4c",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/osmo166yrd7anjg3h7epjsjghlf2uu403phjflk4gygmlelykwlustwysxvgv4c/uLP"
+        }
+      },
+      "incentive_contract": "osmo1fzmaeuptmzv2l5la7trmv7ez6uhsr3tde0l2vqm4sazcfg7jd78slvhzek",
+      "pool_code_id": "502",
+      "lp_code_id": "450"
+    },
+    {
+      "pair": "uwhale-wbtc",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "ibc/EDD6F0D66BCD49C1084FB2C35353B4ACD7B9191117CE63671B61320548F7C89D"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc"
+          }
+        }
+      ],
+      "pool_address": "osmo1ycg9k5dj3pd0szt4f7ladzam8u6rvs472z6ckx4p82u00cetdnzqxw4vwm",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/osmo1ycg9k5dj3pd0szt4f7ladzam8u6rvs472z6ckx4p82u00cetdnzqxw4vwm/uLP"
+        }
+      },
+      "incentive_contract": "osmo1a5zsvtgkzyufaetavqzqksk2zjl2dm3up5erpfuapd4m429qja3qxhdwhr",
       "pool_code_id": "502",
       "lp_code_id": "450"
     },
@@ -253,42 +325,49 @@
       "pool_address": "osmo1692tluwzzmnx56tm5v7r0n8v5fg32nrd9nuukp9jz458ap7wmcls9cz20m",
       "interface": "osmo14zdnsp658g6tf7s5863ygeuj9ce5g00szud3tup6sqpwhuxmdwusc2eq7v",
       "pool_id": "1461", 
-      "code_id": "572"
+      "code_id": "641"
     },
     {
       "pair": "sail-uwhale",
       "pool_address": "osmo1w8e2wyzhrg3y5ghe9yg0xn0u7548e627zs7xahfvn5l63ry2x8zstaraxs",
       "interface": "osmo1suf8z9ypyv3kk4egr7plde00dfetw7rcm4m9ecut7x3720z8l46q23663a",
       "pool_id": "1462", 
-      "code_id": "572"
+      "code_id": "641"
     },
     {
       "pair": "uwhale-uosmo",
       "pool_address": "osmo18r35luyyfqp7jter6jc93vzhft5zjgvsgt2tgx76qez2lpjpzfxqwx4ynk",
       "interface": "osmo184utpa0q2x5d79ctpewwvskea50x7tr3fkgj7ge2r0uavhqexququsj3xq",
       "pool_id": "1463", 
-      "code_id": "572"
+      "code_id": "641"
     },
     {
       "pair": "ampOSMO-uosmo (duplicated)",
       "pool_address": "osmo1692tluwzzmnx56tm5v7r0n8v5fg32nrd9nuukp9jz458ap7wmcls9cz20m",
       "interface": "osmo1g883rt8ytjlhawxey39m3w90nyaxg2vfmlfh6jvnv9ec3py2hgxq9qdz53",
       "pool_id": "1514",
-      "code_id": "572"
+      "code_id": "641"
     },
     {
       "pair": "ROAR-uosmo",
       "pool_address": "osmo13c5k2wxq3cx5xanqnqjdyrwvgw0qs8ea7k8c9dzdddlthg55suhqpvjnq7",
       "interface": "osmo1hnlw8ajwhgg7rsyke2t34uknp4jjcmm23zeygsu7n8cwjqnt2jsqju3nz4",
       "pool_id": "1575",
-      "code_id": "572"
+      "code_id": "641"
     },
     {
       "pair": "shark-uosmo",
       "pool_address": "osmo1nkjck7774semslqk6f8n058m4gwcw5spqtza0hrjf8e2kshn4x6svjrc0m",
       "interface": "osmo1w2sdnptx8jt4vuugcauv6tj3c2syjay5rx2mxalngn7m2cywllsq6xt64k",
       "pool_id": "1584", 
-      "code_id": "572"
+      "code_id": "641"
+    },
+    {
+      "pair": "LAB-uosmo",
+      "pool_address": "osmo12zk0xmacanpz9huy8huth2wee98smf9kktg4lltu9zrk3x9w58aq7k64cz",
+      "interface": "osmo1javcdeqdnlujsrl4kduwfcs2cw5hd4jz9vh2wdpqyz6kp2tn8e9qt0rz8g",
+      "pool_id": "1642",
+      "code_id": "641"
     }
   ]
 }
