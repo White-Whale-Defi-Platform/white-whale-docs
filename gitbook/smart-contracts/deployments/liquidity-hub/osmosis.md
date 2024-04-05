@@ -85,7 +85,7 @@
   ],
   "date": "2024-01-23T15:01:19+0000",
   "chain_id": "osmosis-1",
-  "deployer_address": "osmo1v767q4apajgksqlg5ejdakn8auszecje5t6rdx"
+  "deployer_address": "osmo1x0rl8lc3x92ljl5jhz77k0mdc67tt3yvhscss4qjszehx802dh0qdt8xh8"
 }
 ```
 
