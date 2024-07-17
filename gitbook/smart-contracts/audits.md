@@ -1,9 +1,6 @@
 # Audits
 
-The White Whale smart contracts have been audited multiple times by [SCV Security](https://twitter.com/SCVSecurity), a
-trusted security provider in the Cosmos ecosystem that specializes in CosmWasm and DeFi projects. The audit reports are 
-available at the following link:
+The White Whale V2 smart contracts have not been audited yet, however, they are open-source and have been reviewed by 
+members of the community. 
 
-[https://github.com/SCV-Security/PublicReports/tree/main/WhiteWhale
-](https://github.com/SCV-Security/PublicReports/tree/main/WhiteWhale
-)
+Use the protocol at your own risk.

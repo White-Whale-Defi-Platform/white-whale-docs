@@ -1,7 +1,12 @@
 # Common Types
 
-The following are common data types used across White Whale's contracts. There might be few more that are used
-internally, though this list contains the types that are exposed via the entry points.
+The common types are the data structures that are used across the White Whale contracts, and these can be found on the 
+[white-whale-std crate](https://crates.io/crates/white-whale-std).
+
+The following is a list of these common types exposed via the API, even though there might be few more that are used
+internally by the contracts that are not exposed.
+
+todo
 
 | Struct               | Description                                                     | Contains                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |----------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
