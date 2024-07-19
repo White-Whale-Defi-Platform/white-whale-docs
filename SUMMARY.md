@@ -16,23 +16,28 @@
 * [🪙 WHALE Token Address on Each Chain](./gitbook/smart-contracts/assets/denoms.md)
 * 🌐 Liquidity Hub Deployments
 
-* [💱 Epoch Manager](./gitbook/smart-contracts/liquidity-hub/pool-network/overview.md)
-* [💱 Pool Manager](./gitbook/smart-contracts/liquidity-hub/pool-network/overview.md)
-* [💱 Vault Manager](./gitbook/smart-contracts/liquidity-hub/pool-network/overview.md)
-* [💱 Incentive Manager](./gitbook/smart-contracts/liquidity-hub/pool-network/overview.md)
-* [💱 Bonding Manager](./gitbook/smart-contracts/liquidity-hub/pool-network/overview.md)
+* [⌛ Epoch Manager](./gitbook/smart-contracts/liquidity-hub/epoch-manager.md)
+* [🌊 Pool Manager](./gitbook/smart-contracts/liquidity-hub/pool-manager.md)
+* [🏰 Vault Manager](./gitbook/smart-contracts/liquidity-hub/vault-manager.md)
+* [🎁 Incentive Manager](./gitbook/smart-contracts/liquidity-hub/incentive-manager.md)
+* [💞 Bonding Manager](./gitbook/smart-contracts/liquidity-hub/bonding-manager.md)
 
 * [🛡️ Audits](./gitbook/smart-contracts/audits.md)
 
-### Liquidity Hub Procedures
-
-* [🤑 Updating Fees](./gitbook/smart-contracts/procedures/update-fees.md)
+[//]: # (* [🤑 Updating Fees]&#40;./gitbook/smart-contracts/procedures/update-fees.md&#41;)
 
 ## Client Documentation
-* [⚡ Calling Flashloans](./gitbook/client-docs/flashloan.md)
-  * [Example](./gitbook/client-docs/flashloan_example.md)
-* [🤖 Arbitrage Bots](./gitbook/client-docs/arbitrage_bots.md)
-  * [⚙️   Config Example](./gitbook//client-docs//configexample.md)
-  * [🐳 Running in Docker](./gitbook//client-docs//docker_deployment_bots.md)
-  * [👤 Running with pm2](./gitbook//client-docs//pm2_deployment_bots.md)
 
+[//]: # (* [⚡ Calling Flashloans]&#40;./gitbook/client-docs/flashloan.md&#41;)
+
+[//]: # (  * [Example]&#40;./gitbook/client-docs/flashloan_example.md&#41;)
+
+[//]: # (* [🤖 Arbitrage Bots]&#40;./gitbook/client-docs/arbitrage_bots.md&#41;)
+
+[//]: # (  * [⚙️   Config Example]&#40;./gitbook//client-docs//configexample.md&#41;)
+
+[//]: # (  * [🐳 Running in Docker]&#40;./gitbook//client-docs//docker_deployment_bots.md&#41;)
+
+[//]: # (  * [👤 Running with pm2]&#40;./gitbook//client-docs//pm2_deployment_bots.md&#41;)
+
+[//]: # ()
