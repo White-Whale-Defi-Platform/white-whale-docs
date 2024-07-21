@@ -17,14 +17,14 @@
 [Twitter handle]: https://img.shields.io/twitter/follow/WhiteWhaleDefi.svg?style=social&label=Follow
 [Twitter badge]: https://twitter.com/intent/follow?screen_name=WhiteWhaleDefi
 
-# White Whale Docs
-This repository contains the public-facing documentation of the open-source and decentralized White Whale Protocol. 
+# White Whale V2 Docs
+This repository contains the public-facing documentation of the open-source and decentralized White Whale Protocol V2. 
 Here you will find both general information and specific documentation on our repositories:
 - [White Whale Smart Contracts](https://github.com/White-Whale-Defi-Platform/white-whale-core/)
 - [White Whale Frontend](https://github.com/White-Whale-Defi-Platform/white-whale-frontend/)
 - [White Whale Bots](https://github.com/White-Whale-Defi-Platform/white-whale-bots/)
 
-If you are looking for our V1 documentation, you can find it [here](https://white-whale-defi-platform.github.io/docs/).
+[//]: # (If you are looking for our V1 documentation, you can find it [here]&#40;https://white-whale-defi-platform.github.io/docs/&#41;.)
 
 ## Resources
 1. [Website](https://whitewhale.money/)
