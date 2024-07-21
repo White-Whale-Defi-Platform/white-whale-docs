@@ -1,5 +1,9 @@
 # Pool Manager
 
+The Pool Manager is a contract that handles liquidity pools in the White Whale DEX. It allows for the creation and management of various types of liquidity pools, including constant product and stable swap pools and more. The contract facilitates liquidity provision, token swaps, and multi-hop operations across different pools.
+
+The Pool Manager enables permissionless creation of liquidity pools, requiring a fee to prevent spam. It supports multiple pools for the same asset pair, each with a unique identifier. Users can provide liquidity, perform swaps, and execute multi-hop operations across different pools. The contract manages pool creation, liquidity provision and withdrawal, swaps, and maintains swap routes for efficient token exchanges.
+
 ## Instantiate
 
 Instantiates an instance of the pool manager contract
