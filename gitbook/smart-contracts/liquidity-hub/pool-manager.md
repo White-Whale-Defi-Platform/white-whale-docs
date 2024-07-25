@@ -447,6 +447,10 @@ Returns the configuration of the contract.
 }
 ```
 
+| Key      | Type   | Description                 |
+|----------|--------|-----------------------------|
+| `config` | Config | The contract configuration. |
+
 {% endtab %}
 {% endtabs %}
 
@@ -477,6 +481,12 @@ Retrieves the decimals for the given asset in a specific pool.
   "decimals": 6
 }
 ```
+
+| Key               | Type   | Description                                     |
+|-------------------|--------|-------------------------------------------------|
+| `pool_identifier` | String | The pool identifier to do the query for.        |
+| `denom`           | String | The queried denom in the given pool_identifier. |
+| `decimals`        | u8     | The decimals for the requested denom.           |
 
 {% endtab %}
 {% endtabs %}
@@ -511,9 +521,21 @@ Simulates a swap.
   "spread_amount": "5000",
   "swap_fee_amount": "3000",
   "protocol_fee_amount": "2000",
-  "burn_fee_amount": "0"
+  "burn_fee_amount": "0",
+  "extra_fees_amount": "0",
+  "osmosis_fee_amount": "100"
 }
 ```
+
+| Key                   | Type    | Description                                                                             |
+|-----------------------|---------|-----------------------------------------------------------------------------------------|
+| `return_amount`       | Uint128 | The return amount of the ask asset given the offer amount.                              |
+| `spread_amount`       | Uint128 | The spread amount of the swap.                                                          |
+| `swap_fee_amount`     | Uint128 | The swap fee amount of the swap.                                                        |
+| `protocol_fee_amount` | Uint128 | The protocol fee amount of the swap.                                                    |
+| `burn_fee_amount`     | Uint128 | The burn fee amount of the swap.                                                        |
+| `extra_fees_amount`   | Uint128 | The extra fees amount of the swap.                                                      |
+| `osmosis_fee_amount`  | Uint128 | If deployed on Osmosis, the fee amount of the swap going to the osmosis community pool. |
 
 {% endtab %}
 {% endtabs %}
@@ -548,9 +570,20 @@ Simulates a reverse swap.
   "spread_amount": "5000",
   "swap_fee_amount": "3000",
   "protocol_fee_amount": "2000",
-  "burn_fee_amount": "0"
+  "burn_fee_amount": "0",
+  "osmosis_fee_amount": "100"
 }
 ```
+
+| Key                   | Type    | Description                                                                             |
+|-----------------------|---------|-----------------------------------------------------------------------------------------|
+| `offer_amount`        | Uint128 | The amount of the offer asset needed to get the ask amount.                             |
+| `spread_amount`       | Uint128 | The spread amount of the swap.                                                          |
+| `swap_fee_amount`     | Uint128 | The swap fee amount of the swap.                                                        |
+| `protocol_fee_amount` | Uint128 | The protocol fee amount of the swap.                                                    |
+| `burn_fee_amount`     | Uint128 | The burn fee amount of the swap.                                                        |
+| `extra_fees_amount`   | Uint128 | The extra fees amount of the swap.                                                      |
+| `osmosis_fee_amount`  | Uint128 | If deployed on Osmosis, the fee amount of the swap going to the osmosis community pool. |
 
 {% endtab %}
 {% endtabs %}
@@ -600,6 +633,10 @@ Gets the swap route for the given offer and ask assets.
 }
 ```
 
+| Key          | Type      | Description                                |
+|--------------|-----------|--------------------------------------------|
+| `swap_route` | SwapRoute | The swap route taken for the queried swap. |
+
 {% endtab %}
 {% endtabs %}
 
@@ -647,6 +684,10 @@ Gets all registered swap routes.
 }
 ```
 
+| Key           | Type            | Description                                 |
+|---------------|-----------------|---------------------------------------------|
+| `swap_routes` | Vec\<SwapRoute> | The swap routes registered in the contract. |
+
 {% endtab %}
 {% endtabs %}
 
@@ -691,6 +732,10 @@ Simulates swap operations.
 }
 ```
 
+| Key      | Type    | Description                                              |
+|----------|---------|----------------------------------------------------------|
+| `amount` | Uint128 | The amount of the final token after the swap operations. |
+
 {% endtab %}
 {% endtabs %}
 
@@ -734,6 +779,10 @@ Simulates reverse swap operations.
   "amount": "1000000"
 }
 ```
+
+| Key      | Type    | Description                                                                              |
+|----------|---------|------------------------------------------------------------------------------------------|
+| `amount` | Uint128 | The amount of the initial token needed to get the final token after the swap operations. |
 
 {% endtab %}
 {% endtabs %}
@@ -802,6 +851,10 @@ Retrieves the pool information for the given pool identifier or all pools.
 }
 ```
 
+| Key     | Type                   | Description                      |
+|---------|------------------------|----------------------------------|
+| `pools` | Vec\<PoolInfoResponse> | The pools information responses. |
+
 {% endtab %}
 {% endtabs %}
 
@@ -830,6 +883,10 @@ Retrieves the creator of the swap route to get from offer to ask asset.
   "creator": "migaloo1..."
 }
 ```
+
+| Key       | Type   | Description                    |
+|-----------|--------|--------------------------------|
+| `creator` | String | The creator of the swap route. |
 
 {% endtab %}
 {% endtabs %}
