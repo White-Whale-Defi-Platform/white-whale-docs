@@ -29,8 +29,8 @@ Instantiates an instance of the incentive manager contract
 | `create_incentive_fee`       | Coin    | The fee that must be paid to create an incentive.                                               |
 | `max_concurrent_incentives`  | u32     | The maximum amount of incentives that can exist for a single LP token at a time.                |
 | `max_incentive_epoch_buffer` | u32     | New incentives are allowed to start up to `current_epoch + start_epoch_buffer` into the future. |
-| `min_unlocking_duration`     | u32     | The minimum amount of time that a user can lock their tokens for. In seconds.                   |
-| `max_unlocking_duration`     | u32     | The maximum amount of time that a user can lock their tokens for. In seconds.                   |
+| `min_unlocking_duration`     | u64     | The minimum amount of time that a user can lock their tokens for. In seconds.                   |
+| `max_unlocking_duration`     | u64     | The maximum amount of time that a user can lock their tokens for. In seconds.                   |
 | `emergency_unlock_penalty`   | Decimal | The penalty for unlocking a position before the unlocking duration finishes. In percentage.     |
 
 ## ExecuteMsg
@@ -211,8 +211,8 @@ Updates the contract configuration.
 | `create_incentive_fee`       | Option\<Coin>    | The fee that must be paid to create an incentive.                                           |
 | `max_concurrent_incentives`  | Option\<u32>     | The maximum amount of incentives that can exist for a single LP token at a time.            |
 | `max_incentive_epoch_buffer` | Option\<u32>     | The maximum amount of epochs in the future a new incentive is allowed to start in.          |
-| `min_unlocking_duration`     | Option\<u32>     | The minimum amount of time that a user can lock their tokens for. In seconds.               |
-| `max_unlocking_duration`     | Option\<u32>     | The maximum amount of time that a user can lock their tokens for. In seconds.               |
+| `min_unlocking_duration`     | Option\<u64>     | The minimum amount of time that a user can lock their tokens for. In seconds.               |
+| `max_unlocking_duration`     | Option\<u64>     | The maximum amount of time that a user can lock their tokens for. In seconds.               |
 | `emergency_unlock_penalty`   | Option\<Decimal> | The penalty for unlocking a position before the unlocking duration finishes. In percentage. |
 
 ### EpochChangedHook
@@ -295,4 +295,307 @@ current owner. Any existing pending ownership transfer is canceled.
 {% endtab %}
 {% endtabs %}
 
+## QueryMsg
 
+### Config
+
+Returns the configuration of the contract.
+
+{% tabs %}
+{% tab title="Query" %}
+
+```json
+{
+  "config": {}
+}
+```
+
+{% endtab %}
+
+{% tab title="Response (Config)" %}
+
+```json
+{
+  "bonding_manager_addr": "migaloo1...",
+  "epoch_manager_addr": "migaloo1...",
+  "create_incentive_fee": {
+    "denom": "uwhale",
+    "amount": "1000000000"
+  },
+  "max_concurrent_incentives": 7,
+  "max_incentive_epoch_buffer": 14,
+  "min_unlocking_duration": 86400,
+  "max_unlocking_duration": 31536000,
+  "emergency_unlock_penalty": "0.01"
+}
+```
+
+| Key                          | Type    | Description                                                                                 |
+|------------------------------|---------|---------------------------------------------------------------------------------------------|
+| `bonding_manager_addr`       | Addr    | The address to of the whale lair, to send fees to.                                          |
+| `epoch_manager_addr`         | Addr    | The epoch manager address, where the epochs are managed.                                    |
+| `create_incentive_fee`       | Coin    | The fee that must be paid to create an incentive.                                           |
+| `max_concurrent_incentives`  | u32     | The maximum amount of incentives that can exist for a single LP token at a time.            |
+| `max_incentive_epoch_buffer` | u32     | The maximum amount of epochs in the future a new incentive is allowed to start in.          |
+| `min_unlocking_duration`     | u64     | The minimum amount of time that a user can lock their tokens for. In seconds.               |
+| `max_unlocking_duration`     | u64     | The maximum amount of time that a user can lock their tokens for. In seconds.               |
+| `emergency_unlock_penalty`   | Decimal | The penalty for unlocking a position before the unlocking duration finishes. In percentage. |
+
+{% endtab %}
+{% endtabs %}
+
+### Incentives
+
+Retrieves the configuration of the manager.
+
+{% tabs %}
+{% tab title="Query - Filter by Identifier" %}
+
+```json
+{
+  "incentives": {
+    "filter_by": {
+      "Identifier": "incentive_identifier"
+    },
+    "start_after": "identifier_123",
+    "limit": 30
+  }
+}
+```
+
+| Key           | Type                  | Description                                                                                                                             |
+|---------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| `filter_by`   | Option\<IncentivesBy> | An optional parameter specifying what to filter incentives by. Can be either the incentive identifier, lp denom or the incentive asset. |
+| `start_after` | Option\<String>       | An optional parameter specifying what incentive (identifier) to start searching after.                                                  |
+| `limit`       | Option\<u32>          | The amount of incentives to return. If unspecified, will default to a value specified by the contract.                                  |
+
+{% endtab %}
+
+{% tab title="Query - Filter by LP denom" %}
+
+```json
+{
+  "incentives": {
+    "filter_by": {
+      "lp_denom": "factory/migaloo1.../uLP"
+    },
+    "start_after": "identifier_123",
+    "limit": 30
+  }
+}
+```
+
+| Key           | Type                  | Description                                                                                                                             |
+|---------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| `filter_by`   | Option\<IncentivesBy> | An optional parameter specifying what to filter incentives by. Can be either the incentive identifier, lp denom or the incentive asset. |
+| `start_after` | Option\<String>       | An optional parameter specifying what incentive (identifier) to start searching after.                                                  |
+| `limit`       | Option\<u32>          | The amount of incentives to return. If unspecified, will default to a value specified by the contract.                                  |
+
+{% endtab %}
+
+{% tab title="Query - Filter by Incentive Asset" %}
+
+```json
+{
+  "incentives": {
+    "filter_by": {
+      "incentive_asset": "uwhale"
+    },
+    "start_after": "identifier_123",
+    "limit": 30
+  }
+}
+```
+
+| Key           | Type                  | Description                                                                                                                             |
+|---------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| `filter_by`   | Option\<IncentivesBy> | An optional parameter specifying what to filter incentives by. Can be either the incentive identifier, lp denom or the incentive asset. |
+| `start_after` | Option\<String>       | An optional parameter specifying what incentive (identifier) to start searching after.                                                  |
+| `limit`       | Option\<u32>          | The amount of incentives to return. If unspecified, will default to a value specified by the contract.                                  |
+
+{% endtab %}
+
+{% tab title="Response (IncentivesResponse)" %}
+
+```json
+{
+  "incentives": [
+    {
+      "identifier": "incentive_identifier",
+      "owner": "migaloo1...",
+      "lp_denom": "factory/migaloo1.../uLP",
+      "incentive_asset": {
+        "denom": "uwhale",
+        "amount": "1000000000"
+      },
+      "claimed_amount": "1000000000",
+      "emission_rate": "1000000000",
+      "curve": "linear",
+      "start_epoch": 10,
+      "preliminary_end_epoch": 24,
+      "last_epoch_claimed": 15
+    },
+    {
+      "identifier": "identifier_123",
+      "owner": "migaloo1...",
+      "lp_denom": "factory/migaloo1.../uLP",
+      "incentive_asset": {
+        "denom": "uluna",
+        "amount": "1000000000"
+      },
+      "claimed_amount": "1000000000",
+      "emission_rate": "100000000",
+      "curve": "linear",
+      "start_epoch": 10,
+      "preliminary_end_epoch": 20,
+      "last_epoch_claimed": 15
+    }
+  ]
+}
+```
+
+| Key          | Type            | Description             |
+|--------------|-----------------|-------------------------|
+| `incentives` | Vec\<Incentive> | The list of incentives. |
+
+{% endtab %}
+{% endtabs %}
+
+### Positions
+
+Retrieves the positions for an address.
+
+{% tabs %}
+{% tab title="Query" %}
+
+```json
+{
+  "positions": {
+    "address": "migaloo1...",
+    "open_state": true
+  }
+}
+```
+
+| Key          | Type          | Description                                                                                                                                                                   |
+|--------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `address`    | String        | The address to get positions for.                                                                                                                                             |
+| `open_state` | Option\<bool> | An optional parameter specifying to return only positions that match the given open state. if true, it will return open positions. If false, it will return closed positions. |
+
+{% endtab %}
+
+{% tab title="Response (PositionsResponse)" %}
+
+```json
+{
+  "positions": [
+    {
+      "identifier": "incentive_identifier",
+      "lp_asset": "factory/migaloo1.../uLP",
+      "unlocking_duration": 86400,
+      "open": true,
+      "receiver": "migaloo1..."
+    },
+    {
+      "identifier": "incentive_identifier",
+      "lp_asset": "factory/migaloo1.../uLP",
+      "unlocking_duration": 86400,
+      "open": false,
+      "expiring_at": 1571797419879305533,
+      "receiver": "migaloo1..."
+    }
+  ]
+}
+```
+
+| Key         | Type           | Description                   |
+|-------------|----------------|-------------------------------|
+| `positions` | Vec\<Position> | All the positions a user has. |
+
+{% endtab %}
+{% endtabs %}
+
+### Rewards
+
+Retrieves the rewards for an address.
+
+{% tabs %}
+{% tab title="Query" %}
+
+```json
+{
+  "rewards": {
+    "address": "migaloo1..."
+  }
+}
+```
+
+| Key       | Type   | Description                                       |
+|-----------|--------|---------------------------------------------------|
+| `address` | String | The address to get all the incentive rewards for. |
+
+{% endtab %}
+
+{% tab title="Response (RewardsResponse)" %}
+
+```json
+{
+  "rewards_response": {
+    "rewards": [
+      {
+        "denom": "uwhale",
+        "amount": "1000000000"
+      }
+    ]
+  }
+}
+```
+
+| Key       | Type       | Description                                                                                  |
+|-----------|------------|----------------------------------------------------------------------------------------------|
+| `rewards` | Vec\<Coin> | The rewards that is available to a user if they executed the `claim` function at this point. |
+
+{% endtab %}
+{% endtabs %}
+
+### LPWeight
+
+Retrieves the total LP weight in the contract for a given denom on a given epoch.
+
+{% tabs %}
+{% tab title="Query" %}
+
+```json
+{
+  "lp_weight": {
+    "address": "migaloo1...",
+    "denom": "uwhale",
+    "epoch_id": 50
+  }
+}
+```
+
+| Key        | Type   | Description                               |
+|------------|--------|-------------------------------------------|
+| `address`  | String | The address to get the LP weight for.     |
+| `denom`    | String | The denom to get the total LP weight for. |
+| `epoch_id` | u64    | The epoch id to get the LP weight for.    |
+
+{% endtab %}
+
+{% tab title="Response (LpWeightResponse)" %}
+
+```json
+{
+  "lp_weight": "1000000000",
+  "epoch_id": 50
+}
+```
+
+| Key         | Type    | Description                                                  |
+|-------------|---------|--------------------------------------------------------------|
+| `lp_weight` | Uint128 | The total lp weight in the contract.                         |
+| `epoch_id`  | u64     | The epoch id corresponding to the lp weight in the contract. |
+
+{% endtab %}
+{% endtabs %}
