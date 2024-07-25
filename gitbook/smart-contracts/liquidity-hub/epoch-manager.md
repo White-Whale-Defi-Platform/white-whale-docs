@@ -256,3 +256,173 @@ Returns whether a hook has been registered.
 
 {% endtab %}
 {% endtabs %}
+
+## QueryMsg
+
+### Config
+
+Returns the configuration of the contract.
+
+{% tabs %}
+{% tab title="Query" %}
+
+```json
+{
+  "config": {}
+}
+```
+
+{% endtab %}
+
+{% tab title="Response (ConfigResponse)" %}
+
+```json
+{
+  "owner": "migaloo1...",
+  "epoch_config": {
+    "duration": "86400000000000",
+    "genesis_epoch": "1571797419879305533"
+  }
+}
+```
+
+| Key            | Type        | Description                |
+|----------------|-------------|----------------------------|
+| `owner`        | Addr        | The owner of the contract. |
+| `epoch_config` | EpochConfig | The epoch configuration.   |
+
+{% endtab %}
+{% endtabs %}
+
+### CurrentEpoch
+
+Returns the current epoch, which is the last on the EPOCHS map.
+
+{% tabs %}
+{% tab title="Query" %}
+
+```json
+{
+  "current_epoch": {}
+}
+```
+
+{% endtab %}
+
+{% tab title="Response (EpochResponse)" %}
+
+```json
+{
+  "epoch": {
+    "id": 0,
+    "start_time": "1571797419879305533"
+  }
+}
+```
+
+| Key     | Type  | Description        |
+|---------|-------|--------------------|
+| `epoch` | Epoch | The epoch queried. |
+
+{% endtab %}
+{% endtabs %}
+
+### Epoch
+
+Returns the epoch with the given id.
+
+{% tabs %}
+{% tab title="Query" %}
+
+```json
+{
+  "epoch": {
+    "id": 100
+  }
+}
+```
+
+{% endtab %}
+
+{% tab title="Response (EpochResponse)" %}
+
+```json
+{
+  "epoch": {
+    "id": 100,
+    "start_time": "1571797419879305533"
+  }
+}
+```
+
+| Key     | Type  | Description        |
+|---------|-------|--------------------|
+| `epoch` | Epoch | The epoch queried. |
+
+{% endtab %}
+{% endtabs %}
+
+### Hooks
+
+Returns the hooks in the registry.
+
+{% tabs %}
+{% tab title="Query" %}
+
+```json
+{
+  "hooks": {}
+}
+```
+
+{% endtab %}
+
+{% tab title="Response (HooksResponse)" %}
+
+```json
+{
+  "hooks": [
+    "migaloo1...",
+    "migaloo1..."
+  ]
+}
+```
+
+| Key     | Type         | Description                           |
+|---------|--------------|---------------------------------------|
+| `hooks` | Vec\<String> | The hooks registered in the contract. |
+
+{% endtab %}
+{% endtabs %}
+
+### Hook
+
+Returns whether a hook has been registered.
+
+{% tabs %}
+{% tab title="Query" %}
+
+```json
+{
+  "hook": {
+    "hook": "migaloo1..."
+  }
+}
+```
+
+{% endtab %}
+
+{% tab title="Response (bool)" %}
+
+```json
+{
+  "data": true
+}
+```
+
+| Key    | Type | Description                                                      |
+|--------|------|------------------------------------------------------------------|
+| `data` | bool | True if the hook is registered in the contract, false otherwise. |
+
+{% endtab %}
+{% endtabs %}
