@@ -118,7 +118,31 @@
       },
       "incentive_contract": "inj1zzejvfk8anr2skycj8et5zmhcuzlnn7se8zpca",
       "pool_code_id": "772",
-      "lp_code_id": "17"
+      "lp_code_id": "768"
+    },
+    {
+      "pair": "SYN-inj",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "factory/inj1a6xdezq7a94qwamec6n6cnup02nvewvjtz6h6e/SYN"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "inj"
+          }
+        }
+      ],
+      "pool_address": "inj1z7mx2tc9ea4y2y0nx230pe7knm8fryk3rv6r2c",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/inj1z7mx2tc9ea4y2y0nx230pe7knm8fryk3rv6r2c/uLP"
+        }
+      },
+      "incentive_contract": "inj18jlzm28ut06zv98kec9sgk05mvl0sr5lkkjz8l",
+      "pool_code_id": "772",
+      "lp_code_id": "768"
     },
     {
       "pair": "coping-uwhale",
@@ -142,7 +166,7 @@
       },
       "incentive_contract": "inj1yxp40zt6fhrfqjz6l7cgl97plw8qfyxyracfj3",
       "pool_code_id": "772",
-      "lp_code_id": "17"
+      "lp_code_id": "768"
     },
     {
       "pair": "ampWHALE-uwhale",
@@ -166,7 +190,7 @@
       },
       "incentive_contract": "inj12x7vzmsgj496ps0n9gt0xzmec0vw2wgvqgjxys",
       "pool_code_id": "772",
-      "lp_code_id": "17"
+      "lp_code_id": "768"
     },
     {
       "pair": "uatom-peggy0xdAC17F958D2ee523a2206206994597C13D831ec7",
@@ -190,7 +214,7 @@
       },
       "incentive_contract": "inj1r7tm9zndwyw898hjt3xgmdecugret22vc3ecdw",
       "pool_code_id": "772",
-      "lp_code_id": "17"
+      "lp_code_id": "768"
     },
     {
       "pair": "boneWhale-uwhale",
@@ -214,7 +238,7 @@
       },
       "incentive_contract": "inj10udnevccyg50e80gkeynr0s9gx70j699jgepzl",
       "pool_code_id": "772",
-      "lp_code_id": "17"
+      "lp_code_id": "768"
     },
     {
       "pair": "inj-uwhale",
@@ -238,7 +262,7 @@
       },
       "incentive_contract": "inj1kgssa2jy5ygzealwvuaat8x8zytjv3f6j0tlqv",
       "pool_code_id": "772",
-      "lp_code_id": "17"
+      "lp_code_id": "768"
     },
     {
       "pair": "peggy0xdAC17F958D2ee523a2206206994597C13D831ec7-uwhale",
@@ -262,7 +286,7 @@
       },
       "incentive_contract": "inj1f9j7u5mf8lzgkqqyx00mkeze2nlk9sqf0hv35d",
       "pool_code_id": "772",
-      "lp_code_id": "17"
+      "lp_code_id": "768"
     },
     {
       "pair": "inj-peggy0xdAC17F958D2ee523a2206206994597C13D831ec7",
@@ -286,7 +310,7 @@
       },
       "incentive_contract": "inj1pm4vll4c0q5y6q0qcvvx94377tq670k5gdyuyg",
       "pool_code_id": "772",
-      "lp_code_id": "17"
+      "lp_code_id": "768"
     }
   ]
 }
