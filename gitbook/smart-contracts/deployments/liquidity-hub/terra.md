@@ -287,6 +287,30 @@
       "lp_code_id": "2823"
     },
     {
+      "pair": "uluna-uusdc",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "uluna"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/2C962DAB9F57FE0921435426AE75196009FAA1981BF86991203C8411F8980FDB"
+          }
+        }
+      ],
+      "pool_address": "terra16a45v4k74w3yy30utfxdsekdlnks27sv48sn2suaf4wt7u6meq8scz75mx",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/terra16a45v4k74w3yy30utfxdsekdlnks27sv48sn2suaf4wt7u6meq8scz75mx/uLP"
+        }
+      },
+      "incentive_contract": "null",
+      "pool_code_id": "2821",
+      "lp_code_id": "2823"
+    },
+    {
       "pair": "boneWhale-uwhale",
       "assets": [
         {

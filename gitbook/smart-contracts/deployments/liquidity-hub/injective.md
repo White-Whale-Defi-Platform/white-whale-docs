@@ -145,6 +145,30 @@
       "lp_code_id": "768"
     },
     {
+      "pair": "bINJ-inj",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "factory/inj1dxp690rd86xltejgfq2fa7f2nxtgmm5cer3hvu/bINJ"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "inj"
+          }
+        }
+      ],
+      "pool_address": "inj1gk4thnx4t9y4ltnau60mpst5xyu0u57hqfl0qs",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/inj1gk4thnx4t9y4ltnau60mpst5xyu0u57hqfl0qs/uLP"
+        }
+      },
+      "incentive_contract": "inj174jqfpxa92h5y8dmq46vaw9r0eyq3r290mty0a",
+      "pool_code_id": "772",
+      "lp_code_id": "768"
+    },
+    {
       "pair": "coping-uwhale",
       "assets": [
         {
@@ -189,6 +213,30 @@
         }
       },
       "incentive_contract": "inj12x7vzmsgj496ps0n9gt0xzmec0vw2wgvqgjxys",
+      "pool_code_id": "772",
+      "lp_code_id": "768"
+    },
+    {
+      "pair": "inj-uusdc",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "inj"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "ibc/2CBC2EA121AE42563B08028466F37B600F2D7D4282342DE938283CC3FB2BC00E"
+          }
+        }
+      ],
+      "pool_address": "inj1qqc7ekvm06tch3dtyselt2rl5y4s9daman0ahv",
+      "lp_asset": {
+        "native_token": {
+          "denom": "factory/inj1qqc7ekvm06tch3dtyselt2rl5y4s9daman0ahv/uLP"
+        }
+      },
+      "incentive_contract": "inj10yef2ldmhtkhls0exxdwgmd3zw23eryyctvsav",
       "pool_code_id": "772",
       "lp_code_id": "768"
     },
