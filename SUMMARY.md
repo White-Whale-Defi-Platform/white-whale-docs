@@ -16,6 +16,7 @@
   * [🌕 Terra](./gitbook/smart-contracts/deployments/liquidity-hub/terra.md)
   * [🧪 Osmosis](./gitbook/smart-contracts/deployments/liquidity-hub/osmosis.md)
   * [🐶 Chihuahua](./gitbook/smart-contracts/deployments/liquidity-hub/chihuahua.md)
+  * [⛩️ Archway](./gitbook/smart-contracts/deployments/liquidity-hub/archway.md)
   * [🗽 Juno](./gitbook/smart-contracts/deployments/liquidity-hub/juno.md)
   * [🥷 Injective](./gitbook/smart-contracts/deployments/liquidity-hub/injective.md)
   * [⭐ Stargaze](./gitbook/smart-contracts/deployments/liquidity-hub/stargaze.md)
