@@ -90,3 +90,60 @@
   "deployer_address": "archway1v767q4apajgksqlg5ejdakn8auszecjefm4h3r"
 }
 ```
+
+```json
+{
+  "chain": "archway-1",
+  "pool_factory_addr": "archway1tfkye8su787r5xm3ncp5klve6lqwwc74pt6w9g07lw2550stjqcswjdtsl",
+  "pools": [
+    {
+      "pair": "boneARCH-aarch",
+      "assets": [
+        {
+          "token": {
+            "contract_addr": "archway12yurzx8zynv3ck7uh4tucre48tqsm4fac4hfk9p3l24qs2cn08dqr684cg"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "aarch"
+          }
+        }
+      ],
+      "pool_address": "archway1jq9y6ty3cckpp8nsq7xwu54ttudvmdsmj87y0f3zmlzm5qll75ssr7pgkj",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "archway18zjxz24skc48vs3vya9rtky8qt2rgzmv85cz24t5trj4jngyk84qx3rk8s"
+        }
+      },
+      "incentive_contract": "null",
+      "pool_code_id": "565",
+      "lp_code_id": "567"
+    },
+    {
+      "pair": "uwhale-aarch",
+      "assets": [
+        {
+          "native_token": {
+            "denom": "ibc/3F882513A0CCD1C4110ACB7C6C761AC7B48974C9D2D439CD6F652F9B44362518"
+          }
+        },
+        {
+          "native_token": {
+            "denom": "aarch"
+          }
+        }
+      ],
+      "pool_address": "archway1vkqtkdflv5ueyen92c4v9q0e2vgkvyz4wgpdjns3yjuez0pmcnxqp76zpu",
+      "lp_asset": {
+        "token": {
+          "contract_addr": "archway17dgwtpfg5n6fytmc5m3qkpp3caxms4crvvz6sam0exa0wllqnyjq4t8w39"
+        }
+      },
+      "incentive_contract": "null",
+      "pool_code_id": "565",
+      "lp_code_id": "567"
+    }
+  ]
+}
+```
