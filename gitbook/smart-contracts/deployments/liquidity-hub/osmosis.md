@@ -386,6 +386,13 @@
       "interface": "osmo1pum352hkx6jrk2jgyfhm7xxfnt7m2mqc83p6867tes2jgrtxzxssqr4zg7",
       "pool_id": "1699",
       "code_id": "641"
+    },
+    {
+      "pair": "dgn-uatom",
+      "pool_address": "osmo168uaa4my9e9d29cp4hmqvztf0f5v50w5crfsnawr2t25ehz6un4qaeyg8v",
+      "interface": "osmo1frawprzrw3q722gfz2vq2a62lnkyg4kexwg2ypnmh0ljhz0xxnaq8jk68v",
+      "pool_id": "2299",
+      "code_id": "641"
     }
   ]
 }

@@ -48,6 +48,8 @@
 ### Liquidity Hub Procedures
 
 * [🤑 Updating Fees](./gitbook/smart-contracts/procedures/update-fees.md)
+* [🤽‍♂️ Creating Pools](./gitbook/smart-contracts/procedures/create-pools.md)
+* [🏊️ Creating Osmosis Pool Interface](./gitbook/smart-contracts/procedures/create-osmosis-pool-interface.md)
 
 ## Client Documentation
 * [⚡ Calling Flashloans](./gitbook/client-docs/flashloan.md)
