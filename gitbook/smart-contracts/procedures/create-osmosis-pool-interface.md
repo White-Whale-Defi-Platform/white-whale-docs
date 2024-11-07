@@ -40,7 +40,8 @@ likely break Osmosis Frontend. Nobody wants that. Make sure you follow the instr
 {% endhint %}
 
 - Once you verified the code id, you can run the following command `$BINARY tx cosmwasmpool create-pool 641 '{"white_whale_pool": "osmo1..."}' $TXFLAG --from wallet`,
- where `white_whale_pool` in the instantiate message of the contract is the ww pool address you want to associate the interface with.
+ where `white_whale_pool` in the instantiate message of the contract is the ww pool address you want to associate the 
+interface with. This command can be triggered by any wallet, it doesn't need to be whitelisted anywhere.
 
 ## 3. Update the osmosis interface on the pool
 
@@ -64,3 +65,5 @@ likely break Osmosis Frontend. Nobody wants that. Make sure you follow the instr
 
 By following this guide and utilizing the provided instructions, you can ensure the accurate creation and documentation 
 of the osmosis interface contract.
+
+For more information, check the [Osmosis official documentation](https://docs.osmosis.zone/osmosis-core/modules/cosmwasmpool).
