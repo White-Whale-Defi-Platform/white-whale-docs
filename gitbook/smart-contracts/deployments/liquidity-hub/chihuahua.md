@@ -5,8 +5,8 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "520",
-      "version": "1.1.4",
+      "code_id": "676",
+      "version": "1.2.0",
       "contract_address": "chihuahua1z6fjtpsa9fhnkuxvef5lkcaafuw40zc3hr0wml0tngqahtl0s58sxdkwrm"
     },
     {

@@ -5,8 +5,8 @@
   "contracts": [
     {
       "wasm": "fee_collector.wasm",
-      "code_id": "2293",
-      "version": "1.1.4",
+      "code_id": "3495",
+      "version": "1.2.0",
       "contract_address": "terra1w8402njz8936ag4rlcmvek4zcns6hlkaapsd4qwz5us0ewwyghrsx7k47w"
     },
     {
@@ -45,8 +45,8 @@
     },
     {
       "wasm": "terraswap_pair.wasm",
-      "code_id": "2609",
-      "version": "1.3.5"
+      "code_id": "3435",
+      "version": "1.3.8"
     },
     {
       "wasm": "terraswap_router.wasm",
