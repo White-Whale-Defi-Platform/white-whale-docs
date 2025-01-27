@@ -133,18 +133,24 @@ Updates the configuration of the fee collector.
     "pool_router": "migaloo1...",
     "fee_distributor": "migaloo1...",
     "pool_factory": "migaloo1...",
-    "vault_factory": "migaloo1..."
+    "vault_factory": "migaloo1...",
+    "take_rate": "0.1",
+    "take_rate_dao_address": "migaloo1...",
+    "is_take_rate_active": true
   }
 }
 ```
 
-| Key               | Type            | Description                  |
-|-------------------|-----------------|------------------------------|
-| `owner`           | Option\<String> | New owner of the contract    |
-| `pool_router`     | Option\<String> | New pool router contract     |
-| `fee_distributor` | Option\<String> | New fee distributor contract |
-| `pool_factory`    | Option\<String> | New pool factory contract    |
-| `vault_factory`   | Option\<String> | New vault factory contract   |
+| Key                     | Type             | Description                                           |
+|-------------------------|------------------|-------------------------------------------------------|
+| `owner`                 | Option\<String>  | New owner of the contract                             |
+| `pool_router`           | Option\<String>  | New pool router contract                              |
+| `fee_distributor`       | Option\<String>  | New fee distributor contract                          |
+| `pool_factory`          | Option\<String>  | New pool factory contract                             |
+| `vault_factory`         | Option\<String>  | New vault factory contract                            |
+| `take_rate`             | Option\<Decimal> | New take rate for the buybacks                        |
+| `take_rate_dao_address` | Option\<String>  | New DAO address where the take rate will be sent to   |
+| `is_take_rate_active`   | Option\<bool>    | Flag dictating whether or not the take rate is active |
 
 ### Aggregate fees
 
@@ -341,17 +347,23 @@ Retrieves the configuration of the contract in a `Config` response.
   "pool_router": "migaloo1...",
   "fee_distributor": "migaloo1...",
   "pool_factory": "migaloo1...",
-  "vault_factory": "migaloo1..."
+  "vault_factory": "migaloo1...",
+  "take_rate": "0.1",
+  "take_rate_dao_address": "migaloo1...",
+  "is_take_rate_active": true
 }
 ```
 
-| Key               | Type | Description              |
-|-------------------|------|--------------------------|
-| `owner`           | Addr | Address of the owner     |
-| `pool_router`     | Addr | Pool router contract     |
-| `fee_distributor` | Addr | Fee distributor contract |
-| `pool_factory`    | Addr | Pool factory contract    |
-| `vault_factory`   | Addr | Vault factory contract   |
+| Key                     | Type    | Description                                           |
+|-------------------------|---------|-------------------------------------------------------|
+| `owner`                 | Addr    | Address of the owner                                  |
+| `pool_router`           | Addr    | Pool router contract                                  |
+| `fee_distributor`       | Addr    | Fee distributor contract                              |
+| `pool_factory`          | Addr    | Pool factory contract                                 |
+| `vault_factory`         | Addr    | Vault factory contract                                |
+| `take_rate`             | Decimal | Take rate for the buybacks                            |
+| `take_rate_dao_address` | Addr    | DAO address where the take rate are sent to           |
+| `is_take_rate_active`   | bool    | Flag dictating whether or not the take rate is active |
 
 {% endtab %}
 {% endtabs %}
@@ -485,6 +497,40 @@ fees collected by a given pool or vault factory's children.
 |----------|-----------|---------------------------------------------------------------|
 | `info`   | AssetInfo | Enum specifying whether the asset is native/ibc or cw20 token |
 | `amount` | Uint128   | Asset amount                                                  |
+
+{% endtab %}
+{% endtabs %}
+
+### TakeRateHistory
+
+Retrieves the take rate amount for a given epoch id.
+
+{% tabs %}
+{% tab title="Query" %}
+
+```json
+{
+  "take_rate_history": {
+    "epoch_id": "10"
+  }
+}
+```
+
+{% endtab %}
+
+{% tab title="Response (Coin)" %}
+
+```json
+{
+  "denom": "uwhale",
+  "amount": "1000000"
+}
+```
+
+| Key      | Type    | Description                   |
+|----------|---------|-------------------------------|
+| `denom`  | String  | Denomination of the take rate |
+| `amount` | Uint128 | Amount of the take rate       |
 
 {% endtab %}
 {% endtabs %}
